@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Ndb28f10d5a6b4df8ba386df84d1931e8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LivePaperSection"/>
+    <rdf:rest rdf:nodeID="N513982d9bf9e4ac78fe802e052b466b1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd408b6f5900744f69bc9978910480fa2">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/PublicationVolume"/>
+    <rdf:rest rdf:nodeID="N6419634a00154137965bc8c13930972c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3f219ea80a9f46e0a99f6bdf091dbc36">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileRepository"/>
+    <rdf:rest rdf:nodeID="Ndb28f10d5a6b4df8ba386df84d1931e8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na3c303529f0b40c19ce20346a901384f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Na59a29ca137f4a07a4198e5f7e881efd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c0aca3f1dd240b78fca452210bd99f5">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/PublicationIssue"/>
+    <rdf:rest rdf:nodeID="Nc741fc335d1c4d2c938ce3f7c16bbc7e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne2ce5e7e65dc4fc286a85825338f0263">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nd8a4c6d0e6d54a388a72fbb7210b5679"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f9a950820644bb8bfff33a042e3db4a">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileBundle"/>
+    <rdf:rest rdf:nodeID="N7602e01bb6f74d57af1c9903996ea8d4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/volumeNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Volume number</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/PublicationVolume"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad3e24582c2e444fb53c9ce0535792df">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/volumeNumber"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne9686630839844a2bb3dea111e2336ae">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ElectrodePlacement"/>
+    <rdf:rest rdf:nodeID="N43209a1cdd3441999745fabe48fab660"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1ef1c51614954440a7c4f955fb5ba88c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/isPartOf"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/Periodical"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59af55ce78014b61850e8e4de3ea84ec">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ScholarlyArticle"/>
+    <rdf:rest rdf:nodeID="N5228af16a2ed4d8cab75b74a7a31dd27"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N87ffe0a0851344488c8e4701fd6130fb">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/DatasetVersion"/>
+    <rdf:rest rdf:nodeID="N682dd27dffb346bb92125683a7515f92"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98bdd60a066b49c3839b2c2f1e211ea2">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/TissueCulturePreparation"/>
+    <rdf:rest rdf:nodeID="N98645212148f45f695d09b64b3bf0a1d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/PublicationVolume">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Publication volume</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N1ef1c51614954440a7c4f955fb5ba88c"/>
+    <rdfs:subClassOf rdf:nodeID="Nad3e24582c2e444fb53c9ce0535792df"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6419634a00154137965bc8c13930972c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SubjectGroup"/>
+    <rdf:rest rdf:nodeID="N4bbc07a185da4a4b8f56ca81c9997a4f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na59a29ca137f4a07a4198e5f7e881efd">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Book"/>
+    <rdf:rest rdf:nodeID="N87ffe0a0851344488c8e4701fd6130fb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na20b71158c2943a585830ba3df884b64">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/RecordingActivity"/>
+    <rdf:rest rdf:nodeID="N59af55ce78014b61850e8e4de3ea84ec"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd1b719b0a426474aaa384550bb7d56cd">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Chapter"/>
+    <rdf:rest rdf:nodeID="Naaec596d8b6944659e90543346ede5de"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97fc128e17e240ebbc6c9d7a3b83a960">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/TissueSampleSlicing"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/isPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Is part of</rdfs:label>
+    <rdfs:comment>Reference to the ensemble of multiple things or beings.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Ne2ce5e7e65dc4fc286a85825338f0263"/>
+    <rdfs:range rdf:nodeID="Na3c303529f0b40c19ce20346a901384f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndd9e489985614494aed49692232bea07">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Periodical"/>
+    <rdf:rest rdf:nodeID="Nadd0233318ea408497f017917fe6d330"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7602e01bb6f74d57af1c9903996ea8d4">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LivePaperResourceItem"/>
+    <rdf:rest rdf:nodeID="N1df70ac391c34af88a60e8f4836a340c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N513982d9bf9e4ac78fe802e052b466b1">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LivePaperVersion"/>
+    <rdf:rest rdf:nodeID="Ndd9e489985614494aed49692232bea07"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naaec596d8b6944659e90543346ede5de">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/CranialWindowPreparation"/>
+    <rdf:rest rdf:nodeID="Ne9686630839844a2bb3dea111e2336ae"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne701d46f3d23420c964923177159a7d2">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Subject"/>
+    <rdf:rest rdf:nodeID="N98bdd60a066b49c3839b2c2f1e211ea2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N682dd27dffb346bb92125683a7515f92">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileBundle"/>
+    <rdf:rest rdf:nodeID="N3f219ea80a9f46e0a99f6bdf091dbc36"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4bbc07a185da4a4b8f56ca81c9997a4f">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/TissueSampleCollection"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1df70ac391c34af88a60e8f4836a340c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LivePaperSection"/>
+    <rdf:rest rdf:nodeID="N22e0714dd5004faca7b31fb107ed0ea8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N98645212148f45f695d09b64b3bf0a1d">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/TissueSample"/>
+    <rdf:rest rdf:nodeID="N97fc128e17e240ebbc6c9d7a3b83a960"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nadd0233318ea408497f017917fe6d330">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/PublicationIssue"/>
+    <rdf:rest rdf:nodeID="Nd408b6f5900744f69bc9978910480fa2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N22e0714dd5004faca7b31fb107ed0ea8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ProtocolExecution"/>
+    <rdf:rest rdf:nodeID="N7c0aca3f1dd240b78fca452210bd99f5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5228af16a2ed4d8cab75b74a7a31dd27">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/StimulationActivity"/>
+    <rdf:rest rdf:nodeID="Ne701d46f3d23420c964923177159a7d2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43209a1cdd3441999745fabe48fab660">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/File"/>
+    <rdf:rest rdf:nodeID="N5f9a950820644bb8bfff33a042e3db4a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd8a4c6d0e6d54a388a72fbb7210b5679">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/CellPatching"/>
+    <rdf:rest rdf:nodeID="Nd1b719b0a426474aaa384550bb7d56cd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc741fc335d1c4d2c938ce3f7c16bbc7e">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/PublicationVolume"/>
+    <rdf:rest rdf:nodeID="Na20b71158c2943a585830ba3df884b64"/>
+  </rdf:Description>
+</rdf:RDF>

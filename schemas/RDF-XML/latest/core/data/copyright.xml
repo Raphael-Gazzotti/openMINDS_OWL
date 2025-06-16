@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Copyright">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Copyright</rdfs:label>
+    <rdfs:comment>Structured information on the copyright.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N931f509c7ebc4b84940ba27425cf4d35"/>
+    <rdfs:subClassOf rdf:nodeID="Nac1b8cc54dcf42ca90fe656a893e92e7"/>
+    <rdfs:subClassOf rdf:nodeID="N3f06283e5fab4106b6648738795d04c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0cf4b5fbc04b49ada06726611ff7e7b5">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
+    <rdf:rest rdf:nodeID="N9cf6b20afecf43e1b5f197728c253bb6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/holder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Holder</rdfs:label>
+    <rdfs:comment>Legal person in possession of something.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Copyright"/>
+    <rdfs:range rdf:nodeID="N5975995b415b4aef97357a25ba9d1f55"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:label>Year</rdfs:label>
+    <rdfs:comment>Cycle in the Gregorian calendar specified by a number and comprised of 365 or 366 days divided into 12 months beginning with January and ending with December.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Copyright"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N52fcba040abe466d9a0fa68689e8547a">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3f06283e5fab4106b6648738795d04c6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/year"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nae6a1ead3cf54572a038184cfdc9cac3">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9cf6b20afecf43e1b5f197728c253bb6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <rdf:rest rdf:nodeID="N52fcba040abe466d9a0fa68689e8547a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N931f509c7ebc4b84940ba27425cf4d35">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/holder"/>
+    <owl:allValuesFrom rdf:nodeID="N5ae359ba2306466a9b83171ab2f23770"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb4dc65ff1d664854bd05f931a1338393">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
+    <rdf:rest rdf:nodeID="N86effacb22094ab5b59cd24f708f861c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5975995b415b4aef97357a25ba9d1f55">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nb4dc65ff1d664854bd05f931a1338393"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nac1b8cc54dcf42ca90fe656a893e92e7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/year"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5ae359ba2306466a9b83171ab2f23770">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N0cf4b5fbc04b49ada06726611ff7e7b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N86effacb22094ab5b59cd24f708f861c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <rdf:rest rdf:nodeID="Nae6a1ead3cf54572a038184cfdc9cac3"/>
+  </rdf:Description>
+</rdf:RDF>

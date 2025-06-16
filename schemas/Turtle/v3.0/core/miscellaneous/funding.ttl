@@ -1,0 +1,40 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/acknowledgement> a owl:DatatypeProperty ;
+    rdfs:label "Acknowledgement" ;
+    rdfs:comment "Official declaration or avowal of appreciation of an act or achievement." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/Funding> ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/awardNumber> a owl:DatatypeProperty ;
+    rdfs:label "Award number" ;
+    rdfs:comment "Machine-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/Funding> ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/awardTitle> a owl:DatatypeProperty ;
+    rdfs:label "Award title" ;
+    rdfs:comment "Human-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/Funding> ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/funder> a owl:ObjectProperty ;
+    rdfs:label "Funder" ;
+    rdfs:comment "Legal person that provides money for a particular purpose." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/Funding> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] .
+
+<https://openminds.ebrains.eu/core/Funding> a owl:Class ;
+    rdfs:label "Funding" ;
+    rdfs:comment "Structured information on used funding." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/funder> ] .
+

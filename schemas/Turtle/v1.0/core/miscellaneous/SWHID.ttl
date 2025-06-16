@@ -1,0 +1,18 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/core/SWHID> a owl:Class ;
+    rdfs:label "Swhid" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/identifier> ] .
+
+<https://openminds.ebrains.eu/vocab/identifier> a owl:DatatypeProperty ;
+    rdfs:label "Identifier" ;
+    rdfs:comment "Term or code used to identify something or someone." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/GRIDID> <https://openminds.ebrains.eu/core/ISBN> <https://openminds.ebrains.eu/core/ORCID> <https://openminds.ebrains.eu/core/RORID> <https://openminds.ebrains.eu/core/SWHID> ) ] ;
+    rdfs:range xsd:string .
+

@@ -1,0 +1,33 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/core/DigitalIdentifierSchema> a owl:Class ;
+    rdfs:label "Digital identifier schema" ;
+    rdfs:comment "Structured information on a digital identifier schema." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/type> ] .
+
+<https://openminds.ebrains.eu/vocab/IRI> a owl:DatatypeProperty ;
+    rdfs:label "Iri" ;
+    rdfs:comment "Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileRepository> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/identifierPattern> a owl:DatatypeProperty ;
+    rdfs:label "Identifier pattern" ;
+    rdfs:comment "Format of a term or code used to identify something or someone." ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/type> a owl:DatatypeProperty ;
+    rdfs:label "Type" ;
+    rdfs:comment "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/SemanticDataType> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ) ],
+        xsd:string .
+

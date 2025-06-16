@@ -1,0 +1,43 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/coordinateSpace> a owl:ObjectProperty ;
+    rdfs:label "Coordinate space" ;
+    rdfs:comment "Two or three dimensional geometric setting." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinatePoint> <https://openminds.ebrains.eu/sands/Image> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/sands/CoordinateSpace> .
+
+<https://openminds.ebrains.eu/vocab/definedIn> a owl:ObjectProperty ;
+    rdfs:label "Defined in" ;
+    rdfs:comment "Reference to a file instance in which something is stored." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasTerminology> <https://openminds.ebrains.eu/sands/ElectrodeContact> <https://openminds.ebrains.eu/sands/Image> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/FileInstance> .
+
+<https://openminds.ebrains.eu/vocab/voxelSize> a owl:ObjectProperty ;
+    rdfs:label "Voxel size" ;
+    rdfs:comment "Extent of the discrete elements comprising a three-dimensional entity." ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/Image> ;
+    rdfs:range <https://openminds.ebrains.eu/core/QuantitativeValue> .
+
+<https://openminds.ebrains.eu/sands/Image> a owl:Class ;
+    rdfs:label "Image" ;
+    rdfs:comment "Structured information on an image." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinateSpace> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/voxelSize> ] .
+

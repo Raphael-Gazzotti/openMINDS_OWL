@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N43edb8ee478648bf89e02abbc6deaea3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/regex"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N38475607cb394cbd95920de9233aff31">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FilePathPattern"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/FilePathPattern">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>File path pattern</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N6255f430d205427e8630d6cf01fd0a1e"/>
+    <rdfs:subClassOf rdf:nodeID="N43edb8ee478648bf89e02abbc6deaea3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N034a9585028d4899880e0547cca0a081">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FilePathPattern"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb2c823d0cd07463e974cad4f559c8cbf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nb360d4310acb43d28f3826fa186307c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc51b9788c5d545b3b4745328df8f6ee5">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileBundle"/>
+    <rdf:rest rdf:nodeID="N38475607cb394cbd95920de9233aff31"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/groupingType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Grouping type</rdfs:label>
+    <rdfs:domain rdf:nodeID="Nb7d4d17d6fc845009fa1393413ef4ecd"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/FileBundleGrouping"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6255f430d205427e8630d6cf01fd0a1e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/groupingType"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/FileBundleGrouping"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb360d4310acb43d28f3826fa186307c9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ContentTypePattern"/>
+    <rdf:rest rdf:nodeID="N034a9585028d4899880e0547cca0a081"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/regex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Regex</rdfs:label>
+    <rdfs:domain rdf:nodeID="Nb2c823d0cd07463e974cad4f559c8cbf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7d4d17d6fc845009fa1393413ef4ecd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc51b9788c5d545b3b4745328df8f6ee5"/>
+  </rdf:Description>
+</rdf:RDF>

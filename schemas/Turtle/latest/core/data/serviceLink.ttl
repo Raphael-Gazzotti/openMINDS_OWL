@@ -1,0 +1,56 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/displayLabel> a owl:DatatypeProperty ;
+    rdfs:label "Display label" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/ContentType> <https://openminds.om-i.org/types/ServiceLink> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/dataLocation> a owl:ObjectProperty ;
+    rdfs:label "Data location" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CustomPropertySet> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Recording> <https://openminds.om-i.org/types/ServiceLink> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileBundle> <https://openminds.om-i.org/types/LivePaperResourceItem> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/PropertyValueList> ) ] .
+
+<https://openminds.om-i.org/props/openDataIn> a owl:DatatypeProperty ;
+    rdfs:label "Open data in" ;
+    rdfs:domain <https://openminds.om-i.org/types/ServiceLink> ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/previewImage> a owl:ObjectProperty ;
+    rdfs:label "Preview image" ;
+    rdfs:domain <https://openminds.om-i.org/types/ServiceLink> ;
+    rdfs:range <https://openminds.om-i.org/types/File> .
+
+<https://openminds.om-i.org/props/service> a owl:ObjectProperty ;
+    rdfs:label "Service" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AccountInformation> <https://openminds.om-i.org/types/ServiceLink> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Service> <https://openminds.om-i.org/types/WebService> ) ] .
+
+<https://openminds.om-i.org/types/ServiceLink> a owl:Class ;
+    rdfs:label "Service link" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/File> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/previewImage> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/openDataIn> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileBundle> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/LivePaperResourceItem> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/dataLocation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Service> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/service> ] .
+

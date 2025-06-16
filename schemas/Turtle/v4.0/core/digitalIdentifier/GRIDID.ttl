@@ -1,0 +1,19 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/identifier> a owl:DatatypeProperty ;
+    rdfs:label "Identifier" ;
+    rdfs:comment "Term or code used to identify something or someone." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/GRIDID> <https://openminds.om-i.org/types/HANDLE> <https://openminds.om-i.org/types/ISBN> <https://openminds.om-i.org/types/ISSN> <https://openminds.om-i.org/types/IdentifiersDotOrgID> <https://openminds.om-i.org/types/ORCID> <https://openminds.om-i.org/types/ProductSource> <https://openminds.om-i.org/types/RORID> <https://openminds.om-i.org/types/RRID> <https://openminds.om-i.org/types/SWHID> <https://openminds.om-i.org/types/StockNumber> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/types/GRIDID> a owl:Class ;
+    rdfs:label "Gridid" ;
+    rdfs:comment "A GRID (Global Research Identifier Database) identifier." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/identifier> ] .
+

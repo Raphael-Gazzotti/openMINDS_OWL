@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digitalIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Digital identifier</rdfs:label>
+    <rdfs:comment>Digital handle to identify objects or legal persons.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N43ff51ced14648f3ac0fb1f423891f24"/>
+    <rdfs:range rdf:nodeID="Nf7c5b245e35d44c2bb3ed6062b4afcc5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndf42ba79efe947eabf4a8b72e5ce96b6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Software"/>
+    <rdf:rest rdf:nodeID="N568759df76fb42a49db6d0a968cd5511"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/familyName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Family name</rdfs:label>
+    <rdfs:comment>Name borne in common by members of a family.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c04e301820f40d8a0f40c46bbbcfd83">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SWHID"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/contactInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Contact information</rdfs:label>
+    <rdfs:comment>Any available way used to contact a person or business (e.g., address, phone number, email address, etc.).</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/ContactInformation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na121060d08f3430b90aa546ee68a781e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digitalIdentifier"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ORCID"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ned00054819fd472993c134b2d291c6c2">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/MetaDataModel"/>
+    <rdf:rest rdf:nodeID="Nfc341450d4bd4bbcb2d4fdfbfaaf1f35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N33a80e8fc6ce4979bfe8d006aa2ab95c">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:nodeID="N3bce74bb338e4820b20e1a74d3dc205b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9f59c30c517344d3a592136a48565fe7">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/DatasetVersion"/>
+    <rdf:rest rdf:nodeID="Ned00054819fd472993c134b2d291c6c2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d6e3eda7a26487c8ff725bec7d0ff65">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/BrainAtlas"/>
+    <rdf:rest rdf:nodeID="N485b77a8880e409da708cfa3ceed64e9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:comment>Structured information on a person.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N24a364f13261427c8cb0f88e1f1158b8"/>
+    <rdfs:subClassOf rdf:nodeID="Nd35a383ade4a424fab3c991a0baa517b"/>
+    <rdfs:subClassOf rdf:nodeID="Na121060d08f3430b90aa546ee68a781e"/>
+    <rdfs:subClassOf rdf:nodeID="Nf1c2f597303d47719ff7ea1ebbf03303"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/givenName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Given name</rdfs:label>
+    <rdfs:comment>Name given to a person, including all potential middle names, but excluding the family name.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbef239092e2a4d2f9dbad105fb7016bf">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/RORID"/>
+    <rdf:rest rdf:nodeID="N8c04e301820f40d8a0f40c46bbbcfd83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf1c2f597303d47719ff7ea1ebbf03303">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/givenName"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N665fc958cbb841f6842815b39b4d8e61">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Dataset"/>
+    <rdf:rest rdf:nodeID="N9f59c30c517344d3a592136a48565fe7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf7c5b245e35d44c2bb3ed6062b4afcc5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N413b318beb7b4e92980abc9ebb7990fc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3bce74bb338e4820b20e1a74d3dc205b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdf:rest rdf:nodeID="Ndf42ba79efe947eabf4a8b72e5ce96b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6132fe8d83ea4410b9e3b37a105fbc6e">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ORCID"/>
+    <rdf:rest rdf:nodeID="Nbef239092e2a4d2f9dbad105fb7016bf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/affiliation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Affiliation</rdfs:label>
+    <rdfs:comment>Declaration of a person being closely associated to an organization.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/Affiliation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N92be907541274748b60732edcfd08b3a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CommonCoordinateSpace"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd35a383ade4a424fab3c991a0baa517b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/contactInformation"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ContactInformation"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N24a364f13261427c8cb0f88e1f1158b8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/affiliation"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/Affiliation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43ff51ced14648f3ac0fb1f423891f24">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N665fc958cbb841f6842815b39b4d8e61"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N15cdcd44e8bc45609cfb5d94356235ca">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ModelVersion"/>
+    <rdf:rest rdf:nodeID="N33a80e8fc6ce4979bfe8d006aa2ab95c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N485b77a8880e409da708cfa3ceed64e9">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/BrainAtlasVersion"/>
+    <rdf:rest rdf:nodeID="N92be907541274748b60732edcfd08b3a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N23781ec4ce6b4f54ae8a4dd138f73826">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Model"/>
+    <rdf:rest rdf:nodeID="N15cdcd44e8bc45609cfb5d94356235ca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfc341450d4bd4bbcb2d4fdfbfaaf1f35">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/MetaDataModelVersion"/>
+    <rdf:rest rdf:nodeID="N23781ec4ce6b4f54ae8a4dd138f73826"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb28be4010f354c568eb5f62b227c4154">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/GRIDID"/>
+    <rdf:rest rdf:nodeID="N6132fe8d83ea4410b9e3b37a105fbc6e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N568759df76fb42a49db6d0a968cd5511">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SoftwareVersion"/>
+    <rdf:rest rdf:nodeID="N9d6e3eda7a26487c8ff725bec7d0ff65"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N413b318beb7b4e92980abc9ebb7990fc">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/DOI"/>
+    <rdf:rest rdf:nodeID="Nb28be4010f354c568eb5f62b227c4154"/>
+  </rdf:Description>
+</rdf:RDF>

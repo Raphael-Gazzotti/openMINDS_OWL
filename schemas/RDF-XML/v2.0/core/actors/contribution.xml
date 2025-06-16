@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N9f88d8ad293d426396b931e9a08c164a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N14dfdb00cac449eda2c733a785c408e4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd79131d6b19141b8889bedaa09277668">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/contributionType"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/ContributionType"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/contributionType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Contribution type</rdfs:label>
+    <rdfs:comment>Distinct class of what was given or supplied as a part or share.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Contribution"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/ContributionType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne76d8337099049df96ad63106af7c783">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N91537af685f74c9e84080aa0caaeb9f0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Contributor</rdfs:label>
+    <rdfs:comment>Legal person that gave or supplied something as a part or share.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Contribution"/>
+    <rdfs:range rdf:nodeID="Ne76d8337099049df96ad63106af7c783"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91537af685f74c9e84080aa0caaeb9f0">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:nodeID="N4f08cf78b0fe41abaa8e6a3be09785cf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Contribution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Contribution</rdfs:label>
+    <rdfs:comment>Structured information on the contribution made to a research product.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Nd79131d6b19141b8889bedaa09277668"/>
+    <rdfs:subClassOf rdf:nodeID="Nd5b0ae0f78bd468c9f66fc6cf699b7e7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N302b11001e9f4a4aa283adbe103eb5cf">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f08cf78b0fe41abaa8e6a3be09785cf">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14dfdb00cac449eda2c733a785c408e4">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:nodeID="N302b11001e9f4a4aa283adbe103eb5cf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd5b0ae0f78bd468c9f66fc6cf699b7e7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/contributor"/>
+    <owl:allValuesFrom rdf:nodeID="N9f88d8ad293d426396b931e9a08c164a"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+</rdf:RDF>

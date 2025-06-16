@@ -1,0 +1,27 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/semiMajorAxis> a owl:ObjectProperty ;
+    rdfs:label "Semi major axis" ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/Ellipse> ;
+    rdfs:range <https://openminds.ebrains.eu/core/QuantitativeValue> .
+
+<https://openminds.ebrains.eu/vocab/semiMinorAxis> a owl:ObjectProperty ;
+    rdfs:label "Semi minor axis" ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/Ellipse> ;
+    rdfs:range <https://openminds.ebrains.eu/core/QuantitativeValue> .
+
+<https://openminds.ebrains.eu/sands/Ellipse> a owl:Class ;
+    rdfs:label "Ellipse" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/semiMinorAxis> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/semiMajorAxis> ] .
+

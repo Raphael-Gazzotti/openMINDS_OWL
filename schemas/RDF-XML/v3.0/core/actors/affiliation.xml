@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/memberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Member of</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Affiliation"/>
+    <rdfs:range rdf:nodeID="Nfdbec4bc80b348da80f0f357c8abd2d2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ab4895ff4734e04a679726bf39ab9e0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/memberOf"/>
+    <owl:allValuesFrom rdf:nodeID="N1ff5c8e8d196471ea04c103f5bf51adb"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/startDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>Start date</rdfs:label>
+    <rdfs:comment>Date in the Gregorian calendar at which something begins in time</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Affiliation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/endDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>End date</rdfs:label>
+    <rdfs:comment>Date in the Gregorian calendar at which something terminates in time.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Affiliation"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na1671736ff69421bbe3a038cdc2a52dd">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Affiliation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Affiliation</rdfs:label>
+    <rdfs:comment>Structured information about a relationship between two entities, such as a person and their employer.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N4ab4895ff4734e04a679726bf39ab9e0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne835179b9d474fba9bfdd8b011437bb1">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1ff5c8e8d196471ea04c103f5bf51adb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Ncb388677d72c4d60897aa843a21ec873"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nde6d0758bf8b44ae88770f91f0ea6f35">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Consortium"/>
+    <rdf:rest rdf:nodeID="Na1671736ff69421bbe3a038cdc2a52dd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfdbec4bc80b348da80f0f357c8abd2d2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nde6d0758bf8b44ae88770f91f0ea6f35"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncb388677d72c4d60897aa843a21ec873">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Consortium"/>
+    <rdf:rest rdf:nodeID="Ne835179b9d474fba9bfdd8b011437bb1"/>
+  </rdf:Description>
+</rdf:RDF>

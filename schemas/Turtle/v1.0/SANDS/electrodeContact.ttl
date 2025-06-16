@@ -1,0 +1,68 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/coordinatePoint> a owl:ObjectProperty ;
+    rdfs:label "Coordinate point" ;
+    rdfs:comment "Pair or triplet of numbers defining the position in a particular two- or three dimensional plane or space." ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/ElectrodeContact> ;
+    rdfs:range <https://openminds.ebrains.eu/sands/CoordinatePoint> .
+
+<https://openminds.ebrains.eu/vocab/definedIn> a owl:ObjectProperty ;
+    rdfs:label "Defined in" ;
+    rdfs:comment "Reference to a file instance in which something is stored." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasTerminology> <https://openminds.ebrains.eu/sands/ElectrodeContact> <https://openminds.ebrains.eu/sands/Image> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/FileInstance> .
+
+<https://openminds.ebrains.eu/vocab/internalIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Internal identifier" ;
+    rdfs:comment "Term or code that identifies someone or something within a particular product." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/sands/Annotation> <https://openminds.ebrains.eu/sands/Electrode> <https://openminds.ebrains.eu/sands/ElectrodeArray> <https://openminds.ebrains.eu/sands/ElectrodeContact> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/relatedRecording> a owl:ObjectProperty ;
+    rdfs:label "Related recording" ;
+    rdfs:comment "Reference to the written, stored evidence of something." ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/ElectrodeContact> ;
+    rdfs:range <https://openminds.ebrains.eu/core/FileInstance> .
+
+<https://openminds.ebrains.eu/vocab/relatedStimulation> a owl:ObjectProperty ;
+    rdfs:label "Related stimulation" ;
+    rdfs:comment "Reference to the written, stored function used as a physiological stimulus." ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/ElectrodeContact> ;
+    rdfs:range <https://openminds.ebrains.eu/core/FileInstance> .
+
+<https://openminds.ebrains.eu/vocab/visualizedIn> a owl:ObjectProperty ;
+    rdfs:label "Visualized in" ;
+    rdfs:comment "Reference to an image in which something is visible." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/Annotation> <https://openminds.ebrains.eu/sands/ElectrodeContact> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/sands/Image> .
+
+<https://openminds.ebrains.eu/sands/ElectrodeContact> a owl:Class ;
+    rdfs:label "Electrode contact" ;
+    rdfs:comment "Structured information on an electrode contact." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinatePoint> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinatePoint> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedRecording> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedStimulation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/Image> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/visualizedIn> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/internalIdentifier> ] .
+

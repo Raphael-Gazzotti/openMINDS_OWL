@@ -1,0 +1,34 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/contributor> a owl:ObjectProperty ;
+    rdfs:label "Contributor" ;
+    rdfs:comment "Legal person that gave or supplied something as a part or share." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/Contribution> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] .
+
+<https://openminds.ebrains.eu/vocab/type> a owl:ObjectProperty ;
+    rdfs:label "Type" ;
+    rdfs:comment "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/chemicals/ChemicalMixture> <https://openminds.ebrains.eu/core/Contribution> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Setup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/publications/LearningResource> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/stimulation/EphysStimulus> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AnnotationType> <https://openminds.ebrains.eu/controlledTerms/AtlasType> <https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/FileRepositoryType> <https://openminds.ebrains.eu/controlledTerms/LearningResourceType> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/SetupType> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ) ] .
+
+<https://openminds.ebrains.eu/core/Contribution> a owl:Class ;
+    rdfs:label "Contribution" ;
+    rdfs:comment "Structured information on the contribution made to a research product." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ContributionType> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/contributor> ] .
+

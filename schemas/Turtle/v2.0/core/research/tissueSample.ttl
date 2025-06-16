@@ -1,0 +1,131 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/lookupLabel> a owl:DatatypeProperty ;
+    rdfs:label "Lookup label" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/sands/Electrode> <https://openminds.ebrains.eu/sands/ElectrodeArray> <https://openminds.ebrains.eu/sands/ElectrodeContact> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/biologicalSex> a owl:ObjectProperty ;
+    rdfs:label "Biological sex" ;
+    rdfs:comment "Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> .
+
+<https://openminds.ebrains.eu/vocab/internalIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Internal identifier" ;
+    rdfs:comment "Term or code that identifies someone or something within a particular product." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/sands/Electrode> <https://openminds.ebrains.eu/sands/ElectrodeArray> <https://openminds.ebrains.eu/sands/ElectrodeContact> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/isPartOf> a owl:ObjectProperty ;
+    rdfs:label "Is part of" ;
+    rdfs:comment "Reference to the ensemble of multiple things or beings." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/sands/ParcellationEntity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/sands/ParcellationTerminology> ) ] .
+
+<https://openminds.ebrains.eu/vocab/laterality> a owl:ObjectProperty ;
+    rdfs:label "Laterality" ;
+    rdfs:comment "Differentiation between a pair of lateral homologous parts of the body." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/Laterality> .
+
+<https://openminds.ebrains.eu/vocab/origin> a owl:ObjectProperty ;
+    rdfs:label "Origin" ;
+    rdfs:comment "Source at which something begins or rises, or from which something derives." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> ) ] .
+
+<https://openminds.ebrains.eu/vocab/phenotype> a owl:ObjectProperty ;
+    rdfs:label "Phenotype" ;
+    rdfs:comment "Physical expression of one or more genes of an organism." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/Phenotype> .
+
+<https://openminds.ebrains.eu/vocab/species> a owl:ObjectProperty ;
+    rdfs:label "Species" ;
+    rdfs:comment "Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/Species> .
+
+<https://openminds.ebrains.eu/vocab/strain> a owl:ObjectProperty ;
+    rdfs:label "Strain" ;
+    rdfs:comment "Group of presumed common ancestry with physiological but usually not morphological distinctions." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/Strain> .
+
+<https://openminds.ebrains.eu/vocab/studiedState> a owl:ObjectProperty ;
+    rdfs:label "Studied state" ;
+    rdfs:comment "Reference to a point in time at which something or someone was studied in a particular mode or condition." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> ) ] .
+
+<https://openminds.ebrains.eu/vocab/type> a owl:ObjectProperty ;
+    rdfs:label "Type" ;
+    rdfs:comment "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/SemanticDataType> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ) ] .
+
+<https://openminds.ebrains.eu/core/TissueSample> a owl:Class ;
+    rdfs:label "Tissue sample" ;
+    rdfs:comment "Structured information on a tissue sample." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/biologicalSex> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Species> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/species> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Laterality> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/laterality> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Strain> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/strain> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/TissueSampleState> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/studiedState> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/internalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Phenotype> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/phenotype> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/origin> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/TissueSampleCollection> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isPartOf> ] .
+

@@ -1,0 +1,29 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/isPartOf> a owl:ObjectProperty ;
+    rdfs:label "Is part of" ;
+    rdfs:comment "Reference to the ensemble of multiple things or beings." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/publications/Chapter> <https://openminds.ebrains.eu/publications/LivePaperResourceItem> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/publications/PublicationIssue> <https://openminds.ebrains.eu/publications/PublicationVolume> <https://openminds.ebrains.eu/publications/ScholarlyArticle> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/publications/Book> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/publications/LivePaperVersion> <https://openminds.ebrains.eu/publications/Periodical> <https://openminds.ebrains.eu/publications/PublicationIssue> <https://openminds.ebrains.eu/publications/PublicationVolume> ) ] .
+
+<https://openminds.ebrains.eu/vocab/issueNumber> a owl:DatatypeProperty ;
+    rdfs:label "Issue number" ;
+    rdfs:domain <https://openminds.ebrains.eu/publications/PublicationIssue> ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/publications/PublicationIssue> a owl:Class ;
+    rdfs:label "Publication issue" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/issueNumber> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/publications/PublicationVolume> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isPartOf> ] .
+

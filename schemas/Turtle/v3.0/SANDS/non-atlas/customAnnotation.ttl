@@ -1,0 +1,128 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/internalIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Internal identifier" ;
+    rdfs:comment "Term or code that identifies someone or something within a particular product." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/BehavioralProtocol> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/ephys/Channel> <https://openminds.ebrains.eu/ephys/Electrode> <https://openminds.ebrains.eu/ephys/ElectrodeArray> <https://openminds.ebrains.eu/ephys/Pipette> <https://openminds.ebrains.eu/ephys/Recording> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/stimulation/EphysStimulus> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/anchorPoint> a owl:ObjectProperty ;
+    rdfs:label "Anchor point" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/sands/ViewerSpecification> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/QuantitativeValue> .
+
+<https://openminds.ebrains.eu/vocab/coordinateSpace> a owl:ObjectProperty ;
+    rdfs:label "Coordinate space" ;
+    rdfs:comment "Two or three dimensional geometric setting." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinatePoint> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/sands/CustomCoordinateSpace> ) ] .
+
+<https://openminds.ebrains.eu/vocab/criteria> a owl:ObjectProperty ;
+    rdfs:label "Criteria" ;
+    rdfs:comment "Aspects or standards on which a judgement or decision is based." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/sands/QualitativeRelationAssessment> <https://openminds.ebrains.eu/sands/QuantitativeRelationAssessment> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/ProtocolExecution> .
+
+<https://openminds.ebrains.eu/vocab/criteriaQualityType> a owl:ObjectProperty ;
+    rdfs:label "Criteria quality type" ;
+    rdfs:comment "Distinct class that defines how the judgement or decision was made for a particular criteria." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> .
+
+<https://openminds.ebrains.eu/vocab/criteriaType> a owl:ObjectProperty ;
+    rdfs:label "Criteria type" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType> .
+
+<https://openminds.ebrains.eu/vocab/inspiredBy> a owl:ObjectProperty ;
+    rdfs:label "Inspired by" ;
+    rdfs:comment "Reference to an inspiring element." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/File> .
+
+<https://openminds.ebrains.eu/vocab/laterality> a owl:ObjectProperty ;
+    rdfs:label "Laterality" ;
+    rdfs:comment "Differentiation between a pair of lateral homologous parts of the body." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/Laterality> .
+
+<https://openminds.ebrains.eu/vocab/preferredVisualization> a owl:ObjectProperty ;
+    rdfs:label "Preferred visualization" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/sands/ViewerSpecification> .
+
+<https://openminds.ebrains.eu/vocab/specification> a owl:ObjectProperty ;
+    rdfs:label "Specification" ;
+    rdfs:comment "Detailed and precise presentation of, or proposal for something." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/ContentType> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/stimulation/EphysStimulus> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Configuration> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/PropertyValueList> ) ] .
+
+<https://openminds.ebrains.eu/vocab/type> a owl:ObjectProperty ;
+    rdfs:label "Type" ;
+    rdfs:comment "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/chemicals/ChemicalMixture> <https://openminds.ebrains.eu/core/Contribution> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Setup> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/publications/LearningResource> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/stimulation/EphysStimulus> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AnnotationType> <https://openminds.ebrains.eu/controlledTerms/AtlasType> <https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/FileRepositoryType> <https://openminds.ebrains.eu/controlledTerms/LearningResourceType> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/SetupType> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ) ] .
+
+<https://openminds.ebrains.eu/sands/CustomAnnotation> a owl:Class ;
+    rdfs:label "Custom annotation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/criteriaQualityType> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/File> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/inspiredBy> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/PropertyValueList> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/specification> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/anchorPoint> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/ProtocolExecution> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/criteria> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/sands/CustomCoordinateSpace> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/AnnotationType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/criteriaType> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/ViewerSpecification> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/preferredVisualization> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Laterality> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/laterality> ] .
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N35e00d8b60cc473fa33ce0cc5ab7e986">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/parameter"/>
+    <owl:allValuesFrom rdf:nodeID="N2e12c7b9d78a4bbbb4dca8ef0013fbb0"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N958f7c90120a4940bba97d924f52ebcb">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Technique"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0bee3874a0f460480ecbb2e64e3646a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/NumericalParameter"/>
+    <rdf:rest rdf:nodeID="N807b1a2d91a54f4ca1f77c506e49a2d3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7aca02cb1af0488fa6cadd5b74d129c3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/BehavioralTask"/>
+    <rdf:rest rdf:nodeID="N958f7c90120a4940bba97d924f52ebcb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc902bb5e65f8495684c51fd53608fb50">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/BehavioralTask"/>
+    <rdf:rest rdf:nodeID="N093a361a3a284cda86c71c0faadf802b"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/context">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Context</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/ParameterSet"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/relevantFor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Relevant for</rdfs:label>
+    <rdfs:comment>Reference to what or whom something or someone bears significance.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/ParameterSet"/>
+    <rdfs:range rdf:nodeID="N4e0166776d1b46399b22c2500749f00d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8112920e2f184e3fa66088a535f430cb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc902bb5e65f8495684c51fd53608fb50"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2bb400c9a67d48ec8357651690b5f535">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N14a9a7b0b051466893f1bae58ff922f1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N093a361a3a284cda86c71c0faadf802b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Technique"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/ParameterSet">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Parameter set</rdfs:label>
+    <rdfs:comment>Structured information on a used parameter set.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Nb94f554ef23d4be3859fbc8b0fd3b732"/>
+    <rdfs:subClassOf rdf:nodeID="N35e00d8b60cc473fa33ce0cc5ab7e986"/>
+    <rdfs:subClassOf rdf:nodeID="Nf7c2258a0eff4682829475554f7679b5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2e12c7b9d78a4bbbb4dca8ef0013fbb0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc0bee3874a0f460480ecbb2e64e3646a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf7c2258a0eff4682829475554f7679b5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/relevantFor"/>
+    <owl:allValuesFrom rdf:nodeID="N8112920e2f184e3fa66088a535f430cb"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb94f554ef23d4be3859fbc8b0fd3b732">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/context"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Parameter</rdfs:label>
+    <rdfs:comment>Digital or physical property determining a particular function, characteristic or behavior of something.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/ParameterSet"/>
+    <rdfs:range rdf:nodeID="N2bb400c9a67d48ec8357651690b5f535"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f175e0eee5d4c11aedd8b853ff23918">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/StringParameter"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N807b1a2d91a54f4ca1f77c506e49a2d3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/StringParameter"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4e0166776d1b46399b22c2500749f00d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7aca02cb1af0488fa6cadd5b74d129c3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14a9a7b0b051466893f1bae58ff922f1">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/NumericalParameter"/>
+    <rdf:rest rdf:nodeID="N4f175e0eee5d4c11aedd8b853ff23918"/>
+  </rdf:Description>
+</rdf:RDF>

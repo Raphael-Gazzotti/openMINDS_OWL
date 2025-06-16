@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/holder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Holder</rdfs:label>
+    <rdfs:comment>Legal person in possession of something.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Copyright"/>
+    <rdfs:range rdf:nodeID="Ncf788ed5ac2f49d49de85d18ba2db793"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N27cb75dc473c442f86993d211ebddc7b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N075205e3facf4198bd7abce9e9a99da2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne8b80b0ed82c4893890e1466df3f39cc">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9c78b1508a546e39dd61fe87d8c5bad">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/year"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd4dbfc78d29c44b1b7482bbf855e3fb9">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:nodeID="N8b41330ee7554d199db132471b6c5443"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbafe0f7e0c374350a7e059526de8c352">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/year"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Copyright">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Copyright</rdfs:label>
+    <rdfs:comment>Structured information on the copyright.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N7330eb7d0dbe4a73a0eb681bc4d3c182"/>
+    <rdfs:subClassOf rdf:nodeID="Nd9c78b1508a546e39dd61fe87d8c5bad"/>
+    <rdfs:subClassOf rdf:nodeID="Nbafe0f7e0c374350a7e059526de8c352"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N075205e3facf4198bd7abce9e9a99da2">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Consortium"/>
+    <rdf:rest rdf:nodeID="Nd4dbfc78d29c44b1b7482bbf855e3fb9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7330eb7d0dbe4a73a0eb681bc4d3c182">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/holder"/>
+    <owl:allValuesFrom rdf:nodeID="N27cb75dc473c442f86993d211ebddc7b"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:label>Year</rdfs:label>
+    <rdfs:comment>Cycle in the Gregorian calendar specified by a number and comprised of 365 or 366 days divided into 12 months beginning with January and ending with December.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Copyright"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8b41330ee7554d199db132471b6c5443">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf788ed5ac2f49d49de85d18ba2db793">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nee248dacaa904e519cb4d645575d0d06"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N10c6491f739c408781f74561a213b4ff">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Organization"/>
+    <rdf:rest rdf:nodeID="Ne8b80b0ed82c4893890e1466df3f39cc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee248dacaa904e519cb4d645575d0d06">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Consortium"/>
+    <rdf:rest rdf:nodeID="N10c6491f739c408781f74561a213b4ff"/>
+  </rdf:Description>
+</rdf:RDF>

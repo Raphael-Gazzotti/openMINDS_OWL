@@ -1,0 +1,82 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/patternOfFilenames> a owl:DatatypeProperty ;
+    rdfs:label "Pattern of filenames" ;
+    rdfs:comment "Reliable sample / structure of characters valid for all names in a particular collection of files." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/FileBundle> ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/format> a owl:ObjectProperty ;
+    rdfs:label "Format" ;
+    rdfs:comment "Method of digitally organizing and structuring data or information." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/ModelVersion> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/ContentType> .
+
+<https://openminds.ebrains.eu/vocab/groupedBy> a owl:ObjectProperty ;
+    rdfs:label "Grouped by" ;
+    rdfs:comment "Reference to the aspect used to group something." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/FileBundle> ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> .
+
+<https://openminds.ebrains.eu/vocab/hash> a owl:ObjectProperty ;
+    rdfs:label "Hash" ;
+    rdfs:comment "Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/Hash> .
+
+<https://openminds.ebrains.eu/vocab/isPartOf> a owl:ObjectProperty ;
+    rdfs:label "Is part of" ;
+    rdfs:comment "Reference to the ensemble of multiple things or beings." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/sands/ParcellationEntity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/sands/ParcellationTerminology> ) ] .
+
+<https://openminds.ebrains.eu/vocab/name> a owl:DatatypeProperty ;
+    rdfs:label "Name" ;
+    rdfs:comment "Word or phrase that constitutes the distinctive designation of a being or thing." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AgeCategory> <https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation> <https://openminds.ebrains.eu/controlledTerms/BehavioralTask> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/EthicsAssessment> <https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach> <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> <https://openminds.ebrains.eu/controlledTerms/FileRepositoryType> <https://openminds.ebrains.eu/controlledTerms/FileUsageRole> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/Language> <https://openminds.ebrains.eu/controlledTerms/Laterality> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel> <https://openminds.ebrains.eu/controlledTerms/ModelScope> <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/Phenotype> <https://openminds.ebrains.eu/controlledTerms/PreparationType> <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> <https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap> <https://openminds.ebrains.eu/controlledTerms/SemanticDataType> <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/Strain> <https://openminds.ebrains.eu/controlledTerms/Technique> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> <https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement> <https://openminds.ebrains.eu/core/ContentType> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/NumericalParameter> <https://openminds.ebrains.eu/core/Protocol> <https://openminds.ebrains.eu/core/StringParameter> <https://openminds.ebrains.eu/sands/AtlasAnnotation> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/CustomAnnotation> <https://openminds.ebrains.eu/sands/CustomCoordinateSpace> <https://openminds.ebrains.eu/sands/ParcellationEntity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/storageSize> a owl:ObjectProperty ;
+    rdfs:label "Storage size" ;
+    rdfs:comment "Quantitative value defining how much disk space is used by an object on a computer system." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/QuantitativeValue> .
+
+<https://openminds.ebrains.eu/core/FileBundle> a owl:Class ;
+    rdfs:label "File bundle" ;
+    rdfs:comment "Structured information on a bundle of file instances." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Hash> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/hash> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/ContentType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/format> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/groupedBy> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/storageSize> ] .
+

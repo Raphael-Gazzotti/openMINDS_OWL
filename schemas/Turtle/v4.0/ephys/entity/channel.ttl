@@ -1,0 +1,30 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/internalIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Internal identifier" ;
+    rdfs:comment "Term or code that identifies someone or something within a particular product." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AtlasAnnotation> <https://openminds.om-i.org/types/BehavioralProtocol> <https://openminds.om-i.org/types/Channel> <https://openminds.om-i.org/types/CustomAnnotation> <https://openminds.om-i.org/types/Electrode> <https://openminds.om-i.org/types/ElectrodeArray> <https://openminds.om-i.org/types/EphysStimulus> <https://openminds.om-i.org/types/Pipette> <https://openminds.om-i.org/types/Recording> <https://openminds.om-i.org/types/RecordingActivity> <https://openminds.om-i.org/types/Subject> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectGroupState> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleCollectionState> <https://openminds.om-i.org/types/TissueSampleState> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/unit> a owl:ObjectProperty ;
+    rdfs:label "Unit" ;
+    rdfs:comment "Determinate quantity adopted as a standard of measurement." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Channel> <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueArray> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/UnitOfMeasurement> .
+
+<https://openminds.om-i.org/types/Channel> a owl:Class ;
+    rdfs:label "Channel" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/UnitOfMeasurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/unit> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/internalIdentifier> ] .
+
