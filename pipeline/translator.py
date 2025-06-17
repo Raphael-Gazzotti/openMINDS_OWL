@@ -129,7 +129,7 @@ class OWLSchemaBuilder(object):
         return
 
     def build(self):
-        target_file = os.path.join("target", "schemas", "Turtle", f"{self._target_file_without_extension()}.ttl")
+        target_file = os.path.join("target", "schemas", "Turtle", f"{self._target_file_without_extension()}.owl")
         os.makedirs(os.path.dirname(target_file), exist_ok=True)
         self.translate()
         self.graph.serialize(destination=target_file, format="ttl")
