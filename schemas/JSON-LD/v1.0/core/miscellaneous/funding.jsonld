@@ -26,6 +26,50 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/funder",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Legal person that provides money for a particular purpose."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Funding"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funder"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N036b507fecc643cc8d97ec95d292515f"
+      }
+    ]
+  },
+  {
+    "@id": "_:N036b507fecc643cc8d97ec95d292515f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/awardTitle",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -52,117 +96,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/core/Funding",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on used funding."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N3e91cdbdf1fa4453a3f7debedc8013b9"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3e91cdbdf1fa4453a3f7debedc8013b9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N75f29d1059bb440f9981102d119f6561"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/funder"
-      }
-    ]
-  },
-  {
-    "@id": "_:N75f29d1059bb440f9981102d119f6561",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/funder",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Legal person that provides money for a particular purpose."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Funding"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funder"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nce5690c618ac4530894a3ecdd45699b0"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nce5690c618ac4530894a3ecdd45699b0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/acknowledgement",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -185,6 +118,73 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/core/Funding",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on used funding."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N4bd42b1ae00145328a80508d1a736198"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4bd42b1ae00145328a80508d1a736198",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N4343c44ff2504ac99d34ced50d50923b"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/funder"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4343c44ff2504ac99d34ced50d50923b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          }
+        ]
       }
     ]
   }

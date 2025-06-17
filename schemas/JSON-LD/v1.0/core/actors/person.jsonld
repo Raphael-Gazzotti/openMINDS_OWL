@@ -1,12 +1,12 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/affiliation",
+    "@id": "https://openminds.ebrains.eu/vocab/familyName",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Declaration of a person being closely associated to an organization."
+        "@value": "Name borne in common by members of a family."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -16,116 +16,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Affiliation"
+        "@value": "Family name"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/core/Affiliation"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Digital handle to identify objects or legal persons."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N2d6f959864c6410f9b33141dd2d98fbd"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Digital identifier"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Na93ef395a4f34ce9993a09a2baacbe0b"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2d6f959864c6410f9b33141dd2d98fbd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Dataset"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/MetaDataModel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Model"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Software"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CoordinateSpace"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Na93ef395a4f34ce9993a09a2baacbe0b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/DOI"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DigitalIdentifier"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/GRIDID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ORCID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/RORID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SWHID"
-          }
-        ]
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -182,6 +78,32 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/affiliation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Declaration of a person being closely associated to an organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Affiliation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Affiliation"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/core/Person",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -198,21 +120,21 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Nf56f95e5ce0d40cf9f6e3ad6035ae6d2"
+        "@id": "_:N50d255297606490e8b5c23fa4bcfe6d0"
       },
       {
-        "@id": "_:Naceda9c3abe74aa98ab92178715ccd94"
+        "@id": "_:N01b9f7bc3be74d1da198605539e586d2"
       },
       {
-        "@id": "_:N6602f29952e44840a260db46c03097b3"
+        "@id": "_:N2616ad9e014147379bff7bf2e15346de"
       },
       {
-        "@id": "_:Nc3b298eb67484e119c33e3646cd1c563"
+        "@id": "_:N72ba136df3624fc183a4034d321b4c90"
       }
     ]
   },
   {
-    "@id": "_:Nf56f95e5ce0d40cf9f6e3ad6035ae6d2",
+    "@id": "_:N50d255297606490e8b5c23fa4bcfe6d0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -228,7 +150,7 @@
     ]
   },
   {
-    "@id": "_:Naceda9c3abe74aa98ab92178715ccd94",
+    "@id": "_:N01b9f7bc3be74d1da198605539e586d2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -250,7 +172,7 @@
     ]
   },
   {
-    "@id": "_:N6602f29952e44840a260db46c03097b3",
+    "@id": "_:N2616ad9e014147379bff7bf2e15346de",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -266,7 +188,7 @@
     ]
   },
   {
-    "@id": "_:Nc3b298eb67484e119c33e3646cd1c563",
+    "@id": "_:N72ba136df3624fc183a4034d321b4c90",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -283,28 +205,106 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/familyName",
+    "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Name borne in common by members of a family."
+        "@value": "Digital handle to identify objects or legal persons."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://openminds.ebrains.eu/core/Person"
+        "@id": "_:Ndafc00e6c0c940d0935e80f76757c724"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Family name"
+        "@value": "Digital identifier"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "_:N32875cb8603e4101bac34afa3a6c535a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndafc00e6c0c940d0935e80f76757c724",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Dataset"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/MetaDataModel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Model"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Software"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CoordinateSpace"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N32875cb8603e4101bac34afa3a6c535a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/DOI"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/DigitalIdentifier"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/GRIDID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ORCID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/RORID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SWHID"
+          }
+        ]
       }
     ]
   }

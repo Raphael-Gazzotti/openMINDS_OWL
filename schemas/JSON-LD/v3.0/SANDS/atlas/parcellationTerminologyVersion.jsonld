@@ -1,12 +1,89 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Parcellation terminology version"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nfe538ce2e025412580d751d131227cb5"
+      },
+      {
+        "@id": "_:N11a9bd4c96f6470baeb51af637f552d4"
+      },
+      {
+        "@id": "_:Nfd41e633b41d4e549c96522a21a52024"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfe538ce2e025412580d751d131227cb5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/File"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/dataLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N11a9bd4c96f6470baeb51af637f552d4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/hasEntity"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfd41e633b41d4e549c96522a21a52024",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/ontologyIdentifier"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/dataLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N460e2dc4396448f68ab50858defdfb52"
+        "@id": "_:N1ddac67810144ce58b0798dce573848a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -16,12 +93,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N6bbdd3cbc94f414a9109aca8877d7b31"
+        "@id": "_:N85887847036c4f5e90d0f6274e9a4a69"
       }
     ]
   },
   {
-    "@id": "_:N460e2dc4396448f68ab50858defdfb52",
+    "@id": "_:N1ddac67810144ce58b0798dce573848a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -48,7 +125,7 @@
     ]
   },
   {
-    "@id": "_:N6bbdd3cbc94f414a9109aca8877d7b31",
+    "@id": "_:N85887847036c4f5e90d0f6274e9a4a69",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -84,6 +161,63 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/hasEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N0be9a1f1143546a9b485bb1644f49f58"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Has entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Naa9c7d1fefc14a9c928b196ac3ffe64c"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0be9a1f1143546a9b485bb1644f49f58",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminology"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Naa9c7d1fefc14a9c928b196ac3ffe64c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/ontologyIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -95,7 +229,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N6986dabeb3dc469d9db7cb8cf2aa785e"
+        "@id": "_:Nf1d472830ade4cb882851ac7bddb24f9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -110,7 +244,7 @@
     ]
   },
   {
-    "@id": "_:N6986dabeb3dc469d9db7cb8cf2aa785e",
+    "@id": "_:Nf1d472830ade4cb882851ac7bddb24f9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -143,140 +277,6 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Parcellation terminology version"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N5952206b051440128258d4a8a9e5bf83"
-      },
-      {
-        "@id": "_:Nd31d9494c0c04b21a9534091f48b1b88"
-      },
-      {
-        "@id": "_:Nf7ec414f71034df4b423cfa9456edc66"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5952206b051440128258d4a8a9e5bf83",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/File"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/dataLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd31d9494c0c04b21a9534091f48b1b88",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/hasEntity"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf7ec414f71034df4b423cfa9456edc66",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/ontologyIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/hasEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N641432a51b3049d88765e2c204704263"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Has entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N69acf05e740945fbacc08b32f1ed7e4f"
-      }
-    ]
-  },
-  {
-    "@id": "_:N641432a51b3049d88765e2c204704263",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminology"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N69acf05e740945fbacc08b32f1ed7e4f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
           }
         ]
       }

@@ -1,5 +1,153 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A representation of an array of quantitative values, optionally with uncertainties."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quantitative value array"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N0da8adde23c241429c8ec77cfbcb3c7e"
+      },
+      {
+        "@id": "_:Na44b2e0d06e943d4a31ea7b36aa02c36"
+      },
+      {
+        "@id": "_:N794961c143224a4aa2a645166fd5ad90"
+      },
+      {
+        "@id": "_:Nba36157bc433458bac2018509ec99e34"
+      },
+      {
+        "@id": "_:Na4eaf466a0aa4925a149ae529a7e3b80"
+      },
+      {
+        "@id": "_:N09ea2d2545c045aba41fb54fdf7fdb28"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0da8adde23c241429c8ec77cfbcb3c7e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/negativeUncertainties"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na44b2e0d06e943d4a31ea7b36aa02c36",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/positiveUncertainties"
+      }
+    ]
+  },
+  {
+    "@id": "_:N794961c143224a4aa2a645166fd5ad90",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/typeOfUncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nba36157bc433458bac2018509ec99e34",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na4eaf466a0aa4925a149ae529a7e3b80",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/values"
+      }
+    ]
+  },
+  {
+    "@id": "_:N09ea2d2545c045aba41fb54fdf7fdb28",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/values"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/typeOfUncertainty",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -11,7 +159,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N47f1485d69a84be0ba85e88603047a65"
+        "@id": "_:N97b33eda23f94d8f9557b6123ba4e862"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -26,7 +174,7 @@
     ]
   },
   {
-    "@id": "_:N47f1485d69a84be0ba85e88603047a65",
+    "@id": "_:N97b33eda23f94d8f9557b6123ba4e862",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -38,6 +186,53 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/unit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Determinate quantity adopted as a standard of measurement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Na65324f652644b2c8340a75d50fe4463"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Unit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na65324f652644b2c8340a75d50fe4463",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Channel"
           }
         ]
       }
@@ -65,197 +260,23 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/unit",
+    "@id": "https://openminds.ebrains.eu/vocab/positiveUncertainties",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Determinate quantity adopted as a standard of measurement."
-      }
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N8890d99456e54765a021ff49f4bbc136"
+        "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Unit"
+        "@value": "Positive uncertainties"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8890d99456e54765a021ff49f4bbc136",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Channel"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A representation of an array of quantitative values, optionally with uncertainties."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Quantitative value array"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N7630861e78e9453ba95e08717eb89c77"
-      },
-      {
-        "@id": "_:N1ff25bfa2ff54a9189ed42ff96d34105"
-      },
-      {
-        "@id": "_:Na2f086c65c864f76a08bc1c493f0623f"
-      },
-      {
-        "@id": "_:N618da868b43f4d23a57d37a39dcc87ea"
-      },
-      {
-        "@id": "_:N050d662d058940769f87cae5a13ef571"
-      },
-      {
-        "@id": "_:Ndb2c8a2729ef403fa53fbcd425f2a40c"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7630861e78e9453ba95e08717eb89c77",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/negativeUncertainties"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1ff25bfa2ff54a9189ed42ff96d34105",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/positiveUncertainties"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na2f086c65c864f76a08bc1c493f0623f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/typeOfUncertainty"
-      }
-    ]
-  },
-  {
-    "@id": "_:N618da868b43f4d23a57d37a39dcc87ea",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/unit"
-      }
-    ]
-  },
-  {
-    "@id": "_:N050d662d058940769f87cae5a13ef571",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/values"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndb2c8a2729ef403fa53fbcd425f2a40c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/values"
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
       }
     ]
   },
@@ -272,27 +293,6 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "Values"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/positiveUncertainties",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/QuantitativeValueArray"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Positive uncertainties"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [

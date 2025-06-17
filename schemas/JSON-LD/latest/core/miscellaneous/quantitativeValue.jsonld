@@ -1,5 +1,49 @@
 [
   {
+    "@id": "https://openminds.om-i.org/props/typeOfUncertainty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Distinct technique used to quantify the uncertainty of a measurement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nca39dc20116947d8a1853edd5875e123"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Type of uncertainty"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nca39dc20116947d8a1853edd5875e123",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/unit",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -11,7 +55,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N71409f311e0547c8ae9edfae0c0d066b"
+        "@id": "_:Ne6d70f1b5ad0415b993037598278e7aa"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -26,7 +70,7 @@
     ]
   },
   {
-    "@id": "_:N71409f311e0547c8ae9edfae0c0d066b",
+    "@id": "_:Ne6d70f1b5ad0415b993037598278e7aa",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -43,6 +87,114 @@
             "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/QuantitativeValue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on a quantitative value."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quantitative value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N36baecc248f74257893d3f04f6fc0c83"
+      },
+      {
+        "@id": "_:N0cf7c2d7e90b496bb64cb65ffd4dc145"
+      },
+      {
+        "@id": "_:N093b2ec862a942ea97b1fbc023f9777c"
+      },
+      {
+        "@id": "_:N6e66e968d70b47e89c0b51264623b972"
+      }
+    ]
+  },
+  {
+    "@id": "_:N36baecc248f74257893d3f04f6fc0c83",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/typeOfUncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0cf7c2d7e90b496bb64cb65ffd4dc145",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/uncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:N093b2ec862a942ea97b1fbc023f9777c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6e66e968d70b47e89c0b51264623b972",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/value"
       }
     ]
   },
@@ -73,158 +225,6 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/typeOfUncertainty",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Distinct technique used to quantify the uncertainty of a measurement."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N87454df27954432daf4e2f065cb8f08b"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Type of uncertainty"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
-      }
-    ]
-  },
-  {
-    "@id": "_:N87454df27954432daf4e2f065cb8f08b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/QuantitativeValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on a quantitative value."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Quantitative value"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nf99a405387f943bfa63d472da67bdc73"
-      },
-      {
-        "@id": "_:Ndc44c4dfde63459b8e083fbcbacdc408"
-      },
-      {
-        "@id": "_:Ne5c1391175e149fb9a01363316b145b0"
-      },
-      {
-        "@id": "_:N32178cc467ae4892af603fbb004d0f62"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf99a405387f943bfa63d472da67bdc73",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/typeOfUncertainty"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndc44c4dfde63459b8e083fbcbacdc408",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/uncertainty"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne5c1391175e149fb9a01363316b145b0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/unit"
-      }
-    ]
-  },
-  {
-    "@id": "_:N32178cc467ae4892af603fbb004d0f62",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/value"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/value",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -236,7 +236,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Neccb3d4b1c8f4272a7c231ad60bc0756"
+        "@id": "_:N00ee779cc6ed4fbb8347b63d3dc10976"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -249,12 +249,12 @@
         "@id": "http://www.w3.org/2001/XMLSchema#decimal"
       },
       {
-        "@id": "_:Naf81c282605a4b8b8da080d56e305929"
+        "@id": "_:N7c9ffbe0a19f425e91c0209b5b679f08"
       }
     ]
   },
   {
-    "@id": "_:Naf81c282605a4b8b8da080d56e305929",
+    "@id": "_:N7c9ffbe0a19f425e91c0209b5b679f08",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -272,7 +272,7 @@
     ]
   },
   {
-    "@id": "_:Neccb3d4b1c8f4272a7c231ad60bc0756",
+    "@id": "_:N00ee779cc6ed4fbb8347b63d3dc10976",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

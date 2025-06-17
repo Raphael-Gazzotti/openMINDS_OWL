@@ -4,12 +4,22 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/digest">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>Digest</rdfs:label>
-    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
+  <rdf:Description rdf:nodeID="N3009ebcde2e545149cca7a1700b6934c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/algorithm"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0c58ca5bc16a45d58629efbb86f973d4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/digest"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Hash</rdfs:label>
+    <rdfs:comment>Structured information on a hash.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N3009ebcde2e545149cca7a1700b6934c"/>
+    <rdfs:subClassOf rdf:nodeID="N0c58ca5bc16a45d58629efbb86f973d4"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/algorithm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -18,21 +28,11 @@
     <rdfs:comment>Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/types/Hash">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Hash</rdfs:label>
-    <rdfs:comment>Structured information on a hash.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N65d1c1adaf4348e191be264f32dfbc68"/>
-    <rdfs:subClassOf rdf:nodeID="N1160c376e926463fa22b647966497357"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N65d1c1adaf4348e191be264f32dfbc68">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/algorithm"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1160c376e926463fa22b647966497357">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/digest"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/digest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Digest</rdfs:label>
+    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
   </rdf:Description>
 </rdf:RDF>

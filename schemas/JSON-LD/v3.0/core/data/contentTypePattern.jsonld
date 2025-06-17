@@ -1,12 +1,72 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/contentType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Content type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ContentType"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/regex",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N2f60cb2b45694b7ea182f960888c6c03"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Regex"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2f60cb2b45694b7ea182f960888c6c03",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FilePathPattern"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N89ebf5ba5d8249ef87ec60145e2f9d12"
+        "@id": "_:N751f302cbcc7484bb27b249b2296ae43"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -21,7 +81,7 @@
     ]
   },
   {
-    "@id": "_:N89ebf5ba5d8249ef87ec60145e2f9d12",
+    "@id": "_:N751f302cbcc7484bb27b249b2296ae43",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -144,45 +204,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/regex",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ne0d749bb43d24a22bdbf43af939ebb66"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Regex"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne0d749bb43d24a22bdbf43af939ebb66",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FilePathPattern"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/core/ContentTypePattern",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -194,15 +215,15 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Ne528dc6023384bb0b495c2d128cf86db"
+        "@id": "_:N5df713ed404646f1aaecb0a3cf14a569"
       },
       {
-        "@id": "_:Nac51681fd2784c1eae7280d997ae1638"
+        "@id": "_:Nc9538e635e6c4ad1aa6cb2a7bdfe00ba"
       }
     ]
   },
   {
-    "@id": "_:Ne528dc6023384bb0b495c2d128cf86db",
+    "@id": "_:N5df713ed404646f1aaecb0a3cf14a569",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -230,7 +251,7 @@
     ]
   },
   {
-    "@id": "_:Nac51681fd2784c1eae7280d997ae1638",
+    "@id": "_:Nc9538e635e6c4ad1aa6cb2a7bdfe00ba",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -243,27 +264,6 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "https://openminds.ebrains.eu/vocab/regex"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/contentType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Content type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ContentType"
       }
     ]
   }

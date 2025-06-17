@@ -4,59 +4,64 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="Nbb0beb2bfe2243f8a1d6c3dee2784e2d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/criteria"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/inRelationTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>In relation to</rdfs:label>
+    <rdfs:comment>Reference to a related element.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N1be451de617c477cbe597823e667250b"/>
+    <rdfs:range rdf:nodeID="N11499f75ebe3494eac30ed65ee60b1d1"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7e3b1918e8ee4f2c9d5c784437178afb">
+  <rdf:Description rdf:nodeID="N7f6d4f70f9254e598eb134d4e004b6d1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/inRelationTo"/>
+    <owl:allValuesFrom rdf:nodeID="N3b9067afb0fd49d0b81879e06b132e9c"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc70e91f0261c4db8a792bae5ddabc065">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AtlasAnnotation"/>
+    <rdf:rest rdf:nodeID="N29f5ade9349940129048cda8cc8c0928"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nedcbf60539f5435083064c8ef0063cd6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"/>
+    <rdf:rest rdf:nodeID="N9a4aa9e7eacd46e3953f299dab134f5e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N70bc6e0ea9c448318c625b3c1f47db13">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/QuantitativeRelationAssessment"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfb1fcfd6ca6846f6979c5ecaf8e6d871">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/qualitativeOverlap"/>
     <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndaf96006087e4235aa478542a10b1dde">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"/>
+    <rdf:rest rdf:nodeID="N6db9590ed0d34af8bf9f989a83db068a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne3d5298d0e724e8689810cead352b02b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntityVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/sands/QualitativeRelationAssessment">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Qualitative relation assessment</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="Nbb0beb2bfe2243f8a1d6c3dee2784e2d"/>
-    <rdfs:subClassOf rdf:nodeID="Nb072d2e4bf4940eebcffb2b023b46cbe"/>
-    <rdfs:subClassOf rdf:nodeID="N7e3b1918e8ee4f2c9d5c784437178afb"/>
+    <rdfs:subClassOf rdf:nodeID="N7aca06182ba04213a6926a4441c97a2a"/>
+    <rdfs:subClassOf rdf:nodeID="N7f6d4f70f9254e598eb134d4e004b6d1"/>
+    <rdfs:subClassOf rdf:nodeID="Nfb1fcfd6ca6846f6979c5ecaf8e6d871"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1be451de617c477cbe597823e667250b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nffa82ab7255f4299bf899a7fe58464d8"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/criteria">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Criteria</rdfs:label>
     <rdfs:comment>Aspects or standards on which a judgement or decision is based.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N21e877569a834d34985f4a741318d0fe"/>
+    <rdfs:domain rdf:nodeID="N99c576e7b9394f41b6e8e801fc7f80bb"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N95089020a94b4219921c80d09df0d4f9">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntity"/>
-    <rdf:rest rdf:nodeID="Nf6355780a30a446a9d659036a15f2974"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N75556e231ce34503bd4aadf7df56d71b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/QuantitativeRelationAssessment"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N21e877569a834d34985f4a741318d0fe">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N6749ea13e4d24f918c2d19e76df0f735"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1c7fa5baa9d241f9949aff997948391a">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nf20ff3e04f8b4f90a4d3af47942a5881"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb072d2e4bf4940eebcffb2b023b46cbe">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/inRelationTo"/>
-    <owl:allValuesFrom rdf:nodeID="Ne8e2f2539823485f8df9a1529c5b459f"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne8e2f2539823485f8df9a1529c5b459f">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nd30bc60148524e569036b95982517edb"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/qualitativeOverlap">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -65,55 +70,50 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/QualitativeRelationAssessment"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd30bc60148524e569036b95982517edb">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"/>
-    <rdf:rest rdf:nodeID="N95089020a94b4219921c80d09df0d4f9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6749ea13e4d24f918c2d19e76df0f735">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AtlasAnnotation"/>
-    <rdf:rest rdf:nodeID="Nde1c951f209f4b6e88ce1c878e43a9d6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf20ff3e04f8b4f90a4d3af47942a5881">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"/>
-    <rdf:rest rdf:nodeID="N75b17e6293a047b2a019e8d1996db85a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N51d6866aeabd4797a7cd77c690e4754d">
+  <rdf:Description rdf:nodeID="Nc2c4619844524b2cbbafcd85bb73b016">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/QualitativeRelationAssessment"/>
-    <rdf:rest rdf:nodeID="N75556e231ce34503bd4aadf7df56d71b"/>
+    <rdf:rest rdf:nodeID="N70bc6e0ea9c448318c625b3c1f47db13"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncdab48605b6d469583e899ac629cc955">
+  <rdf:Description rdf:nodeID="N9a4aa9e7eacd46e3953f299dab134f5e">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntity"/>
+    <rdf:rest rdf:nodeID="Ne3d5298d0e724e8689810cead352b02b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N282e927f2920464db7d52cbf257cf5f7">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntityVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b9067afb0fd49d0b81879e06b132e9c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N51d6866aeabd4797a7cd77c690e4754d"/>
+    <owl:unionOf rdf:nodeID="Nedcbf60539f5435083064c8ef0063cd6"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/inRelationTo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>In relation to</rdfs:label>
-    <rdfs:comment>Reference to a related element.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Ncdab48605b6d469583e899ac629cc955"/>
-    <rdfs:range rdf:nodeID="N1c7fa5baa9d241f9949aff997948391a"/>
+  <rdf:Description rdf:nodeID="N29f5ade9349940129048cda8cc8c0928">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnnotation"/>
+    <rdf:rest rdf:nodeID="Nc2c4619844524b2cbbafcd85bb73b016"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2626cb8ff7cb4fd58a5ce70a46e53ae6">
+  <rdf:Description rdf:nodeID="N7aca06182ba04213a6926a4441c97a2a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/criteria"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nffa82ab7255f4299bf899a7fe58464d8">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/QualitativeRelationAssessment"/>
+    <rdf:rest rdf:nodeID="N8490f635a44347c2856f271ae67c573e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8490f635a44347c2856f271ae67c573e">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/QuantitativeRelationAssessment"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf6355780a30a446a9d659036a15f2974">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntityVersion"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="N11499f75ebe3494eac30ed65ee60b1d1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Ndaf96006087e4235aa478542a10b1dde"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N76cce66053bf4be598a0c1504fda1643">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntityVersion"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nde1c951f209f4b6e88ce1c878e43a9d6">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnnotation"/>
-    <rdf:rest rdf:nodeID="Nb0f598d09ae044c7a42e6ed41714ce27"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N75b17e6293a047b2a019e8d1996db85a">
+  <rdf:Description rdf:nodeID="N6db9590ed0d34af8bf9f989a83db068a">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ParcellationEntity"/>
-    <rdf:rest rdf:nodeID="N76cce66053bf4be598a0c1504fda1643"/>
+    <rdf:rest rdf:nodeID="N282e927f2920464db7d52cbf257cf5f7"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb0f598d09ae044c7a42e6ed41714ce27">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/QualitativeRelationAssessment"/>
-    <rdf:rest rdf:nodeID="N2626cb8ff7cb4fd58a5ce70a46e53ae6"/>
+  <rdf:Description rdf:nodeID="N99c576e7b9394f41b6e8e801fc7f80bb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc70e91f0261c4db8a792bae5ddabc065"/>
   </rdf:Description>
 </rdf:RDF>

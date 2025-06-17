@@ -1,135 +1,12 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/core/ContentType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on the content type of a file instance, bundle or repository."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Content type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N4371f904710e4f919d92b48b216840ce"
-      },
-      {
-        "@id": "_:Neda1afcbbac240fea0366bdf457d0392"
-      },
-      {
-        "@id": "_:Na9f8e886846c4eeca75b8156c7e308cd"
-      },
-      {
-        "@id": "_:N01b05d9d1e2f4e6f8b9ff6ce489d99b1"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4371f904710e4f919d92b48b216840ce",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/DataType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/dataType"
-      }
-    ]
-  },
-  {
-    "@id": "_:Neda1afcbbac240fea0366bdf457d0392",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/fileExtension"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na9f8e886846c4eeca75b8156c7e308cd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:N01b05d9d1e2f4e6f8b9ff6ce489d99b1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/synonym"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/relatedMediaType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Reference to an official two-part identifier for file formats and format contents."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ContentType"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Related media type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/displayLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N5e71194f7a5c480496dc957720da3df1"
+        "@id": "_:N25a9b19cec2446b6856c7ad8fe860ec5"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -144,7 +21,7 @@
     ]
   },
   {
-    "@id": "_:N5e71194f7a5c480496dc957720da3df1",
+    "@id": "_:N25a9b19cec2446b6856c7ad8fe860ec5",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -162,6 +39,95 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/dataType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nbbbc0d4b44074d3d87cc6c748b75780e"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Data type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N5512d36034904604847ba64dfdf32229"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbbbc0d4b44074d3d87cc6c748b75780e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ContentType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N5512d36034904604847ba64dfdf32229",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/DataType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/fileExtension",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "String of characters attached as suffix to the names of files of a particular format."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ContentType"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "File extension"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -173,7 +139,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nbedcd9cbd54f44f2b390765ed6aceb6d"
+        "@id": "_:N70d5ee8713b847aeb7320a7473b9596f"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -188,7 +154,7 @@
     ]
   },
   {
-    "@id": "_:Nbedcd9cbd54f44f2b390765ed6aceb6d",
+    "@id": "_:N70d5ee8713b847aeb7320a7473b9596f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -541,7 +507,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nac5c728686224f068d17066502734aec"
+        "@id": "_:N1f474096be044e38aa6f13f50bfeb0ba"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -556,7 +522,7 @@
     ]
   },
   {
-    "@id": "_:Nac5c728686224f068d17066502734aec",
+    "@id": "_:N1f474096be044e38aa6f13f50bfeb0ba",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -946,13 +912,187 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/fileExtension",
+    "@id": "https://openminds.ebrains.eu/vocab/specification",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "String of characters attached as suffix to the names of files of a particular format."
+        "@value": "Detailed and precise presentation of, or proposal for something."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N96438744ff854bc8a1130e5025d3bbc8"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Specification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+        "@id": "_:N7ee836a312864a46a1267e3441c93d83"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7ee836a312864a46a1267e3441c93d83",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N96438744ff854bc8a1130e5025d3bbc8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/ContentType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/core/ContentType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on the content type of a file instance, bundle or repository."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Content type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nbc4892dcf88246e6895ef9d635c09b6e"
+      },
+      {
+        "@id": "_:N304a898562c34ffe9a554632a9917b7c"
+      },
+      {
+        "@id": "_:N26c3bc9d790b4246b45a79c40f58ab7f"
+      },
+      {
+        "@id": "_:N128c7ee4c7904f6fa223bccbcf3b663d"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbc4892dcf88246e6895ef9d635c09b6e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/DataType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/dataType"
+      }
+    ]
+  },
+  {
+    "@id": "_:N304a898562c34ffe9a554632a9917b7c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/fileExtension"
+      }
+    ]
+  },
+  {
+    "@id": "_:N26c3bc9d790b4246b45a79c40f58ab7f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/name"
+      }
+    ]
+  },
+  {
+    "@id": "_:N128c7ee4c7904f6fa223bccbcf3b663d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/synonym"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/relatedMediaType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Reference to an official two-part identifier for file formats and format contents."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -962,12 +1102,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "File extension"
+        "@value": "Related media type"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -983,7 +1123,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N14834d56b79547d18d5d9ff263df88bb"
+        "@id": "_:Nd3a74223e85346ed8da1bf080eff9920"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -998,7 +1138,7 @@
     ]
   },
   {
-    "@id": "_:N14834d56b79547d18d5d9ff263df88bb",
+    "@id": "_:Nd3a74223e85346ed8da1bf080eff9920",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1244,146 +1384,6 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/core/Strain"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/dataType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N634152ff0e7b4f2986b021a35880d34d"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Data type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nea29924707c34c00a08773381cd7c92b"
-      }
-    ]
-  },
-  {
-    "@id": "_:N634152ff0e7b4f2986b021a35880d34d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ContentType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nea29924707c34c00a08773381cd7c92b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/DataType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/specification",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Detailed and precise presentation of, or proposal for something."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N7c5a000232f841509a531fe079723138"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Specification"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      {
-        "@id": "_:N0acfd51b77d44b17ad64184b56dbda3d"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0acfd51b77d44b17ad64184b56dbda3d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N7c5a000232f841509a531fe079723138",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/ContentType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
           }
         ]
       }

@@ -1,83 +1,27 @@
 [
   {
-    "@id": "https://openminds.om-i.org/types/Measurement",
+    "@id": "https://openminds.om-i.org/props/measuredWith",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@value": "Structured information about a measurement performed during a scientific experiment."
+        "@id": "https://openminds.om-i.org/types/Measurement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Measurement"
+        "@value": "Measured with"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N662faca2eb154f79b00f805f4114bd4f"
-      },
-      {
-        "@id": "_:Nf6fcede9df87431baed1610fc1d88360"
-      },
-      {
-        "@id": "_:Nda378110e5a746e3b780df4826eed66f"
+        "@id": "_:N8d35a90eb89b43248d22f64ad5413090"
       }
     ]
   },
   {
-    "@id": "_:N662faca2eb154f79b00f805f4114bd4f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/MeasuredQuantity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/measuredQuantity"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf6fcede9df87431baed1610fc1d88360",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N325e0dba343f4dcea240c000e2b221a7"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/measuredWith"
-      }
-    ]
-  },
-  {
-    "@id": "_:N325e0dba343f4dcea240c000e2b221a7",
+    "@id": "_:N8d35a90eb89b43248d22f64ad5413090",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -101,177 +45,6 @@
     ]
   },
   {
-    "@id": "_:Nda378110e5a746e3b780df4826eed66f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N32aba90f1f0a487db68936a9ace1ff2d"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/value"
-      }
-    ]
-  },
-  {
-    "@id": "_:N32aba90f1f0a487db68936a9ace1ff2d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/timestamp",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ncc12e284f7834b8faee9e54cb3262df1"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Timestamp"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncc12e284f7834b8faee9e54cb3262df1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Comment"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Measurement"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/value",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Entry for a property."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nd5acf098a5c14b1c843c7158fa34ebc3"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Value"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Ne4684bcb79bb47089d65f397e1149ec1"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd5acf098a5c14b1c843c7158fa34ebc3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Measurement"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/NumericalProperty"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SingleColor"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/StringProperty"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne4684bcb79bb47089d65f397e1149ec1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/measuredQuantity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Measured quantity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/MeasuredQuantity"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/additionalRemarks",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -283,7 +56,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N7e7bf005693a43bb81b6876e6f0bd749"
+        "@id": "_:Nbf98fcc2c0e8486491e927ab70bead35"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -298,7 +71,7 @@
     ]
   },
   {
-    "@id": "_:N7e7bf005693a43bb81b6876e6f0bd749",
+    "@id": "_:Nbf98fcc2c0e8486491e927ab70bead35",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -349,7 +122,7 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/measuredWith",
+    "@id": "https://openminds.om-i.org/props/measuredQuantity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -360,17 +133,133 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Measured with"
+        "@value": "Measured quantity"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N4f22c93c0c034080980055d7b1efd454"
+        "@id": "https://openminds.om-i.org/types/MeasuredQuantity"
       }
     ]
   },
   {
-    "@id": "_:N4f22c93c0c034080980055d7b1efd454",
+    "@id": "https://openminds.om-i.org/props/timestamp",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N74faae2404be4528827beff680e627c9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Timestamp"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N74faae2404be4528827beff680e627c9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Comment"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Measurement"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/Measurement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about a measurement performed during a scientific experiment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Ndfdb06ea28b74dc8aee09700a951de99"
+      },
+      {
+        "@id": "_:Nf3066fe8658242439278e4b0abca0148"
+      },
+      {
+        "@id": "_:N38bb658605e442a5a0bba3c22264833e"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndfdb06ea28b74dc8aee09700a951de99",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/MeasuredQuantity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/measuredQuantity"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf3066fe8658242439278e4b0abca0148",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N7bbc17b0bef74e098001843d835d0be0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/measuredWith"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7bbc17b0bef74e098001843d835d0be0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -388,6 +277,117 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N38bb658605e442a5a0bba3c22264833e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N82b1677f7a304a1c81e43beb747d8ae1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:N82b1677f7a304a1c81e43beb747d8ae1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/value",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Entry for a property."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nf01531b9128c4062ab7af74cc11dfd1a"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Value"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N5bef348ed9f745889f6084f29b633e68"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf01531b9128c4062ab7af74cc11dfd1a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Measurement"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/NumericalProperty"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SingleColor"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/StringProperty"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N5bef348ed9f745889f6084f29b633e68",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
           }
         ]
       }

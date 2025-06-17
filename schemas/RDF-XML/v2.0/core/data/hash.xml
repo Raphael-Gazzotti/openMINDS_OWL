@@ -4,6 +4,18 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:nodeID="Nce80d81b36564c029ccb29d8d9a3955b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Digest</rdfs:label>
+    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/algorithm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -15,22 +27,10 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Hash</rdfs:label>
     <rdfs:comment>Structured information on a hash.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N788ac25a9b7346b098e0bbda1ed0bf44"/>
-    <rdfs:subClassOf rdf:nodeID="N132a681d0ac34e1f82538db2673f5649"/>
+    <rdfs:subClassOf rdf:nodeID="N770aa1b321dc4b018c08b110c739ced2"/>
+    <rdfs:subClassOf rdf:nodeID="Nce80d81b36564c029ccb29d8d9a3955b"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>Digest</rdfs:label>
-    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N132a681d0ac34e1f82538db2673f5649">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N788ac25a9b7346b098e0bbda1ed0bf44">
+  <rdf:Description rdf:nodeID="N770aa1b321dc4b018c08b110c739ced2">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/algorithm"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>

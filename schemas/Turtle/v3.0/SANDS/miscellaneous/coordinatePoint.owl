@@ -1,0 +1,32 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/coordinateSpace> a owl:ObjectProperty ;
+    rdfs:label "Coordinate space" ;
+    rdfs:comment "Two or three dimensional geometric setting." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinatePoint> <https://openminds.ebrains.eu/sands/CustomAnnotation> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/sands/CustomCoordinateSpace> ) ] .
+
+<https://openminds.ebrains.eu/vocab/coordinates> a owl:ObjectProperty ;
+    rdfs:label "Coordinates" ;
+    rdfs:comment "Pair or triplet of numbers defining a location in a given coordinate space." ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/CoordinatePoint> ;
+    rdfs:range <https://openminds.ebrains.eu/core/QuantitativeValue> .
+
+<https://openminds.ebrains.eu/sands/CoordinatePoint> a owl:Class ;
+    rdfs:label "Coordinate point" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/sands/CustomCoordinateSpace> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinates> ] .
+

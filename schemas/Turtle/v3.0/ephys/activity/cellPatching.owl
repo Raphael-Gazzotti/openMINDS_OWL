@@ -1,0 +1,178 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/description> a owl:DatatypeProperty ;
+    rdfs:label "Description" ;
+    rdfs:comment "Longer statement or account giving the characteristics of someone or something." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/Environment> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/HardwareSystem> <https://openminds.ebrains.eu/computation/LaunchConfiguration> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/ValidationTest> <https://openminds.ebrains.eu/computation/ValidationTestVersion> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/computation/WorkflowRecipe> <https://openminds.ebrains.eu/computation/WorkflowRecipeVersion> <https://openminds.ebrains.eu/controlledTerms/ActionStatusType> <https://openminds.ebrains.eu/controlledTerms/AgeCategory> <https://openminds.ebrains.eu/controlledTerms/AnalysisTechnique> <https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation> <https://openminds.ebrains.eu/controlledTerms/AnatomicalIdentificationType> <https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane> <https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType> <https://openminds.ebrains.eu/controlledTerms/AnnotationType> <https://openminds.ebrains.eu/controlledTerms/AtlasType> <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalProcess> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType> <https://openminds.ebrains.eu/controlledTerms/Colormap> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType> <https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType> <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> <https://openminds.ebrains.eu/controlledTerms/DataType> <https://openminds.ebrains.eu/controlledTerms/DeviceType> <https://openminds.ebrains.eu/controlledTerms/DifferenceMeasure> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/EducationalLevel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/EthicsAssessment> <https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach> <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> <https://openminds.ebrains.eu/controlledTerms/FileRepositoryType> <https://openminds.ebrains.eu/controlledTerms/FileUsageRole> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/Language> <https://openminds.ebrains.eu/controlledTerms/Laterality> <https://openminds.ebrains.eu/controlledTerms/LearningResourceType> <https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity> <https://openminds.ebrains.eu/controlledTerms/MeasuredSignalType> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel> <https://openminds.ebrains.eu/controlledTerms/ModelScope> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/PatchClampVariation> <https://openminds.ebrains.eu/controlledTerms/PreparationType> <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> <https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap> <https://openminds.ebrains.eu/controlledTerms/SemanticDataType> <https://openminds.ebrains.eu/controlledTerms/Service> <https://openminds.ebrains.eu/controlledTerms/SetupType> <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/StimulationApproach> <https://openminds.ebrains.eu/controlledTerms/StimulationTechnique> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/SubjectAttribute> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/Technique> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/controlledTerms/TissueSampleAttribute> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> <https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> <https://openminds.ebrains.eu/core/BehavioralProtocol> <https://openminds.ebrains.eu/core/ContentType> <https://openminds.ebrains.eu/core/Dataset> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModel> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Model> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/Project> <https://openminds.ebrains.eu/core/Protocol> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/core/Setup> <https://openminds.ebrains.eu/core/Software> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/core/Strain> <https://openminds.ebrains.eu/core/WebService> <https://openminds.ebrains.eu/core/WebServiceVersion> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/Electrode> <https://openminds.ebrains.eu/ephys/ElectrodeArray> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/Pipette> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/publications/LivePaper> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/publications/LivePaperVersion> <https://openminds.ebrains.eu/sands/BrainAtlas> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CommonCoordinateSpace> <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/specimenPrep/SlicingDevice> <https://openminds.ebrains.eu/stimulation/EphysStimulus> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/endTime> a owl:DatatypeProperty ;
+    rdfs:label "End time" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/lookupLabel> a owl:DatatypeProperty ;
+    rdfs:label "Lookup label" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/chemicals/ChemicalSubstance> <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/Configuration> <https://openminds.ebrains.eu/core/ContentTypePattern> <https://openminds.ebrains.eu/core/FileRepositoryStructure> <https://openminds.ebrains.eu/core/PropertyValueList> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/Electrode> <https://openminds.ebrains.eu/ephys/ElectrodeArray> <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/Pipette> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/specimenPrep/SlicingDevice> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> <https://openminds.ebrains.eu/stimulation/EphysStimulus> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/startTime> a owl:DatatypeProperty ;
+    rdfs:label "Start time" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/bathTemperature> a owl:ObjectProperty ;
+    rdfs:label "Bath temperature" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/CellPatching> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/QuantitativeValueRange> ) ] .
+
+<https://openminds.ebrains.eu/vocab/customPropertySet> a owl:ObjectProperty ;
+    rdfs:label "Custom property set" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/CustomPropertySet> .
+
+<https://openminds.ebrains.eu/vocab/device> a owl:ObjectProperty ;
+    rdfs:label "Device" ;
+    rdfs:comment "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> <https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/ephys/Electrode> <https://openminds.ebrains.eu/ephys/ElectrodeArray> <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/Pipette> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/specimenPrep/SlicingDevice> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] .
+
+<https://openminds.ebrains.eu/vocab/input> a owl:ObjectProperty ;
+    rdfs:label "Input" ;
+    rdfs:comment "Something or someone that is put into or participates in a process or machine." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation> <https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/LocalFile> <https://openminds.ebrains.eu/computation/ValidationTestVersion> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/isPartOf> a owl:ObjectProperty ;
+    rdfs:label "Is part of" ;
+    rdfs:comment "Reference to the ensemble of multiple things or beings." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/publications/Chapter> <https://openminds.ebrains.eu/publications/LivePaperResourceItem> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/publications/PublicationIssue> <https://openminds.ebrains.eu/publications/PublicationVolume> <https://openminds.ebrains.eu/publications/ScholarlyArticle> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/publications/Book> <https://openminds.ebrains.eu/publications/LivePaperSection> <https://openminds.ebrains.eu/publications/LivePaperVersion> <https://openminds.ebrains.eu/publications/Periodical> <https://openminds.ebrains.eu/publications/PublicationIssue> <https://openminds.ebrains.eu/publications/PublicationVolume> ) ] .
+
+<https://openminds.ebrains.eu/vocab/output> a owl:ObjectProperty ;
+    rdfs:label "Output" ;
+    rdfs:comment "Something or someone that comes out of, is delivered or produced by a process or machine." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation> <https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/LocalFile> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileArchive> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> ) ] .
+
+<https://openminds.ebrains.eu/vocab/performedBy> a owl:ObjectProperty ;
+    rdfs:label "Performed by" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/SoftwareAgent> <https://openminds.ebrains.eu/core/Person> ) ] .
+
+<https://openminds.ebrains.eu/vocab/preparationDesign> a owl:ObjectProperty ;
+    rdfs:label "Preparation design" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/PreparationType> .
+
+<https://openminds.ebrains.eu/vocab/protocol> a owl:ObjectProperty ;
+    rdfs:label "Protocol" ;
+    rdfs:comment "Plan that describes the process of a scientific or medical experiment, treatment, or procedure." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/core/Protocol> .
+
+<https://openminds.ebrains.eu/vocab/studyTarget> a owl:ObjectProperty ;
+    rdfs:label "Study target" ;
+    rdfs:comment "Structure or function that was targeted within a study." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/ValidationTest> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/Model> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/targetPosition> a owl:ObjectProperty ;
+    rdfs:label "Target position" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/sands/AnatomicalTargetPosition> .
+
+<https://openminds.ebrains.eu/vocab/tissueBathSolution> a owl:ObjectProperty ;
+    rdfs:label "Tissue bath solution" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/chemicals/ChemicalMixture> .
+
+<https://openminds.ebrains.eu/vocab/variation> a owl:ObjectProperty ;
+    rdfs:label "Variation" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/CellPatching> ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/PatchClampVariation> .
+
+<https://openminds.ebrains.eu/ephys/CellPatching> a owl:Class ;
+    rdfs:label "Cell patching" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/chemicals/ChemicalMixture> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/tissueBathSolution> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/CustomPropertySet> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/customPropertySet> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/computation/SoftwareAgent> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/performedBy> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/PreparationType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/preparationDesign> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/AnatomicalTargetPosition> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/targetPosition> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/core/SubjectState> ) ] ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/output> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/QuantitativeValueRange> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/bathTemperature> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/DatasetVersion> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/studyTarget> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/PatchClampVariation> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/variation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/core/SubjectState> ) ] ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/input> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Protocol> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/protocol> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/device> ] .
+

@@ -1,0 +1,109 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/lookupLabel> a owl:DatatypeProperty ;
+    rdfs:label "Lookup label" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CellPatching> <https://openminds.om-i.org/types/ChemicalSubstance> <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/ContentTypePattern> <https://openminds.om-i.org/types/CranialWindowPreparation> <https://openminds.om-i.org/types/DataAnalysis> <https://openminds.om-i.org/types/DataCopy> <https://openminds.om-i.org/types/Electrode> <https://openminds.om-i.org/types/ElectrodeArray> <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodePlacement> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/EphysStimulus> <https://openminds.om-i.org/types/FileRepositoryStructure> <https://openminds.om-i.org/types/GenericComputation> <https://openminds.om-i.org/types/ModelValidation> <https://openminds.om-i.org/types/Optimization> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/Pipette> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/PropertyValueList> <https://openminds.om-i.org/types/ProtocolExecution> <https://openminds.om-i.org/types/RecordingActivity> <https://openminds.om-i.org/types/Simulation> <https://openminds.om-i.org/types/SlicingDevice> <https://openminds.om-i.org/types/SlicingDeviceUsage> <https://openminds.om-i.org/types/StimulationActivity> <https://openminds.om-i.org/types/Subject> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectGroupState> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueCulturePreparation> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleCollectionState> <https://openminds.om-i.org/types/TissueSampleSlicing> <https://openminds.om-i.org/types/TissueSampleState> <https://openminds.om-i.org/types/Visualization> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/device> a owl:ObjectProperty ;
+    rdfs:label "Device" ;
+    rdfs:comment "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CellPatching> <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodePlacement> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/RecordingActivity> <https://openminds.om-i.org/types/SlicingDeviceUsage> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/TissueSampleSlicing> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Electrode> <https://openminds.om-i.org/types/ElectrodeArray> <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/OperatingDevice> <https://openminds.om-i.org/types/Pipette> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDevice> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] .
+
+<https://openminds.om-i.org/props/metadataLocation> a owl:ObjectProperty ;
+    rdfs:label "Metadata location" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] .
+
+<https://openminds.om-i.org/props/oscillationAmplitude> a owl:ObjectProperty ;
+    rdfs:label "Oscillation amplitude" ;
+    rdfs:domain <https://openminds.om-i.org/types/SlicingDeviceUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/sliceThickness> a owl:ObjectProperty ;
+    rdfs:label "Slice thickness" ;
+    rdfs:domain <https://openminds.om-i.org/types/SlicingDeviceUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] .
+
+<https://openminds.om-i.org/props/slicingAngle> a owl:ObjectProperty ;
+    rdfs:label "Slicing angle" ;
+    rdfs:domain <https://openminds.om-i.org/types/SlicingDeviceUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/NumericalProperty> <https://openminds.om-i.org/types/QuantitativeValue> ) ] .
+
+<https://openminds.om-i.org/props/slicingPlane> a owl:ObjectProperty ;
+    rdfs:label "Slicing plane" ;
+    rdfs:domain <https://openminds.om-i.org/types/SlicingDeviceUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/AnatomicalPlane> .
+
+<https://openminds.om-i.org/props/slicingSpeed> a owl:ObjectProperty ;
+    rdfs:label "Slicing speed" ;
+    rdfs:domain <https://openminds.om-i.org/types/SlicingDeviceUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/usedSpecimen> a owl:ObjectProperty ;
+    rdfs:label "Used specimen" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Subject> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleState> ) ] .
+
+<https://openminds.om-i.org/props/vibrationFrequency> a owl:ObjectProperty ;
+    rdfs:label "Vibration frequency" ;
+    rdfs:domain <https://openminds.om-i.org/types/SlicingDeviceUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/types/SlicingDeviceUsage> a owl:Class ;
+    rdfs:label "Slicing device usage" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sliceThickness> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/SlicingDevice> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/device> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AnatomicalPlane> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/slicingPlane> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/NumericalProperty> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/slicingAngle> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/slicingSpeed> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/metadataLocation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSampleState> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/usedSpecimen> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/vibrationFrequency> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/oscillationAmplitude> ] .
+

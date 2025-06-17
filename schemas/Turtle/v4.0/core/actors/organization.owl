@@ -1,0 +1,66 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/homepage> a owl:DatatypeProperty ;
+    rdfs:label "Homepage" ;
+    rdfs:comment "Main website of something or someone." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Project> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WebService> <https://openminds.om-i.org/types/WebServiceVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/shortName> a owl:DatatypeProperty ;
+    rdfs:label "Short name" ;
+    rdfs:comment "Shortened or fully abbreviated name of something or somebody." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/License> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Project> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WebService> <https://openminds.om-i.org/types/WebServiceVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/affiliation> a owl:ObjectProperty ;
+    rdfs:label "Affiliation" ;
+    rdfs:comment "Declaration of a person being closely associated to an organization." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/Affiliation> .
+
+<https://openminds.om-i.org/props/digitalIdentifier> a owl:ObjectProperty ;
+    rdfs:label "Digital identifier" ;
+    rdfs:comment "Digital handle to identify objects or legal persons." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Book> <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/Chapter> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/Electrode> <https://openminds.om-i.org/types/ElectrodeArray> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Periodical> <https://openminds.om-i.org/types/Person> <https://openminds.om-i.org/types/Pipette> <https://openminds.om-i.org/types/ProductSource> <https://openminds.om-i.org/types/ScholarlyArticle> <https://openminds.om-i.org/types/SlicingDevice> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/Strain> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/GRIDID> <https://openminds.om-i.org/types/ISBN> <https://openminds.om-i.org/types/ISSN> <https://openminds.om-i.org/types/IdentifiersDotOrgID> <https://openminds.om-i.org/types/ORCID> <https://openminds.om-i.org/types/RORID> <https://openminds.om-i.org/types/RRID> <https://openminds.om-i.org/types/SWHID> ) ] .
+
+<https://openminds.om-i.org/props/fullName> a owl:DatatypeProperty ;
+    rdfs:label "Full name" ;
+    rdfs:comment "Whole, non-abbreviated name of something or somebody." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/License> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Project> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WebService> <https://openminds.om-i.org/types/WebServiceVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/hasParent> a owl:ObjectProperty ;
+    rdfs:label "Has parent" ;
+    rdfs:comment "Reference to a parent object or legal person." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] .
+
+<https://openminds.om-i.org/types/Organization> a owl:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An entity comprised of one or more natural persons with a particular purpose. [adapted from Wikipedia](https://en.wikipedia.org/wiki/Organization)" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/fullName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Organization> ;
+            owl:onProperty <https://openminds.om-i.org/props/hasParent> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/GRIDID> <https://openminds.om-i.org/types/RORID> <https://openminds.om-i.org/types/RRID> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Affiliation> ;
+            owl:onProperty <https://openminds.om-i.org/props/affiliation> ] .
+

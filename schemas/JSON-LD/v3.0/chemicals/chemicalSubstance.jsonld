@@ -1,5 +1,103 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/additionalRemarks",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Mention of what deserves additional attention or notice."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nf3924daa81e144e5ae284e5d375d4555"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Additional remarks"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf3924daa81e144e5ae284e5d375d4555",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Measurement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Recording"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/molecularEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Molecular entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -16,18 +114,18 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Nf8a6e8bcf8c64c8d81f9c7058f5afb5f"
+        "@id": "_:Nc0502b165a1448e48bf452fd5ae49133"
       },
       {
-        "@id": "_:Nedadd00bd30b440f82eb52b0e9c8aed7"
+        "@id": "_:N0818a49ac9a24d5ba1f437a2181fc0db"
       },
       {
-        "@id": "_:Nef6c705fa88747148edf60275ee69996"
+        "@id": "_:Nbec69ae2d52641f8a125f3f50bae1b1f"
       }
     ]
   },
   {
-    "@id": "_:Nf8a6e8bcf8c64c8d81f9c7058f5afb5f",
+    "@id": "_:Nc0502b165a1448e48bf452fd5ae49133",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -55,7 +153,7 @@
     ]
   },
   {
-    "@id": "_:Nedadd00bd30b440f82eb52b0e9c8aed7",
+    "@id": "_:N0818a49ac9a24d5ba1f437a2181fc0db",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -77,13 +175,13 @@
     ]
   },
   {
-    "@id": "_:Nef6c705fa88747148edf60275ee69996",
+    "@id": "_:Nbec69ae2d52641f8a125f3f50bae1b1f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Nfcaa3fc313ee403dbe1097631ec4bcb8"
+        "@id": "_:N5fe40ed2fe434c30aca17669f908ed2c"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -99,7 +197,7 @@
     ]
   },
   {
-    "@id": "_:Nfcaa3fc313ee403dbe1097631ec4bcb8",
+    "@id": "_:N5fe40ed2fe434c30aca17669f908ed2c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -117,13 +215,52 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/productSource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N9d16c3efdc414f3799736ec113bb458d"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Product source"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/chemicals/ProductSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9d16c3efdc414f3799736ec113bb458d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/purity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N187a3f07c3e54bfcb6c1f4cb326689b9"
+        "@id": "_:Nc5cb720ad1b442a9957afe522c060eeb"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -133,12 +270,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N492a259930784de0ae582c98750b39d3"
+        "@id": "_:N46e0de751cdd4ff0ac18e1697279d64d"
       }
     ]
   },
   {
-    "@id": "_:N187a3f07c3e54bfcb6c1f4cb326689b9",
+    "@id": "_:Nc5cb720ad1b442a9957afe522c060eeb",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -156,7 +293,7 @@
     ]
   },
   {
-    "@id": "_:N492a259930784de0ae582c98750b39d3",
+    "@id": "_:N46e0de751cdd4ff0ac18e1697279d64d",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -180,7 +317,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N080076db554e4e2ab316a9c629c0e59d"
+        "@id": "_:Nbcb9b6284d284878969a5c3f3df1a414"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -195,7 +332,7 @@
     ]
   },
   {
-    "@id": "_:N080076db554e4e2ab316a9c629c0e59d",
+    "@id": "_:Nbcb9b6284d284878969a5c3f3df1a414",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -312,143 +449,6 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/additionalRemarks",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Mention of what deserves additional attention or notice."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nff1421fd27124801bdd3914e042094f7"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Additional remarks"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nff1421fd27124801bdd3914e042094f7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Measurement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Recording"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/molecularEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Molecular entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/productSource",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nafa5b5dbc5e3424482d5456c6d92c7ba"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Product source"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/chemicals/ProductSource"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nafa5b5dbc5e3424482d5456c6d92c7ba",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
           }
         ]
       }

@@ -1,0 +1,39 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/dataLocation> a owl:ObjectProperty ;
+    rdfs:label "Data location" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CustomPropertySet> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Recording> <https://openminds.om-i.org/types/ServiceLink> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileBundle> <https://openminds.om-i.org/types/LivePaperResourceItem> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/PropertyValueList> ) ] .
+
+<https://openminds.om-i.org/props/hasEntity> a owl:ObjectProperty ;
+    rdfs:label "Has entity" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] .
+
+<https://openminds.om-i.org/props/ontologyIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Ontology identifier" ;
+    rdfs:comment "Term or code used to identify something or someone registered within a particular ontology." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Strain> ) ] ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/types/ParcellationTerminologyVersion> a owl:Class ;
+    rdfs:label "Parcellation terminology version" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/ontologyIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/ParcellationEntityVersion> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/hasEntity> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/File> ;
+            owl:onProperty <https://openminds.om-i.org/props/dataLocation> ] .
+

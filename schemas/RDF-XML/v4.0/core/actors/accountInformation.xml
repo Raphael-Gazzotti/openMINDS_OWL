@@ -4,59 +4,59 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N5cb23734712e44d78acab51e890fd737">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/userName"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N89c16623682548adbc7332890755c74c">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/service"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/WebService"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/types/AccountInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Account information</rdfs:label>
-    <rdfs:comment>Structured information about a user account for a web service.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N89c16623682548adbc7332890755c74c"/>
-    <rdfs:subClassOf rdf:nodeID="N5cb23734712e44d78acab51e890fd737"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfa4b4e02c29b4285a991218d8d879a3e">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/AccountInformation"/>
-    <rdf:rest rdf:nodeID="N829501faa2574f2e82642b9032521dad"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N829501faa2574f2e82642b9032521dad">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/ServiceLink"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N8085c879411e4460933fa8932460c143">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/WebService"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N40975eeb73b0467a8e2fca3d70a52b09">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nfa4b4e02c29b4285a991218d8d879a3e"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/userName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>User name</rdfs:label>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/AccountInformation"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N42692c9218f443439a6fb9299d9c5253">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Service"/>
-    <rdf:rest rdf:nodeID="N8085c879411e4460933fa8932460c143"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/service">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Service</rdfs:label>
-    <rdfs:domain rdf:nodeID="N40975eeb73b0467a8e2fca3d70a52b09"/>
-    <rdfs:range rdf:nodeID="Nb6706478e92047879f240960873ffe2c"/>
+    <rdfs:domain rdf:nodeID="N07d783562ef64882bb103b5bf7f6dd15"/>
+    <rdfs:range rdf:nodeID="Nb05967aff5bb48f2991443727f3758c5"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb6706478e92047879f240960873ffe2c">
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/AccountInformation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N42692c9218f443439a6fb9299d9c5253"/>
+    <rdfs:label>Account information</rdfs:label>
+    <rdfs:comment>Structured information about a user account for a web service.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Ndeba1b7c3f444eb7866c3529e25e1c33"/>
+    <rdfs:subClassOf rdf:nodeID="N9e93b84f87cd4d0294d8853d937567f4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a234e21d1ba4bc39cdc85880ec74f2f">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/AccountInformation"/>
+    <rdf:rest rdf:nodeID="Nc2eeb4b34d9c4f14913069764d640ba8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4e5c94794ebc4628a8b3004f4c9d4c17">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Service"/>
+    <rdf:rest rdf:nodeID="N4b35e6b1476f46548823180ecaf2a0c9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc2eeb4b34d9c4f14913069764d640ba8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ServiceLink"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndeba1b7c3f444eb7866c3529e25e1c33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/service"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/WebService"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9e93b84f87cd4d0294d8853d937567f4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/userName"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b35e6b1476f46548823180ecaf2a0c9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/WebService"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb05967aff5bb48f2991443727f3758c5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N4e5c94794ebc4628a8b3004f4c9d4c17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N07d783562ef64882bb103b5bf7f6dd15">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N0a234e21d1ba4bc39cdc85880ec74f2f"/>
   </rdf:Description>
 </rdf:RDF>

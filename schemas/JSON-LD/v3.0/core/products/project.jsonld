@@ -1,132 +1,32 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/core/Project",
+    "@id": "https://openminds.ebrains.eu/vocab/fullName",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Structured information on a research project."
+        "@value": "Whole, non-abbreviated name of something or somebody."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nf6b63e6cf90d4542b5f1e62dff69ef97"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Project"
+        "@value": "Full name"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nff9d08a7e9d44e8a967608512c7ddfa1"
-      },
-      {
-        "@id": "_:N86ef4e0207134c399ebdbb4775bfa656"
-      },
-      {
-        "@id": "_:N8557cbc0c1554fd69748c0bf5c6f454d"
-      },
-      {
-        "@id": "_:Nfe3dd38c15f54cc08721314ef211e32d"
-      },
-      {
-        "@id": "_:N14b0a17dc0f34a238d04930aab24eafc"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:Nff9d08a7e9d44e8a967608512c7ddfa1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N197efcccd2c742a88e92d6eb2b71fd4f"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/coordinator"
-      }
-    ]
-  },
-  {
-    "@id": "_:N197efcccd2c742a88e92d6eb2b71fd4f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Consortium"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N86ef4e0207134c399ebdbb4775bfa656",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/description"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8557cbc0c1554fd69748c0bf5c6f454d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/fullName"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfe3dd38c15f54cc08721314ef211e32d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N19f02f8502ba419e95200e134947c753"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/hasPart"
-      }
-    ]
-  },
-  {
-    "@id": "_:N19f02f8502ba419e95200e134947c753",
+    "@id": "_:Nf6b63e6cf90d4542b5f1e62dff69ef97",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -146,10 +46,16 @@
             "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
           },
           {
+            "@id": "https://openminds.ebrains.eu/core/Consortium"
+          },
+          {
             "@id": "https://openminds.ebrains.eu/core/Dataset"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/License"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/MetaDataModel"
@@ -162,6 +68,12 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Project"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/Software"
@@ -198,23 +110,6 @@
     ]
   },
   {
-    "@id": "_:N14b0a17dc0f34a238d04930aab24eafc",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/shortName"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/homepage",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -226,7 +121,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Na42ade06a7dd45f9a8eda164679df7d9"
+        "@id": "_:N6b2241cd476a4abf82ff5a85e28ec51c"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -241,7 +136,7 @@
     ]
   },
   {
-    "@id": "_:Na42ade06a7dd45f9a8eda164679df7d9",
+    "@id": "_:N6b2241cd476a4abf82ff5a85e28ec51c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -322,60 +217,13 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/coordinator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Legal person who organizes the collaborative work of people or groups."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Project"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Coordinator"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N1e1d7be8d3f1498cb793f697a0c51093"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1e1d7be8d3f1498cb793f697a0c51093",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Consortium"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/hasPart",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nd7d7e3135867410d9589928c09b05698"
+        "@id": "_:N5e6a14304e004716a54815f7af738f6f"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -385,12 +233,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N55703c52054146a6bae140c0420de970"
+        "@id": "_:N6cb49f7722f24704afcd30b8637510f7"
       }
     ]
   },
   {
-    "@id": "_:Nd7d7e3135867410d9589928c09b05698",
+    "@id": "_:N5e6a14304e004716a54815f7af738f6f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -423,7 +271,7 @@
     ]
   },
   {
-    "@id": "_:N55703c52054146a6bae140c0420de970",
+    "@id": "_:N6cb49f7722f24704afcd30b8637510f7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -519,116 +367,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/fullName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Whole, non-abbreviated name of something or somebody."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N9230d55705a740168473c95fe0ad2ff6"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Full name"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9230d55705a740168473c95fe0ad2ff6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTest"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipe"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Consortium"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Dataset"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/License"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/MetaDataModel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Model"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Project"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Software"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/WebService"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/WebServiceVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaper"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlas"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/shortName",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -640,7 +378,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N0003279a3d6e4c69b1a2b7b4cbe4bb95"
+        "@id": "_:Ne6e6e68555464f0493aad015170d62ac"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -655,7 +393,7 @@
     ]
   },
   {
-    "@id": "_:N0003279a3d6e4c69b1a2b7b4cbe4bb95",
+    "@id": "_:Ne6e6e68555464f0493aad015170d62ac",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -735,6 +473,221 @@
             "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/core/Project",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on a research project."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N0a918fd7a8bf4f1c8825782515578a44"
+      },
+      {
+        "@id": "_:Ne0da179fee91484f91e4223a00ca4790"
+      },
+      {
+        "@id": "_:Nfce0d2223d124ed9a2c2996548d01497"
+      },
+      {
+        "@id": "_:N233840fc65924e938cce984bc024ba49"
+      },
+      {
+        "@id": "_:N25cdd7b4e59c45e8a3c92c03fa091d1a"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0a918fd7a8bf4f1c8825782515578a44",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Na30aa90d1e67417eb2d2a3af9a5a0ba2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/coordinator"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na30aa90d1e67417eb2d2a3af9a5a0ba2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Consortium"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne0da179fee91484f91e4223a00ca4790",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/description"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfce0d2223d124ed9a2c2996548d01497",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/fullName"
+      }
+    ]
+  },
+  {
+    "@id": "_:N233840fc65924e938cce984bc024ba49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N0be8a698b7bd4d5eaab09d1ecaa7218b"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0be8a698b7bd4d5eaab09d1ecaa7218b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTest"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipe"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Dataset"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/MetaDataModel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Model"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Software"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/WebService"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/WebServiceVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaper"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlas"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N25cdd7b4e59c45e8a3c92c03fa091d1a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/shortName"
       }
     ]
   },
@@ -750,7 +703,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nbbcc2e72a31c48328ef2e06bfea41ce8"
+        "@id": "_:Nb186559df5f54266a39c151893f994f2"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -765,7 +718,7 @@
     ]
   },
   {
-    "@id": "_:Nbbcc2e72a31c48328ef2e06bfea41ce8",
+    "@id": "_:Nb186559df5f54266a39c151893f994f2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1149,6 +1102,53 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/coordinator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Legal person who organizes the collaborative work of people or groups."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Project"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Coordinator"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N447ae70142e64084864060f5526ddb37"
+      }
+    ]
+  },
+  {
+    "@id": "_:N447ae70142e64084864060f5526ddb37",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Consortium"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
           }
         ]
       }

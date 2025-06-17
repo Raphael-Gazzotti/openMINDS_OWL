@@ -1,8 +1,8 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/requiredTime",
+    "@id": "https://openminds.om-i.org/props/learningOutcome",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
@@ -11,17 +11,43 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Required time"
+        "@value": "Learning outcome"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N70f153c5aee749d6b095dc6600506adb"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:N70f153c5aee749d6b095dc6600506adb",
+    "@id": "https://openminds.om-i.org/props/IRI",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3eb9d132f6db46aeb704759cc684c332"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Iri"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3eb9d132f6db46aeb704759cc684c332",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -29,10 +55,265 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+            "@id": "https://openminds.om-i.org/types/Book"
           },
           {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/File"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/FileArchive"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/FileRepository"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperResourceItem"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebResource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/editor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N1a71d0dcbcd64cf587ebf3dedef46036"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Editor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Person"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1a71d0dcbcd64cf587ebf3dedef46036",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/order",
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N1b6310408f1f406b9a164216508d384a"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Order"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1b6310408f1f406b9a164216508d384a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperSection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/license",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N777417dcce2c4e97bad025244d048ed7"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "License"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nb351be295b4c4561aed8318f214fe70c"
+      }
+    ]
+  },
+  {
+    "@id": "_:N777417dcce2c4e97bad025244d048ed7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb351be295b4c4561aed8318f214fe70c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/License"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebResource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/citedPublication",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N9d654bda379b40e492bd172658f822f6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Cited publication"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nd64b2779336342b4887c0d65118b5da0"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9d654bda379b40e492bd172658f822f6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd64b2779336342b4887c0d65118b5da0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/DOI"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ISBN"
           }
         ]
       }
@@ -50,7 +331,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N94adb470367f4dc28602747c19af0004"
+        "@id": "_:N348fab910d1e4b20a4a46f48c155c8e0"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -60,12 +341,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N4530e869d20a426085940acc11f6087b"
+        "@id": "_:N7c280e75540a49cf80b810389776f394"
       }
     ]
   },
   {
-    "@id": "_:N94adb470367f4dc28602747c19af0004",
+    "@id": "_:N348fab910d1e4b20a4a46f48c155c8e0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -119,7 +400,7 @@
     ]
   },
   {
-    "@id": "_:N4530e869d20a426085940acc11f6087b",
+    "@id": "_:N7c280e75540a49cf80b810389776f394",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -371,33 +652,70 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/author",
+    "@id": "https://openminds.om-i.org/props/educationalLevel",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Creator of a literary or creative work, as well as a dataset publication."
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nf18cf18634194ed19a8ee57a01d503a0"
+        "@id": "https://openminds.om-i.org/types/LearningResource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Author"
+        "@value": "Educational level"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N19a48a97981046d58cda975112a8e2d6"
+        "@id": "https://openminds.om-i.org/types/EducationalLevel"
       }
     ]
   },
   {
-    "@id": "_:Nf18cf18634194ed19a8ee57a01d503a0",
+    "@id": "https://openminds.om-i.org/props/topic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/LearningResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Topic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/publisher",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nbfce69010a034d08b429e3b307f47b75"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Publisher"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nd89d2ac72e824daf974021a5503ddc55"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbfce69010a034d08b429e3b307f47b75",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -408,34 +726,10 @@
             "@id": "https://openminds.om-i.org/types/Book"
           },
           {
-            "@id": "https://openminds.om-i.org/types/BrainAtlas"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
             "@id": "https://openminds.om-i.org/types/Chapter"
           },
           {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Dataset"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DatasetVersion"
-          },
-          {
             "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaper"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
           },
           {
             "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
@@ -445,7 +739,7 @@
     ]
   },
   {
-    "@id": "_:N19a48a97981046d58cda975112a8e2d6",
+    "@id": "_:Nd89d2ac72e824daf974021a5503ddc55",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -477,63 +771,63 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N828f997320934bf98fac058f4f71f898"
+        "@id": "_:N5d245ac00706440bb0af66be001204b0"
       },
       {
-        "@id": "_:Nd6b638d928e74b6e89ed411e895271ed"
+        "@id": "_:N8b80c0ef26e14433ae358b7d52852bed"
       },
       {
-        "@id": "_:Nf1c551b1bb24476a82fca0b78840ede7"
+        "@id": "_:Nd1b17a7d7c704cbca17da893a91351af"
       },
       {
-        "@id": "_:Nb611fc1ff65f458490ebad8f04e13622"
+        "@id": "_:N076d99e9cb2240ae934fa2575f6777cf"
       },
       {
-        "@id": "_:N718804d05b1440e79bb693a58d325bdf"
+        "@id": "_:N0ba3bab6b5ae4b0dac84690bef5c5b85"
       },
       {
-        "@id": "_:Nfe5e7851cf4f44d080be71c4e8fcf279"
+        "@id": "_:N26d50f4b81fb497c92c46c9059045906"
       },
       {
-        "@id": "_:N8e774481e6e543cb93a4873aabcbe151"
+        "@id": "_:N96f18bc4c19046fb864e5aef5f8f2c42"
       },
       {
-        "@id": "_:N864d230fed484f749f6d08af74a17958"
+        "@id": "_:N4e441ac5568947d0bc7aae78be369125"
       },
       {
-        "@id": "_:N2e3459590f7846ad9c5213b78dac1742"
+        "@id": "_:Ne366af5d3cad4a56811874be282af68b"
       },
       {
-        "@id": "_:N6d4b9024240c4b4cb40b3da7f130bafe"
+        "@id": "_:Nea2e0cc2fbeb47f98688ddeb2c6488e6"
       },
       {
-        "@id": "_:N3d3059c6c1c942bdb58549caf83a9bc3"
+        "@id": "_:Naa238d3c361f41679b8109f523295a8e"
       },
       {
-        "@id": "_:N7129ec923fad437a89e9ccdfec4c1645"
+        "@id": "_:Nd33839b94dd14691853a325c69c8916b"
       },
       {
-        "@id": "_:N2c12648c8f7f4fe9aec1e4a953af6f58"
+        "@id": "_:Ncb7ea7c2e1d54bd4a497249e1fec8f47"
       },
       {
-        "@id": "_:Nb5e186947f98441288dd478798f533e4"
+        "@id": "_:Nc11364bed50c4204883ee6e6456bfc03"
       },
       {
-        "@id": "_:N770ec45b57464e828c5886998e4c1791"
+        "@id": "_:Nf00e158aec3d47868bc4d6dfad4fcfb2"
       },
       {
-        "@id": "_:N0ee9c22b1b1d4d5290b27da606de2d7f"
+        "@id": "_:N353bfaaf59ae45bc8dd15c96c757e6af"
       }
     ]
   },
   {
-    "@id": "_:N828f997320934bf98fac058f4f71f898",
+    "@id": "_:N5d245ac00706440bb0af66be001204b0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Ne966583eb0824f57baeaa51473a8e0cb"
+        "@id": "_:Nb87cc866bde8433785a8e3b96c4863df"
       }
     ],
     "http://www.w3.org/2002/07/owl#minCardinality": [
@@ -549,7 +843,7 @@
     ]
   },
   {
-    "@id": "_:Ne966583eb0824f57baeaa51473a8e0cb",
+    "@id": "_:Nb87cc866bde8433785a8e3b96c4863df",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -621,13 +915,13 @@
     ]
   },
   {
-    "@id": "_:Nd6b638d928e74b6e89ed411e895271ed",
+    "@id": "_:N8b80c0ef26e14433ae358b7d52852bed",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N27f508e725c744b8bc6315b1a99941b3"
+        "@id": "_:N7c04842656374ccb9a0dd1be84f8b136"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -637,7 +931,7 @@
     ]
   },
   {
-    "@id": "_:N27f508e725c744b8bc6315b1a99941b3",
+    "@id": "_:N7c04842656374ccb9a0dd1be84f8b136",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -658,13 +952,13 @@
     ]
   },
   {
-    "@id": "_:Nf1c551b1bb24476a82fca0b78840ede7",
+    "@id": "_:Nd1b17a7d7c704cbca17da893a91351af",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N8c328fbf1dc741898887331f69e07acd"
+        "@id": "_:N202a7f40ee094687a36a1caf445d3f3c"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -674,7 +968,7 @@
     ]
   },
   {
-    "@id": "_:N8c328fbf1dc741898887331f69e07acd",
+    "@id": "_:N202a7f40ee094687a36a1caf445d3f3c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -692,7 +986,7 @@
     ]
   },
   {
-    "@id": "_:Nb611fc1ff65f458490ebad8f04e13622",
+    "@id": "_:N076d99e9cb2240ae934fa2575f6777cf",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -714,13 +1008,13 @@
     ]
   },
   {
-    "@id": "_:N718804d05b1440e79bb693a58d325bdf",
+    "@id": "_:N0ba3bab6b5ae4b0dac84690bef5c5b85",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Nf55be624cea24a0d8c7414879152d27e"
+        "@id": "_:N45bea8a2750848a486fd49172c13a639"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -730,7 +1024,7 @@
     ]
   },
   {
-    "@id": "_:Nf55be624cea24a0d8c7414879152d27e",
+    "@id": "_:N45bea8a2750848a486fd49172c13a639",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -751,7 +1045,7 @@
     ]
   },
   {
-    "@id": "_:Nfe5e7851cf4f44d080be71c4e8fcf279",
+    "@id": "_:N26d50f4b81fb497c92c46c9059045906",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -773,7 +1067,7 @@
     ]
   },
   {
-    "@id": "_:N8e774481e6e543cb93a4873aabcbe151",
+    "@id": "_:N96f18bc4c19046fb864e5aef5f8f2c42",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -789,7 +1083,7 @@
     ]
   },
   {
-    "@id": "_:N864d230fed484f749f6d08af74a17958",
+    "@id": "_:N4e441ac5568947d0bc7aae78be369125",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -811,7 +1105,7 @@
     ]
   },
   {
-    "@id": "_:N2e3459590f7846ad9c5213b78dac1742",
+    "@id": "_:Ne366af5d3cad4a56811874be282af68b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -827,13 +1121,13 @@
     ]
   },
   {
-    "@id": "_:N6d4b9024240c4b4cb40b3da7f130bafe",
+    "@id": "_:Nea2e0cc2fbeb47f98688ddeb2c6488e6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N89d438339f2e442f9a8b1d779465895c"
+        "@id": "_:N55083b8b3b0e40eda7bd1e9d3f6a6269"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -843,7 +1137,7 @@
     ]
   },
   {
-    "@id": "_:N89d438339f2e442f9a8b1d779465895c",
+    "@id": "_:N55083b8b3b0e40eda7bd1e9d3f6a6269",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1095,7 +1389,7 @@
     ]
   },
   {
-    "@id": "_:N3d3059c6c1c942bdb58549caf83a9bc3",
+    "@id": "_:Naa238d3c361f41679b8109f523295a8e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1117,7 +1411,7 @@
     ]
   },
   {
-    "@id": "_:N7129ec923fad437a89e9ccdfec4c1645",
+    "@id": "_:Nd33839b94dd14691853a325c69c8916b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1134,7 +1428,7 @@
     ]
   },
   {
-    "@id": "_:N2c12648c8f7f4fe9aec1e4a953af6f58",
+    "@id": "_:Ncb7ea7c2e1d54bd4a497249e1fec8f47",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1151,13 +1445,13 @@
     ]
   },
   {
-    "@id": "_:Nb5e186947f98441288dd478798f533e4",
+    "@id": "_:Nc11364bed50c4204883ee6e6456bfc03",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N4e8e66c4a6ba410f82ef2d475b79f8f7"
+        "@id": "_:N3edcd36732b8458e931d436e4bc6f14c"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -1173,7 +1467,7 @@
     ]
   },
   {
-    "@id": "_:N4e8e66c4a6ba410f82ef2d475b79f8f7",
+    "@id": "_:N3edcd36732b8458e931d436e4bc6f14c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1194,13 +1488,13 @@
     ]
   },
   {
-    "@id": "_:N770ec45b57464e828c5886998e4c1791",
+    "@id": "_:Nf00e158aec3d47868bc4d6dfad4fcfb2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Ndac5b7c392ed4d4ea6846af2ccfa95a5"
+        "@id": "_:Ndddcff665f2e4c5d96e6e01e7254e7ee"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -1216,7 +1510,7 @@
     ]
   },
   {
-    "@id": "_:Ndac5b7c392ed4d4ea6846af2ccfa95a5",
+    "@id": "_:Ndddcff665f2e4c5d96e6e01e7254e7ee",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1234,7 +1528,7 @@
     ]
   },
   {
-    "@id": "_:N0ee9c22b1b1d4d5290b27da606de2d7f",
+    "@id": "_:N353bfaaf59ae45bc8dd15c96c757e6af",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1256,6 +1550,415 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/props/creationDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nd4af0f982a1e44fa859613388df43c49"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Creation date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd4af0f982a1e44fa859613388df43c49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/digitalIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Digital handle to identify objects or legal persons."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Ned6ea588a5a145ad87610173171f2d00"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Digital identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nfe9cb5786ed34b72a7fe7025fd2a86cb"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ned6ea588a5a145ad87610173171f2d00",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlas"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Dataset"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Electrode"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaper"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Model"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Periodical"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Pipette"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ProductSource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Software"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Strain"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTest"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfe9cb5786ed34b72a7fe7025fd2a86cb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/DOI"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GRIDID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ISBN"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ISSN"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/IdentifiersDotOrgID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ORCID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/RORID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/RRID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SWHID"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/copyright",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N67fc18826b794488bae8aeb42ee5e1a7"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Copyright"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Copyright"
+      }
+    ]
+  },
+  {
+    "@id": "_:N67fc18826b794488bae8aeb42ee5e1a7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/about",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N444104cf8b7f4e42b2fb4ea9006e7668"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "About"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N67d7447b2fab4921a813ed209d4776ea"
+      }
+    ]
+  },
+  {
+    "@id": "_:N444104cf8b7f4e42b2fb4ea9006e7668",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Comment"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N67d7447b2fab4921a813ed209d4776ea",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlas"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Dataset"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaper"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Model"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Software"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTest"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebService"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/type",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -1267,7 +1970,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N0f036f34341740a18247a43411cfe59f"
+        "@id": "_:N3dff2ee243c04a51bae7bc38ecd94ca8"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1277,12 +1980,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Na5ed306d738b444587a26dd97ea6ca53"
+        "@id": "_:N40b55630148f497bbc3ec533b86efcf4"
       }
     ]
   },
   {
-    "@id": "_:N0f036f34341740a18247a43411cfe59f",
+    "@id": "_:N3dff2ee243c04a51bae7bc38ecd94ca8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1333,7 +2036,7 @@
     ]
   },
   {
-    "@id": "_:Na5ed306d738b444587a26dd97ea6ca53",
+    "@id": "_:N40b55630148f497bbc3ec533b86efcf4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1375,230 +2078,6 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/IRI",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ncb094a318b7346efa652b8aeaf88fa6e"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Iri"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncb094a318b7346efa652b8aeaf88fa6e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/File"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/FileArchive"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/FileRepository"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperResourceItem"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebResource"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/topic",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/LearningResource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Topic"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/editor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ne7547adc611d4362b42213071687c608"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Editor"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Person"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne7547adc611d4362b42213071687c608",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/creationDate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ned0a40e9368242e2ae6bf9e8639303a0"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Creation date"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ned0a40e9368242e2ae6bf9e8639303a0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/modificationDate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N343d95fa449341bb87f4b9885dcbc3aa"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Modification date"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ]
-  },
-  {
-    "@id": "_:N343d95fa449341bb87f4b9885dcbc3aa",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/versionIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -1610,7 +2089,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Ndbce632d9a3041c6bea6743b33056a51"
+        "@id": "_:N0277099d723947b1a1dcce69eff33c9a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1625,7 +2104,7 @@
     ]
   },
   {
-    "@id": "_:Ndbce632d9a3041c6bea6743b33056a51",
+    "@id": "_:N0277099d723947b1a1dcce69eff33c9a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1685,80 +2164,28 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/prerequisite",
+    "@id": "https://openminds.om-i.org/props/publicationDate",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://openminds.om-i.org/types/LearningResource"
+        "@id": "_:N8a75126fdd444392a0341c30b8ff4006"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Prerequisite"
+        "@value": "Publication date"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
       }
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/order",
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N50ac1d5166df4d82884cdc8ff6428974"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Order"
-      }
-    ]
-  },
-  {
-    "@id": "_:N50ac1d5166df4d82884cdc8ff6428974",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperSection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/citedPublication",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N813c7611daff468e9f5dd5534737a8dd"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Cited publication"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N085f9a89c6514348a1fc6e61a98a43ce"
-      }
-    ]
-  },
-  {
-    "@id": "_:N813c7611daff468e9f5dd5534737a8dd",
+    "@id": "_:N8a75126fdd444392a0341c30b8ff4006",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1782,7 +2209,33 @@
     ]
   },
   {
-    "@id": "_:N085f9a89c6514348a1fc6e61a98a43ce",
+    "@id": "https://openminds.om-i.org/props/custodian",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "The 'custodian' is a legal person who is responsible for the content and quality of the data, metadata, and/or code of a research product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N12edf3aebabe4228a0eef170af0b1063"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Custodian"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N0e7f719c0d7b41e3b9c53bdfbd0577de"
+      }
+    ]
+  },
+  {
+    "@id": "_:N12edf3aebabe4228a0eef170af0b1063",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1790,10 +2243,330 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/DOI"
+            "@id": "https://openminds.om-i.org/types/Book"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ISBN"
+            "@id": "https://openminds.om-i.org/types/BrainAtlas"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Dataset"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaper"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Model"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Software"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTest"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebService"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N0e7f719c0d7b41e3b9c53bdfbd0577de",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Consortium"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/prerequisite",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/LearningResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Prerequisite"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/funding",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Money provided by a legal person for a particular purpose."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N96b13cce7d884068a755fe9775d6bcf2"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Funding"
+      }
+    ]
+  },
+  {
+    "@id": "_:N96b13cce7d884068a755fe9775d6bcf2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/requiredTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/LearningResource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Required time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N8947d008e140496481480b3e8deff2d4"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8947d008e140496481480b3e8deff2d4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/abstract",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3d5336844e974596ae3f2ecc47a2c6c1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Abstract"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3d5336844e974596ae3f2ecc47a2c6c1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/modificationDate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nc577d65af76644a99f0a3e705adf6212"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Modification date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#date"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc577d65af76644a99f0a3e705adf6212",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Book"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Chapter"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
           }
         ]
       }
@@ -1811,7 +2584,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N96b10d9478e241a68acd05665330e345"
+        "@id": "_:Nfc89e6fe376e4f6b8b7403f5084c3569"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1826,7 +2599,7 @@
     ]
   },
   {
-    "@id": "_:N96b10d9478e241a68acd05665330e345",
+    "@id": "_:Nfc89e6fe376e4f6b8b7403f5084c3569",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2174,770 +2947,33 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/digitalIdentifier",
+    "@id": "https://openminds.om-i.org/props/author",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Digital handle to identify objects or legal persons."
+        "@value": "Creator of a literary or creative work, as well as a dataset publication."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3064d447c66547d4aef302c9312de267"
+        "@id": "_:Nf0989f2336464dcaa9369f2eb9032335"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Digital identifier"
+        "@value": "Author"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nc556824c5d614979a00867fd6e9c12e8"
+        "@id": "_:N0d6b658803934c3292e6d049210546a7"
       }
     ]
   },
   {
-    "@id": "_:N3064d447c66547d4aef302c9312de267",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlas"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Dataset"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Electrode"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaper"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModel"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Model"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Periodical"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Pipette"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ProductSource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Software"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Strain"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTest"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc556824c5d614979a00867fd6e9c12e8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/DOI"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/GRIDID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ISBN"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ISSN"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/IdentifiersDotOrgID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ORCID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/RORID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/RRID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SWHID"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/funding",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Money provided by a legal person for a particular purpose."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N04b7e9c6407445bd85989726f235e337"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Funding"
-      }
-    ]
-  },
-  {
-    "@id": "_:N04b7e9c6407445bd85989726f235e337",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/learningOutcome",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/LearningResource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Learning outcome"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/publicationDate",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nf1d15904f2fc4ab99534d11d12913089"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Publication date"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#date"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf1d15904f2fc4ab99534d11d12913089",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/educationalLevel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/LearningResource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Educational level"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/EducationalLevel"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/copyright",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Exclusive and assignable legal right of an originator to reproduce, publish, sell, or distribute the matter and form of a creative work for a defined time period."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N87dc5cc5628f478aacf0cf156b5e2c3b"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Copyright"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Copyright"
-      }
-    ]
-  },
-  {
-    "@id": "_:N87dc5cc5628f478aacf0cf156b5e2c3b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/about",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N2b472c1d31de4608b7ede4a663605163"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "About"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N10d19cc2a33442f8b6472e465e6f15f1"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2b472c1d31de4608b7ede4a663605163",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Comment"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N10d19cc2a33442f8b6472e465e6f15f1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlas"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Dataset"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaper"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModel"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Model"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Software"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTest"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebService"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/publisher",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N75791dcce0a549db8913da092c6a3788"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Publisher"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N285ef9fcefdd4456b22543c10bfeb3b9"
-      }
-    ]
-  },
-  {
-    "@id": "_:N75791dcce0a549db8913da092c6a3788",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N285ef9fcefdd4456b22543c10bfeb3b9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Consortium"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/abstract",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N4bf8223f397c4caca14eceafc0696010"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Abstract"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4bf8223f397c4caca14eceafc0696010",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/license",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Grant by a party to another party as an element of an agreement between those parties that permits to do, use, or own something."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ne149519e3d744ff3b7b777d774a561e1"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "License"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nc9d1cf339e80442397c6de066bccbc97"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne149519e3d744ff3b7b777d774a561e1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Book"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Chapter"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc9d1cf339e80442397c6de066bccbc97",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/License"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebResource"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/custodian",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "The 'custodian' is a legal person who is responsible for the content and quality of the data, metadata, and/or code of a research product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N8b3bace3a6b548dd85a2bc92155ea6aa"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Custodian"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nbfc83117259a4b25ba0f318f91ca0a28"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8b3bace3a6b548dd85a2bc92155ea6aa",
+    "@id": "_:Nf0989f2336464dcaa9369f2eb9032335",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2978,50 +3014,14 @@
             "@id": "https://openminds.om-i.org/types/LivePaperVersion"
           },
           {
-            "@id": "https://openminds.om-i.org/types/MetaDataModel"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Model"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelVersion"
-          },
-          {
             "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Software"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTest"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebService"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:Nbfc83117259a4b25ba0f318f91ca0a28",
+    "@id": "_:N0d6b658803934c3292e6d049210546a7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

@@ -1,0 +1,39 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/dataLocation> a owl:ObjectProperty ;
+    rdfs:label "Data location" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/CustomPropertySet> <https://openminds.ebrains.eu/core/ServiceLink> <https://openminds.ebrains.eu/ephys/Recording> <https://openminds.ebrains.eu/sands/ParcellationTerminology> <https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Configuration> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileArchive> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/PropertyValueList> <https://openminds.ebrains.eu/publications/LivePaperResourceItem> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/hasEntity> a owl:ObjectProperty ;
+    rdfs:label "Has entity" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/ParcellationTerminology> <https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/ontologyIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Ontology identifier" ;
+    rdfs:comment "Term or code used to identify something or someone registered within a particular ontology." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Strain> <https://openminds.ebrains.eu/sands/BrainAtlas> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CommonCoordinateSpace> <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> <https://openminds.ebrains.eu/sands/ParcellationTerminology> <https://openminds.ebrains.eu/sands/ParcellationTerminologyVersion> ) ] ;
+    rdfs:range rdf:List .
+
+<https://openminds.ebrains.eu/sands/ParcellationTerminology> a owl:Class ;
+    rdfs:label "Parcellation terminology" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/File> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/dataLocation> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/ontologyIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/ParcellationEntity> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/hasEntity> ] .
+

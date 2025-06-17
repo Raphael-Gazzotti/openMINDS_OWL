@@ -1,5 +1,59 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/abbreviation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N59fff9bf06ce4795a7337a824d1f6bcd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Abbreviation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N59fff9bf06ce4795a7337a824d1f6bcd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/publications/Periodical"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlas"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -11,7 +65,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nace29f9dd7c3490c8b2f1e3130b84d34"
+        "@id": "_:Nfa35d1223805428193e94a74b6dabf9a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -26,7 +80,7 @@
     ]
   },
   {
-    "@id": "_:Nace29f9dd7c3490c8b2f1e3130b84d34",
+    "@id": "_:Nfa35d1223805428193e94a74b6dabf9a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -368,56 +422,60 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/abbreviation",
+    "@id": "https://openminds.ebrains.eu/publications/Periodical",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N31fc7790cc904c949a58da071aa288a7"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Abbreviation"
+        "@value": "Periodical"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "_:Nd48e7e3d60f2487c988d9af7f0cbd7f1"
+      },
+      {
+        "@id": "_:N85166a3f590f4e3a92b32a25b37425f1"
       }
     ]
   },
   {
-    "@id": "_:N31fc7790cc904c949a58da071aa288a7",
+    "@id": "_:Nd48e7e3d60f2487c988d9af7f0cbd7f1",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/publications/Periodical"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlas"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          }
-        ]
+        "@id": "https://openminds.ebrains.eu/core/ISSN"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "_:N85166a3f590f4e3a92b32a25b37425f1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/name"
       }
     ]
   },
@@ -433,7 +491,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Naace8b1f3abc4da78ccdb80948951747"
+        "@id": "_:N9a58c361e64b4fba8bc2a1da4a427e30"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -443,12 +501,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N2de6f9fb3a23426fb3ef73c2f5130883"
+        "@id": "_:N861879007a744cdd9b412881b7dd668e"
       }
     ]
   },
   {
-    "@id": "_:Naace8b1f3abc4da78ccdb80948951747",
+    "@id": "_:N9a58c361e64b4fba8bc2a1da4a427e30",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -553,7 +611,7 @@
     ]
   },
   {
-    "@id": "_:N2de6f9fb3a23426fb3ef73c2f5130883",
+    "@id": "_:N861879007a744cdd9b412881b7dd668e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -588,64 +646,6 @@
             "@id": "https://openminds.ebrains.eu/core/SWHID"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/publications/Periodical",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Periodical"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nf028ee368c5f4bcc9d995ba9e3a0831a"
-      },
-      {
-        "@id": "_:N1e2408417c2b4016b51820af298dc3fb"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf028ee368c5f4bcc9d995ba9e3a0831a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ISSN"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1e2408417c2b4016b51820af298dc3fb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/name"
       }
     ]
   }

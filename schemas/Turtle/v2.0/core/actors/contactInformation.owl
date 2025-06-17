@@ -1,0 +1,17 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/core/ContactInformation> a owl:Class ;
+    rdfs:label "Contact information" ;
+    rdfs:comment "Structured information about how to contact a given person or consortium." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/email> ] .
+
+<https://openminds.ebrains.eu/vocab/email> a owl:DatatypeProperty ;
+    rdfs:label "Email" ;
+    rdfs:comment "Address to which or from which an electronic mail can be sent." ;
+    rdfs:domain <https://openminds.ebrains.eu/core/ContactInformation> ;
+    rdfs:range xsd:string .
+

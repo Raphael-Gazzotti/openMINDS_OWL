@@ -1,95 +1,115 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent",
+    "@id": "https://openminds.ebrains.eu/vocab/software",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@value": "Structured information about a piece of software or web service that can perform a task autonomously."
+        "@id": "_:N37872ac49e604885bca68b25ae239008"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Software agent"
+        "@value": "Software"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nc7c3ae700986451e81a683eabc1b30ad"
-      },
-      {
-        "@id": "_:Nc1f5c041ab3f4499af0a05890c0a28c0"
-      },
-      {
-        "@id": "_:Ne3698ad5ba4e4b75ba7801b778198aee"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc7c3ae700986451e81a683eabc1b30ad",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/computation/Environment"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/environment"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc1f5c041ab3f4499af0a05890c0a28c0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne3698ad5ba4e4b75ba7801b778198aee",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
       }
+    ]
+  },
+  {
+    "@id": "_:N37872ac49e604885bca68b25ae239008",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
+    "http://www.w3.org/2002/07/owl#unionOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Environment"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/environment",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Ne45395c960fb48cd87faca1c814bb31e"
       }
     ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@value": "Environment"
       }
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/vocab/software"
+        "@id": "_:Nf7a56d9f7d2f456aaaee3ab527404a98"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne45395c960fb48cd87faca1c814bb31e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf7a56d9f7d2f456aaaee3ab527404a98",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Environment"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/WebServiceVersion"
+          }
+        ]
       }
     ]
   },
@@ -105,7 +125,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N7b734ea93edc4efea3aa774023e11c70"
+        "@id": "_:Nb63ca1d9f9ed455b8952169f50a5213d"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -120,7 +140,7 @@
     ]
   },
   {
-    "@id": "_:N7b734ea93edc4efea3aa774023e11c70",
+    "@id": "_:Nb63ca1d9f9ed455b8952169f50a5213d",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -462,116 +482,96 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/environment",
+    "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@id": "_:N1fd710c2d37649e98b7699a952a5a4a5"
+        "@value": "Structured information about a piece of software or web service that can perform a task autonomously."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Environment"
+        "@value": "Software agent"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Nf96fee4e90454d299a551c24d5d7c86b"
+        "@id": "_:Nd018cb1fb2374307a07ae68f9633c49a"
+      },
+      {
+        "@id": "_:Nb4bd875e2ff645018eb6ae2b99246e51"
+      },
+      {
+        "@id": "_:Nb27b2cfc088143caa1b3949c7873808c"
       }
     ]
   },
   {
-    "@id": "_:N1fd710c2d37649e98b7699a952a5a4a5",
+    "@id": "_:Nd018cb1fb2374307a07ae68f9633c49a",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          }
-        ]
+        "@id": "https://openminds.ebrains.eu/computation/Environment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/environment"
       }
     ]
   },
   {
-    "@id": "_:Nf96fee4e90454d299a551c24d5d7c86b",
+    "@id": "_:Nb4bd875e2ff645018eb6ae2b99246e51",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#minCardinality": [
       {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Environment"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/WebServiceVersion"
-          }
-        ]
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/name"
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/software",
+    "@id": "_:Nb27b2cfc088143caa1b3949c7873808c",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N178898c123b14a80b8c98f882292902c"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Software"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
         "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
       }
-    ]
-  },
-  {
-    "@id": "_:N178898c123b14a80b8c98f882292902c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
       {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Environment"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
-          }
-        ]
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/software"
       }
     ]
   }

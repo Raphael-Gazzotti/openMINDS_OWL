@@ -1,0 +1,47 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/name> a owl:DatatypeProperty ;
+    rdfs:label "Name" ;
+    rdfs:comment "Word or phrase that constitutes the distinctive designation of a being or thing." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AgeCategory> <https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation> <https://openminds.ebrains.eu/controlledTerms/BehavioralTask> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> <https://openminds.ebrains.eu/controlledTerms/DatasetType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/EthicsAssessment> <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> <https://openminds.ebrains.eu/controlledTerms/FileUsageRole> <https://openminds.ebrains.eu/controlledTerms/Genotype> <https://openminds.ebrains.eu/controlledTerms/Language> <https://openminds.ebrains.eu/controlledTerms/Laterality> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/Modality> <https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel> <https://openminds.ebrains.eu/controlledTerms/ModelScope> <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/Phenotype> <https://openminds.ebrains.eu/controlledTerms/PreparationType> <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> <https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap> <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/Strain> <https://openminds.ebrains.eu/controlledTerms/Technique> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> <https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement> <https://openminds.ebrains.eu/core/ContentType> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> <https://openminds.ebrains.eu/core/FileRepository> <https://openminds.ebrains.eu/core/NumericalParameter> <https://openminds.ebrains.eu/core/Protocol> <https://openminds.ebrains.eu/core/ServiceLink> <https://openminds.ebrains.eu/core/StringParameter> <https://openminds.ebrains.eu/sands/AnatomicalEntity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/dataLocation> a owl:ObjectProperty ;
+    rdfs:label "Data location" ;
+    rdfs:domain <https://openminds.ebrains.eu/core/ServiceLink> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] .
+
+<https://openminds.ebrains.eu/vocab/openDataIn> a owl:ObjectProperty ;
+    rdfs:label "Open data in" ;
+    rdfs:domain <https://openminds.ebrains.eu/core/ServiceLink> ;
+    rdfs:range <https://openminds.ebrains.eu/core/URL> .
+
+<https://openminds.ebrains.eu/vocab/service> a owl:ObjectProperty ;
+    rdfs:label "Service" ;
+    rdfs:domain <https://openminds.ebrains.eu/core/ServiceLink> ;
+    rdfs:range <https://openminds.ebrains.eu/controlledTerms/Service> .
+
+<https://openminds.ebrains.eu/core/ServiceLink> a owl:Class ;
+    rdfs:label "Service link" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/URL> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/openDataIn> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/dataLocation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Service> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/service> ] .
+

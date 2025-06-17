@@ -4,6 +4,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Affiliation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Affiliation</rdfs:label>
+    <rdfs:comment>Structured information about a relationship between two entities, such as a person and their employer.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Nd731bc117d644852a1bed56e7f6d4afd"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/endDate">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -11,17 +17,7 @@
     <rdfs:comment>Date in the Gregorian calendar at which something terminates in time.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3264c65fb344407cb357147e3821819b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N02e6040a445646d89be94dbf8427b451"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/memberOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Member of</rdfs:label>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
-    <rdfs:range rdf:nodeID="N3264c65fb344407cb357147e3821819b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na34fedeea90f405e833bab1629562e3e">
+  <rdf:Description rdf:nodeID="N130547d971f44a339cf3dd48932df01d">
     <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
@@ -32,33 +28,37 @@
     <rdfs:comment>Date in the Gregorian calendar at which something begins in time</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N8cdf08f37030474dbd9aaed7694f70d7">
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/memberOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Member of</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
+    <rdfs:range rdf:nodeID="N1f96d146ab0447b188925fb6dcf71d45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1f96d146ab0447b188925fb6dcf71d45">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nbead692f06ed43d2a13be1fd0aefdee6"/>
+    <owl:unionOf rdf:nodeID="Nbfe5d6cb655f447da0464e24abdf590f"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbead692f06ed43d2a13be1fd0aefdee6">
+  <rdf:Description rdf:nodeID="N870d6cd38e9647dc9c9ebef7ccee4481">
     <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
-    <rdf:rest rdf:nodeID="Na34fedeea90f405e833bab1629562e3e"/>
+    <rdf:rest rdf:nodeID="Nabef3227853f4b0db28d2c88f923c83a"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N6297063a7b8c4198a4f3a64aa97885f6">
+  <rdf:Description rdf:nodeID="N8ea42f562a964ef8b9992635e07725d5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N870d6cd38e9647dc9c9ebef7ccee4481"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd731bc117d644852a1bed56e7f6d4afd">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/memberOf"/>
-    <owl:allValuesFrom rdf:nodeID="N8cdf08f37030474dbd9aaed7694f70d7"/>
+    <owl:allValuesFrom rdf:nodeID="N8ea42f562a964ef8b9992635e07725d5"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbf94b022eaf2470992484a3439508ddd">
+  <rdf:Description rdf:nodeID="Nbfe5d6cb655f447da0464e24abdf590f">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
+    <rdf:rest rdf:nodeID="N130547d971f44a339cf3dd48932df01d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nabef3227853f4b0db28d2c88f923c83a">
     <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/types/Affiliation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Affiliation</rdfs:label>
-    <rdfs:comment>Structured information about a relationship between two entities, such as a person and their employer.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N6297063a7b8c4198a4f3a64aa97885f6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N02e6040a445646d89be94dbf8427b451">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
-    <rdf:rest rdf:nodeID="Nbf94b022eaf2470992484a3439508ddd"/>
   </rdf:Description>
 </rdf:RDF>

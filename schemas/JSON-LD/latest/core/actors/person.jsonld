@@ -26,6 +26,139 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/props/associatedAccount",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Associated account"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/AccountInformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/givenName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Name given to a person, including all potential middle names, but excluding the family name."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Given name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/alternateName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N51503ca9bc7b4938b5f2577ccaf2858f"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Alternate name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+      }
+    ]
+  },
+  {
+    "@id": "_:N51503ca9bc7b4938b5f2577ccaf2858f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/affiliation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Declaration of a person being closely associated to an organization."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N8cbc79308d0349b99053fe9192c8ee1c"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Affiliation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Affiliation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8cbc79308d0349b99053fe9192c8ee1c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/digitalIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -37,7 +170,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N17e319c643e843a09c95633588e238d6"
+        "@id": "_:N4497ad5401814272bb6492921314ae94"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -47,12 +180,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N89982a936b6542a788570cd19654b6c5"
+        "@id": "_:N52ddf4137d6d433a83691960bf5aeb61"
       }
     ]
   },
   {
-    "@id": "_:N17e319c643e843a09c95633588e238d6",
+    "@id": "_:N4497ad5401814272bb6492921314ae94",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -157,7 +290,7 @@
     ]
   },
   {
-    "@id": "_:N89982a936b6542a788570cd19654b6c5",
+    "@id": "_:N52ddf4137d6d433a83691960bf5aeb61",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -207,7 +340,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N2f85736d4987458a8154e506c768ae98"
+        "@id": "_:N9ac0c4e094034a1689a9c0c5d8111492"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -222,7 +355,7 @@
     ]
   },
   {
-    "@id": "_:N2f85736d4987458a8154e506c768ae98",
+    "@id": "_:N9ac0c4e094034a1689a9c0c5d8111492",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -256,27 +389,27 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N009cbbfe10a648d3ba6ae3d74a7801ea"
+        "@id": "_:Nc7356c6caa134f628158b89606de7f52"
       },
       {
-        "@id": "_:N961a726b1bcb44399b64db66bd826984"
+        "@id": "_:N4b392e3ea4a744588d465c2321d73cd1"
       },
       {
-        "@id": "_:N85166acba4ce46e385f685fd5ad2f9bb"
+        "@id": "_:N9dc6520897ae44a5a0c44dab333bea7d"
       },
       {
-        "@id": "_:N11484bae88744c95b47cfb962c1782fd"
+        "@id": "_:N36f43ae475954f7bb66ca185ee42842e"
       },
       {
-        "@id": "_:N813da15193844fa49e772e1931a8066f"
+        "@id": "_:N2f0b1fa907e2437bbaf49724ebc7fb7d"
       },
       {
-        "@id": "_:N5a1c92d4a0104e1da4b3d2b4e72fa75a"
+        "@id": "_:Neca45a3bb7c7463abe7e6d1910a30e84"
       }
     ]
   },
   {
-    "@id": "_:N009cbbfe10a648d3ba6ae3d74a7801ea",
+    "@id": "_:Nc7356c6caa134f628158b89606de7f52",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -292,7 +425,7 @@
     ]
   },
   {
-    "@id": "_:N961a726b1bcb44399b64db66bd826984",
+    "@id": "_:N4b392e3ea4a744588d465c2321d73cd1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -309,7 +442,7 @@
     ]
   },
   {
-    "@id": "_:N85166acba4ce46e385f685fd5ad2f9bb",
+    "@id": "_:N9dc6520897ae44a5a0c44dab333bea7d",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -325,7 +458,7 @@
     ]
   },
   {
-    "@id": "_:N11484bae88744c95b47cfb962c1782fd",
+    "@id": "_:N36f43ae475954f7bb66ca185ee42842e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -347,7 +480,7 @@
     ]
   },
   {
-    "@id": "_:N813da15193844fa49e772e1931a8066f",
+    "@id": "_:N2f0b1fa907e2437bbaf49724ebc7fb7d",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -363,7 +496,7 @@
     ]
   },
   {
-    "@id": "_:N5a1c92d4a0104e1da4b3d2b4e72fa75a",
+    "@id": "_:Neca45a3bb7c7463abe7e6d1910a30e84",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -376,139 +509,6 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "https://openminds.om-i.org/props/givenName"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/associatedAccount",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Associated account"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/AccountInformation"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/alternateName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N927bc3114a9a4f15b40ce7fa24623a0b"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Alternate name"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
-      }
-    ]
-  },
-  {
-    "@id": "_:N927bc3114a9a4f15b40ce7fa24623a0b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/affiliation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Declaration of a person being closely associated to an organization."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N607b962b70c14065ab392906c6e5028e"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Affiliation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Affiliation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N607b962b70c14065ab392906c6e5028e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/givenName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Name given to a person, including all potential middle names, but excluding the family name."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Given name"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   }

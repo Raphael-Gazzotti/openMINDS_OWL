@@ -4,12 +4,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Hash">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Hash</rdfs:label>
-    <rdfs:comment>Structured information on a hash.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N27f2906e838e402c8485003161563a91"/>
-    <rdfs:subClassOf rdf:nodeID="Nb0810628594544a6a8df43f9e5c9d510"/>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Digest</rdfs:label>
+    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/algorithm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -18,21 +18,21 @@
     <rdfs:comment>Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb0810628594544a6a8df43f9e5c9d510">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Hash</rdfs:label>
+    <rdfs:comment>Structured information on a hash.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N2ef4bad4e7654f64aeba02c8af50716b"/>
+    <rdfs:subClassOf rdf:nodeID="N76ead8ff7f934daca53cc9f220bdb510"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N27f2906e838e402c8485003161563a91">
+  <rdf:Description rdf:nodeID="N2ef4bad4e7654f64aeba02c8af50716b">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/algorithm"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>Digest</rdfs:label>
-    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
+  <rdf:Description rdf:nodeID="N76ead8ff7f934daca53cc9f220bdb510">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
 </rdf:RDF>

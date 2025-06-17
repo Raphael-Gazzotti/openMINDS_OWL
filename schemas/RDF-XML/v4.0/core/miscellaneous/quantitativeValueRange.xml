@@ -4,38 +4,24 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/maxValue">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <rdfs:label>Max value</rdfs:label>
-    <rdfs:comment>Greatest quantity attained or allowed.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4b93ec20cbfb44928c9881db83aeb7ef">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/minValueUnit"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/types/QuantitativeValueRange">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Quantitative value range</rdfs:label>
     <rdfs:comment>A representation of a range of quantitative values.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N2eeb92d6c29f48288158a441a49ac484"/>
-    <rdfs:subClassOf rdf:nodeID="N3019ec82acbe463cad870c37d2fed949"/>
-    <rdfs:subClassOf rdf:nodeID="N724f789ad4184332bed54c60134aa5b8"/>
-    <rdfs:subClassOf rdf:nodeID="N4b93ec20cbfb44928c9881db83aeb7ef"/>
+    <rdfs:subClassOf rdf:nodeID="N57dbc8da817c480891ef047bf83ac312"/>
+    <rdfs:subClassOf rdf:nodeID="Nd9e35d119abd4d488e4122d2a06e2126"/>
+    <rdfs:subClassOf rdf:nodeID="N8c983eb9024a4831b9c3f2c84677a771"/>
+    <rdfs:subClassOf rdf:nodeID="Ne7928dfed8304eecb8083287e875e41d"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N724f789ad4184332bed54c60134aa5b8">
+  <rdf:Description rdf:nodeID="N8c983eb9024a4831b9c3f2c84677a771">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/minValue"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3019ec82acbe463cad870c37d2fed949">
+  <rdf:Description rdf:nodeID="N57dbc8da817c480891ef047bf83ac312">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/maxValueUnit"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/maxValue"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/minValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -44,21 +30,35 @@
     <rdfs:comment>Smallest quantity attained or allowed.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
   </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/minValueUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Min value unit</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/maxValueUnit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Max value unit</rdfs:label>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
     <rdfs:range rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2eeb92d6c29f48288158a441a49ac484">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/maxValue"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/minValueUnit">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Min value unit</rdfs:label>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/maxValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>Max value</rdfs:label>
+    <rdfs:comment>Greatest quantity attained or allowed.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
-    <rdfs:range rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd9e35d119abd4d488e4122d2a06e2126">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/maxValueUnit"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne7928dfed8304eecb8083287e875e41d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/minValueUnit"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
   </rdf:Description>
 </rdf:RDF>

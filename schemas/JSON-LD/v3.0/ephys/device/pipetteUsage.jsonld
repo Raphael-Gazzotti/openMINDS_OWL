@@ -1,5 +1,26 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/endMembranePotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "End membrane potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/seriesResistance",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -21,7 +42,7 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/pipetteResistance",
+    "@id": "https://openminds.ebrains.eu/vocab/labelingCompound",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -32,17 +53,17 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Pipette resistance"
+        "@value": "Labeling compound"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Naf809de72e4742489a32504e049de943"
+        "@id": "_:Nf4c13409bf484fffa560f7af7d9b82da"
       }
     ]
   },
   {
-    "@id": "_:Naf809de72e4742489a32504e049de943",
+    "@id": "_:Nf4c13409bf484fffa560f7af7d9b82da",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -50,33 +71,15 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/sealResistance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Seal resistance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
       }
     ]
   },
@@ -87,7 +90,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N567552d89d81492c8980a86fa9946828"
+        "@id": "_:Ndcbcf9a726884bc3b007fb55d143d772"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -97,12 +100,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Na62cc955d803405da227d74e95b2214c"
+        "@id": "_:N5cad2fcfbf1d4a9283c405ed0b113c03"
       }
     ]
   },
   {
-    "@id": "_:N567552d89d81492c8980a86fa9946828",
+    "@id": "_:Ndcbcf9a726884bc3b007fb55d143d772",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -132,7 +135,7 @@
     ]
   },
   {
-    "@id": "_:Na62cc955d803405da227d74e95b2214c",
+    "@id": "_:N5cad2fcfbf1d4a9283c405ed0b113c03",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -162,7 +165,7 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/startMembranePotential",
+    "@id": "https://openminds.ebrains.eu/vocab/pipetteSolution",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -173,7 +176,28 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Start membrane potential"
+        "@value": "Pipette solution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/compensationCurrent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Compensation current"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -204,118 +228,13 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/pipetteSolution",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Pipette solution"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/inputResistance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Input resistance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/spatialLocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nf715a15f28404593a6e9f1b5e3290076"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Spatial location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/sands/CoordinatePoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf715a15f28404593a6e9f1b5e3290076",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/chlorideReversalPotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Chloride reversal potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/metadataLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N528bffdb1c7d43afa99b9afbd4b4452f"
+        "@id": "_:N0f5870a992e34cfd94e2323d9c2e08c6"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -325,12 +244,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N1bcbf5d1fe9a4c449df419c8c4ff0acf"
+        "@id": "_:Nd0cf4bea3ba841f59af691f8ebdf98b6"
       }
     ]
   },
   {
-    "@id": "_:N528bffdb1c7d43afa99b9afbd4b4452f",
+    "@id": "_:N0f5870a992e34cfd94e2323d9c2e08c6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -354,7 +273,7 @@
     ]
   },
   {
-    "@id": "_:N1bcbf5d1fe9a4c449df419c8c4ff0acf",
+    "@id": "_:Nd0cf4bea3ba841f59af691f8ebdf98b6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -372,7 +291,7 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/labelingCompound",
+    "@id": "https://openminds.ebrains.eu/vocab/sealResistance",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -383,33 +302,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Labeling compound"
+        "@value": "Seal resistance"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Ndb67a6feeab74df9a724954981894569"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndb67a6feeab74df9a724954981894569",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
-          }
-        ]
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
       }
     ]
   },
@@ -425,66 +323,66 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Ne681e4a78e5047cea5cff1f1ac493c0d"
+        "@id": "_:N43496deacf954726bdacc77a3df85191"
       },
       {
-        "@id": "_:Nb1f4941931cf41fc9a0860ea28b11ca9"
+        "@id": "_:N484f0701633046379ac693d564c44622"
       },
       {
-        "@id": "_:N18dca6a649e44edaaed6a2f78932c9a8"
+        "@id": "_:Nc0e0ec6119e64b4dbc7d42842af44807"
       },
       {
-        "@id": "_:N906ce3625949458ba1605b7327704430"
+        "@id": "_:Nbbfaebe35b934c1ba6290b600107b50a"
       },
       {
-        "@id": "_:N6fa3b40cd7764b0a90ec81dc9d11b4b9"
+        "@id": "_:N2eb320a902b84714b88f017529838293"
       },
       {
-        "@id": "_:Ncb0276cdc97f4b678b79b4e1df43fc8d"
+        "@id": "_:Ndf3711bf6dd043dd9bdbe08d644ae49f"
       },
       {
-        "@id": "_:N9d35d39ce3fc46a2b37305719a2bca79"
+        "@id": "_:N340f3ad31c11441ca8d503088005667e"
       },
       {
-        "@id": "_:Nf87c2370423440858d850741809b40f8"
+        "@id": "_:N1f78e295f6834ecb909bb21a5cfb9959"
       },
       {
-        "@id": "_:N7bc49aca6d34447da2709d3c72c56f48"
+        "@id": "_:N5c71c18444ad437eb70d2a908d0aba87"
       },
       {
-        "@id": "_:N966bba6fb4d0459997b1c8c5c9b5eabe"
+        "@id": "_:Nb8ab71b623bd4f60957f973a73995085"
       },
       {
-        "@id": "_:Nb2019bf8cbe343df85debc02800bedf5"
+        "@id": "_:Nbed1f382ff6443d4842597a2d9b45196"
       },
       {
-        "@id": "_:Nb32ff7b416cf4c17928ae0cfb1cd4d52"
+        "@id": "_:N2c7458e010fd421083eb95ee68ce9633"
       },
       {
-        "@id": "_:Ne402f9dbaf2047e4af019b165095b486"
+        "@id": "_:N8370f5dd794f423aad33fc61a629a00f"
       },
       {
-        "@id": "_:N1dddd23690054f8e9c2dffb5fc73811d"
+        "@id": "_:Nff8f4045cb8048f2965e0ff7ea9fbf5a"
       },
       {
-        "@id": "_:N371b6779bf8e409ca58811b6ddd6d28a"
+        "@id": "_:N0b98c501755a4fa495cdf173f97cdb80"
       },
       {
-        "@id": "_:Na4a2e1e0d1f9477fa32a2a72a0c4d75e"
+        "@id": "_:N38a47bf9e1af4358b2b4776699c3b3a0"
       },
       {
-        "@id": "_:N4a8f2a202a0242519fc0a56f8aaa6dbd"
+        "@id": "_:N4ed28abe0db048e5b5bb9d41cd6e7a75"
       }
     ]
   },
   {
-    "@id": "_:Ne681e4a78e5047cea5cff1f1ac493c0d",
+    "@id": "_:N43496deacf954726bdacc77a3df85191",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N574b3b017bbb476bb9a378e4d98278f8"
+        "@id": "_:N07fe65b8b1164b678e5a79a00fd74ed6"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -500,7 +398,7 @@
     ]
   },
   {
-    "@id": "_:N574b3b017bbb476bb9a378e4d98278f8",
+    "@id": "_:N07fe65b8b1164b678e5a79a00fd74ed6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -536,7 +434,7 @@
     ]
   },
   {
-    "@id": "_:Nb1f4941931cf41fc9a0860ea28b11ca9",
+    "@id": "_:N484f0701633046379ac693d564c44622",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -552,7 +450,7 @@
     ]
   },
   {
-    "@id": "_:N18dca6a649e44edaaed6a2f78932c9a8",
+    "@id": "_:Nc0e0ec6119e64b4dbc7d42842af44807",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -574,7 +472,7 @@
     ]
   },
   {
-    "@id": "_:N906ce3625949458ba1605b7327704430",
+    "@id": "_:Nbbfaebe35b934c1ba6290b600107b50a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -602,7 +500,7 @@
     ]
   },
   {
-    "@id": "_:N6fa3b40cd7764b0a90ec81dc9d11b4b9",
+    "@id": "_:N2eb320a902b84714b88f017529838293",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -624,7 +522,7 @@
     ]
   },
   {
-    "@id": "_:Ncb0276cdc97f4b678b79b4e1df43fc8d",
+    "@id": "_:Ndf3711bf6dd043dd9bdbe08d644ae49f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -646,7 +544,7 @@
     ]
   },
   {
-    "@id": "_:N9d35d39ce3fc46a2b37305719a2bca79",
+    "@id": "_:N340f3ad31c11441ca8d503088005667e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -668,13 +566,13 @@
     ]
   },
   {
-    "@id": "_:Nf87c2370423440858d850741809b40f8",
+    "@id": "_:N1f78e295f6834ecb909bb21a5cfb9959",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Nf101a632218e43a096bb4dd40cb0efdc"
+        "@id": "_:Nb03c181ff4434865ab21e6331aca3789"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -690,7 +588,7 @@
     ]
   },
   {
-    "@id": "_:Nf101a632218e43a096bb4dd40cb0efdc",
+    "@id": "_:Nb03c181ff4434865ab21e6331aca3789",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -711,7 +609,7 @@
     ]
   },
   {
-    "@id": "_:N7bc49aca6d34447da2709d3c72c56f48",
+    "@id": "_:N5c71c18444ad437eb70d2a908d0aba87",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -733,13 +631,13 @@
     ]
   },
   {
-    "@id": "_:N966bba6fb4d0459997b1c8c5c9b5eabe",
+    "@id": "_:Nb8ab71b623bd4f60957f973a73995085",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Ndf333164e46742a2b2f9eef37b12673c"
+        "@id": "_:Nc4aee169231a40e0a4c2d3467f7de8de"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -749,7 +647,7 @@
     ]
   },
   {
-    "@id": "_:Ndf333164e46742a2b2f9eef37b12673c",
+    "@id": "_:Nc4aee169231a40e0a4c2d3467f7de8de",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -767,13 +665,13 @@
     ]
   },
   {
-    "@id": "_:Nb2019bf8cbe343df85debc02800bedf5",
+    "@id": "_:Nbed1f382ff6443d4842597a2d9b45196",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N7838ef63b16b4fdca79c695b03d91192"
+        "@id": "_:N18f7461b512448c596cd6f15ab4e0ded"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -789,7 +687,7 @@
     ]
   },
   {
-    "@id": "_:N7838ef63b16b4fdca79c695b03d91192",
+    "@id": "_:N18f7461b512448c596cd6f15ab4e0ded",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -807,7 +705,7 @@
     ]
   },
   {
-    "@id": "_:Nb32ff7b416cf4c17928ae0cfb1cd4d52",
+    "@id": "_:N2c7458e010fd421083eb95ee68ce9633",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -835,7 +733,7 @@
     ]
   },
   {
-    "@id": "_:Ne402f9dbaf2047e4af019b165095b486",
+    "@id": "_:N8370f5dd794f423aad33fc61a629a00f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -857,7 +755,7 @@
     ]
   },
   {
-    "@id": "_:N1dddd23690054f8e9c2dffb5fc73811d",
+    "@id": "_:Nff8f4045cb8048f2965e0ff7ea9fbf5a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -879,7 +777,7 @@
     ]
   },
   {
-    "@id": "_:N371b6779bf8e409ca58811b6ddd6d28a",
+    "@id": "_:N0b98c501755a4fa495cdf173f97cdb80",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -901,7 +799,7 @@
     ]
   },
   {
-    "@id": "_:Na4a2e1e0d1f9477fa32a2a72a0c4d75e",
+    "@id": "_:N38a47bf9e1af4358b2b4776699c3b3a0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -923,13 +821,13 @@
     ]
   },
   {
-    "@id": "_:N4a8f2a202a0242519fc0a56f8aaa6dbd",
+    "@id": "_:N4ed28abe0db048e5b5bb9d41cd6e7a75",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N225ce030ca5c474c9e96ddea8b7c8b55"
+        "@id": "_:N219d3edc87324a90adf4e3e006730c21"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -945,7 +843,7 @@
     ]
   },
   {
-    "@id": "_:N225ce030ca5c474c9e96ddea8b7c8b55",
+    "@id": "_:N219d3edc87324a90adf4e3e006730c21",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -963,96 +861,28 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/compensationCurrent",
+    "@id": "https://openminds.ebrains.eu/vocab/spatialLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+        "@id": "_:N4a45c016c7544ea9a2ef185ea76eede7"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Compensation current"
+        "@value": "Spatial location"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
+        "@id": "https://openminds.ebrains.eu/sands/CoordinatePoint"
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/endMembranePotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "End membrane potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/holdingPotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Holding potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/device",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nc9b7ab7b4fbb45ac85fb1515b926881d"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Device"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N98bb5b9d35e74b319ba916124d9205ea"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc9b7ab7b4fbb45ac85fb1515b926881d",
+    "@id": "_:N4a45c016c7544ea9a2ef185ea76eede7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1060,70 +890,13 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N98bb5b9d35e74b319ba916124d9205ea",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
           }
         ]
       }
@@ -1136,7 +909,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N98747ae3ed25454fb3c521cfb74b2c81"
+        "@id": "_:Nd43d53d2209c42f58e6df258458b230a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1151,7 +924,7 @@
     ]
   },
   {
-    "@id": "_:N98747ae3ed25454fb3c521cfb74b2c81",
+    "@id": "_:Nd43d53d2209c42f58e6df258458b230a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1274,13 +1047,97 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/inputResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Input resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/holdingPotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Holding potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/chlorideReversalPotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Chloride reversal potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/startMembranePotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Start membrane potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/anatomicalLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N9a2100490f1f40ec8f6ede064b7828b8"
+        "@id": "_:N9864ff84ddc147c897e8712d1fffc374"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1290,12 +1147,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N4eb419990c4b413b9854fbde3f7ba35e"
+        "@id": "_:N4152d0aa3d41433498c23aec7b234a46"
       }
     ]
   },
   {
-    "@id": "_:N9a2100490f1f40ec8f6ede064b7828b8",
+    "@id": "_:N9864ff84ddc147c897e8712d1fffc374",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1319,7 +1176,7 @@
     ]
   },
   {
-    "@id": "_:N4eb419990c4b413b9854fbde3f7ba35e",
+    "@id": "_:N4152d0aa3d41433498c23aec7b234a46",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1349,6 +1206,149 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/pipetteResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pipette resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nd4b2b2138936448fa7a2566da9a0471d"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd4b2b2138936448fa7a2566da9a0471d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/device",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N32b18e6968d54dd0aa5c25a0cccb91cf"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Device"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N912b91237c62401d9c1b033f34f27d89"
+      }
+    ]
+  },
+  {
+    "@id": "_:N32b18e6968d54dd0aa5c25a0cccb91cf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N912b91237c62401d9c1b033f34f27d89",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
           }
         ]
       }

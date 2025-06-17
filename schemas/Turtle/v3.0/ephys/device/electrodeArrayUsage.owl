@@ -1,0 +1,96 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/lookupLabel> a owl:DatatypeProperty ;
+    rdfs:label "Lookup label" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/chemicals/ChemicalSubstance> <https://openminds.ebrains.eu/computation/DataAnalysis> <https://openminds.ebrains.eu/computation/DataCopy> <https://openminds.ebrains.eu/computation/GenericComputation> <https://openminds.ebrains.eu/computation/ModelValidation> <https://openminds.ebrains.eu/computation/Optimization> <https://openminds.ebrains.eu/computation/Simulation> <https://openminds.ebrains.eu/computation/Visualization> <https://openminds.ebrains.eu/core/Configuration> <https://openminds.ebrains.eu/core/ContentTypePattern> <https://openminds.ebrains.eu/core/FileRepositoryStructure> <https://openminds.ebrains.eu/core/PropertyValueList> <https://openminds.ebrains.eu/core/ProtocolExecution> <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/SubjectGroupState> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/core/TissueSampleCollectionState> <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/Electrode> <https://openminds.ebrains.eu/ephys/ElectrodeArray> <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/Pipette> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> <https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation> <https://openminds.ebrains.eu/specimenPrep/SlicingDevice> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> <https://openminds.ebrains.eu/stimulation/EphysStimulus> <https://openminds.ebrains.eu/stimulation/StimulationActivity> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/anatomicalLocationOfArray> a owl:ObjectProperty ;
+    rdfs:label "Anatomical location of array" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/anatomicalLocationOfElectrodes> a owl:ObjectProperty ;
+    rdfs:label "Anatomical location of electrodes" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/contactResistances> a owl:ObjectProperty ;
+    rdfs:label "Contact resistances" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/QuantitativeValueRange> ) ] .
+
+<https://openminds.ebrains.eu/vocab/device> a owl:ObjectProperty ;
+    rdfs:label "Device" ;
+    rdfs:comment "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/ephys/CellPatching> <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodePlacement> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/ephys/RecordingActivity> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> <https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/ephys/Electrode> <https://openminds.ebrains.eu/ephys/ElectrodeArray> <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/Pipette> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/specimenPrep/SlicingDevice> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] .
+
+<https://openminds.ebrains.eu/vocab/metadataLocation> a owl:ObjectProperty ;
+    rdfs:label "Metadata location" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] .
+
+<https://openminds.ebrains.eu/vocab/spatialLocationOfElectrodes> a owl:ObjectProperty ;
+    rdfs:label "Spatial location of electrodes" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> ;
+    rdfs:range <https://openminds.ebrains.eu/sands/CoordinatePoint> .
+
+<https://openminds.ebrains.eu/vocab/usedElectrode> a owl:DatatypeProperty ;
+    rdfs:label "Used electrode" ;
+    rdfs:domain <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> ;
+    rdfs:range rdf:List .
+
+<https://openminds.ebrains.eu/vocab/usedSpecimen> a owl:ObjectProperty ;
+    rdfs:label "Used specimen" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Subject> <https://openminds.ebrains.eu/core/SubjectGroup> <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSample> <https://openminds.ebrains.eu/core/TissueSampleCollection> <https://openminds.ebrains.eu/core/TissueSampleState> ) ] .
+
+<https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> a owl:Class ;
+    rdfs:label "Electrode array usage" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/anatomicalLocationOfElectrodes> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/metadataLocation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/anatomicalLocationOfArray> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSampleState> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/usedSpecimen> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/usedElectrode> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinatePoint> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/spatialLocationOfElectrodes> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/QuantitativeValueRange> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/contactResistances> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/ephys/ElectrodeArray> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/device> ] .
+

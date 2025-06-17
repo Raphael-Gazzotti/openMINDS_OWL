@@ -1,12 +1,82 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/acknowledgement",
+    "@id": "https://openminds.om-i.org/types/Funding",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on used funding."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Funding"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nff424be8acee4cefb325bd4eee2406ca"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nff424be8acee4cefb325bd4eee2406ca",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N1a14a999c80349d2a44db11498e49918"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/funder"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1a14a999c80349d2a44db11498e49918",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Consortium"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/awardTitle",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Official declaration or avowal of appreciation of an act or achievement."
+        "@value": "Human-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -16,7 +86,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Acknowledgement"
+        "@value": "Award title"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -47,82 +117,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Ndb1185da09a84fbfbb00877976977d18"
+        "@id": "_:N7dfac86b1539415080a8bb7b31222180"
       }
     ]
   },
   {
-    "@id": "_:Ndb1185da09a84fbfbb00877976977d18",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Consortium"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/Funding",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on used funding."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funding"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N67bb637d08d94f51bb478d045c1e67a2"
-      }
-    ]
-  },
-  {
-    "@id": "_:N67bb637d08d94f51bb478d045c1e67a2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N3792dbb90fd34105aed7046a67e38101"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/funder"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3792dbb90fd34105aed7046a67e38101",
+    "@id": "_:N7dfac86b1539415080a8bb7b31222180",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -169,13 +169,13 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/awardTitle",
+    "@id": "https://openminds.om-i.org/props/acknowledgement",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Human-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need."
+        "@value": "Official declaration or avowal of appreciation of an act or achievement."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -185,7 +185,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Award title"
+        "@value": "Acknowledgement"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [

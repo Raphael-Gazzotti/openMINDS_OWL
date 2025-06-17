@@ -21,12 +21,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N71815af152984bcea8f1e8b6d6fc1e19"
+        "@id": "_:Nafaf162f8e5842bebe60aa60cfa8ecd0"
       }
     ]
   },
   {
-    "@id": "_:N71815af152984bcea8f1e8b6d6fc1e19",
+    "@id": "_:Nafaf162f8e5842bebe60aa60cfa8ecd0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -47,6 +47,101 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/types/Contribution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on the contribution made to a research product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Contribution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N5d4ba7270ea84989a50d79b6f8318dd4"
+      },
+      {
+        "@id": "_:Na5c6ff0b2cc441b2a31aef4defbeb640"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5d4ba7270ea84989a50d79b6f8318dd4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N53c9684687f74f64ad7a502045add6aa"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/contributor"
+      }
+    ]
+  },
+  {
+    "@id": "_:N53c9684687f74f64ad7a502045add6aa",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Consortium"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Na5c6ff0b2cc441b2a31aef4defbeb640",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/ContributionType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/type"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/type",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -58,7 +153,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N25c88f7e39424ab4bf2eadbc6fced8cf"
+        "@id": "_:N0938d93b87d8453490654c902c3f16f5"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -68,12 +163,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N12a408eb06944d35be5b26b2b3e75610"
+        "@id": "_:Nc09fab0ac9eb4a969ce8f034b629d65c"
       }
     ]
   },
   {
-    "@id": "_:N25c88f7e39424ab4bf2eadbc6fced8cf",
+    "@id": "_:N0938d93b87d8453490654c902c3f16f5",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -124,7 +219,7 @@
     ]
   },
   {
-    "@id": "_:N12a408eb06944d35be5b26b2b3e75610",
+    "@id": "_:Nc09fab0ac9eb4a969ce8f034b629d65c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -162,101 +257,6 @@
             "@id": "https://openminds.om-i.org/types/TissueSampleType"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/Contribution",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on the contribution made to a research product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Contribution"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N114d45d2fa534f9e9537a2b740b7fcdf"
-      },
-      {
-        "@id": "_:N5769f0ca440b4534ba8ea7b6e25703ff"
-      }
-    ]
-  },
-  {
-    "@id": "_:N114d45d2fa534f9e9537a2b740b7fcdf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Nb7292292e721430187d5d54e31f82482"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/contributor"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb7292292e721430187d5d54e31f82482",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Consortium"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N5769f0ca440b4534ba8ea7b6e25703ff",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/ContributionType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/type"
       }
     ]
   }

@@ -1,71 +1,5 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/measuredWith",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Measured with"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N740abeabde2d49f582a0664bc6fb75c7"
-      }
-    ]
-  },
-  {
-    "@id": "_:N740abeabde2d49f582a0664bc6fb75c7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/measuredQuantity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Measurement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Measured quantity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/value",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -77,7 +11,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Neaf73a8547a74dd288fb2e929ad3f7c3"
+        "@id": "_:N495066657e014b74b737be5735720139"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -87,12 +21,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N43b171cd7ddd4003b299fee44f1f0786"
+        "@id": "_:N30b1dc6a90b2427eb35b854f5ad759b9"
       }
     ]
   },
   {
-    "@id": "_:Neaf73a8547a74dd288fb2e929ad3f7c3",
+    "@id": "_:N495066657e014b74b737be5735720139",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -119,148 +53,7 @@
     ]
   },
   {
-    "@id": "_:N43b171cd7ddd4003b299fee44f1f0786",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/core/Measurement",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information about a measurement performed during a scientific experiment."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Measurement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N6f4d161df7cd47a0809cd6a50c66546b"
-      },
-      {
-        "@id": "_:N62bcb1b50e6e4665a6c0a7e78113d7c6"
-      },
-      {
-        "@id": "_:N55073b40806d41bb9170e14131872f29"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6f4d161df7cd47a0809cd6a50c66546b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/measuredQuantity"
-      }
-    ]
-  },
-  {
-    "@id": "_:N62bcb1b50e6e4665a6c0a7e78113d7c6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N997ec39b97404f8cba501cb3f3972e7d"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/measuredWith"
-      }
-    ]
-  },
-  {
-    "@id": "_:N997ec39b97404f8cba501cb3f3972e7d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N55073b40806d41bb9170e14131872f29",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N58839fe9d89042a99d2821cbc2645608"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/value"
-      }
-    ]
-  },
-  {
-    "@id": "_:N58839fe9d89042a99d2821cbc2645608",
+    "@id": "_:N30b1dc6a90b2427eb35b854f5ad759b9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -289,7 +82,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc4885d8e860d42f9b5027f7f6eab05d7"
+        "@id": "_:N0aa5dcea04c7429c808a1ef2441a82e7"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -304,7 +97,7 @@
     ]
   },
   {
-    "@id": "_:Nc4885d8e860d42f9b5027f7f6eab05d7",
+    "@id": "_:N0aa5dcea04c7429c808a1ef2441a82e7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -355,13 +148,220 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/core/Measurement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about a measurement performed during a scientific experiment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N03e52d2c5cc14711a9e0bc377d877136"
+      },
+      {
+        "@id": "_:N4a0b00efae0e428a866ca3443ccd21e2"
+      },
+      {
+        "@id": "_:Nb00df3872c4e4e7fb6273e427e3d2770"
+      }
+    ]
+  },
+  {
+    "@id": "_:N03e52d2c5cc14711a9e0bc377d877136",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/measuredQuantity"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4a0b00efae0e428a866ca3443ccd21e2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nde1a5a2c27ce457abfb1f9f0341ac6bf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/measuredWith"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nde1a5a2c27ce457abfb1f9f0341ac6bf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb00df3872c4e4e7fb6273e427e3d2770",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nee57d185e5c946d4b181fe9014262d1c"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nee57d185e5c946d4b181fe9014262d1c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/measuredWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Measured with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nf260001b14be4d22a8be7b6bca46fceb"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf260001b14be4d22a8be7b6bca46fceb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/measuredQuantity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Measurement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Measured quantity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/timestamp",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N2bcf2fa4286640abb08aab1d7985e29a"
+        "@id": "_:N779efb42ae0f48e58140ed09dbbf44af"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -376,7 +376,7 @@
     ]
   },
   {
-    "@id": "_:N2bcf2fa4286640abb08aab1d7985e29a",
+    "@id": "_:N779efb42ae0f48e58140ed09dbbf44af",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

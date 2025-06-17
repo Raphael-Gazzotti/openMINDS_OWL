@@ -1,5 +1,360 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/hostedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Reference to an organization that provides facilities and services for something."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N75d5bdf2884e4a81badd3936ae986237"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Hosted by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Organization"
+      }
+    ]
+  },
+  {
+    "@id": "_:N75d5bdf2884e4a81badd3936ae986237",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileRepository"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Live paper resource item"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nf746239bf0774dd7a8b46a0500b29e81"
+      },
+      {
+        "@id": "_:N4952d7604a0648749d75897807c626a2"
+      },
+      {
+        "@id": "_:Nfb6692c256b742ca8353cd19afb4e431"
+      },
+      {
+        "@id": "_:N686646787cfa4d47a7812132e24ddea2"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf746239bf0774dd7a8b46a0500b29e81",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/IRI"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4952d7604a0648749d75897807c626a2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/hostedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfb6692c256b742ca8353cd19afb4e431",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/publications/LivePaperSection"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/isPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:N686646787cfa4d47a7812132e24ddea2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/name"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/IRI",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N4d0829be4cf748f5be5b3ba5ba89499e"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Iri"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4d0829be4cf748f5be5b3ba5ba89499e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileArchive"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileRepository"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/WebResource"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/Book"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/Chapter"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LearningResource"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/ScholarlyArticle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/isPartOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Reference to the ensemble of multiple things or beings."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N28f666e9481d4a8ca53201adfbec6ecd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Is part of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N3800d0afecdc4bc6a5230693d8931445"
+      }
+    ]
+  },
+  {
+    "@id": "_:N28f666e9481d4a8ca53201adfbec6ecd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Subject"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSample"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/Chapter"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperSection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/PublicationIssue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/PublicationVolume"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/ScholarlyArticle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N3800d0afecdc4bc6a5230693d8931445",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileRepository"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/Book"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperSection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/Periodical"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/PublicationIssue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/publications/PublicationVolume"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -11,7 +366,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N52ac38fed8794d3b9c7792762134db3e"
+        "@id": "_:N710e1ea7901344979f23cff3f4d4379b"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -26,7 +381,7 @@
     ]
   },
   {
-    "@id": "_:N52ac38fed8794d3b9c7792762134db3e",
+    "@id": "_:N710e1ea7901344979f23cff3f4d4379b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -362,361 +717,6 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/isPartOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Reference to the ensemble of multiple things or beings."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nc874a4d14edb487797f14d463382c6ef"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Is part of"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Ne8351db38ffc43a9a7d16bff35384d28"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc874a4d14edb487797f14d463382c6ef",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Subject"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSample"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/Chapter"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperSection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/PublicationIssue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/PublicationVolume"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/ScholarlyArticle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne8351db38ffc43a9a7d16bff35384d28",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileRepository"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/Book"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperSection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/Periodical"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/PublicationIssue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/PublicationVolume"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/IRI",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Ne1c3e19f643d4ccb8ff8975b652e3a06"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Iri"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne1c3e19f643d4ccb8ff8975b652e3a06",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileArchive"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileRepository"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/WebResource"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/Book"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/Chapter"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LearningResource"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/ScholarlyArticle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Live paper resource item"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Na58d2cf59c1e4202acbaf9ebabda7e01"
-      },
-      {
-        "@id": "_:N4bc9fbe1f48c4606aff366bb16dd7d88"
-      },
-      {
-        "@id": "_:N313a9925c3e642cd83bf172d44e9a15f"
-      },
-      {
-        "@id": "_:Nf7ba010073f6420996cf50c1aa5e83f6"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na58d2cf59c1e4202acbaf9ebabda7e01",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/IRI"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4bc9fbe1f48c4606aff366bb16dd7d88",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Organization"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/hostedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:N313a9925c3e642cd83bf172d44e9a15f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/publications/LivePaperSection"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf7ba010073f6420996cf50c1aa5e83f6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/name"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/hostedBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Reference to an organization that provides facilities and services for something."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N697759adc19a48e59cac23a8fac305ad"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Hosted by"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "_:N697759adc19a48e59cac23a8fac305ad",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileRepository"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/publications/LivePaperResourceItem"
           }
         ]
       }

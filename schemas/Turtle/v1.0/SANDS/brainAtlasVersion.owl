@@ -1,0 +1,140 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.ebrains.eu/vocab/homepage> a owl:DatatypeProperty ;
+    rdfs:label "Homepage" ;
+    rdfs:comment "Main website of something or someone." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Dataset> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModel> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Model> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Project> <https://openminds.ebrains.eu/core/Software> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlas> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range xsd:string,
+        <https://openminds.ebrains.eu/core/URL> .
+
+<https://openminds.ebrains.eu/vocab/ontologyIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Ontology identifier" ;
+    rdfs:comment "Term or code used to identify something or someone registered within a particular ontology." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AgeCategory> <https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation> <https://openminds.ebrains.eu/controlledTerms/BehavioralTask> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> <https://openminds.ebrains.eu/controlledTerms/DatasetType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/EthicsAssessment> <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> <https://openminds.ebrains.eu/controlledTerms/FileUsageRole> <https://openminds.ebrains.eu/controlledTerms/Genotype> <https://openminds.ebrains.eu/controlledTerms/Language> <https://openminds.ebrains.eu/controlledTerms/Laterality> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/Modality> <https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel> <https://openminds.ebrains.eu/controlledTerms/ModelScope> <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/Phenotype> <https://openminds.ebrains.eu/controlledTerms/PreparationType> <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> <https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap> <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/Strain> <https://openminds.ebrains.eu/controlledTerms/Technique> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> <https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement> <https://openminds.ebrains.eu/sands/AnatomicalEntity> <https://openminds.ebrains.eu/sands/AtlasTerminology> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/annotationSet> a owl:ObjectProperty ;
+    rdfs:label "Annotation set" ;
+    rdfs:comment "Collection of notes or markings, each added by way of comment or explanation." ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ;
+    rdfs:range <https://openminds.ebrains.eu/sands/Annotation> .
+
+<https://openminds.ebrains.eu/vocab/coordinateSpace> a owl:ObjectProperty ;
+    rdfs:label "Coordinate space" ;
+    rdfs:comment "Two or three dimensional geometric setting." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinatePoint> <https://openminds.ebrains.eu/sands/Image> ) ] ;
+    rdfs:range <https://openminds.ebrains.eu/sands/CoordinateSpace> .
+
+<https://openminds.ebrains.eu/vocab/digitalIdentifier> a owl:ObjectProperty ;
+    rdfs:label "Digital identifier" ;
+    rdfs:comment "Digital handle to identify objects or legal persons." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/Dataset> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModel> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Model> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> <https://openminds.ebrains.eu/core/Software> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/DigitalIdentifier> <https://openminds.ebrains.eu/core/GRIDID> <https://openminds.ebrains.eu/core/ORCID> <https://openminds.ebrains.eu/core/RORID> <https://openminds.ebrains.eu/core/SWHID> ) ] .
+
+<https://openminds.ebrains.eu/vocab/fullName> a owl:DatatypeProperty ;
+    rdfs:label "Full name" ;
+    rdfs:comment "Whole, non-abbreviated name of something or somebody." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/BehavioralTask> <https://openminds.ebrains.eu/core/Dataset> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/License> <https://openminds.ebrains.eu/core/MetaDataModel> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Model> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Project> <https://openminds.ebrains.eu/core/Software> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/AtlasTerminology> <https://openminds.ebrains.eu/sands/BrainAtlas> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/hasAlternativeVersion> a owl:ObjectProperty ;
+    rdfs:label "Has alternative version" ;
+    rdfs:domain <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ;
+    rdfs:range <https://openminds.ebrains.eu/sands/BrainAtlasVersion> .
+
+<https://openminds.ebrains.eu/vocab/isNewVersionOf> a owl:ObjectProperty ;
+    rdfs:label "Is new version of" ;
+    rdfs:comment "Reference to a previous (potentially outdated) particular form of something." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ) ] .
+
+<https://openminds.ebrains.eu/vocab/releaseDate> a owl:DatatypeProperty ;
+    rdfs:label "Release date" ;
+    rdfs:comment "Fixed date on which a product is due to become or was made available for the general public to see or buy" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/shortName> a owl:DatatypeProperty ;
+    rdfs:label "Short name" ;
+    rdfs:comment "Shortened or fully abbreviated name of something or somebody." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/BehavioralTask> <https://openminds.ebrains.eu/core/Dataset> <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/License> <https://openminds.ebrains.eu/core/MetaDataModel> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/Model> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Project> <https://openminds.ebrains.eu/core/Software> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/AtlasTerminology> <https://openminds.ebrains.eu/sands/BrainAtlas> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/terminology> a owl:ObjectProperty ;
+    rdfs:label "Terminology" ;
+    rdfs:comment "Nomenclature for a particular field of study." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/sands/AtlasTerminology> ) ] .
+
+<https://openminds.ebrains.eu/vocab/versionIdentifier> a owl:DatatypeProperty ;
+    rdfs:label "Version identifier" ;
+    rdfs:comment "Term or code used to identify the version of something." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CoordinateSpace> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/vocab/versionInnovation> a owl:DatatypeProperty ;
+    rdfs:label "Version innovation" ;
+    rdfs:comment "Documentation on what changed in comparison to a previously published form of something." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.ebrains.eu/core/DatasetVersion> <https://openminds.ebrains.eu/core/MetaDataModelVersion> <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.ebrains.eu/sands/BrainAtlasVersion> a owl:Class ;
+    rdfs:label "Brain atlas version" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/fullName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/Annotation> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/annotationSet> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionInnovation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinateSpace> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/AtlasTerminology> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/terminology> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/DigitalIdentifier> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/hasAlternativeVersion> ] .
+

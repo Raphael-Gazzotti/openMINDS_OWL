@@ -1,12 +1,221 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/format",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Method of digitally organizing and structuring data or information."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N7c579246db174431a002a1b62066cacd"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Format"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ContentType"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7c579246db174431a002a1b62066cacd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileArchive"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileRepository"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/WebResource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/core/Configuration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about the properties or parameters of an entity or process."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Configuration"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N05a70df368dc40149c22c86bbe02db77"
+      },
+      {
+        "@id": "_:N4b62f230c8944b78bff2a7e7869a94ba"
+      }
+    ]
+  },
+  {
+    "@id": "_:N05a70df368dc40149c22c86bbe02db77",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/configuration"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4b62f230c8944b78bff2a7e7869a94ba",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ContentType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/format"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/configuration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Ndabd7a8cbd6d451b82d151225e368f5f"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Configuration"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+        "@id": "_:Necabf4cc99cb4b378c0f62e1af0ead67"
+      }
+    ]
+  },
+  {
+    "@id": "_:Necabf4cc99cb4b378c0f62e1af0ead67",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/WebResource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndabd7a8cbd6d451b82d151225e368f5f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Environment"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/WorkflowExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Ne96e106d6bf047398d75d733df71f6b1"
+        "@id": "_:Nb37690f38623405597d6946563fe5e9b"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -21,7 +230,7 @@
     ]
   },
   {
-    "@id": "_:Ne96e106d6bf047398d75d733df71f6b1",
+    "@id": "_:Nb37690f38623405597d6946563fe5e9b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -138,215 +347,6 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/format",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Method of digitally organizing and structuring data or information."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Na926c347392d403f863de4652bbe8cd4"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Format"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ContentType"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na926c347392d403f863de4652bbe8cd4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/WorkflowRecipeVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileArchive"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileRepository"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/WebResource"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/core/Configuration",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information about the properties or parameters of an entity or process."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Configuration"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N76d0f81693dc405fb61a1d56f4cc5baf"
-      },
-      {
-        "@id": "_:N5ffece86e1ee4faeab307a7e89b7231e"
-      }
-    ]
-  },
-  {
-    "@id": "_:N76d0f81693dc405fb61a1d56f4cc5baf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/configuration"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5ffece86e1ee4faeab307a7e89b7231e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ContentType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/format"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/configuration",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nd4a6edcdad6b4b0a96b2c4bbca986c8e"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Configuration"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      },
-      {
-        "@id": "_:Ndf9beb8e4ad445f2b944dd8cb4385b9c"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndf9beb8e4ad445f2b944dd8cb4385b9c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/WebResource"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd4a6edcdad6b4b0a96b2c4bbca986c8e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Environment"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/WorkflowExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
           }
         ]
       }

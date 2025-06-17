@@ -8,9 +8,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Quantitative value range</rdfs:label>
     <rdfs:comment>A representation of a range of quantitative values.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N2df93ec73fbe490b884c0125e83f44e8"/>
-    <rdfs:subClassOf rdf:nodeID="N6b65d99da7c8416da850dba1cc393532"/>
-    <rdfs:subClassOf rdf:nodeID="N28e4a157ae3842e7ac5e6350b9ec1fb8"/>
+    <rdfs:subClassOf rdf:nodeID="Neac9ae711f724db79ff52e9f4dae2f37"/>
+    <rdfs:subClassOf rdf:nodeID="Nc60818576dd24b7d915d2525fb086631"/>
+    <rdfs:subClassOf rdf:nodeID="Nb46b855557254344b1f692dbb5930e86"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/minValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -19,21 +19,27 @@
     <rdfs:comment>Smallest quantity attained or allowed.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N6b65d99da7c8416da850dba1cc393532">
+  <rdf:Description rdf:nodeID="Nc60818576dd24b7d915d2525fb086631">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/minValue"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14f04992e073415e84acecf8336af901">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
+    <rdf:rest rdf:nodeID="Ndb0678342c9840b1beaef82db1dd838f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb46b855557254344b1f692dbb5930e86">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/unit"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/unit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Unit</rdfs:label>
     <rdfs:comment>Determinate quantity adopted as a standard of measurement.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N257373bbd3694324be3ed6fbecede082"/>
+    <rdfs:domain rdf:nodeID="N0e59273748be463f9730af3556ce1bdf"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N27f27dd121704a6a96edfd93625cafde">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-    <rdf:rest rdf:nodeID="Na5f02f5d303c41ee900f9398c708dc97"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/maxValue">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -42,23 +48,17 @@
     <rdfs:comment>Greatest quantity attained or allowed.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N28e4a157ae3842e7ac5e6350b9ec1fb8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/unit"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N257373bbd3694324be3ed6fbecede082">
+  <rdf:Description rdf:nodeID="N0e59273748be463f9730af3556ce1bdf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N27f27dd121704a6a96edfd93625cafde"/>
+    <owl:unionOf rdf:nodeID="N14f04992e073415e84acecf8336af901"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na5f02f5d303c41ee900f9398c708dc97">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2df93ec73fbe490b884c0125e83f44e8">
+  <rdf:Description rdf:nodeID="Neac9ae711f724db79ff52e9f4dae2f37">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/maxValue"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndb0678342c9840b1beaef82db1dd838f">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
 </rdf:RDF>

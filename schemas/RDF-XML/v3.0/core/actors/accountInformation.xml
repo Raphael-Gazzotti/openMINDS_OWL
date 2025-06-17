@@ -4,11 +4,31 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:nodeID="Ne0873a3658994a6683a0bbaadcfeb921">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/userName"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/AccountInformation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Account information</rdfs:label>
+    <rdfs:comment>Structured information about a user account for a web service.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N61626266daad47f8975c28d3643b5abc"/>
+    <rdfs:subClassOf rdf:nodeID="Ne0873a3658994a6683a0bbaadcfeb921"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/service">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Service</rdfs:label>
-    <rdfs:domain rdf:nodeID="Nadd9bece7af64adb8269ff4ea67803e7"/>
-    <rdfs:range rdf:nodeID="N969d7656c91040098c6e3469ac23c3d5"/>
+    <rdfs:domain rdf:nodeID="N168db21187124cf4acc4ac968425f988"/>
+    <rdfs:range rdf:nodeID="Ne5355521bc704f43bf5f0e212bf4549b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6af9d57fe25a4a3ea8b6c27785473ce6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/WebService"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N69a65d95ea8046159d30b03bd03c10bb">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/AccountInformation"/>
+    <rdf:rest rdf:nodeID="Nc6e9120ffe36494f8d9cce4359088c99"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/userName">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -16,47 +36,27 @@
     <rdfs:label>User name</rdfs:label>
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/AccountInformation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/AccountInformation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Account information</rdfs:label>
-    <rdfs:comment>Structured information about a user account for a web service.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N7db9c15bc31d42debdf84de172777ced"/>
-    <rdfs:subClassOf rdf:nodeID="N51e125c9d1264e6b8add9ac4a23d3a39"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N699b6c4e4ceb4227bdc8d57f120cf9d4">
+  <rdf:Description rdf:nodeID="Nd4653c0007b24948a080e947107f231e">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Service"/>
-    <rdf:rest rdf:nodeID="N0775c7ac86fa4be4bce597454b40f378"/>
+    <rdf:rest rdf:nodeID="N6af9d57fe25a4a3ea8b6c27785473ce6"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N969d7656c91040098c6e3469ac23c3d5">
+  <rdf:Description rdf:nodeID="N168db21187124cf4acc4ac968425f988">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N699b6c4e4ceb4227bdc8d57f120cf9d4"/>
+    <owl:unionOf rdf:nodeID="N69a65d95ea8046159d30b03bd03c10bb"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne0f7fe5013d849c7b4ae02e96088de96">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/AccountInformation"/>
-    <rdf:rest rdf:nodeID="N4e600b8ddc704007b2631db3563b37ee"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N51e125c9d1264e6b8add9ac4a23d3a39">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/userName"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7db9c15bc31d42debdf84de172777ced">
+  <rdf:Description rdf:nodeID="N61626266daad47f8975c28d3643b5abc">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/service"/>
     <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/WebService"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N4e600b8ddc704007b2631db3563b37ee">
+  <rdf:Description rdf:nodeID="Nc6e9120ffe36494f8d9cce4359088c99">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ServiceLink"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0775c7ac86fa4be4bce597454b40f378">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/WebService"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nadd9bece7af64adb8269ff4ea67803e7">
+  <rdf:Description rdf:nodeID="Ne5355521bc704f43bf5f0e212bf4549b">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Ne0f7fe5013d849c7b4ae02e96088de96"/>
+    <owl:unionOf rdf:nodeID="Nd4653c0007b24948a080e947107f231e"/>
   </rdf:Description>
 </rdf:RDF>

@@ -4,15 +4,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N00e6faf427c14b8d8fb7f7375538d172">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/algorithm"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N08dd73fe063e41b39922c175fd72a97a">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Digest</rdfs:label>
+    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/algorithm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -25,14 +22,17 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Hash</rdfs:label>
     <rdfs:comment>Structured information on a hash.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N00e6faf427c14b8d8fb7f7375538d172"/>
-    <rdfs:subClassOf rdf:nodeID="N08dd73fe063e41b39922c175fd72a97a"/>
+    <rdfs:subClassOf rdf:nodeID="N178f2569e0cf49f9971a2672f94f8b04"/>
+    <rdfs:subClassOf rdf:nodeID="N423542b68c0f4ff7821b4e274c2e6154"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>Digest</rdfs:label>
-    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
+  <rdf:Description rdf:nodeID="N423542b68c0f4ff7821b4e274c2e6154">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N178f2569e0cf49f9971a2672f94f8b04">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/algorithm"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
 </rdf:RDF>

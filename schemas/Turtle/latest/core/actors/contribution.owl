@@ -1,0 +1,34 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/contributor> a owl:ObjectProperty ;
+    rdfs:label "Contributor" ;
+    rdfs:comment "Legal person that gave or supplied something as a part or share." ;
+    rdfs:domain <https://openminds.om-i.org/types/Contribution> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] .
+
+<https://openminds.om-i.org/props/type> a owl:ObjectProperty ;
+    rdfs:label "Type" ;
+    rdfs:comment "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AtlasAnnotation> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/Contribution> <https://openminds.om-i.org/types/CustomAnnotation> <https://openminds.om-i.org/types/EphysStimulus> <https://openminds.om-i.org/types/FileRepository> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaperSection> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Setup> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AnnotationType> <https://openminds.om-i.org/types/AtlasType> <https://openminds.om-i.org/types/ChemicalMixtureType> <https://openminds.om-i.org/types/ContributionType> <https://openminds.om-i.org/types/ElectricalStimulusType> <https://openminds.om-i.org/types/FileRepositoryType> <https://openminds.om-i.org/types/LearningResourceType> <https://openminds.om-i.org/types/MetaDataModelType> <https://openminds.om-i.org/types/SetupType> <https://openminds.om-i.org/types/TissueSampleType> ) ] .
+
+<https://openminds.om-i.org/types/Contribution> a owl:Class ;
+    rdfs:label "Contribution" ;
+    rdfs:comment "Structured information on the contribution made to a research product." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/ContributionType> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/type> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/contributor> ] .
+

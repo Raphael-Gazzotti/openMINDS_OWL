@@ -1,5 +1,371 @@
 [
   {
+    "@id": "https://openminds.ebrains.eu/vocab/definition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Short, but precise statement of the meaning of a word, word group, sign or a symbol."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nf4619a82658e4466a615b9fa1c7db10b"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Definition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf4619a82658e4466a615b9fa1c7db10b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/AgeCategory"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ContributionType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/FileUsageRole"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Language"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/MetaDataModelType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelScope"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingSystem"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Phenotype"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Strain"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Technique"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Terminology"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TissueSampleType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/controlledTerms/AgeCategory",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on the life cycle (semantic term) of a specific age group."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Age category"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Ncd20bf3b883d472b806587f8dcbdadc1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncd20bf3b883d472b806587f8dcbdadc1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/name"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/ontologyIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Term or code used to identify something or someone registered within a particular ontology."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N38e846216e5a4ff3b13b0903e13de955"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Ontology identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N38e846216e5a4ff3b13b0903e13de955",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/AgeCategory"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ContributionType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/FileUsageRole"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Language"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/MetaDataModelType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelScope"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingSystem"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Phenotype"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Strain"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Technique"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Terminology"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TissueSampleType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminology"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -11,7 +377,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3cd9ed7c996743728f00ff675c61f2b3"
+        "@id": "_:N051a24f07103419fae22957e8dfc6bf9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -26,7 +392,7 @@
     ]
   },
   {
-    "@id": "_:N3cd9ed7c996743728f00ff675c61f2b3",
+    "@id": "_:N051a24f07103419fae22957e8dfc6bf9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -194,372 +560,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/controlledTerms/AgeCategory",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on the life cycle (semantic term) of a specific age group."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Age category"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N5af4d8b4f32a4b74bbf3ad893c188c14"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5af4d8b4f32a4b74bbf3ad893c188c14",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/name"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/definition",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Short, but precise statement of the meaning of a word, word group, sign or a symbol."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nf973ca83f43f4c6c8142caf87cb72cf8"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Definition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf973ca83f43f4c6c8142caf87cb72cf8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/AgeCategory"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ContributionType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/FileUsageRole"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Language"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/MetaDataModelType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelScope"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingSystem"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Phenotype"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Strain"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Technique"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Terminology"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TissueSampleType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/ontologyIdentifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Term or code used to identify something or someone registered within a particular ontology."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nf3f3deca22c8418f913c871832c1aacf"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Ontology identifier"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf3f3deca22c8418f913c871832c1aacf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/AgeCategory"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BehavioralTask"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ContributionType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/FileRepositoryType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/FileUsageRole"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Language"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/MetaDataModelType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ModelScope"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingSystem"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Phenotype"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SemanticDataType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Strain"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Technique"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Terminology"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TissueSampleType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpace"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationTerminology"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -571,7 +571,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nf5720986d0ed42898847632604b7a6f0"
+        "@id": "_:N0cc85405ea6f419291f25f504328c4dd"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -586,7 +586,7 @@
     ]
   },
   {
-    "@id": "_:Nf5720986d0ed42898847632604b7a6f0",
+    "@id": "_:N0cc85405ea6f419291f25f504328c4dd",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
