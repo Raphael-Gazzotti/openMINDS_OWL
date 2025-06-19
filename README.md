@@ -17,7 +17,7 @@
 
 The openMINDS metadata framework is an open-source project and community contributions are highly appreciated. If you want to contribute please follow our :arrow_right: [**contribution guidelines**][contribution-url].
 
-This repository has two main branches: pipeline and main. The pipeline contains the code for building the Java library from the openMINDS schemas. The build process is triggered by changes to the schemas, and runs as a GitHub action. The resultant library is copied to the main branch.
+This repository has two main branches: pipeline and main. The pipeline contains the code for building the OWL ontologies from the openMINDS schemas. The build process is triggered by changes to the schemas, and runs as a GitHub action. The resultant ontologies are copied to the main branch.
 
 General usage questions should be raised and discussed in our :arrow_right: [**community forum**][community-forum].  
 Alternatively you can email us: `support@openmetadatainitiative.org`
