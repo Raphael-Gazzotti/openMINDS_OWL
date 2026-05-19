@@ -1,87 +1,6 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/usedSpecimen",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N7d01786c5dc04b2aa78ed624456c4876"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Used specimen"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nc2a23b8fc7dc439ca9169f7c93711d57"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7d01786c5dc04b2aa78ed624456c4876",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc2a23b8fc7dc439ca9169f7c93711d57",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Subject"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSample"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/oscillationAmplitude",
+    "@id": "https://openminds.ebrains.eu/vocab/sliceThickness",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -92,12 +11,176 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Oscillation amplitude"
+        "@value": "Slice thickness"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N80ada22fdb1346c29fc9399d5fbf43da"
+      }
+    ]
+  },
+  {
+    "@id": "_:N80ada22fdb1346c29fc9399d5fbf43da",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/vibrationFrequency",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Vibration frequency"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/device",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nca720733c91d4adc95b59de3f2146d3d"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Device"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nf01301a337124fdf97eb4c5020791be4"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nca720733c91d4adc95b59de3f2146d3d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf01301a337124fdf97eb4c5020791be4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/slicingPlane",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Slicing plane"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane"
       }
     ]
   },
@@ -134,36 +217,36 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N6727f4f777e0486987f4cd5d54f3a145"
+        "@id": "_:N4274c092e5a445b0b25ab771643152f2"
       },
       {
-        "@id": "_:N5c0ccb4ef4dc4207ad5b0477ff9ba02e"
+        "@id": "_:N38c67133340b4605b8c617210a132e57"
       },
       {
-        "@id": "_:Nb78b8a6f62404d4f813f47bd1a39efc1"
+        "@id": "_:Nb62439e37605426584fcbb1fc56378ba"
       },
       {
-        "@id": "_:Nc8e397f381d6456d87f644136589b3bc"
+        "@id": "_:N87743f2c1cd14e70aa4aefaf5e5e3646"
       },
       {
-        "@id": "_:Nbc99a1367d5a4d1c805f2824dea83c4e"
+        "@id": "_:Nac1b866f67e74e278371b1d54210619a"
       },
       {
-        "@id": "_:N24e554261c204aaa891b38881a8640df"
+        "@id": "_:Ne06443c727b6432496e2adb488ec6543"
       },
       {
-        "@id": "_:N8749657c50ee408798157003031427f9"
+        "@id": "_:N5ca6d6575bb947b7a3c4624a81eb1a2c"
       },
       {
-        "@id": "_:N430264fa650b4b6cadb05fed68dedd02"
+        "@id": "_:Nedf7c8dbdf4140b89c1814030b7fecfe"
       },
       {
-        "@id": "_:Nf5f3a24f8d374c60a4c677804387351b"
+        "@id": "_:Nf787b6467d1747b4b4bce43e971cbf55"
       }
     ]
   },
   {
-    "@id": "_:N6727f4f777e0486987f4cd5d54f3a145",
+    "@id": "_:N4274c092e5a445b0b25ab771643152f2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -191,13 +274,13 @@
     ]
   },
   {
-    "@id": "_:N5c0ccb4ef4dc4207ad5b0477ff9ba02e",
+    "@id": "_:N38c67133340b4605b8c617210a132e57",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N467ffaf5574b43ab9fabf109985618cf"
+        "@id": "_:N59b54b2623e04441bf70ba0b3eaa11b0"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -207,7 +290,7 @@
     ]
   },
   {
-    "@id": "_:N467ffaf5574b43ab9fabf109985618cf",
+    "@id": "_:N59b54b2623e04441bf70ba0b3eaa11b0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -225,7 +308,7 @@
     ]
   },
   {
-    "@id": "_:Nb78b8a6f62404d4f813f47bd1a39efc1",
+    "@id": "_:Nb62439e37605426584fcbb1fc56378ba",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -247,13 +330,13 @@
     ]
   },
   {
-    "@id": "_:Nc8e397f381d6456d87f644136589b3bc",
+    "@id": "_:N87743f2c1cd14e70aa4aefaf5e5e3646",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N362cf854a7694cfaad09bf74f1fe3029"
+        "@id": "_:Ndf7098f4b361415bad9306e6f709df40"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -275,7 +358,7 @@
     ]
   },
   {
-    "@id": "_:N362cf854a7694cfaad09bf74f1fe3029",
+    "@id": "_:Ndf7098f4b361415bad9306e6f709df40",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -293,13 +376,13 @@
     ]
   },
   {
-    "@id": "_:Nbc99a1367d5a4d1c805f2824dea83c4e",
+    "@id": "_:Nac1b866f67e74e278371b1d54210619a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Na3f3d04c15d549b0b1719a5cb5ce6be2"
+        "@id": "_:Nb973ec49f7fb4e07a6da163856e135a2"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
@@ -309,7 +392,7 @@
     ]
   },
   {
-    "@id": "_:Na3f3d04c15d549b0b1719a5cb5ce6be2",
+    "@id": "_:Nb973ec49f7fb4e07a6da163856e135a2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -327,7 +410,7 @@
     ]
   },
   {
-    "@id": "_:N24e554261c204aaa891b38881a8640df",
+    "@id": "_:Ne06443c727b6432496e2adb488ec6543",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -355,7 +438,7 @@
     ]
   },
   {
-    "@id": "_:N8749657c50ee408798157003031427f9",
+    "@id": "_:N5ca6d6575bb947b7a3c4624a81eb1a2c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -377,13 +460,13 @@
     ]
   },
   {
-    "@id": "_:N430264fa650b4b6cadb05fed68dedd02",
+    "@id": "_:Nedf7c8dbdf4140b89c1814030b7fecfe",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N6db7ffc7d31f4f228fb09fda51d3c41f"
+        "@id": "_:N58c79992888548fa9139f7d669433601"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -399,7 +482,7 @@
     ]
   },
   {
-    "@id": "_:N6db7ffc7d31f4f228fb09fda51d3c41f",
+    "@id": "_:N58c79992888548fa9139f7d669433601",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -417,7 +500,7 @@
     ]
   },
   {
-    "@id": "_:Nf5f3a24f8d374c60a4c677804387351b",
+    "@id": "_:Nf787b6467d1747b4b4bce43e971cbf55",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -439,175 +522,13 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/vibrationFrequency",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Vibration frequency"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/metadataLocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nfc801308ebfc4610954db61faf8f47a4"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Metadata location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N3f067137c64c44928409c515e6f81a6e"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfc801308ebfc4610954db61faf8f47a4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N3f067137c64c44928409c515e6f81a6e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/slicingAngle",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Slicing angle"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Na7e05e53a9944f36a44119df4ff65506"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na7e05e53a9944f36a44119df4ff65506",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/NumericalProperty"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/sliceThickness",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Slice thickness"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N1c4c43eef18a4979a5126f6b10249fea"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1c4c43eef18a4979a5126f6b10249fea",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N8e4ca0842d5b4c50854bad6d903b0806"
+        "@id": "_:Nbf3533c9489749d49b627704dfacc0de"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -622,7 +543,7 @@
     ]
   },
   {
-    "@id": "_:N8e4ca0842d5b4c50854bad6d903b0806",
+    "@id": "_:Nbf3533c9489749d49b627704dfacc0de",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -745,111 +666,7 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/device",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N9c9902775a3742dabc1f4cf3544552d4"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Device"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N6e3baef057fa47b89db0d389f86d8d0f"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9c9902775a3742dabc1f4cf3544552d4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N6e3baef057fa47b89db0d389f86d8d0f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/slicingPlane",
+    "@id": "https://openminds.ebrains.eu/vocab/oscillationAmplitude",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -860,12 +677,195 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Slicing plane"
+        "@value": "Oscillation amplitude"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane"
+        "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/usedSpecimen",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N9e9dd99e80834c9994d3ecd24f8d8f49"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Used specimen"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nfadb7967f50f480fb9796063e307582e"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9e9dd99e80834c9994d3ecd24f8d8f49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfadb7967f50f480fb9796063e307582e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Subject"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSample"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/metadataLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nfd90c8e82765439a9cc1fa6cd00b53fb"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Metadata location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nd40fa20da48f4169bbbf89c1334772ac"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfd90c8e82765439a9cc1fa6cd00b53fb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd40fa20da48f4169bbbf89c1334772ac",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/slicingAngle",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Slicing angle"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N34a1f2d3f861409799f673e6f936a44d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N34a1f2d3f861409799f673e6f936a44d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/NumericalProperty"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          }
+        ]
       }
     ]
   }

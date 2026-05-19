@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Naa916b6eaed04662bb1c7bd567bb4a95">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Square"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/sideLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Side length</rdfs:label>
+    <rdfs:domain rdf:nodeID="N7250cea18b934dc68d5eae3d40830ba5"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncefb92ec745841d98a048d32027755a6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/EquilateralTriangle"/>
+    <rdf:rest rdf:nodeID="Naa916b6eaed04662bb1c7bd567bb4a95"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nee7fe9ec2f154ceb866c24ad67a8d42a">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Cube"/>
+    <rdf:rest rdf:nodeID="Ncefb92ec745841d98a048d32027755a6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Square">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Square</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N0147f92199c94160883305f8023f6231"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0147f92199c94160883305f8023f6231">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/sideLength"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7250cea18b934dc68d5eae3d40830ba5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nee7fe9ec2f154ceb866c24ad67a8d42a"/>
+  </rdf:Description>
+</rdf:RDF>

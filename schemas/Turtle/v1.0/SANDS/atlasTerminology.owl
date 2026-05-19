@@ -41,15 +41,15 @@
     rdfs:label "Atlas terminology" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/fullName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/AnatomicalEntity> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/anatomicalEntity> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ] .
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ] .
 

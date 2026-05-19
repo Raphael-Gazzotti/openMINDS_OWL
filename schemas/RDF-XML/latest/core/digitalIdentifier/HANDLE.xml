@@ -4,74 +4,82 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:nodeID="Nf4abbe40f254427b83787db9384ca8c8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ISNI"/>
+    <rdf:rest rdf:nodeID="N586d6ca82fa44da392284e83fee51687"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd4d9316ed9194ae390969cdab14b6467">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/StockNumber"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N676d32d24b384e4591ddeb1fe865cde9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SWHID"/>
+    <rdf:rest rdf:nodeID="Nd4d9316ed9194ae390969cdab14b6467"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbc5a1846c5304e74a56338a0cb2dc41c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LEI"/>
+    <rdf:rest rdf:nodeID="N55519dea89cc455da5262a47248bae45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4b15eed1765d4b0db745b0e764bc33fe">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/DOI"/>
+    <rdf:rest rdf:nodeID="N4e236b719d6a4d8a970eda573d2c99b2"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/types/HANDLE">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Handle</rdfs:label>
     <rdfs:comment>A persistent identifier for an information resource provided by the Handle System of the Corporation for National Research Initiatives.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N3109cff78d8f42f582f7de316225278b"/>
+    <rdfs:subClassOf rdf:nodeID="N59c90760be6e4feea02ffa55dac12215"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N85de698abb4a4eecbf3b3372cead018a">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/RRID"/>
-    <rdf:rest rdf:nodeID="Nfc9888812a8d4b35a9a23e3c6b8c996d"/>
+  <rdf:Description rdf:nodeID="N687daec9029844468037e8a41b5e0c19">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N4b15eed1765d4b0db745b0e764bc33fe"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N04eedb299201413b915608968a230b0d">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/DOI"/>
-    <rdf:rest rdf:nodeID="N2914d03a6ef14f649a6d3fe2a4f52184"/>
+  <rdf:Description rdf:nodeID="N59c90760be6e4feea02ffa55dac12215">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/identifier"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne7d7c0bc46254fb6bb6eebce128664b9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/HANDLE"/>
+    <rdf:rest rdf:nodeID="N4e46ed658f004825a190c93580c86158"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/identifier">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Identifier</rdfs:label>
     <rdfs:comment>Term or code used to identify something or someone.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N0101cf7a57ad4dc0a2c4f46b72733866"/>
+    <rdfs:domain rdf:nodeID="N687daec9029844468037e8a41b5e0c19"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3109cff78d8f42f582f7de316225278b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/identifier"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6137d4c7a1334c91aa92db2838f35a48">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/ORCID"/>
-    <rdf:rest rdf:nodeID="Nd01a61afcfb844889c34765033efb9da"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N8458b4ce203c4827b4c0e733f6ae40ef">
+  <rdf:Description rdf:nodeID="N5fcf85e1534f4904a9fd3d9a52d55eb2">
     <rdf:first rdf:resource="https://openminds.om-i.org/types/IdentifiersDotOrgID"/>
-    <rdf:rest rdf:nodeID="N6137d4c7a1334c91aa92db2838f35a48"/>
+    <rdf:rest rdf:nodeID="Nbc5a1846c5304e74a56338a0cb2dc41c"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2b18ec8be2714dbebf22b4127ecf9347">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/ISBN"/>
-    <rdf:rest rdf:nodeID="N12b3f3afe3354be2bc933de5aa7c0331"/>
+  <rdf:Description rdf:nodeID="N4e236b719d6a4d8a970eda573d2c99b2">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/GenericIdentifier"/>
+    <rdf:rest rdf:nodeID="Ne7d7c0bc46254fb6bb6eebce128664b9"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfc9888812a8d4b35a9a23e3c6b8c996d">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/SWHID"/>
-    <rdf:rest rdf:nodeID="N0c3c7dd936164d8f8f22ebeffc173d75"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0c3c7dd936164d8f8f22ebeffc173d75">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/StockNumber"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ned3bc3b2882f44bb8b96c02ae3bd24a7">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/HANDLE"/>
-    <rdf:rest rdf:nodeID="N2b18ec8be2714dbebf22b4127ecf9347"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd01a61afcfb844889c34765033efb9da">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/ProductSource"/>
-    <rdf:rest rdf:nodeID="N0582c563bae947709551e6a2eea46181"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2914d03a6ef14f649a6d3fe2a4f52184">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/GRIDID"/>
-    <rdf:rest rdf:nodeID="Ned3bc3b2882f44bb8b96c02ae3bd24a7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0101cf7a57ad4dc0a2c4f46b72733866">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N04eedb299201413b915608968a230b0d"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0582c563bae947709551e6a2eea46181">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/RORID"/>
-    <rdf:rest rdf:nodeID="N85de698abb4a4eecbf3b3372cead018a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N12b3f3afe3354be2bc933de5aa7c0331">
+  <rdf:Description rdf:nodeID="N586d6ca82fa44da392284e83fee51687">
     <rdf:first rdf:resource="https://openminds.om-i.org/types/ISSN"/>
-    <rdf:rest rdf:nodeID="N8458b4ce203c4827b4c0e733f6ae40ef"/>
+    <rdf:rest rdf:nodeID="N5fcf85e1534f4904a9fd3d9a52d55eb2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N196c278b9ecc43bbab4003f2bf05ad25">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/RRID"/>
+    <rdf:rest rdf:nodeID="N676d32d24b384e4591ddeb1fe865cde9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4e46ed658f004825a190c93580c86158">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ISBN"/>
+    <rdf:rest rdf:nodeID="Nf4abbe40f254427b83787db9384ca8c8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naaeef0aff02c4b0595c62ca3f74a976c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ProductSource"/>
+    <rdf:rest rdf:nodeID="Nb193df9c2a464c7fa72baa246db9cad0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N55519dea89cc455da5262a47248bae45">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ORCID"/>
+    <rdf:rest rdf:nodeID="Naaeef0aff02c4b0595c62ca3f74a976c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb193df9c2a464c7fa72baa246db9cad0">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/RORID"/>
+    <rdf:rest rdf:nodeID="N196c278b9ecc43bbab4003f2bf05ad25"/>
   </rdf:Description>
 </rdf:RDF>

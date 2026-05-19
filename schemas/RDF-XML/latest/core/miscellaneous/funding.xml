@@ -18,34 +18,18 @@
     <rdfs:comment>Human-readable identifier for a benefit that is conferred or bestowed on the basis of merit or need.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Funding"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N4417253a57a7481fb40e28a8d302a5fb">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
-    <rdf:rest rdf:nodeID="N0d74cd4851c5485092caa8b5ba8399c3"/>
+  <rdf:Description rdf:nodeID="N5858fe170e3f4eab961dbbe45374c4a9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/funder"/>
+    <owl:allValuesFrom rdf:nodeID="Nf7e97a1fab9d482fa8298f89f661f5c2"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/types/Funding">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Funding</rdfs:label>
     <rdfs:comment>Structured information on used funding.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="Nff424be8acee4cefb325bd4eee2406ca"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nff424be8acee4cefb325bd4eee2406ca">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/funder"/>
-    <owl:allValuesFrom rdf:nodeID="N1a14a999c80349d2a44db11498e49918"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1a14a999c80349d2a44db11498e49918">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nce77e57ad0724daca71dd610bc334fc7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0d74cd4851c5485092caa8b5ba8399c3">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
-    <rdf:rest rdf:nodeID="Nc84778da12154a6c82b85b1281eb5426"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf6df5ca6c3c94e7e94d906dbe96bedf7">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
-    <rdf:rest rdf:nodeID="Nec8f3e4952c84a3e96bc9d0979f2dfdf"/>
+    <rdfs:subClassOf rdf:nodeID="N5858fe170e3f4eab961dbbe45374c4a9"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/acknowledgement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -54,27 +38,35 @@
     <rdfs:comment>Official declaration or avowal of appreciation of an act or achievement.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Funding"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="N35a20d5cc69a45a4ab347313e9812bd9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <rdf:rest rdf:nodeID="N578a3317c5f748ea8df4f53b932e95ba"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N578a3317c5f748ea8df4f53b932e95ba">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce246e14c38a49258cbb58dda546ad7b">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/funder">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Funder</rdfs:label>
     <rdfs:comment>Legal person that provides money for a particular purpose.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Funding"/>
-    <rdfs:range rdf:nodeID="N7dfac86b1539415080a8bb7b31222180"/>
+    <rdfs:range rdf:nodeID="N1d907614588a4d42ad108fe266280c56"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nce77e57ad0724daca71dd610bc334fc7">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
-    <rdf:rest rdf:nodeID="Nf6df5ca6c3c94e7e94d906dbe96bedf7"/>
+  <rdf:Description rdf:nodeID="N1e3c413ff1b14eff82c58918650f0e36">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <rdf:rest rdf:nodeID="Nce246e14c38a49258cbb58dda546ad7b"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7dfac86b1539415080a8bb7b31222180">
+  <rdf:Description rdf:nodeID="N1d907614588a4d42ad108fe266280c56">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N4417253a57a7481fb40e28a8d302a5fb"/>
+    <owl:unionOf rdf:nodeID="N1e3c413ff1b14eff82c58918650f0e36"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nec8f3e4952c84a3e96bc9d0979f2dfdf">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc84778da12154a6c82b85b1281eb5426">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="Nf7e97a1fab9d482fa8298f89f661f5c2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N35a20d5cc69a45a4ab347313e9812bd9"/>
   </rdf:Description>
 </rdf:RDF>

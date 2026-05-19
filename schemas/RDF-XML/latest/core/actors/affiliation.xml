@@ -4,61 +4,37 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <rdf:Description rdf:nodeID="N02df8631558842378351fcea1f35970e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/organization"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:comment>Legally accountable, administrative and functional structure.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N962d49a24e1a4ff498db245e306437ef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/person"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/types/Affiliation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Affiliation</rdfs:label>
     <rdfs:comment>Structured information about a relationship between two entities, such as a person and their employer.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N83b534432c6b49b2b2afaaf7dd1cd344"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/endDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:label>End date</rdfs:label>
-    <rdfs:comment>Date in the Gregorian calendar at which something terminates in time.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/startDate">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-    <rdfs:label>Start date</rdfs:label>
-    <rdfs:comment>Date in the Gregorian calendar at which something begins in time</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/memberOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Member of</rdfs:label>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
-    <rdfs:range rdf:nodeID="N3722d35d88c74131b5b7e71824074ce7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N83b534432c6b49b2b2afaaf7dd1cd344">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/memberOf"/>
-    <owl:allValuesFrom rdf:nodeID="Nd6a5dcb3074c42569fdcb00aa0fee329"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na02048c262ff4e7bb43f1f5d09e1c55e">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
-    <rdf:rest rdf:nodeID="N5858c7d4160247a6acb96896452cb23b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd6a5dcb3074c42569fdcb00aa0fee329">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Ncb1c5b30fc864c3080050a0c68e7035e"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndb8809c7a3834fc5a49aea001655b084">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N3722d35d88c74131b5b7e71824074ce7">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Na02048c262ff4e7bb43f1f5d09e1c55e"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncb1c5b30fc864c3080050a0c68e7035e">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
-    <rdf:rest rdf:nodeID="Ndb8809c7a3834fc5a49aea001655b084"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5858c7d4160247a6acb96896452cb23b">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdfs:subClassOf rdf:nodeID="N02df8631558842378351fcea1f35970e"/>
+    <rdfs:subClassOf rdf:nodeID="N962d49a24e1a4ff498db245e306437ef"/>
   </rdf:Description>
 </rdf:RDF>

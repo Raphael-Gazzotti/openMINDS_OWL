@@ -1,51 +1,12 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/software",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N0ef01d4095a34f5e98943514f256d66b"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Software"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0ef01d4095a34f5e98943514f256d66b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Environment"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareAgent"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/environment",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N178fc0df8202446fbf53f1afb46ba122"
+        "@id": "_:N0680c233e3724869a38623a138e96afe"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -55,12 +16,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N05069795d08d41348661b1a195064d0d"
+        "@id": "_:N4d841beefd29440397b19e24ab3e2681"
       }
     ]
   },
   {
-    "@id": "_:N178fc0df8202446fbf53f1afb46ba122",
+    "@id": "_:N0680c233e3724869a38623a138e96afe",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -96,7 +57,7 @@
     ]
   },
   {
-    "@id": "_:N05069795d08d41348661b1a195064d0d",
+    "@id": "_:N4d841beefd29440397b19e24ab3e2681",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -114,6 +75,100 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/types/SoftwareAgent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about a piece of software or web service that can perform a task autonomously."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Software agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N3ec2be5faa2940e98e5d7daf865af776"
+      },
+      {
+        "@id": "_:Nca77a81426804e30b56d96e96107367c"
+      },
+      {
+        "@id": "_:N7315b2a8441e4714b3e31a4bb1808b28"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3ec2be5faa2940e98e5d7daf865af776",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Environment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/environment"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nca77a81426804e30b56d96e96107367c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/name"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7315b2a8441e4714b3e31a4bb1808b28",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/software"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -125,7 +180,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3486d6513bd342e4b5ad97cc59cd5654"
+        "@id": "_:N61f8b1d19d0f40d1af8e248916fc9dbf"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -140,7 +195,7 @@
     ]
   },
   {
-    "@id": "_:N3486d6513bd342e4b5ad97cc59cd5654",
+    "@id": "_:N61f8b1d19d0f40d1af8e248916fc9dbf",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -488,96 +543,41 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/types/SoftwareAgent",
+    "@id": "https://openminds.om-i.org/props/software",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@value": "Structured information about a piece of software or web service that can perform a task autonomously."
+        "@id": "_:N4a7b3f947b14468e87e0f4f36917cc18"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Software agent"
+        "@value": "Software"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Na3299a45b971441299b9f537490b644c"
-      },
-      {
-        "@id": "_:N042e10aaf3884271ae89d89f36d0c6d9"
-      },
-      {
-        "@id": "_:Nb4ee646dde274009b92774ad847f6a42"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na3299a45b971441299b9f537490b644c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Environment"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/environment"
-      }
-    ]
-  },
-  {
-    "@id": "_:N042e10aaf3884271ae89d89f36d0c6d9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb4ee646dde274009b92774ad847f6a42",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://openminds.om-i.org/types/SoftwareVersion"
       }
+    ]
+  },
+  {
+    "@id": "_:N4a7b3f947b14468e87e0f4f36917cc18",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
+    "http://www.w3.org/2002/07/owl#unionOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/software"
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Environment"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareAgent"
+          }
+        ]
       }
     ]
   }

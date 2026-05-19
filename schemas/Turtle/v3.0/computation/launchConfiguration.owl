@@ -36,13 +36,13 @@
     rdfs:label "Launch configuration" ;
     rdfs:comment "Structured information about the launch of a computational process." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/PropertyValueList> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/environmentVariable> ],
-        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/argument> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/executable> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/executable> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/PropertyValueList> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/environmentVariable> ] .
 

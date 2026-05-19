@@ -21,11 +21,11 @@
 <https://openminds.ebrains.eu/core/NumericalParameter> a owl:Class ;
     rdfs:label "Numerical parameter" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/QuantitativeValueRange> ) ] ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/value> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/value> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ] .
 

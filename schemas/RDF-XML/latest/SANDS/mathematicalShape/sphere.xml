@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Nc6aef6b795e3440fb02a456376dbf918">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N617a187c85ad4b8282e6d874c58d3f05"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N617a187c85ad4b8282e6d874c58d3f05">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Circle"/>
+    <rdf:rest rdf:nodeID="Nb69ec5e37e7d412ebba624298d5835e0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7ab3aaa36394988b9b02baa9bd405ef">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Sphere"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Sphere">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Sphere</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N7a51a739baaf42a882949742011396a5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb69ec5e37e7d412ebba624298d5835e0">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/CircularSector"/>
+    <rdf:rest rdf:nodeID="Nb7ab3aaa36394988b9b02baa9bd405ef"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a51a739baaf42a882949742011396a5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/radius"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/radius">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Radius</rdfs:label>
+    <rdfs:domain rdf:nodeID="Nc6aef6b795e3440fb02a456376dbf918"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+</rdf:RDF>

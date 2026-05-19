@@ -6,9 +6,17 @@
 <https://openminds.om-i.org/props/dataLocation> a owl:ObjectProperty ;
     rdfs:label "Data location" ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/CustomPropertySet> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Recording> <https://openminds.om-i.org/types/ServiceLink> ) ] ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CustomPropertySet> <https://openminds.om-i.org/types/GridImage> <https://openminds.om-i.org/types/GridImageStack> <https://openminds.om-i.org/types/GridVolume> <https://openminds.om-i.org/types/GridVolumeSequence> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/ServiceLink> ) ] ;
     rdfs:range [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileBundle> <https://openminds.om-i.org/types/LivePaperResourceItem> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/PropertyValueList> ) ] .
+            owl:unionOf ( <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileBundle> <https://openminds.om-i.org/types/LivePaperResourceItem> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/PropertyValueList> <https://openminds.om-i.org/types/WebResource> ) ] .
+
+<https://openminds.om-i.org/props/digitalIdentifier> a owl:ObjectProperty ;
+    rdfs:label "Digital identifier" ;
+    rdfs:comment "Digital handle to identify objects or legal persons." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalAtlas> <https://openminds.om-i.org/types/AnatomicalAtlasVersion> <https://openminds.om-i.org/types/Book> <https://openminds.om-i.org/types/Chapter> <https://openminds.om-i.org/types/CommonCoordinateFramework> <https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/HardwareProduct> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Periodical> <https://openminds.om-i.org/types/Person> <https://openminds.om-i.org/types/ProductSource> <https://openminds.om-i.org/types/ScholarlyArticle> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/Strain> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/GenericIdentifier> <https://openminds.om-i.org/types/ISBN> <https://openminds.om-i.org/types/ISNI> <https://openminds.om-i.org/types/ISSN> <https://openminds.om-i.org/types/IdentifiersDotOrgID> <https://openminds.om-i.org/types/LEI> <https://openminds.om-i.org/types/ORCID> <https://openminds.om-i.org/types/RORID> <https://openminds.om-i.org/types/RRID> <https://openminds.om-i.org/types/SWHID> ) ] .
 
 <https://openminds.om-i.org/props/hasEntity> a owl:ObjectProperty ;
     rdfs:label "Has entity" ;
@@ -21,19 +29,25 @@
     rdfs:label "Ontology identifier" ;
     rdfs:comment "Term or code used to identify something or someone registered within a particular ontology." ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Strain> ) ] ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalAtlas> <https://openminds.om-i.org/types/AnatomicalAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateFramework> <https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/ParcellationTerminology> <https://openminds.om-i.org/types/ParcellationTerminologyVersion> <https://openminds.om-i.org/types/Strain> ) ] ;
     rdfs:range rdf:List .
 
 <https://openminds.om-i.org/types/ParcellationTerminology> a owl:Class ;
     rdfs:label "Parcellation terminology" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/File> ;
-            owl:onProperty <https://openminds.om-i.org/props/dataLocation> ],
+            owl:allValuesFrom <https://openminds.om-i.org/types/ParcellationEntity> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/hasEntity> ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/ontologyIdentifier> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/ParcellationEntity> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/hasEntity> ] .
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/ISBN> <https://openminds.om-i.org/types/RRID> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/WebResource> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/dataLocation> ] .
 

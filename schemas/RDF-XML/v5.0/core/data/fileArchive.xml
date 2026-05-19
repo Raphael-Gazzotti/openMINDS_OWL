@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N06aadb5bfe6c4c71aa09489118f87f05">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileArchive"/>
+    <rdf:rest rdf:nodeID="Na68152dfc7534e81b8f8a3bd94bdc8d2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc4ba1ac7d9634deda002422cb604c9a8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileRepository"/>
+    <rdf:rest rdf:nodeID="Nd81ba16d3a5e479f9fa70ae17d950ba9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/sourceData">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Source data</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/FileArchive"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/File"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd7126e2ea8fa461ead139246bbea8930">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/WorkflowRecipeVersion"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1e1eccdf784549fd816183fa2f8ddc16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/IRI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/FileArchive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>File archive</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N1e1eccdf784549fd816183fa2f8ddc16"/>
+    <rdfs:subClassOf rdf:nodeID="Nb08ffda5829d411dbe869e827a9812bd"/>
+    <rdfs:subClassOf rdf:nodeID="N156bf4067c7d408397653260adaf7fe5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd81ba16d3a5e479f9fa70ae17d950ba9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LocalFile"/>
+    <rdf:rest rdf:nodeID="N8bcc3537966f43879ddd05f512953beb"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/format">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Format</rdfs:label>
+    <rdfs:comment>Method of digitally organizing and structuring data or information.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N616a706278cd42fdb3416a64f960de6f"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/ContentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7ae6caec50e14fb19707ca449722a429">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ValidationTestVersion"/>
+    <rdf:rest rdf:nodeID="Na765ad63a30343f2a16b7117994e93b8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43d70f94dca94e278755868db760f0f5">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/File"/>
+    <rdf:rest rdf:nodeID="N1fa256e7144f47babf3c47d1dd2dee10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91efc8f8ff9641d0a72ca4d932174f07">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Chapter"/>
+    <rdf:rest rdf:nodeID="N43d70f94dca94e278755868db760f0f5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1fa256e7144f47babf3c47d1dd2dee10">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileArchive"/>
+    <rdf:rest rdf:nodeID="N32f35dbdc855491ea0e98302642d1b09"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N616a706278cd42fdb3416a64f960de6f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N2cf459d7bc9d4bf69a5dac0dc1b3b6fa"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N156bf4067c7d408397653260adaf7fe5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/sourceData"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/File"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/IRI">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Iri</rdfs:label>
+    <rdfs:comment>Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N00331cefb6b849259a151651ee298859"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30350eb53c0148589e025906293095c6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/File"/>
+    <rdf:rest rdf:nodeID="N06aadb5bfe6c4c71aa09489118f87f05"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb08ffda5829d411dbe869e827a9812bd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/format"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/ContentType"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d5dba79aa3c41ffb4198b82830567d1">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Book"/>
+    <rdf:rest rdf:nodeID="N91efc8f8ff9641d0a72ca4d932174f07"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8bcc3537966f43879ddd05f512953beb">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ModelVersion"/>
+    <rdf:rest rdf:nodeID="N7ae6caec50e14fb19707ca449722a429"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na68152dfc7534e81b8f8a3bd94bdc8d2">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileBundle"/>
+    <rdf:rest rdf:nodeID="Nc4ba1ac7d9634deda002422cb604c9a8"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5e3a7d7bcce9484690ebea13f0ae17ba">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LivePaperResourceItem"/>
+    <rdf:rest rdf:nodeID="N0449e375aff74ea9a8872053358affec"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N00331cefb6b849259a151651ee298859">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N5d5dba79aa3c41ffb4198b82830567d1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N32f35dbdc855491ea0e98302642d1b09">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/FileRepository"/>
+    <rdf:rest rdf:nodeID="N86bf85ef7332438c81894a0adf2157d1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N86bf85ef7332438c81894a0adf2157d1">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/LearningResource"/>
+    <rdf:rest rdf:nodeID="N5e3a7d7bcce9484690ebea13f0ae17ba"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N07d7538720784e2ab11bb7b591da7059">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/WebResource"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2cf459d7bc9d4bf69a5dac0dc1b3b6fa">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Configuration"/>
+    <rdf:rest rdf:nodeID="N30350eb53c0148589e025906293095c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0449e375aff74ea9a8872053358affec">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/ScholarlyArticle"/>
+    <rdf:rest rdf:nodeID="N07d7538720784e2ab11bb7b591da7059"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na765ad63a30343f2a16b7117994e93b8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/WebResource"/>
+    <rdf:rest rdf:nodeID="Nd7126e2ea8fa461ead139246bbea8930"/>
+  </rdf:Description>
+</rdf:RDF>

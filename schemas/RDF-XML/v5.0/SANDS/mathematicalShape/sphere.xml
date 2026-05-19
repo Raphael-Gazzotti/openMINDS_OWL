@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Nd350f3d4235e47d08626a19050969751">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/radius"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a1fbece25f24a2c91f46d76a323d131">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Sphere"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Sphere">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Sphere</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nd350f3d4235e47d08626a19050969751"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4db82d8ad6a14a178116f2cd720dccb3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nfa636c9639c64eeab9f921509504ab92"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/radius">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Radius</rdfs:label>
+    <rdfs:domain rdf:nodeID="N4db82d8ad6a14a178116f2cd720dccb3"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N18384274a4254a0495c79ae3c12a9787">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/CircularSector"/>
+    <rdf:rest rdf:nodeID="N9a1fbece25f24a2c91f46d76a323d131"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa636c9639c64eeab9f921509504ab92">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Circle"/>
+    <rdf:rest rdf:nodeID="N18384274a4254a0495c79ae3c12a9787"/>
+  </rdf:Description>
+</rdf:RDF>

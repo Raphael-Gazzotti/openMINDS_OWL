@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/legLengths">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Leg lengths</rdfs:label>
+    <rdfs:domain rdf:nodeID="N0a7976218c9549bcb958457a8c2c125b"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncb791b7d16c2451fb7c7068efccc37ce">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/apexAngle"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na5edfe14824d4fd1aee631dcbd25ee4a">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Triangle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb0bc4bdedd194cb1b4e6f0120f3c9540">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/legLengths"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Triangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Triangle</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Ncb791b7d16c2451fb7c7068efccc37ce"/>
+    <rdfs:subClassOf rdf:nodeID="Nb0bc4bdedd194cb1b4e6f0120f3c9540"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4c0e7ea3014248e9a140244b067df2f0">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Triangle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa6f4a2b135d4d7b9dc7123a2662b3b3">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Kite"/>
+    <rdf:rest rdf:nodeID="Na5edfe14824d4fd1aee631dcbd25ee4a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/apexAngle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Apex angle</rdfs:label>
+    <rdfs:domain rdf:nodeID="N4f14b6e29b1b41868ba9dabba9092f97"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4f14b6e29b1b41868ba9dabba9092f97">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N97b2c1ae3a7846438db6589e69d06605"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0a7976218c9549bcb958457a8c2c125b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nfa6f4a2b135d4d7b9dc7123a2662b3b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97b2c1ae3a7846438db6589e69d06605">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/IsoscelesTriangle"/>
+    <rdf:rest rdf:nodeID="N4c0e7ea3014248e9a140244b067df2f0"/>
+  </rdf:Description>
+</rdf:RDF>

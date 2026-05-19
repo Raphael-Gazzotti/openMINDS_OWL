@@ -4,30 +4,37 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="Nee01c49c2fb046b8a2404bc5dd311132">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N65f5fa706503426cb55d5092bcec8ea0"/>
+  <rdf:Description rdf:nodeID="Nad3c0609bf6d4e3892b56acf0fb2d570">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnnotation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na99a0fba38aa453791959615920d8d4b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
-    <rdf:rest rdf:nodeID="N4eea29d99ed34ec0be65229969b9353e"/>
+  <rdf:Description rdf:nodeID="N849a5e41f87648c68b9d3318bce877ee">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomCoordinateSpace"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N9cf611e038be4500a3a650df4cfa3259">
+  <rdf:Description rdf:nodeID="N74769030c51944d8b44ce391e3ace885">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/coordinateSpace"/>
-    <owl:allValuesFrom rdf:nodeID="Ne60fbec0d1db45cbae6fc5ec07efd311"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/coordinates"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N65f5fa706503426cb55d5092bcec8ea0">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/BrainAtlasVersion"/>
-    <rdf:rest rdf:nodeID="Na99a0fba38aa453791959615920d8d4b"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/sands/CoordinatePoint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Coordinate point</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="N9cf611e038be4500a3a650df4cfa3259"/>
-    <rdfs:subClassOf rdf:nodeID="Nc53fb5cea16d4fda9edb8430df9b3624"/>
+    <rdfs:subClassOf rdf:nodeID="N1504a1e8fe9748cba8dfc2e7777e511d"/>
+    <rdfs:subClassOf rdf:nodeID="N74769030c51944d8b44ce391e3ace885"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nac5948be958047a5912ac9c220fb7ea5">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"/>
+    <rdf:rest rdf:nodeID="Ncf0af213d5d34b4da899bc9c3584430c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N27280abccfbc4124a089e67ff097c89a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/BrainAtlasVersion"/>
+    <rdf:rest rdf:nodeID="N42e500a561104cc18556115c7eee73f2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncf0af213d5d34b4da899bc9c3584430c">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomCoordinateSpace"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/coordinates">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -36,45 +43,38 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc53fb5cea16d4fda9edb8430df9b3624">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/coordinates"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N83a5caa7da85441399c1f7d04ebed202">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomCoordinateSpace"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne60fbec0d1db45cbae6fc5ec07efd311">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N00264f91430a4a1188f5ca8723a5d755"/>
+  <rdf:Description rdf:nodeID="Ndcc04b258ec64a9896bca4a4a956f1a6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"/>
+    <rdf:rest rdf:nodeID="N849a5e41f87648c68b9d3318bce877ee"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/coordinateSpace">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Coordinate space</rdfs:label>
     <rdfs:comment>Two or three dimensional geometric setting.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Nee01c49c2fb046b8a2404bc5dd311132"/>
-    <rdfs:range rdf:nodeID="N28d078a91d7e40ecb91c4d7286199dac"/>
+    <rdfs:domain rdf:nodeID="N57839e73768b4214a09f66a17dc50494"/>
+    <rdfs:range rdf:nodeID="N1427d8b7f9974c0b9e124529d4e896e2"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1976c58a748b4b6da85a1502cdf48d8a">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"/>
-    <rdf:rest rdf:nodeID="N313a05441099451488b72851d944e004"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N00264f91430a4a1188f5ca8723a5d755">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"/>
-    <rdf:rest rdf:nodeID="N83a5caa7da85441399c1f7d04ebed202"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N28d078a91d7e40ecb91c4d7286199dac">
+  <rdf:Description rdf:nodeID="N57839e73768b4214a09f66a17dc50494">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N1976c58a748b4b6da85a1502cdf48d8a"/>
+    <owl:unionOf rdf:nodeID="N27280abccfbc4124a089e67ff097c89a"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N313a05441099451488b72851d944e004">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomCoordinateSpace"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="N1504a1e8fe9748cba8dfc2e7777e511d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/coordinateSpace"/>
+    <owl:allValuesFrom rdf:nodeID="N2f140f1ef6e247d7805d2c107ef0c6c9"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N4eea29d99ed34ec0be65229969b9353e">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CustomAnnotation"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="N1427d8b7f9974c0b9e124529d4e896e2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Ndcc04b258ec64a9896bca4a4a956f1a6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N42e500a561104cc18556115c7eee73f2">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
+    <rdf:rest rdf:nodeID="Nad3c0609bf6d4e3892b56acf0fb2d570"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2f140f1ef6e247d7805d2c107ef0c6c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nac5948be958047a5912ac9c220fb7ea5"/>
   </rdf:Description>
 </rdf:RDF>

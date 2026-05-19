@@ -6,7 +6,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nfecf63bc4cd940c8b14401864d6d3fce"
+        "@id": "_:N5f1061de32a4467d9c7ed53bdfd01c1b"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -16,12 +16,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N57c13a985df9464d84992fc1f359334f"
+        "@id": "_:Na38b7e78625941c2b19c5f08aef585f8"
       }
     ]
   },
   {
-    "@id": "_:Nfecf63bc4cd940c8b14401864d6d3fce",
+    "@id": "_:N5f1061de32a4467d9c7ed53bdfd01c1b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "@id": "_:N57c13a985df9464d84992fc1f359334f",
+    "@id": "_:Na38b7e78625941c2b19c5f08aef585f8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -51,6 +51,48 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/provider",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/chemicals/ProductSource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Provider"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nf65ffb148deb4a0da4e74a0c0256465b"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf65ffb148deb4a0da4e74a0c0256465b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Consortium"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
           }
         ]
       }
@@ -78,280 +120,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/chemicals/ProductSource",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information about the source of a chemical substance or mixture."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Product source"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N0f8fb4b13e154f2fa05f33445d0b1b12"
-      },
-      {
-        "@id": "_:N8ed8a110199945cb918b19885b363705"
-      },
-      {
-        "@id": "_:Neb1d8c490e4f46ba8c2eb46444640832"
-      },
-      {
-        "@id": "_:N90a6c59c701247cb9267c19e8d9543d6"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0f8fb4b13e154f2fa05f33445d0b1b12",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/RRID"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8ed8a110199945cb918b19885b363705",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/productName"
-      }
-    ]
-  },
-  {
-    "@id": "_:Neb1d8c490e4f46ba8c2eb46444640832",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N97ebe62ad5f240f9aeb38c2483310138"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/provider"
-      }
-    ]
-  },
-  {
-    "@id": "_:N97ebe62ad5f240f9aeb38c2483310138",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Consortium"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N90a6c59c701247cb9267c19e8d9543d6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N11da93a1f90b482f84821eec16b3b805"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/purity"
-      }
-    ]
-  },
-  {
-    "@id": "_:N11da93a1f90b482f84821eec16b3b805",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/identifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Term or code used to identify something or someone."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Na5b046d7ab9b4040a33c341bb8c4f602"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Identifier"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na5b046d7ab9b4040a33c341bb8c4f602",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ProductSource"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DOI"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/GRIDID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/HANDLE"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ISBN"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ISSN"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/IdentifiersDotOrgID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ORCID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/RORID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/RRID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SWHID"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/StockNumber"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/provider",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/chemicals/ProductSource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Provider"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N0694f4c0e8504b819afe135c3bba112d"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0694f4c0e8504b819afe135c3bba112d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Consortium"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Organization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -363,7 +131,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N2f70cd181d99460096711f8dc10a5cfa"
+        "@id": "_:Ne04cc5c0cb9d4a708bf308e10a27aaac"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -373,12 +141,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N19bf3232b7df410bb94740567c334d4a"
+        "@id": "_:N5593ac394efd485c987f627b127b56b4"
       }
     ]
   },
   {
-    "@id": "_:N2f70cd181d99460096711f8dc10a5cfa",
+    "@id": "_:Ne04cc5c0cb9d4a708bf308e10a27aaac",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -483,7 +251,7 @@
     ]
   },
   {
-    "@id": "_:N19bf3232b7df410bb94740567c334d4a",
+    "@id": "_:N5593ac394efd485c987f627b127b56b4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -516,6 +284,238 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/core/SWHID"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/chemicals/ProductSource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about the source of a chemical substance or mixture."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Product source"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nccdfe40ede454edfb4f15d2e45362020"
+      },
+      {
+        "@id": "_:N2f276623d3e74f54ac14d9f6b716c894"
+      },
+      {
+        "@id": "_:Ndb5b13a92ed94795a697cd679aaf8dfd"
+      },
+      {
+        "@id": "_:N4457663c69334ec1adb7cbd30443f1dd"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nccdfe40ede454edfb4f15d2e45362020",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/RRID"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2f276623d3e74f54ac14d9f6b716c894",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/productName"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndb5b13a92ed94795a697cd679aaf8dfd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N0013546ccd4245c785742cc8c1a24089"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/provider"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0013546ccd4245c785742cc8c1a24089",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Consortium"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Organization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N4457663c69334ec1adb7cbd30443f1dd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N6fe472a546c5475c815ace74e5a6417e"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/purity"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6fe472a546c5475c815ace74e5a6417e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/identifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Term or code used to identify something or someone."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N12280799348f445cb7c80a85e10ee4df"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N12280799348f445cb7c80a85e10ee4df",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ProductSource"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/DOI"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/GRIDID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/HANDLE"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ISBN"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ISSN"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/IdentifiersDotOrgID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ORCID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/RORID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/RRID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SWHID"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/StockNumber"
           }
         ]
       }

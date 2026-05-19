@@ -42,14 +42,14 @@
     rdfs:label "Chemical mixture" ;
     rdfs:comment "Structured information about a mixture of chemical substances." ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/chemicals/ProductSource> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/productSource> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/type> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/chemicals/ProductSource> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/productSource> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/chemicals/AmountOfChemical> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;

@@ -1,0 +1,58 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/negativeUncertainties> a owl:DatatypeProperty ;
+    rdfs:label "Negative uncertainties" ;
+    rdfs:domain <https://openminds.om-i.org/types/QuantitativeValueArray> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/props/positiveUncertainties> a owl:DatatypeProperty ;
+    rdfs:label "Positive uncertainties" ;
+    rdfs:domain <https://openminds.om-i.org/types/QuantitativeValueArray> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/props/typeOfUncertainty> a owl:ObjectProperty ;
+    rdfs:label "Type of uncertainty" ;
+    rdfs:comment "Distinct technique used to quantify the uncertainty of a measurement." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueArray> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/TypeOfUncertainty> .
+
+<https://openminds.om-i.org/props/unit> a owl:ObjectProperty ;
+    rdfs:label "Unit" ;
+    rdfs:comment "Determinate quantity adopted as a standard of measurement." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueArray> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/UnitOfMeasurement> .
+
+<https://openminds.om-i.org/props/values> a owl:DatatypeProperty ;
+    rdfs:label "Values" ;
+    rdfs:domain <https://openminds.om-i.org/types/QuantitativeValueArray> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/types/QuantitativeValueArray> a owl:Class ;
+    rdfs:label "Quantitative value array" ;
+    rdfs:comment "A representation of an array of quantitative values, optionally with uncertainties." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/UnitOfMeasurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/unit> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/negativeUncertainties> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/TypeOfUncertainty> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/typeOfUncertainty> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/positiveUncertainties> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/values> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/values> ] .
+

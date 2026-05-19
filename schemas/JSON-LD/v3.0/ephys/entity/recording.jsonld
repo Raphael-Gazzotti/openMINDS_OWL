@@ -27,7 +27,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N5aca02b516314f6ebe3ea16dbc08be43"
+        "@id": "_:N7915fcf01d3f4487a17bfafc19bf17d4"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -37,12 +37,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N4a1905604f274817b01430f8020d934b"
+        "@id": "_:N8b5d52019e5e487ab7743c429513406f"
       }
     ]
   },
   {
-    "@id": "_:N5aca02b516314f6ebe3ea16dbc08be43",
+    "@id": "_:N7915fcf01d3f4487a17bfafc19bf17d4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "@id": "_:N4a1905604f274817b01430f8020d934b",
+    "@id": "_:N8b5d52019e5e487ab7743c429513406f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -105,7 +105,282 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/channel",
+    "@id": "https://openminds.ebrains.eu/vocab/additionalRemarks",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Mention of what deserves additional attention or notice."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3b2f2b3d6e57437db21524ed363c419c"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Additional remarks"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3b2f2b3d6e57437db21524ed363c419c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Measurement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Recording"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/ephys/Recording",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Recording"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Ndbf8d3e3831642a49dc9262599564212"
+      },
+      {
+        "@id": "_:Nde5ec26d058a46e88885924d549436fc"
+      },
+      {
+        "@id": "_:N5d0aa78d04cb46f2a18e96a0320c19bc"
+      },
+      {
+        "@id": "_:N6403aea2ef9c4c3eacef81ffbf068c8a"
+      },
+      {
+        "@id": "_:N18aaf94d0d664786b0fb52047fa2b1a3"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndbf8d3e3831642a49dc9262599564212",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/Channel"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/channel"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nde5ec26d058a46e88885924d549436fc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N29be7ab1475242f4ab9aa5755c677f77"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/dataLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N29be7ab1475242f4ab9aa5755c677f77",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N5d0aa78d04cb46f2a18e96a0320c19bc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/Recording"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/previousRecording"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6403aea2ef9c4c3eacef81ffbf068c8a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N1a394db52234422992e9570dcb42d218"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/recordedWith"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1a394db52234422992e9570dcb42d218",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N18aaf94d0d664786b0fb52047fa2b1a3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/samplingFrequency"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/previousRecording",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -116,12 +391,57 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Channel"
+        "@value": "Previous recording"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/ephys/Channel"
+        "@id": "https://openminds.ebrains.eu/ephys/Recording"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/recordedWith",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/Recording"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Recorded with"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N8ae22f2f4d394ac29a9e0381244e5783"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8ae22f2f4d394ac29a9e0381244e5783",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
       }
     ]
   },
@@ -137,7 +457,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N8c5cfdb3dad548e7a0bce3d7dd00ee1e"
+        "@id": "_:N73c9f52466314095a9e4d4693cafb8a4"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -152,7 +472,7 @@
     ]
   },
   {
-    "@id": "_:N8c5cfdb3dad548e7a0bce3d7dd00ee1e",
+    "@id": "_:N73c9f52466314095a9e4d4693cafb8a4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -218,104 +538,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/additionalRemarks",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Mention of what deserves additional attention or notice."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N34ec1f98480642c8ab407f6d03302549"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Additional remarks"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N34ec1f98480642c8ab407f6d03302549",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalMixture"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Measurement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Recording"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/previousRecording",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Previous recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/Recording"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/name",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -327,7 +549,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nb243247474a7494189d1ffe0e9991347"
+        "@id": "_:N8eed329e026e403b95a386a75b854741"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -342,7 +564,7 @@
     ]
   },
   {
-    "@id": "_:Nb243247474a7494189d1ffe0e9991347",
+    "@id": "_:N8eed329e026e403b95a386a75b854741",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -684,7 +906,7 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/recordedWith",
+    "@id": "https://openminds.ebrains.eu/vocab/channel",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -695,234 +917,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Recorded with"
+        "@value": "Channel"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N321ac51759e748ecaffeca5b40a7eef3"
-      }
-    ]
-  },
-  {
-    "@id": "_:N321ac51759e748ecaffeca5b40a7eef3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/ephys/Recording",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N7b32e38a74cb4788b28496bd40495ba6"
-      },
-      {
-        "@id": "_:N167114d2c2e046518f1fdeb8fbb6cd9d"
-      },
-      {
-        "@id": "_:N0a1113c3fa9e45e1b667f03d27970866"
-      },
-      {
-        "@id": "_:Na560ea1c40a14905aff95d76a3a9f993"
-      },
-      {
-        "@id": "_:N4ee2c627ec0f426c80cfd91c274bb941"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7b32e38a74cb4788b28496bd40495ba6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
         "@id": "https://openminds.ebrains.eu/ephys/Channel"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/channel"
-      }
-    ]
-  },
-  {
-    "@id": "_:N167114d2c2e046518f1fdeb8fbb6cd9d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Nc002c81bb27b46969bbb68f8d8874a64"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/dataLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc002c81bb27b46969bbb68f8d8874a64",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N0a1113c3fa9e45e1b667f03d27970866",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/Recording"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/previousRecording"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na560ea1c40a14905aff95d76a3a9f993",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N099b148f656c4a7e88542439c44dd448"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/recordedWith"
-      }
-    ]
-  },
-  {
-    "@id": "_:N099b148f656c4a7e88542439c44dd448",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N4ee2c627ec0f426c80cfd91c274bb941",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/samplingFrequency"
       }
     ]
   }

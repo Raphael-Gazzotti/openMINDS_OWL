@@ -87,37 +87,6 @@
     rdfs:label "Tissue sample" ;
     rdfs:comment "Structured information on a tissue sample." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/biologicalSex> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/origin> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/type> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Strain> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/strain> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/TissueSampleState> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/studiedState> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Phenotype> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/phenotype> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Laterality> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/laterality> ],
-        [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/internalIdentifier> ],
         [ a owl:Restriction ;
@@ -127,5 +96,36 @@
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Species> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/species> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/species> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Laterality> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/laterality> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Strain> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/strain> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Organ> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/origin> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Phenotype> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/phenotype> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/TissueSampleState> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/studiedState> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/biologicalSex> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/type> ] .
 

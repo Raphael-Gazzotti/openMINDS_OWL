@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Na53764b67ad4435da200bb42ad1d9aef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/member"/>
+    <owl:allValuesFrom rdf:nodeID="N262bcca4f3674b22928453bb84ca157c"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N751f644632c84c148b2423eb09c3e9dd">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/endDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>End date</rdfs:label>
+    <rdfs:comment>Date in the Gregorian calendar at which something terminates in time.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Membership"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14d7184fbdf2410ca943c85291c220d9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N9591ea3dd4b844ecb6ad905023121d67"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N898cc8bb10c84691926edffbc2b42404">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/member">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Member</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Membership"/>
+    <rdfs:range rdf:nodeID="N14d7184fbdf2410ca943c85291c220d9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/startDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:label>Start date</rdfs:label>
+    <rdfs:comment>Date in the Gregorian calendar at which something begins in time</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Membership"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N09e57dc2340d4ce6a54a5ac768eb91b6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <rdf:rest rdf:nodeID="N898cc8bb10c84691926edffbc2b42404"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N262bcca4f3674b22928453bb84ca157c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7cab9fac2cb54243b953ec732eb0dbdb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9591ea3dd4b844ecb6ad905023121d67">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
+    <rdf:rest rdf:nodeID="N69c53a57298646daa85982925dce2d39"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Membership">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Membership</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Na53764b67ad4435da200bb42ad1d9aef"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7cab9fac2cb54243b953ec732eb0dbdb">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Consortium"/>
+    <rdf:rest rdf:nodeID="N09e57dc2340d4ce6a54a5ac768eb91b6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N69c53a57298646daa85982925dce2d39">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <rdf:rest rdf:nodeID="N751f644632c84c148b2423eb09c3e9dd"/>
+  </rdf:Description>
+</rdf:RDF>

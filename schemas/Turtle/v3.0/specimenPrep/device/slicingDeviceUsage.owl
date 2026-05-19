@@ -66,16 +66,6 @@
 <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> a owl:Class ;
     rdfs:label "Slicing device usage" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/slicingPlane> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSampleState> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/usedSpecimen> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/metadataLocation> ],
@@ -89,19 +79,29 @@
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/slicingSpeed> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/oscillationAmplitude> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/NumericalProperty> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/slicingAngle> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/QuantitativeValueRange> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/sliceThickness> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/QuantitativeValue> <https://openminds.ebrains.eu/core/NumericalProperty> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/slicingAngle> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/oscillationAmplitude> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/slicingPlane> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/SubjectState> <https://openminds.ebrains.eu/core/TissueSampleState> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/usedSpecimen> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;

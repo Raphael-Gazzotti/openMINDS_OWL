@@ -27,6 +27,11 @@
     rdfs:label "Image" ;
     rdfs:comment "Structured information on an image." ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinateSpace> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/voxelSize> ],
@@ -34,10 +39,5 @@
             owl:allValuesFrom <https://openminds.ebrains.eu/core/FileInstance> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinateSpace> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ] .
 

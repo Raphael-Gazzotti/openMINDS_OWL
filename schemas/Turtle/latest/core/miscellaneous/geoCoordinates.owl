@@ -1,0 +1,28 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/elevation> a owl:DatatypeProperty ;
+    rdfs:label "Elevation" ;
+    rdfs:domain <https://openminds.om-i.org/types/GeoCoordinates> ;
+    rdfs:range xsd:decimal .
+
+<https://openminds.om-i.org/props/latitude> a owl:DatatypeProperty ;
+    rdfs:label "Latitude" ;
+    rdfs:domain <https://openminds.om-i.org/types/GeoCoordinates> ;
+    rdfs:range xsd:decimal .
+
+<https://openminds.om-i.org/props/longitude> a owl:DatatypeProperty ;
+    rdfs:label "Longitude" ;
+    rdfs:domain <https://openminds.om-i.org/types/GeoCoordinates> ;
+    rdfs:range xsd:decimal .
+
+<https://openminds.om-i.org/types/GeoCoordinates> a owl:Class ;
+    rdfs:label "Geo coordinates" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/longitude> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/latitude> ] .
+

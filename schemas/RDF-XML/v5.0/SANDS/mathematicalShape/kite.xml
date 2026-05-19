@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/legLengths">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Leg lengths</rdfs:label>
+    <rdfs:domain rdf:nodeID="Ne5dcabd7218245ada9f92a597eb08654"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Kite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Kite</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N1c21603cb372433eafbf336e4f790b33"/>
+    <rdfs:subClassOf rdf:nodeID="Nd702cb4073974f0fbd796463c8862fef"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/symmetryDiagonalLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Symmetry diagonal length</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Kite"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1c21603cb372433eafbf336e4f790b33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/legLengths"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na4cc069d20ca4fb08118d2e891058a13">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Triangle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd702cb4073974f0fbd796463c8862fef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/symmetryDiagonalLength"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne5dcabd7218245ada9f92a597eb08654">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc3485d231124477aae63c707fde8a86b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc3485d231124477aae63c707fde8a86b">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Kite"/>
+    <rdf:rest rdf:nodeID="Na4cc069d20ca4fb08118d2e891058a13"/>
+  </rdf:Description>
+</rdf:RDF>

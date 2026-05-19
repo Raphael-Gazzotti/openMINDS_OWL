@@ -4,11 +4,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/width">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Width</rdfs:label>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Rectangle"/>
-    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  <rdf:Description rdf:nodeID="N8e094dc41c4d4213aa049a1c5e478ce4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/width"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/length">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -16,24 +17,23 @@
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Rectangle"/>
     <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/types/Rectangle">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Rectangle</rdfs:label>
-    <rdfs:subClassOf rdf:nodeID="N2de018200adc43848401c76136b51e80"/>
-    <rdfs:subClassOf rdf:nodeID="Nc3d29a8219a841c980c188239e0cb731"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2de018200adc43848401c76136b51e80">
+  <rdf:Description rdf:nodeID="Nc2bd42701ff9479db04c1cf06fa6bba4">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/length"/>
     <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc3d29a8219a841c980c188239e0cb731">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/width"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/width">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Width</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Rectangle"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Rectangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Rectangle</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nc2bd42701ff9479db04c1cf06fa6bba4"/>
+    <rdfs:subClassOf rdf:nodeID="N8e094dc41c4d4213aa049a1c5e478ce4"/>
   </rdf:Description>
 </rdf:RDF>

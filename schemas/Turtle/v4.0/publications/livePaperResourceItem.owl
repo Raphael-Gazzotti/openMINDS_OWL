@@ -35,9 +35,6 @@
 <https://openminds.om-i.org/types/LivePaperResourceItem> a owl:Class ;
     rdfs:label "Live paper resource item" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/IRI> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Organization> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
@@ -47,6 +44,9 @@
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/isPartOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/IRI> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/name> ] .

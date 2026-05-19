@@ -92,9 +92,13 @@
 <https://openminds.ebrains.eu/core/Strain> a owl:Class ;
     rdfs:label "Strain" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/BreedingType> ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/breedingType> ],
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/geneticStrainType> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Species> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -102,34 +106,30 @@
             owl:onProperty <https://openminds.ebrains.eu/vocab/species> ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/ontologyIdentifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/geneticStrainType> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/diseaseModel> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/Strain> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/backgroundStrain> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/synonym> ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/alternateIdentifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/RRID> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/StockNumber> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/stockNumber> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Strain> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/backgroundStrain> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/BreedingType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/synonym> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/breedingType> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/ontologyIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/diseaseModel> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/RRID> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ] .
 

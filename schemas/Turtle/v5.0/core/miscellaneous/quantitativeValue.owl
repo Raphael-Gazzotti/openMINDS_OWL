@@ -1,0 +1,52 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/typeOfUncertainty> a owl:ObjectProperty ;
+    rdfs:label "Type of uncertainty" ;
+    rdfs:comment "Distinct technique used to quantify the uncertainty of a measurement." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueArray> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/TypeOfUncertainty> .
+
+<https://openminds.om-i.org/props/uncertainty> a owl:DatatypeProperty ;
+    rdfs:label "Uncertainty" ;
+    rdfs:comment "Quantitative value range defining the uncertainty of a measurement." ;
+    rdfs:domain <https://openminds.om-i.org/types/QuantitativeValue> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/props/unit> a owl:ObjectProperty ;
+    rdfs:label "Unit" ;
+    rdfs:comment "Determinate quantity adopted as a standard of measurement." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueArray> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/UnitOfMeasurement> .
+
+<https://openminds.om-i.org/props/value> a owl:DatatypeProperty ;
+    rdfs:label "Value" ;
+    rdfs:comment "Entry for a property." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Measurement> <https://openminds.om-i.org/types/NumericalProperty> <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/SingleColor> <https://openminds.om-i.org/types/StringProperty> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ],
+        xsd:decimal .
+
+<https://openminds.om-i.org/types/QuantitativeValue> a owl:Class ;
+    rdfs:label "Quantitative value" ;
+    rdfs:comment "Structured information on a quantitative value." ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/value> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/UnitOfMeasurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/unit> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/TypeOfUncertainty> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/typeOfUncertainty> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/uncertainty> ] .
+

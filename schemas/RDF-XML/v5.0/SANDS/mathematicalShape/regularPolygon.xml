@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N7ef28674370d41f0aa9d463dd23f5f4e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/circumradius"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/RegularPolygon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Regular polygon</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N7ef28674370d41f0aa9d463dd23f5f4e"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/circumradius">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Circumradius</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/RegularPolygon"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/numberOfSides">
+    <rdfs:label>Number of sides</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/RegularPolygon"/>
+  </rdf:Description>
+</rdf:RDF>

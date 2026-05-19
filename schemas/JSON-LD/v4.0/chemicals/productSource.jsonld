@@ -1,32 +1,27 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/identifier",
+    "@id": "https://openminds.om-i.org/props/provider",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Term or code used to identify something or someone."
-      }
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3e6212860df34b99a9abe10c031f2ae1"
+        "@id": "https://openminds.om-i.org/types/ProductSource"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Identifier"
+        "@value": "Provider"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "_:Nc62a58adc0364c409b21e84f25f53f38"
       }
     ]
   },
   {
-    "@id": "_:N3e6212860df34b99a9abe10c031f2ae1",
+    "@id": "_:Nc62a58adc0364c409b21e84f25f53f38",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -34,42 +29,93 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/DOI"
+            "@id": "https://openminds.om-i.org/types/Consortium"
           },
           {
-            "@id": "https://openminds.om-i.org/types/GRIDID"
+            "@id": "https://openminds.om-i.org/types/Organization"
           },
           {
-            "@id": "https://openminds.om-i.org/types/HANDLE"
-          },
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/purity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N36e53863115c4820b637faaa4cfee82e"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Purity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nd1b74b55525142528c2d971f054d4b79"
+      }
+    ]
+  },
+  {
+    "@id": "_:N36e53863115c4820b637faaa4cfee82e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/ISBN"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ISSN"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/IdentifiersDotOrgID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ORCID"
+            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
           },
           {
             "@id": "https://openminds.om-i.org/types/ProductSource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/RORID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/RRID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SWHID"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/StockNumber"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd1b74b55525142528c2d971f054d4b79",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/productName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/ProductSource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Product name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -85,7 +131,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc24a035071aa453394a04fb89b2f6433"
+        "@id": "_:N9743f290b48b46308d3edcb0be429bcb"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -95,12 +141,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Ncc7e50cce55f4be0bf1f15acab992a58"
+        "@id": "_:Nffac79d6b5f3465591595f344efef821"
       }
     ]
   },
   {
-    "@id": "_:Nc24a035071aa453394a04fb89b2f6433",
+    "@id": "_:N9743f290b48b46308d3edcb0be429bcb",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -205,7 +251,7 @@
     ]
   },
   {
-    "@id": "_:Ncc7e50cce55f4be0bf1f15acab992a58",
+    "@id": "_:Nffac79d6b5f3465591595f344efef821",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -244,126 +290,6 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/productName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/ProductSource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Product name"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/provider",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/ProductSource"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Provider"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N3d7515373dd14f2cb5024251aa425dc9"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3d7515373dd14f2cb5024251aa425dc9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Consortium"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/purity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N69aeff882289431dad5afdc1a13b7c05"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Purity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N828526b892ce4aeb845f9a2f6bd9fa32"
-      }
-    ]
-  },
-  {
-    "@id": "_:N69aeff882289431dad5afdc1a13b7c05",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ProductSource"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N828526b892ce4aeb845f9a2f6bd9fa32",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/types/ProductSource",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -380,21 +306,21 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N9e1aa5025d544225937b0a5755e8a45f"
+        "@id": "_:N9d5f6ce8ad6745ce8c9773dad3020767"
       },
       {
-        "@id": "_:N337972439a774732a41724c26c2a93c9"
+        "@id": "_:Nb08f725258f34f0e8555cdecdc9a0ce6"
       },
       {
-        "@id": "_:N997fffd23a9a4aa0b8c2e1202e1b2616"
+        "@id": "_:N62fbdc659a0c4cd38ca9577e29957dfc"
       },
       {
-        "@id": "_:N599238da9b70473bab336e86a75dc17b"
+        "@id": "_:N28a86524952e4e8a91e798360cae693a"
       }
     ]
   },
   {
-    "@id": "_:N9e1aa5025d544225937b0a5755e8a45f",
+    "@id": "_:N9d5f6ce8ad6745ce8c9773dad3020767",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -416,7 +342,7 @@
     ]
   },
   {
-    "@id": "_:N337972439a774732a41724c26c2a93c9",
+    "@id": "_:Nb08f725258f34f0e8555cdecdc9a0ce6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -433,13 +359,13 @@
     ]
   },
   {
-    "@id": "_:N997fffd23a9a4aa0b8c2e1202e1b2616",
+    "@id": "_:N62fbdc659a0c4cd38ca9577e29957dfc",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N493f26cfefc740e5928ca9cbc412c394"
+        "@id": "_:N52cc811d6f7a46f891bb1eded6207da6"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -461,7 +387,7 @@
     ]
   },
   {
-    "@id": "_:N493f26cfefc740e5928ca9cbc412c394",
+    "@id": "_:N52cc811d6f7a46f891bb1eded6207da6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -482,13 +408,13 @@
     ]
   },
   {
-    "@id": "_:N599238da9b70473bab336e86a75dc17b",
+    "@id": "_:N28a86524952e4e8a91e798360cae693a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N9133a71c456b45dda295df24ad4bacca"
+        "@id": "_:N1f1ef9acc391446f9454f8514045fd9d"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -504,7 +430,7 @@
     ]
   },
   {
-    "@id": "_:N9133a71c456b45dda295df24ad4bacca",
+    "@id": "_:N1f1ef9acc391446f9454f8514045fd9d",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -516,6 +442,80 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/identifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Term or code used to identify something or someone."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N646eab6ddc504fc9bbf91cd0580ecd02"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N646eab6ddc504fc9bbf91cd0580ecd02",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/DOI"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GRIDID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/HANDLE"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ISBN"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ISSN"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/IdentifiersDotOrgID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ORCID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ProductSource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/RORID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/RRID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SWHID"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/StockNumber"
           }
         ]
       }

@@ -57,22 +57,22 @@
             owl:allValuesFrom <https://openminds.ebrains.eu/core/File> ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/visualizedIn> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinatePoint> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinatePoint> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/internalIdentifier> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/File> ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/definedIn> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedStimulation> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedRecording> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedRecording> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/internalIdentifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinatePoint> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/coordinatePoint> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedStimulation> ] .
 

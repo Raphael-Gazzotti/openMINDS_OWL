@@ -1,12 +1,144 @@
 [
   {
+    "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Custom anatomical entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N3dc257dcfaad4304a5c71bd2b0445e71"
+      },
+      {
+        "@id": "_:Nd53dc1c67db94c86a7bfd3a7daeeb019"
+      },
+      {
+        "@id": "_:Nbeb14c13a8c94a5d82fefe09adbdd9b7"
+      },
+      {
+        "@id": "_:N84fbe10a34dc4d428b3304357643797f"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3dc257dcfaad4304a5c71bd2b0445e71",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/CustomAnnotation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/hasAnnotation"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd53dc1c67db94c86a7bfd3a7daeeb019",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/name"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbeb14c13a8c94a5d82fefe09adbdd9b7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N4a89f359b3224fcca7d234e2e2947265"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/relatedUBERONTerm"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4a89f359b3224fcca7d234e2e2947265",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Organ"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N84fbe10a34dc4d428b3304357643797f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N4e2c1863c2e4466e9b24e0ea9d7d2e58"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/relationAssessment"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4e2c1863c2e4466e9b24e0ea9d7d2e58",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QualitativeRelationAssessment"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeRelationAssessment"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/hasAnnotation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N276172c4ef184d5f9a949b6bdc92dd24"
+        "@id": "_:N4d89ac51256b4f56ae16da650ee5df2f"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -16,12 +148,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N01db726636e948cf817804bb2a029280"
+        "@id": "_:Nefb061907c094d8d90504f0e7058d492"
       }
     ]
   },
   {
-    "@id": "_:N276172c4ef184d5f9a949b6bdc92dd24",
+    "@id": "_:N4d89ac51256b4f56ae16da650ee5df2f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -39,7 +171,7 @@
     ]
   },
   {
-    "@id": "_:N01db726636e948cf817804bb2a029280",
+    "@id": "_:Nefb061907c094d8d90504f0e7058d492",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -63,22 +195,22 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N90a34958c1e24252ac4b3f789e67a721"
+        "@id": "_:N5f59f2328bc642ac84e8e723fbe53c42"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Related uberonterm"
+        "@value": "Related UBERON term"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nba551b2301cc44f68d942e21d73f22ce"
+        "@id": "_:Nebea38bc5a614ad288c5e21454af1813"
       }
     ]
   },
   {
-    "@id": "_:N90a34958c1e24252ac4b3f789e67a721",
+    "@id": "_:N5f59f2328bc642ac84e8e723fbe53c42",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -96,7 +228,7 @@
     ]
   },
   {
-    "@id": "_:Nba551b2301cc44f68d942e21d73f22ce",
+    "@id": "_:Nebea38bc5a614ad288c5e21454af1813",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -108,138 +240,6 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/UBERONParcellation"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Custom anatomical entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nb7df309b7b224dea943e4e12467ded1f"
-      },
-      {
-        "@id": "_:N0ea466a7c5084dd08d876b96798869ae"
-      },
-      {
-        "@id": "_:N390f1a8ab9dd4634ab72d66c0404dbcc"
-      },
-      {
-        "@id": "_:N3a8cde4c35e54b18815199399e8aed87"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb7df309b7b224dea943e4e12467ded1f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/CustomAnnotation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/hasAnnotation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0ea466a7c5084dd08d876b96798869ae",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:N390f1a8ab9dd4634ab72d66c0404dbcc",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N7e5ae21202484f458a3cb1b9d8694e9a"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/relatedUBERONTerm"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7e5ae21202484f458a3cb1b9d8694e9a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Organ"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N3a8cde4c35e54b18815199399e8aed87",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Nee339c856da7424481c6754cfbca8d2a"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/relationAssessment"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nee339c856da7424481c6754cfbca8d2a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QualitativeRelationAssessment"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeRelationAssessment"
           }
         ]
       }
@@ -257,7 +257,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N039d86968e3b4beabd7d0e283da467f7"
+        "@id": "_:N7a93714f78b94e4faf772a4e7eb59011"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -272,7 +272,7 @@
     ]
   },
   {
-    "@id": "_:N039d86968e3b4beabd7d0e283da467f7",
+    "@id": "_:N7a93714f78b94e4faf772a4e7eb59011",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -626,7 +626,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N5fe65b73af354e6e9aae29c590d6c47e"
+        "@id": "_:Nf1fa9e639206476dbd3c9c9242fb350a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -636,12 +636,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nd63fc58f0f3b49599f3f2a079c71ff78"
+        "@id": "_:N68f2437b1812495897e3332af0b41031"
       }
     ]
   },
   {
-    "@id": "_:N5fe65b73af354e6e9aae29c590d6c47e",
+    "@id": "_:Nf1fa9e639206476dbd3c9c9242fb350a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -659,7 +659,7 @@
     ]
   },
   {
-    "@id": "_:Nd63fc58f0f3b49599f3f2a079c71ff78",
+    "@id": "_:N68f2437b1812495897e3332af0b41031",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],

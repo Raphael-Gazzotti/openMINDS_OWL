@@ -1,0 +1,291 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/accelerationFactor> rdfs:label "Acceleration factor" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> .
+
+<https://openminds.om-i.org/props/lookupLabel> a owl:DatatypeProperty ;
+    rdfs:label "Lookup label" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CellPatching> <https://openminds.om-i.org/types/ChemicalSubstance> <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/ContentTypePattern> <https://openminds.om-i.org/types/CranialWindowPreparation> <https://openminds.om-i.org/types/DataAnalysis> <https://openminds.om-i.org/types/DataCopy> <https://openminds.om-i.org/types/DynamicMRIAcquisition> <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodePlacement> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/EphysStimulus> <https://openminds.om-i.org/types/FileRepositoryStructure> <https://openminds.om-i.org/types/GenericComputation> <https://openminds.om-i.org/types/MRICoilUsage> <https://openminds.om-i.org/types/MRIScannerUsage> <https://openminds.om-i.org/types/ModelValidation> <https://openminds.om-i.org/types/Optimization> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/PropertyValueList> <https://openminds.om-i.org/types/ProtocolExecution> <https://openminds.om-i.org/types/RecordingActivity> <https://openminds.om-i.org/types/Simulation> <https://openminds.om-i.org/types/SlicingDeviceUsage> <https://openminds.om-i.org/types/StaticMRIAcquisition> <https://openminds.om-i.org/types/StimulationActivity> <https://openminds.om-i.org/types/Subject> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectGroupState> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueCulturePreparation> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleCollectionState> <https://openminds.om-i.org/types/TissueSampleSlicing> <https://openminds.om-i.org/types/TissueSampleState> <https://openminds.om-i.org/types/Visualization> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/numberOfDiscardedVolumes> rdfs:label "Number of discarded volumes" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/DynamicMRIAcquisition> <https://openminds.om-i.org/types/MRIScannerUsage> ) ] .
+
+<https://openminds.om-i.org/props/numberOfExcitations> rdfs:label "Number of excitations" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> .
+
+<https://openminds.om-i.org/props/numberOfSlices> rdfs:label "Number of slices" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> .
+
+<https://openminds.om-i.org/props/MRIWeighting> a owl:ObjectProperty ;
+    rdfs:label "MRI weighting" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/MRIWeighting> .
+
+<https://openminds.om-i.org/props/MTPulseShape> a owl:ObjectProperty ;
+    rdfs:label "MT pulse shape" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/PulseShape> .
+
+<https://openminds.om-i.org/props/diffusionEncodingParameters> a owl:ObjectProperty ;
+    rdfs:label "Diffusion encoding parameters" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/File> .
+
+<https://openminds.om-i.org/props/dwellTime> a owl:ObjectProperty ;
+    rdfs:label "Dwell time" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/echoTime> a owl:ObjectProperty ;
+    rdfs:label "Echo time" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/fatSuppressionTechnique> a owl:ObjectProperty ;
+    rdfs:label "Fat suppression technique" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/MRIFatSuppressionTechnique> .
+
+<https://openminds.om-i.org/props/fieldOfView> a owl:ObjectProperty ;
+    rdfs:label "Field of view" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> .
+
+<https://openminds.om-i.org/props/flipAngle> a owl:ObjectProperty ;
+    rdfs:label "Flip angle" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/gradientCorrection> a owl:ObjectProperty ;
+    rdfs:label "Gradient correction" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/AnalysisTechnique> .
+
+<https://openminds.om-i.org/props/inversionTime> a owl:ObjectProperty ;
+    rdfs:label "Inversion time" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/matrixSize> a owl:DatatypeProperty ;
+    rdfs:label "Matrix size" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/props/metadataLocation> a owl:ObjectProperty ;
+    rdfs:label "Metadata location" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/MRICoilUsage> <https://openminds.om-i.org/types/MRIScannerUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] .
+
+<https://openminds.om-i.org/props/parallelAcquisitionTechnique> a owl:ObjectProperty ;
+    rdfs:label "Parallel acquisition technique" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/MRIParallelAcquisitionTechnique> .
+
+<https://openminds.om-i.org/props/phaseEncodingDirection> a owl:DatatypeProperty ;
+    rdfs:label "Phase encoding direction" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/props/receiverBandwidth> a owl:ObjectProperty ;
+    rdfs:label "Receiver bandwidth" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/repetitionTime> a owl:ObjectProperty ;
+    rdfs:label "Repetition time" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/sliceAngulation> a owl:DatatypeProperty ;
+    rdfs:label "Slice angulation" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range rdf:List .
+
+<https://openminds.om-i.org/props/sliceGap> a owl:ObjectProperty ;
+    rdfs:label "Slice gap" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] .
+
+<https://openminds.om-i.org/props/sliceOrientation> a owl:ObjectProperty ;
+    rdfs:label "Slice orientation" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/AnatomicalPlane> .
+
+<https://openminds.om-i.org/props/sliceThickness> a owl:ObjectProperty ;
+    rdfs:label "Slice thickness" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/MRIScannerUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] .
+
+<https://openminds.om-i.org/props/sliceTiming> a owl:ObjectProperty ;
+    rdfs:label "Slice timing" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValueArray> .
+
+<https://openminds.om-i.org/props/spatialEncoding> a owl:ObjectProperty ;
+    rdfs:label "Spatial encoding" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/SpatialEncoding> .
+
+<https://openminds.om-i.org/props/spoilingTechnique> a owl:ObjectProperty ;
+    rdfs:label "Spoiling technique" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/MRISpoilingTechnique> .
+
+<https://openminds.om-i.org/props/totalReadOutTime> a owl:ObjectProperty ;
+    rdfs:label "Total read out time" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/transmitterBandwidth> a owl:ObjectProperty ;
+    rdfs:label "Transmitter bandwidth" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/usedCoils> a owl:ObjectProperty ;
+    rdfs:label "Used coils" ;
+    rdfs:domain <https://openminds.om-i.org/types/MRIScannerUsage> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/DeviceType> <https://openminds.om-i.org/types/MRICoilUsage> ) ] .
+
+<https://openminds.om-i.org/props/usedSpecimen> a owl:ObjectProperty ;
+    rdfs:label "Used specimen" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion> <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/MRICoilUsage> <https://openminds.om-i.org/types/MRIScannerUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Subject> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleState> ) ] .
+
+<https://openminds.om-i.org/props/voxelSize> a owl:ObjectProperty ;
+    rdfs:label "Voxel size" ;
+    rdfs:comment "Extent of the discrete elements comprising a three-dimensional entity." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/GridVolume> <https://openminds.om-i.org/types/GridVolumeSequence> <https://openminds.om-i.org/types/MRIScannerUsage> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueArray> ) ] .
+
+<https://openminds.om-i.org/types/MRIScannerUsage> a owl:Class ;
+    rdfs:label "Mriscanner usage" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/MRISpoilingTechnique> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/spoilingTechnique> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/receiverBandwidth> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sliceGap> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/phaseEncodingDirection> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AnatomicalPlane> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sliceOrientation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/MRIWeighting> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/MRIWeighting> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sliceThickness> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/totalReadOutTime> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/flipAngle> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AnalysisTechnique> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/gradientCorrection> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/File> ;
+            owl:onProperty <https://openminds.om-i.org/props/diffusionEncodingParameters> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/repetitionTime> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValueArray> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sliceTiming> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSampleState> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/usedSpecimen> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/matrixSize> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/echoTime> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/DeviceType> <https://openminds.om-i.org/types/MRICoilUsage> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/usedCoils> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/inversionTime> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/MRIParallelAcquisitionTechnique> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/parallelAcquisitionTechnique> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/metadataLocation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValueArray> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/voxelSize> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/PulseShape> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/MTPulseShape> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf [ ] ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/fieldOfView> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sliceAngulation> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/MRIFatSuppressionTechnique> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/fatSuppressionTechnique> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/SpatialEncoding> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/spatialEncoding> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/dwellTime> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/transmitterBandwidth> ] .
+

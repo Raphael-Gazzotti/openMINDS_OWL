@@ -6,7 +6,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nd21999d4524e4b5bb422f3458f1dc3fd"
+        "@id": "_:N0b2fa8b2097545c7bf5256301d38aed9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "@id": "_:Nd21999d4524e4b5bb422f3458f1dc3fd",
+    "@id": "_:N0b2fa8b2097545c7bf5256301d38aed9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -63,7 +63,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N2169c2660eb045cab3ea679a783548ff"
+        "@id": "_:N58d3faadbefb4c3c9ab430e7ea8a233f"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -73,12 +73,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nceb44702fe054cc7b240d96084761739"
+        "@id": "_:N40869887df514eb98b8bccc32aa5e7aa"
       }
     ]
   },
   {
-    "@id": "_:N2169c2660eb045cab3ea679a783548ff",
+    "@id": "_:N58d3faadbefb4c3c9ab430e7ea8a233f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -105,7 +105,7 @@
     ]
   },
   {
-    "@id": "_:Nceb44702fe054cc7b240d96084761739",
+    "@id": "_:N40869887df514eb98b8bccc32aa5e7aa",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -129,13 +129,254 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/props/stage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/WorkflowExecution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Stage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N64d742a76b284cbeb03409b7a73c4349"
+      }
+    ]
+  },
+  {
+    "@id": "_:N64d742a76b284cbeb03409b7a73c4349",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DataCopy"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Optimization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Simulation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Visualization"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/WorkflowExecution",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about an execution of a computational workflow."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Workflow execution"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N604c9338b27e4050bbae4741a88b3580"
+      },
+      {
+        "@id": "_:N8ae3d50627d344e2969eef12d63736eb"
+      },
+      {
+        "@id": "_:N6a2e67e73c73421ab3e0e61aed4e2564"
+      },
+      {
+        "@id": "_:N0189e144d2254d1c901fed3c12f6dd1d"
+      }
+    ]
+  },
+  {
+    "@id": "_:N604c9338b27e4050bbae4741a88b3580",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nf8184d78e12e4272896b244a0444ad2d"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/configuration"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf8184d78e12e4272896b244a0444ad2d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Configuration"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/File"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N8ae3d50627d344e2969eef12d63736eb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/recipe"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6a2e67e73c73421ab3e0e61aed4e2564",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Neab0cab821234e0088a14abd55db7e5b"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/stage"
+      }
+    ]
+  },
+  {
+    "@id": "_:Neab0cab821234e0088a14abd55db7e5b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DataCopy"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Optimization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Simulation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Visualization"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N0189e144d2254d1c901fed3c12f6dd1d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N7adbf4e4976c47aaad2b7c9e881ac273"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/startedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7adbf4e4976c47aaad2b7c9e881ac273",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareAgent"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/startedBy",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3d8cca7850f84efcafe8ca0745840e19"
+        "@id": "_:Nc907248d99534ea0b27fde17c57d24e5"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -145,12 +386,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N0558a0e2f6934747a33ad48e46b85627"
+        "@id": "_:N24cef13a33d54633aadd9dfad9ca14c3"
       }
     ]
   },
   {
-    "@id": "_:N3d8cca7850f84efcafe8ca0745840e19",
+    "@id": "_:Nc907248d99534ea0b27fde17c57d24e5",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -186,7 +427,7 @@
     ]
   },
   {
-    "@id": "_:N0558a0e2f6934747a33ad48e46b85627",
+    "@id": "_:N24cef13a33d54633aadd9dfad9ca14c3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -198,247 +439,6 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/SoftwareAgent"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/WorkflowExecution",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information about an execution of a computational workflow."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Workflow execution"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Ncefe666e15724d948528af973f19f4e9"
-      },
-      {
-        "@id": "_:N824b64f99c494e269de5d4f350580f9e"
-      },
-      {
-        "@id": "_:N50d7ea489da84e93bc68908c3f2884b6"
-      },
-      {
-        "@id": "_:N446d7a74fdf84991bad4246fbda202b5"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncefe666e15724d948528af973f19f4e9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Ndfcccad4dd7b42d6bc5b4a1b7f4c7dfd"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/configuration"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndfcccad4dd7b42d6bc5b4a1b7f4c7dfd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Configuration"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/File"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N824b64f99c494e269de5d4f350580f9e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/recipe"
-      }
-    ]
-  },
-  {
-    "@id": "_:N50d7ea489da84e93bc68908c3f2884b6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N8aea724879fb4c10959c6d1faf241463"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/stage"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8aea724879fb4c10959c6d1faf241463",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DataCopy"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Optimization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Simulation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Visualization"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N446d7a74fdf84991bad4246fbda202b5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N373e8fb0251944e7b7cd85d15c24d24c"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/startedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:N373e8fb0251944e7b7cd85d15c24d24c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareAgent"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/stage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/WorkflowExecution"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Stage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nf9c317f994c74d0e87413d0666ac1ea8"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf9c317f994c74d0e87413d0666ac1ea8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/DataCopy"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Optimization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Simulation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Visualization"
           }
         ]
       }

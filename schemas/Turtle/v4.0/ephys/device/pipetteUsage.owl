@@ -109,34 +109,20 @@
 <https://openminds.om-i.org/types/PipetteUsage> a owl:Class ;
     rdfs:label "Pipette usage" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/ChemicalSubstance> <https://openminds.om-i.org/types/MolecularEntity> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/labelingCompound> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/startMembranePotential> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/holdingPotential> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/inputResistance> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/liquidJunctionPotential> ],
+            owl:onProperty <https://openminds.om-i.org/props/chlorideReversalPotential> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/CoordinatePoint> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/spatialLocation> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/metadataLocation> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/endMembranePotential> ],
+            owl:onProperty <https://openminds.om-i.org/props/seriesResistance> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -144,24 +130,21 @@
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/sealResistance> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] ;
-            owl:onProperty <https://openminds.om-i.org/props/metadataLocation> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
-            owl:onProperty <https://openminds.om-i.org/props/chlorideReversalPotential> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/ChemicalMixture> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/pipetteSolution> ],
+            owl:onProperty <https://openminds.om-i.org/props/liquidJunctionPotential> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSampleState> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/usedSpecimen> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/inputResistance> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/ChemicalSubstance> <https://openminds.om-i.org/types/MolecularEntity> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/labelingCompound> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/CellType> <https://openminds.om-i.org/types/Organ> <https://openminds.om-i.org/types/OrganismSubstance> <https://openminds.om-i.org/types/SubcellularEntity> <https://openminds.om-i.org/types/UBERONParcellation> <https://openminds.om-i.org/types/CustomAnatomicalEntity> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
@@ -170,15 +153,32 @@
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/seriesResistance> ],
+            owl:onProperty <https://openminds.om-i.org/props/holdingPotential> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/sealResistance> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/pipetteResistance> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/endMembranePotential> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Measurement> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/startMembranePotential> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Pipette> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/device> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/ChemicalMixture> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/pipetteResistance> ] .
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/pipetteSolution> ] .
 

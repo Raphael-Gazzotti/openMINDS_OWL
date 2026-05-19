@@ -36,6 +36,9 @@
     rdfs:label "Quantitative value array" ;
     rdfs:comment "A representation of an array of quantitative values, optionally with uncertainties." ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/negativeUncertainties> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/UnitOfMeasurement> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/unit> ],
@@ -43,16 +46,13 @@
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/values> ],
         [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/values> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/TypeOfUncertainty> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/typeOfUncertainty> ],
         [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/values> ],
-        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/positiveUncertainties> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/negativeUncertainties> ] .
+            owl:onProperty <https://openminds.om-i.org/props/positiveUncertainties> ] .
 

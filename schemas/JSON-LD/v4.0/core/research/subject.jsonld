@@ -11,7 +11,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N79268ed1e89c4c27aa896ae153db25f6"
+        "@id": "_:N18bb776e665943b78571134e109ddfc2"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -21,12 +21,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N156d1754d9d841478007509b393a09e2"
+        "@id": "_:N62dca133954f43fdbc8608bfe8d49988"
       }
     ]
   },
   {
-    "@id": "_:N79268ed1e89c4c27aa896ae153db25f6",
+    "@id": "_:N18bb776e665943b78571134e109ddfc2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "@id": "_:N156d1754d9d841478007509b393a09e2",
+    "@id": "_:N62dca133954f43fdbc8608bfe8d49988",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -137,13 +137,362 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/types/Subject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on a subject."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Subject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nfcf79802c2bd4ae8b90ecedbbfef24a0"
+      },
+      {
+        "@id": "_:Nc2eda5d8fd0b46898d8e6a7cabd07050"
+      },
+      {
+        "@id": "_:Na9e88d62812c4bcb84251f54d442aa01"
+      },
+      {
+        "@id": "_:Nc5410587f9e0472fb668c330c9ef4966"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfcf79802c2bd4ae8b90ecedbbfef24a0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/BiologicalSex"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/biologicalSex"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc2eda5d8fd0b46898d8e6a7cabd07050",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/SubjectGroup"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/isPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na9e88d62812c4bcb84251f54d442aa01",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nd2137f55a80742d8ab02d85b7533c479"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/species"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd2137f55a80742d8ab02d85b7533c479",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Species"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Strain"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc5410587f9e0472fb668c330c9ef4966",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/SubjectState"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/studiedState"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/species",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N5a932b977dd24f4fb38a650db38c6a99"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Species"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N5a8269f37cf84ecc9d5caea4affe01d1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5a932b977dd24f4fb38a650db38c6a99",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Strain"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Subject"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSample"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N5a8269f37cf84ecc9d5caea4affe01d1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Species"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Strain"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/internalIdentifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Term or code that identifies someone or something within a particular product."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N69847fdf40364165b1bb7fc09dad4176"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Internal identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N69847fdf40364165b1bb7fc09dad4176",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/AtlasAnnotation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/BehavioralProtocol"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Channel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomAnnotation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Electrode"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/EphysStimulus"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Pipette"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Recording"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Subject"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSample"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/biologicalSex",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N83575360daa9475d8cf9eec5c60e7abb"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Biological sex"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/BiologicalSex"
+      }
+    ]
+  },
+  {
+    "@id": "_:N83575360daa9475d8cf9eec5c60e7abb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Subject"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSample"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/lookupLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N335a474e522047ce82a15f14dac187c5"
+        "@id": "_:Nf62af44d94dc435aaf1d615c23334331"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -158,7 +507,7 @@
     ]
   },
   {
-    "@id": "_:N335a474e522047ce82a15f14dac187c5",
+    "@id": "_:Nf62af44d94dc435aaf1d615c23334331",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -287,127 +636,6 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/biologicalSex",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Differentiation of individuals of most species (animals and plants) based on the type of gametes they produce."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Naa610e09ba304c609ba66aef50759a67"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Biological sex"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/BiologicalSex"
-      }
-    ]
-  },
-  {
-    "@id": "_:Naa610e09ba304c609ba66aef50759a67",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Subject"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSample"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/species",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Category of biological classification comprising related organisms or populations potentially capable of interbreeding, and being designated by a binomial that consists of the name of a genus followed by a Latin or latinized uncapitalized noun or adjective."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N291bca6549c5405d8f33d228be8981e6"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Species"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nd145c00747f947619497c197a9289794"
-      }
-    ]
-  },
-  {
-    "@id": "_:N291bca6549c5405d8f33d228be8981e6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Strain"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Subject"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSample"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd145c00747f947619497c197a9289794",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Species"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Strain"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/studiedState",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -419,7 +647,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N5747ab84a6694b66aaadfee9b50823d5"
+        "@id": "_:N541f89268eb047df80248cda5df1f56a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -429,12 +657,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N922dd75e52394a1b8ff051a12e5595cb"
+        "@id": "_:N3a2dd028a64548048d653e685ec6baf9"
       }
     ]
   },
   {
-    "@id": "_:N5747ab84a6694b66aaadfee9b50823d5",
+    "@id": "_:N541f89268eb047df80248cda5df1f56a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -458,7 +686,7 @@
     ]
   },
   {
-    "@id": "_:N922dd75e52394a1b8ff051a12e5595cb",
+    "@id": "_:N3a2dd028a64548048d653e685ec6baf9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -470,234 +698,6 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/SubjectState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleState"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/Subject",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on a subject."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Subject"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N540dc9374f4b4ad9972eebc030e9c553"
-      },
-      {
-        "@id": "_:Nad7772a337164372af07f6342d038740"
-      },
-      {
-        "@id": "_:N061f88e303fa40f1898f47f7c5da6392"
-      },
-      {
-        "@id": "_:Nee8666a443e345fbbf1179fb3d304e54"
-      }
-    ]
-  },
-  {
-    "@id": "_:N540dc9374f4b4ad9972eebc030e9c553",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/BiologicalSex"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/biologicalSex"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nad7772a337164372af07f6342d038740",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/SubjectGroup"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:N061f88e303fa40f1898f47f7c5da6392",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N8c099acbbdd94b7fabcbbb510b1de282"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/species"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8c099acbbdd94b7fabcbbb510b1de282",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Species"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Strain"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nee8666a443e345fbbf1179fb3d304e54",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/SubjectState"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/studiedState"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/internalIdentifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Term or code that identifies someone or something within a particular product."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N57b4bf11754d49e786d0d7432b367923"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Internal identifier"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N57b4bf11754d49e786d0d7432b367923",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/AtlasAnnotation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/BehavioralProtocol"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Channel"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CustomAnnotation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Electrode"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/EphysStimulus"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Pipette"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Recording"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Subject"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSample"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
           },
           {
             "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"

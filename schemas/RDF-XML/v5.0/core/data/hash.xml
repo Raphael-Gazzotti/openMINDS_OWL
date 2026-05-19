@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/digest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Digest</rdfs:label>
+    <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/algorithm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Algorithm</rdfs:label>
+    <rdfs:comment>Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Hash</rdfs:label>
+    <rdfs:comment>Structured information on a hash.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N5a2aea054ecf469589ccc672131b3731"/>
+    <rdfs:subClassOf rdf:nodeID="N20eb0d2abfdf4bae81f261ccb1c02100"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5a2aea054ecf469589ccc672131b3731">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/algorithm"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N20eb0d2abfdf4bae81f261ccb1c02100">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/digest"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+</rdf:RDF>

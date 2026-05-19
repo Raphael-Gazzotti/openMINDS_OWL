@@ -197,84 +197,72 @@
     rdfs:label "Model version" ;
     rdfs:comment "Structured information on a computational model (version level)." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/SWHID> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/ISBN> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedPublication> ],
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/outputData> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/developer> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/custodian> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/ModelVersion> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/accessibility> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/License> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/license> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/SWHID> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/ModelVersion> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isAlternativeVersionOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/ContentType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/format> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/URL> ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Copyright> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/homepage> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/ModelVersion> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/isAlternativeVersionOf> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/supportChannel> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/inputData> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/outputData> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/copyright> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/Funding> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/funding> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/ModelVersion> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ],
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/License> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/license> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/URL> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/keyword> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/homepage> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/FileRepository> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/repository> ],
         [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/Copyright> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/copyright> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/URL> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/fullDocumentation> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/custodian> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ],
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/inputData> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/versionInnovation> ],
@@ -283,6 +271,18 @@
             owl:onProperty <https://openminds.ebrains.eu/vocab/otherContribution> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/developer> ] .
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/URL> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/fullDocumentation> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/supportChannel> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/keyword> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/ISBN> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedPublication> ] .
 

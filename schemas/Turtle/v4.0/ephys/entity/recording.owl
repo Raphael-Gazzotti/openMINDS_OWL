@@ -56,27 +56,27 @@
     rdfs:label "Recording" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/recordedWith> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Recording> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/previousRecording> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Channel> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/channel> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileBundle> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/dataLocation> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/recordedWith> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/samplingFrequency> ] .
+            owl:onProperty <https://openminds.om-i.org/props/samplingFrequency> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Channel> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/channel> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Recording> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/previousRecording> ] .
 

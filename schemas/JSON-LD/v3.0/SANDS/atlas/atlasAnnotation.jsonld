@@ -1,32 +1,27 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/laterality",
+    "@id": "https://openminds.ebrains.eu/vocab/criteriaType",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Differentiation between a pair of lateral homologous parts of the body."
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N27ab2236a56f4fa7b67ec20f001118a5"
+        "@id": "_:N782ad5714aac48c4b287afaa75a24308"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Laterality"
+        "@value": "Criteria type"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
+        "@id": "https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType"
       }
     ]
   },
   {
-    "@id": "_:N27ab2236a56f4fa7b67ec20f001118a5",
+    "@id": "_:N782ad5714aac48c4b287afaa75a24308",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -34,16 +29,322 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/TissueSample"
+            "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Atlas annotation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Ne765f137b71c4bd7b35ac0b231d710a2"
+      },
+      {
+        "@id": "_:Na602ffe625e9449b9443b6231f2548d5"
+      },
+      {
+        "@id": "_:Ndfc03fe097bd470791e07327f568144f"
+      },
+      {
+        "@id": "_:N6fc43027be6f43d282012eb5090a9c34"
+      },
+      {
+        "@id": "_:Na684be5f67b743d7b5d177be51745adb"
+      },
+      {
+        "@id": "_:Nb71e80473b85490b8245c19c9d4ac6c1"
+      },
+      {
+        "@id": "_:N73dcd5d3448342c18999257ed1dc96a9"
+      },
+      {
+        "@id": "_:N341a073964f94368ac27113e7c018fac"
+      },
+      {
+        "@id": "_:Nb246988e9e264ffd8f941ae023450f32"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne765f137b71c4bd7b35ac0b231d710a2",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/anchorPoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na602ffe625e9449b9443b6231f2548d5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/criteria"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndfc03fe097bd470791e07327f568144f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/criteriaQualityType"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6fc43027be6f43d282012eb5090a9c34",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/criteriaType"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na684be5f67b743d7b5d177be51745adb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/File"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/inspiredBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb71e80473b85490b8245c19c9d4ac6c1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/laterality"
+      }
+    ]
+  },
+  {
+    "@id": "_:N73dcd5d3448342c18999257ed1dc96a9",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/preferredVisualization"
+      }
+    ]
+  },
+  {
+    "@id": "_:N341a073964f94368ac27113e7c018fac",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/File"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/specification"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb246988e9e264ffd8f941ae023450f32",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/AnnotationType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/type"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/specification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Detailed and precise presentation of, or proposal for something."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N4be56cc44d974ef18cda19954a1b4f70"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Specification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Ne1252ca9bf92440dbcc8685393bfa5ae"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4be56cc44d974ef18cda19954a1b4f70",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/ContentType"
           },
           {
             "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
           },
           {
             "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne1252ca9bf92440dbcc8685393bfa5ae",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
           }
         ]
       }
@@ -61,7 +362,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N1417d9d41c1e4c629695d7195e861581"
+        "@id": "_:N66438b987a2e426d85db591ca0cb237e"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -76,46 +377,7 @@
     ]
   },
   {
-    "@id": "_:N1417d9d41c1e4c629695d7195e861581",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/criteriaType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N56ffbc97a8af488bad6916d746dd3e01"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Criteria type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType"
-      }
-    ]
-  },
-  {
-    "@id": "_:N56ffbc97a8af488bad6916d746dd3e01",
+    "@id": "_:N66438b987a2e426d85db591ca0cb237e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -139,7 +401,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N043835a8afc942e1b464417ec3f367f9"
+        "@id": "_:N23c57c8d842349afbda7983265027aec"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -154,7 +416,7 @@
     ]
   },
   {
-    "@id": "_:N043835a8afc942e1b464417ec3f367f9",
+    "@id": "_:N23c57c8d842349afbda7983265027aec",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -175,6 +437,50 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/inspiredBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Reference to an inspiring element."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N13b57176a10d4e4b9229d2bc5c264625"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Inspired by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/File"
+      }
+    ]
+  },
+  {
+    "@id": "_:N13b57176a10d4e4b9229d2bc5c264625",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/internalIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -186,7 +492,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N7d92bfa9bdb54b35bb5a86a44fca9cb5"
+        "@id": "_:Nf04dd6fc45194e769bd4ad1301b671d2"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -201,7 +507,7 @@
     ]
   },
   {
-    "@id": "_:N7d92bfa9bdb54b35bb5a86a44fca9cb5",
+    "@id": "_:Nf04dd6fc45194e769bd4ad1301b671d2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -267,34 +573,45 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/preferredVisualization",
+    "@id": "https://openminds.ebrains.eu/vocab/laterality",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Differentiation between a pair of lateral homologous parts of the body."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N474d34971cb74d85ac77c54f054348ba"
+        "@id": "_:N87c0903964044dcf88e7d0f139b17823"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Preferred visualization"
+        "@value": "Laterality"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
+        "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
       }
     ]
   },
   {
-    "@id": "_:N474d34971cb74d85ac77c54f054348ba",
+    "@id": "_:N87c0903964044dcf88e7d0f139b17823",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2002/07/owl#unionOf": [
       {
         "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSample"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
           {
             "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
           },
@@ -317,7 +634,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nbc03ec51914b4fdaa2b00480bc86bd30"
+        "@id": "_:N45f1e92b79114d5f9088cc1c4a912382"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -332,7 +649,7 @@
     ]
   },
   {
-    "@id": "_:Nbc03ec51914b4fdaa2b00480bc86bd30",
+    "@id": "_:N45f1e92b79114d5f9088cc1c4a912382",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -356,74 +673,39 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/specification",
+    "@id": "https://openminds.ebrains.eu/vocab/preferredVisualization",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Detailed and precise presentation of, or proposal for something."
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Neab7dca2e63c42e99f36721c5b6024a0"
+        "@id": "_:Neae7044fdb4f4cabad470390b35c01f7"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Specification"
+        "@value": "Preferred visualization"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N57658facdfb94eb7b192cdb12576b9d0"
+        "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
       }
     ]
   },
   {
-    "@id": "_:Neab7dca2e63c42e99f36721c5b6024a0",
+    "@id": "_:Neae7044fdb4f4cabad470390b35c01f7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2002/07/owl#unionOf": [
       {
         "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/ContentType"
-          },
           {
             "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
           },
           {
             "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N57658facdfb94eb7b192cdb12576b9d0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
           }
         ]
       }
@@ -441,7 +723,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N7667dcc8afc4457095488cfe5b38998d"
+        "@id": "_:N86e1d907b5e9445a810b98b744ad84a8"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -451,12 +733,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Ne02c8ed375684343808e7b23b96855f8"
+        "@id": "_:N903a2a6ba0f849fb8d766bf7421a655a"
       }
     ]
   },
   {
-    "@id": "_:N7667dcc8afc4457095488cfe5b38998d",
+    "@id": "_:N86e1d907b5e9445a810b98b744ad84a8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -507,7 +789,7 @@
     ]
   },
   {
-    "@id": "_:Ne02c8ed375684343808e7b23b96855f8",
+    "@id": "_:N903a2a6ba0f849fb8d766bf7421a655a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -545,288 +827,6 @@
             "@id": "https://openminds.ebrains.eu/controlledTerms/TissueSampleType"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/inspiredBy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Reference to an inspiring element."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N46d16462c49c433ba89dc45e5d8e9cd5"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Inspired by"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/File"
-      }
-    ]
-  },
-  {
-    "@id": "_:N46d16462c49c433ba89dc45e5d8e9cd5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnnotation"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/sands/AtlasAnnotation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Atlas annotation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nfad97bdb93b14b75bd3a3eec8bd25fdd"
-      },
-      {
-        "@id": "_:N34cb3b71da654bd6808fcaff4bed1474"
-      },
-      {
-        "@id": "_:N474b8640f7934e668c57aa1fd4b3750b"
-      },
-      {
-        "@id": "_:Nc058f5269f434a7488c057cd2d68a092"
-      },
-      {
-        "@id": "_:N716938e28b35449a876066b17d555af1"
-      },
-      {
-        "@id": "_:Nf49d7c1127834df7919205235d6a2a3c"
-      },
-      {
-        "@id": "_:Nb63ca1e3672d4657b4b2fafbf9b707f5"
-      },
-      {
-        "@id": "_:Na3fc2657956f4770877ffaa2fe35b9ac"
-      },
-      {
-        "@id": "_:N7cc4533acfa64c58a415fb945217c681"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfad97bdb93b14b75bd3a3eec8bd25fdd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/anchorPoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N34cb3b71da654bd6808fcaff4bed1474",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/criteria"
-      }
-    ]
-  },
-  {
-    "@id": "_:N474b8640f7934e668c57aa1fd4b3750b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/criteriaQualityType"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc058f5269f434a7488c057cd2d68a092",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/criteriaType"
-      }
-    ]
-  },
-  {
-    "@id": "_:N716938e28b35449a876066b17d555af1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/File"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/inspiredBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf49d7c1127834df7919205235d6a2a3c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/Laterality"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/laterality"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb63ca1e3672d4657b4b2fafbf9b707f5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/sands/ViewerSpecification"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/preferredVisualization"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na3fc2657956f4770877ffaa2fe35b9ac",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/File"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/specification"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7cc4533acfa64c58a415fb945217c681",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/AnnotationType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/type"
       }
     ]
   }

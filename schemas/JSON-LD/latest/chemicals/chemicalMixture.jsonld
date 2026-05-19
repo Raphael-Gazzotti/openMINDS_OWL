@@ -1,32 +1,131 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/additionalRemarks",
+    "@id": "https://openminds.om-i.org/types/ChemicalMixture",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Mention of what deserves additional attention or notice."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N482c9111c35a41a4bdefcbbe1e87a939"
+        "@value": "Structured information about a mixture of chemical substances."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Additional remarks"
+        "@value": "Chemical mixture"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "_:N74ba7cf08ed641e9ac75621637f22637"
+      },
+      {
+        "@id": "_:N764fce1c52034ea6b08d0740ca7d5aa6"
+      },
+      {
+        "@id": "_:N6400e85692774ba18110e4b5777bb97c"
       }
     ]
   },
   {
-    "@id": "_:N482c9111c35a41a4bdefcbbe1e87a939",
+    "@id": "_:N74ba7cf08ed641e9ac75621637f22637",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/AmountOfChemical"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:N764fce1c52034ea6b08d0740ca7d5aa6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/ProductSource"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/productSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6400e85692774ba18110e4b5777bb97c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/ChemicalMixtureType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/type"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/type",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3e1eabe4d4114c8999bf43b0243a9628"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N3914d6a71b0342c2b09b943356d12201"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3e1eabe4d4114c8999bf43b0243a9628",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -34,43 +133,172 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition"
+            "@id": "https://openminds.om-i.org/types/AnatomicalAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AtlasAnnotation"
           },
           {
             "@id": "https://openminds.om-i.org/types/ChemicalMixture"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
+            "@id": "https://openminds.om-i.org/types/Contribution"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Measurement"
+            "@id": "https://openminds.om-i.org/types/CustomAnnotation"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+            "@id": "https://openminds.om-i.org/types/Electrode"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Recording"
+            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+            "@id": "https://openminds.om-i.org/types/EphysStimulus"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SubjectGroupState"
+            "@id": "https://openminds.om-i.org/types/FileRepository"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SubjectState"
+            "@id": "https://openminds.om-i.org/types/GenericIdentifier"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/HardwareProduct"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResource"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LivePaperSection"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRICoil"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIScanner"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Pipette"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Project"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Setup"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SpecimenWeight"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSample"
           },
           {
             "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N3914d6a71b0342c2b09b943356d12201",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/AnnotationType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"
+            "@id": "https://openminds.om-i.org/types/AtlasType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/TissueSampleState"
+            "@id": "https://openminds.om-i.org/types/ChemicalMixtureType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ViewerSpecification"
+            "@id": "https://openminds.om-i.org/types/ContributionType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DeviceType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectricalStimulusType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/FileRepositoryType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/HardwareProduct"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/LearningResourceType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MetaDataModelType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OrganizationType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ProjectType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SetupType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WeightType"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/productSource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N04ddcb36a8d4441db11a8f39253bb331"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Product source"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/ProductSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:N04ddcb36a8d4441db11a8f39253bb331",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/ChemicalMixture"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
           }
         ]
       }
@@ -83,7 +311,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N8fd8df94735c4d7d9f1479e6f57f7d06"
+        "@id": "_:N5d274da5ec6943a9b3188df99cf71970"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -93,12 +321,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N27cdffa7198d4d18a0bfb1f0643c4d93"
+        "@id": "_:N1f860406bebb4174a1fd8267b76e2095"
       }
     ]
   },
   {
-    "@id": "_:N8fd8df94735c4d7d9f1479e6f57f7d06",
+    "@id": "_:N5d274da5ec6943a9b3188df99cf71970",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -118,12 +346,6 @@
             "@id": "https://openminds.om-i.org/types/Setup"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
-          },
-          {
             "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
           }
         ]
@@ -131,7 +353,7 @@
     ]
   },
   {
-    "@id": "_:N27cdffa7198d4d18a0bfb1f0643c4d93",
+    "@id": "_:N1f860406bebb4174a1fd8267b76e2095",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -142,16 +364,16 @@
             "@id": "https://openminds.om-i.org/types/AmountOfChemical"
           },
           {
-            "@id": "https://openminds.om-i.org/types/BrainAtlas"
+            "@id": "https://openminds.om-i.org/types/AnatomicalAtlas"
           },
           {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
+            "@id": "https://openminds.om-i.org/types/AnatomicalAtlasVersion"
           },
           {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpace"
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateFramework"
           },
           {
-            "@id": "https://openminds.om-i.org/types/CommonCoordinateSpaceVersion"
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion"
           },
           {
             "@id": "https://openminds.om-i.org/types/Dataset"
@@ -172,10 +394,22 @@
             "@id": "https://openminds.om-i.org/types/FileBundle"
           },
           {
+            "@id": "https://openminds.om-i.org/types/Interface"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/InterfaceVersion"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/LivePaper"
           },
           {
             "@id": "https://openminds.om-i.org/types/LivePaperVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRICoil"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIScanner"
           },
           {
             "@id": "https://openminds.om-i.org/types/MetaDataModel"
@@ -211,117 +445,12 @@
             "@id": "https://openminds.om-i.org/types/ValidationTestVersion"
           },
           {
-            "@id": "https://openminds.om-i.org/types/WebService"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
-          },
-          {
             "@id": "https://openminds.om-i.org/types/WorkflowRecipe"
           },
           {
             "@id": "https://openminds.om-i.org/types/WorkflowRecipeVersion"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/ChemicalMixture",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information about a mixture of chemical substances."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Chemical mixture"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N20c8f70ade314e08a5783cb8fff38249"
-      },
-      {
-        "@id": "_:N0eb0eeb8e059477bad544cb8a2a1e4e3"
-      },
-      {
-        "@id": "_:N836d9ada13094248895021ec63efe361"
-      }
-    ]
-  },
-  {
-    "@id": "_:N20c8f70ade314e08a5783cb8fff38249",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/AmountOfChemical"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/hasPart"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0eb0eeb8e059477bad544cb8a2a1e4e3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/ProductSource"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/productSource"
-      }
-    ]
-  },
-  {
-    "@id": "_:N836d9ada13094248895021ec63efe361",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/ChemicalMixtureType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/type"
       }
     ]
   },
@@ -337,7 +466,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc4f698ddcb6d4f58aa0d1b7ba3e6105b"
+        "@id": "_:N7c1a81c499214219bbdf75067c0b277f"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -352,7 +481,7 @@
     ]
   },
   {
-    "@id": "_:Nc4f698ddcb6d4f58aa0d1b7ba3e6105b",
+    "@id": "_:N7c1a81c499214219bbdf75067c0b277f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -360,16 +489,34 @@
       {
         "@list": [
           {
+            "@id": "https://openminds.om-i.org/types/AccessChannel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AccessEligibilityType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AccessForm"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AccessProcessType"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/ActionStatusType"
           },
           {
             "@id": "https://openminds.om-i.org/types/AgeCategory"
           },
           {
+            "@id": "https://openminds.om-i.org/types/AgeReference"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/AnalysisTechnique"
           },
           {
             "@id": "https://openminds.om-i.org/types/AnatomicalAxesOrientation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AnatomicalCavity"
           },
           {
             "@id": "https://openminds.om-i.org/types/AnatomicalIdentificationType"
@@ -426,6 +573,12 @@
             "@id": "https://openminds.om-i.org/types/Colormap"
           },
           {
+            "@id": "https://openminds.om-i.org/types/CommunicationInterfaceType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommunicationProtocol"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/ContentType"
           },
           {
@@ -444,10 +597,19 @@
             "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
           },
           {
-            "@id": "https://openminds.om-i.org/types/CustomCoordinateSpace"
+            "@id": "https://openminds.om-i.org/types/CustomCoordinateFramework"
           },
           {
             "@id": "https://openminds.om-i.org/types/DataType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DependencyImpact"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DeploymentEnvironmentType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DeviceMountingType"
           },
           {
             "@id": "https://openminds.om-i.org/types/DeviceType"
@@ -477,10 +639,10 @@
             "@id": "https://openminds.om-i.org/types/Environment"
           },
           {
-            "@id": "https://openminds.om-i.org/types/EthicsAssessment"
+            "@id": "https://openminds.om-i.org/types/ExperimentalApproach"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ExperimentalApproach"
+            "@id": "https://openminds.om-i.org/types/ExternalBodyRegion"
           },
           {
             "@id": "https://openminds.om-i.org/types/File"
@@ -504,10 +666,25 @@
             "@id": "https://openminds.om-i.org/types/GeneticStrainType"
           },
           {
+            "@id": "https://openminds.om-i.org/types/GridImage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImageStack"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolume"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolumeSequence"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/GustatoryStimulusType"
           },
           {
             "@id": "https://openminds.om-i.org/types/Handedness"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/HardwareProduct"
           },
           {
             "@id": "https://openminds.om-i.org/types/HardwareSystem"
@@ -537,10 +714,22 @@
             "@id": "https://openminds.om-i.org/types/LocalFile"
           },
           {
-            "@id": "https://openminds.om-i.org/types/MRAcquisitionType"
+            "@id": "https://openminds.om-i.org/types/MRICoil"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIFatSuppressionTechnique"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIParallelAcquisitionTechnique"
           },
           {
             "@id": "https://openminds.om-i.org/types/MRIPulseSequence"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIScanner"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRISpoilingTechnique"
           },
           {
             "@id": "https://openminds.om-i.org/types/MRIWeighting"
@@ -561,7 +750,25 @@
             "@id": "https://openminds.om-i.org/types/ModelScope"
           },
           {
+            "@id": "https://openminds.om-i.org/types/ModificationConsentRequirement"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModificationConstraint"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModificationForm"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModificationScope"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/MolecularEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MuscularStructure"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/NervousSystemStructure"
           },
           {
             "@id": "https://openminds.om-i.org/types/NumericalProperty"
@@ -576,16 +783,28 @@
             "@id": "https://openminds.om-i.org/types/OperatingSystem"
           },
           {
+            "@id": "https://openminds.om-i.org/types/OperationalApproach"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/OpticalStimulusType"
           },
           {
             "@id": "https://openminds.om-i.org/types/Organ"
           },
           {
+            "@id": "https://openminds.om-i.org/types/OrganSystemStructure"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/OrganismSubstance"
           },
           {
             "@id": "https://openminds.om-i.org/types/OrganismSystem"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OrganizationType"
           },
           {
             "@id": "https://openminds.om-i.org/types/ParcellationEntity"
@@ -597,6 +816,9 @@
             "@id": "https://openminds.om-i.org/types/PatchClampVariation"
           },
           {
+            "@id": "https://openminds.om-i.org/types/PaymentModelType"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/Periodical"
           },
           {
@@ -606,19 +828,22 @@
             "@id": "https://openminds.om-i.org/types/PreparationType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ProductAccessibility"
+            "@id": "https://openminds.om-i.org/types/ProgrammingLanguage"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ProgrammingLanguage"
+            "@id": "https://openminds.om-i.org/types/ProjectType"
           },
           {
             "@id": "https://openminds.om-i.org/types/Protocol"
           },
           {
-            "@id": "https://openminds.om-i.org/types/QualitativeOverlap"
+            "@id": "https://openminds.om-i.org/types/PublicationStatus"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Recording"
+            "@id": "https://openminds.om-i.org/types/PulseShape"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QualitativeOverlap"
           },
           {
             "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
@@ -627,13 +852,19 @@
             "@id": "https://openminds.om-i.org/types/SemanticDataType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Service"
+            "@id": "https://openminds.om-i.org/types/ServiceDeployment"
           },
           {
             "@id": "https://openminds.om-i.org/types/Setup"
           },
           {
             "@id": "https://openminds.om-i.org/types/SetupType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SignalDirectionality"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SkeletalStructure"
           },
           {
             "@id": "https://openminds.om-i.org/types/SlicingDevice"
@@ -646,6 +877,12 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/SoftwareFeature"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SovereignState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SpatialEncoding"
           },
           {
             "@id": "https://openminds.om-i.org/types/Species"
@@ -669,6 +906,9 @@
             "@id": "https://openminds.om-i.org/types/SubjectAttribute"
           },
           {
+            "@id": "https://openminds.om-i.org/types/SupranationalBody"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/TactileStimulusType"
           },
           {
@@ -687,49 +927,55 @@
             "@id": "https://openminds.om-i.org/types/TissueSampleType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
+            "@id": "https://openminds.om-i.org/types/TissueStructure"
           },
           {
-            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
+            "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
           },
           {
             "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
           },
           {
+            "@id": "https://openminds.om-i.org/types/VascularStructure"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/VisualStimulusType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WeightType"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/type",
+    "@id": "https://openminds.om-i.org/props/additionalRemarks",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to."
+        "@value": "Mention of what deserves additional attention or notice."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3b80dc44296345a5b1389ba7aae47795"
+        "@id": "_:N2500b22e12674fa08b0a4a8b39c26dbe"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Type"
+        "@value": "Additional remarks"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N4dcc74457a4846919ac1bca6c8810edd"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:N3b80dc44296345a5b1389ba7aae47795",
+    "@id": "_:N2500b22e12674fa08b0a4a8b39c26dbe",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -737,124 +983,52 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/AtlasAnnotation"
+            "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition"
           },
-          {
-            "@id": "https://openminds.om-i.org/types/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ChemicalMixture"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Contribution"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CustomAnnotation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/EphysStimulus"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/FileRepository"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResource"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LivePaperSection"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Setup"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSample"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N4dcc74457a4846919ac1bca6c8810edd",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/AnnotationType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/AtlasType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ChemicalMixtureType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ContributionType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectricalStimulusType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/FileRepositoryType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/LearningResourceType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MetaDataModelType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SetupType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleType"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/productSource",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N17a62cb713974dac8888e5ace4665c35"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Product source"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/ProductSource"
-      }
-    ]
-  },
-  {
-    "@id": "_:N17a62cb713974dac8888e5ace4665c35",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
           {
             "@id": "https://openminds.om-i.org/types/ChemicalMixture"
           },
           {
             "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImageStack"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolume"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolumeSequence"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Measurement"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ViewerSpecification"
           }
         ]
       }

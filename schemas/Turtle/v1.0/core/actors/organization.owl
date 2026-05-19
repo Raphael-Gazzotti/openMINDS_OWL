@@ -44,18 +44,18 @@
     rdfs:label "Organization" ;
     rdfs:comment "An entity comprised of one or more natural persons with a particular purpose. [adapted from Wikipedia](https://en.wikipedia.org/wiki/Organization)" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/URL> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/homepage> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/Organization> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/hasParent> ],
         [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/fullName> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/GRIDID> <https://openminds.ebrains.eu/core/RORID> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/URL> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/homepage> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/fullName> ] .
 

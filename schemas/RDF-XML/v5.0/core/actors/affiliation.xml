@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60520db6cdf745f48594d6cc60645e56">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/organization"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/Organization"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/organization">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:comment>Legally accountable, administrative and functional structure.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Affiliation"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nce992f033cdb4460b10b2ec7e7eb29c1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/person"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/Person"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Affiliation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Affiliation</rdfs:label>
+    <rdfs:comment>Structured information about a relationship between two entities, such as a person and their employer.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N60520db6cdf745f48594d6cc60645e56"/>
+    <rdfs:subClassOf rdf:nodeID="Nce992f033cdb4460b10b2ec7e7eb29c1"/>
+  </rdf:Description>
+</rdf:RDF>

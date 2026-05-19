@@ -43,23 +43,23 @@
     rdfs:label "Protocol" ;
     rdfs:comment "Structured information on a research project." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/description> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/AuditoryStimulusType> <https://openminds.om-i.org/types/ElectricalStimulusType> <https://openminds.om-i.org/types/GustatoryStimulusType> <https://openminds.om-i.org/types/OlfactoryStimulusType> <https://openminds.om-i.org/types/OpticalStimulusType> <https://openminds.om-i.org/types/TactileStimulusType> <https://openminds.om-i.org/types/VisualStimulusType> ) ] ;
             owl:onProperty <https://openminds.om-i.org/props/stimulusType> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/AnalysisTechnique> <https://openminds.om-i.org/types/MRIPulseSequence> <https://openminds.om-i.org/types/MRIWeighting> <https://openminds.om-i.org/types/StimulationApproach> <https://openminds.om-i.org/types/StimulationTechnique> <https://openminds.om-i.org/types/Technique> ) ] ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/technique> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/name> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/WebResource> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/describedIn> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/AnalysisTechnique> <https://openminds.om-i.org/types/MRIPulseSequence> <https://openminds.om-i.org/types/MRIWeighting> <https://openminds.om-i.org/types/StimulationApproach> <https://openminds.om-i.org/types/StimulationTechnique> <https://openminds.om-i.org/types/Technique> ) ] ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/technique> ] .
+            owl:onProperty <https://openminds.om-i.org/props/description> ] .
 

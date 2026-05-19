@@ -8,7 +8,7 @@
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( <https://openminds.om-i.org/types/Comment> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaperVersion> ) ] ;
     rdfs:range [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WebService> <https://openminds.om-i.org/types/WebServiceVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] .
+            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalAtlas> <https://openminds.om-i.org/types/AnatomicalAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateFramework> <https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/Interface> <https://openminds.om-i.org/types/InterfaceVersion> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] .
 
 <https://openminds.om-i.org/props/comment> a owl:DatatypeProperty ;
     rdfs:label "Comment" ;
@@ -31,10 +31,13 @@
     rdfs:comment "Structured information about a short text expressing an opinion on, or giving information about some entity." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/WebService> <https://openminds.om-i.org/types/WebServiceVersion> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/BrainAtlas> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateSpace> <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> ) ] ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/ValidationTest> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WorkflowRecipe> <https://openminds.om-i.org/types/WorkflowRecipeVersion> <https://openminds.om-i.org/types/Dataset> <https://openminds.om-i.org/types/DatasetVersion> <https://openminds.om-i.org/types/Interface> <https://openminds.om-i.org/types/InterfaceVersion> <https://openminds.om-i.org/types/MetaDataModel> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Model> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/Software> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/LivePaper> <https://openminds.om-i.org/types/LivePaperVersion> <https://openminds.om-i.org/types/AnatomicalAtlas> <https://openminds.om-i.org/types/AnatomicalAtlasVersion> <https://openminds.om-i.org/types/CommonCoordinateFramework> <https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/about> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/comment> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Person> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -42,8 +45,5 @@
             owl:onProperty <https://openminds.om-i.org/props/commenter> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/timestamp> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/comment> ] .
+            owl:onProperty <https://openminds.om-i.org/props/timestamp> ] .
 

@@ -26,11 +26,6 @@
     rdfs:label "Parameter set" ;
     rdfs:comment "Structured information on a used parameter set." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/NumericalParameter> <https://openminds.ebrains.eu/core/StringParameter> ) ] ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/parameter> ],
-        [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/context> ],
         [ a owl:Restriction ;
@@ -38,5 +33,10 @@
                     owl:unionOf ( <https://openminds.ebrains.eu/core/BehavioralTask> <https://openminds.ebrains.eu/controlledTerms/Technique> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/relevantFor> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relevantFor> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/NumericalParameter> <https://openminds.ebrains.eu/core/StringParameter> ) ] ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/parameter> ] .
 

@@ -16,18 +16,18 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N665badb8a73d4400876892876f3ed03b"
+        "@id": "_:N0b0b26c34a654638a8817626110bbe7a"
       }
     ]
   },
   {
-    "@id": "_:N665badb8a73d4400876892876f3ed03b",
+    "@id": "_:N0b0b26c34a654638a8817626110bbe7a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:Ne2920cbe5d934e88b6a5e393f98f274e"
+        "@id": "_:N1c250c3ce4574dbc94dc878f5e7426a9"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "@id": "_:Ne2920cbe5d934e88b6a5e393f98f274e",
+    "@id": "_:N1c250c3ce4574dbc94dc878f5e7426a9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -66,6 +66,32 @@
             "@id": "https://openminds.om-i.org/types/Person"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/acknowledgement",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Official declaration or avowal of appreciation of an act or achievement."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/Funding"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Acknowledgement"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -96,53 +122,6 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/funder",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Legal person that provides money for a particular purpose."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/Funding"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Funder"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N8a5695a4a4674d29ac62ede9ba250dfa"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8a5695a4a4674d29ac62ede9ba250dfa",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Consortium"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organization"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/awardNumber",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -169,13 +148,13 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/acknowledgement",
+    "@id": "https://openminds.om-i.org/props/funder",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Official declaration or avowal of appreciation of an act or achievement."
+        "@value": "Legal person that provides money for a particular purpose."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
@@ -185,12 +164,33 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Acknowledgement"
+        "@value": "Funder"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "_:N9ba5eab08c744840b3c8f1135f83c837"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9ba5eab08c744840b3c8f1135f83c837",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Consortium"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Person"
+          }
+        ]
       }
     ]
   }

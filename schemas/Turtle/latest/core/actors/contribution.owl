@@ -14,21 +14,21 @@
     rdfs:label "Type" ;
     rdfs:comment "Distinct class to which a group of entities or concepts with similar characteristics or attributes belong to." ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/AtlasAnnotation> <https://openminds.om-i.org/types/BrainAtlasVersion> <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/Contribution> <https://openminds.om-i.org/types/CustomAnnotation> <https://openminds.om-i.org/types/EphysStimulus> <https://openminds.om-i.org/types/FileRepository> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaperSection> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Setup> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> ) ] ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalAtlasVersion> <https://openminds.om-i.org/types/AtlasAnnotation> <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/Contribution> <https://openminds.om-i.org/types/CustomAnnotation> <https://openminds.om-i.org/types/Electrode> <https://openminds.om-i.org/types/ElectrodeArray> <https://openminds.om-i.org/types/EphysStimulus> <https://openminds.om-i.org/types/FileRepository> <https://openminds.om-i.org/types/GenericIdentifier> <https://openminds.om-i.org/types/HardwareProduct> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaperSection> <https://openminds.om-i.org/types/MRICoil> <https://openminds.om-i.org/types/MRIScanner> <https://openminds.om-i.org/types/MetaDataModelVersion> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Pipette> <https://openminds.om-i.org/types/Project> <https://openminds.om-i.org/types/Setup> <https://openminds.om-i.org/types/SlicingDevice> <https://openminds.om-i.org/types/SpecimenWeight> <https://openminds.om-i.org/types/TissueSample> <https://openminds.om-i.org/types/TissueSampleCollection> ) ] ;
     rdfs:range [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/AnnotationType> <https://openminds.om-i.org/types/AtlasType> <https://openminds.om-i.org/types/ChemicalMixtureType> <https://openminds.om-i.org/types/ContributionType> <https://openminds.om-i.org/types/ElectricalStimulusType> <https://openminds.om-i.org/types/FileRepositoryType> <https://openminds.om-i.org/types/LearningResourceType> <https://openminds.om-i.org/types/MetaDataModelType> <https://openminds.om-i.org/types/SetupType> <https://openminds.om-i.org/types/TissueSampleType> ) ] .
+            owl:unionOf ( <https://openminds.om-i.org/types/AnnotationType> <https://openminds.om-i.org/types/AtlasType> <https://openminds.om-i.org/types/ChemicalMixtureType> <https://openminds.om-i.org/types/ContributionType> <https://openminds.om-i.org/types/DeviceType> <https://openminds.om-i.org/types/ElectricalStimulusType> <https://openminds.om-i.org/types/FileRepositoryType> <https://openminds.om-i.org/types/HardwareProduct> <https://openminds.om-i.org/types/LearningResourceType> <https://openminds.om-i.org/types/MetaDataModelType> <https://openminds.om-i.org/types/OrganizationType> <https://openminds.om-i.org/types/ProjectType> <https://openminds.om-i.org/types/SetupType> <https://openminds.om-i.org/types/TissueSampleType> <https://openminds.om-i.org/types/WeightType> ) ] .
 
 <https://openminds.om-i.org/types/Contribution> a owl:Class ;
     rdfs:label "Contribution" ;
     rdfs:comment "Structured information on the contribution made to a research product." ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/ContributionType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/type> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/contributor> ] .
 

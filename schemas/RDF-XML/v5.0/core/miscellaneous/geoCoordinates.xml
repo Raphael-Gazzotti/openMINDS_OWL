@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/longitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>Longitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/GeoCoordinates"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/latitude">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>Latitude</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/GeoCoordinates"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd2b8014d4d424753bac6bfb8d1f2a834">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/latitude"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/GeoCoordinates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Geo coordinates</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nd2b8014d4d424753bac6bfb8d1f2a834"/>
+    <rdfs:subClassOf rdf:nodeID="N1a1f2095ec2e4435a9001139bc3b8f32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1a1f2095ec2e4435a9001139bc3b8f32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/longitude"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/elevation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:label>Elevation</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/GeoCoordinates"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Need6ee10ad0a454f9eb7ee8591673fcd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N03fd5742fc4b4bb5af822b27ea9dc6c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/EquilateralTriangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Equilateral triangle</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N0b5db641b24d43d5a63cdc253f89bc00"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/sideLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Side length</rdfs:label>
+    <rdfs:domain rdf:nodeID="Need6ee10ad0a454f9eb7ee8591673fcd"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nab56db27092c4b83a84661ec5f6e5748">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Square"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0b5db641b24d43d5a63cdc253f89bc00">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/sideLength"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c9f04e3014e49fe97bd0ac2aba52234">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/EquilateralTriangle"/>
+    <rdf:rest rdf:nodeID="Nab56db27092c4b83a84661ec5f6e5748"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N03fd5742fc4b4bb5af822b27ea9dc6c6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Cube"/>
+    <rdf:rest rdf:nodeID="N8c9f04e3014e49fe97bd0ac2aba52234"/>
+  </rdf:Description>
+</rdf:RDF>

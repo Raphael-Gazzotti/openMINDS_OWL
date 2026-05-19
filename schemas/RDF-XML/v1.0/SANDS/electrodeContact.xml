@@ -4,54 +4,88 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N1b03ff5a3d2b47759ed9ca8f47cff6d5">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
-    <rdf:rest rdf:nodeID="N750f7c3f72b04362a866a153301d6889"/>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/relatedStimulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Related stimulation</rdfs:label>
+    <rdfs:comment>Reference to the written, stored function used as a physiological stimulus.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N260fac4a3c5d4d43984c580a90f13218">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Subject"/>
-    <rdf:rest rdf:nodeID="Nf84bbcaae199459aa82d5c775b397b79"/>
+  <rdf:Description rdf:nodeID="N77ef1c631da84d119a688b5df17f465c">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Electrode"/>
+    <rdf:rest rdf:nodeID="N8c7480089f87456bbb625dc216c3cc18"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/internalIdentifier">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>Internal identifier</rdfs:label>
-    <rdfs:comment>Term or code that identifies someone or something within a particular product.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N959ba10689934cd091ffb21540832d0c"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb899aefe36f24eaf8bfa7b7d98079e16">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6f2fa0f046c5432da349248cbb0beebc">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/relatedStimulation"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na1a6267a33754e4f91b1fcd5a1814f3b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AtlasTerminology"/>
-    <rdf:rest rdf:nodeID="N1b03ff5a3d2b47759ed9ca8f47cff6d5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N68a2e3e945ab415da8341d8a8cecbfe2">
+  <rdf:Description rdf:nodeID="Nfcf025f299e1455f9f90df00eee8139f">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/visualizedIn"/>
     <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/sands/Image"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1b85646a9007466bbef95e600341605a">
+  <rdf:Description rdf:nodeID="Nd87bd8bcb8b147c9958ab0e350a99dda">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Ne73fc7dfcaf14d549a2ee8fcb0588f0f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8aff96476d6e4b05ad4aeb859166131d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/definedIn"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/coordinatePoint"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N61a79d75bc14471ea9915923c2165229">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/relatedStimulation"/>
     <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/coordinatePoint">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Coordinate point</rdfs:label>
-    <rdfs:comment>Pair or triplet of numbers defining the position in a particular two- or three dimensional plane or space.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
+  <rdf:Description rdf:nodeID="N315e2365d66243eeb35298a775a863c9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/relatedRecording"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2fdd2602984a432aafa3c6f1ce8c4b2b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeArray"/>
-    <rdf:rest rdf:nodeID="Nae9abda08e9e4a45a1053f3e5ec9c50c"/>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/visualizedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Visualized in</rdfs:label>
+    <rdfs:comment>Reference to an image in which something is visible.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Nd87bd8bcb8b147c9958ab0e350a99dda"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/sands/Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfd7b7ce75a7744cf955ec1794af2f859">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AtlasTerminology"/>
+    <rdf:rest rdf:nodeID="N42e7b221cdb54cb4a8da3e8d4a5b8e95"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne73fc7dfcaf14d549a2ee8fcb0588f0f">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
+    <rdf:rest rdf:nodeID="Nacb1a7e54e27424da72a541feabca351"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N42e7b221cdb54cb4a8da3e8d4a5b8e95">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
+    <rdf:rest rdf:nodeID="Na0141081858943f79d29f2c32730b8ff"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/definedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Defined in</rdfs:label>
+    <rdfs:comment>Reference to a file instance in which something is stored.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Nc0b634fda0b2411cb945a8f796ab2fb0"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N76442b87465640d6bbf20ab375a36585">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/internalIdentifier"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb1f5cd8afd864580ba775bd413e5dccf">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSample"/>
+    <rdf:rest rdf:nodeID="N9d38e91ad20e432f9d0d8c4a6df3a972"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/sands/ElectrodeContact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Electrode contact</rdfs:label>
+    <rdfs:comment>Structured information on an electrode contact.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N8aff96476d6e4b05ad4aeb859166131d"/>
+    <rdfs:subClassOf rdf:nodeID="N7f4b7cca96414de5b1bab90cabeb605a"/>
+    <rdfs:subClassOf rdf:nodeID="N76442b87465640d6bbf20ab375a36585"/>
+    <rdfs:subClassOf rdf:nodeID="N315e2365d66243eeb35298a775a863c9"/>
+    <rdfs:subClassOf rdf:nodeID="N61a79d75bc14471ea9915923c2165229"/>
+    <rdfs:subClassOf rdf:nodeID="Nfcf025f299e1455f9f90df00eee8139f"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/relatedRecording">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -60,97 +94,63 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/sands/ElectrodeContact">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Electrode contact</rdfs:label>
-    <rdfs:comment>Structured information on an electrode contact.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N025f708f40ca4b20bb5d4f4b50e24f79"/>
-    <rdfs:subClassOf rdf:nodeID="N1b85646a9007466bbef95e600341605a"/>
-    <rdfs:subClassOf rdf:nodeID="N567bf628a1ff4c1fb52affcbe5c5af7a"/>
-    <rdfs:subClassOf rdf:nodeID="N1ce5e2e0cf63487799a422b3b596bcd3"/>
-    <rdfs:subClassOf rdf:nodeID="N6f2fa0f046c5432da349248cbb0beebc"/>
-    <rdfs:subClassOf rdf:nodeID="N68a2e3e945ab415da8341d8a8cecbfe2"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N567bf628a1ff4c1fb52affcbe5c5af7a">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/internalIdentifier"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/visualizedIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Visualized in</rdfs:label>
-    <rdfs:comment>Reference to an image in which something is visible.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N90b50d36bc0142faaf8dec10d075ee4d"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/sands/Image"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1ce5e2e0cf63487799a422b3b596bcd3">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/relatedRecording"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/relatedStimulation">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Related stimulation</rdfs:label>
-    <rdfs:comment>Reference to the written, stored function used as a physiological stimulus.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf84bbcaae199459aa82d5c775b397b79">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroup"/>
-    <rdf:rest rdf:nodeID="N433173e3f28f4469bd33a01610b226af"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/definedIn">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Defined in</rdfs:label>
-    <rdfs:comment>Reference to a file instance in which something is stored.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Nd2ebf29edde24e448a6fd64c3ec5879b"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N433173e3f28f4469bd33a01610b226af">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSample"/>
-    <rdf:rest rdf:nodeID="N6497c84f71a546cb92f81e36bde341ed"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N78071cc5b35d4a31ad65a258495cb0a6">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Electrode"/>
-    <rdf:rest rdf:nodeID="N2fdd2602984a432aafa3c6f1ce8c4b2b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N025f708f40ca4b20bb5d4f4b50e24f79">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/coordinatePoint"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N62546e6fbf84495695f04498281f85e7">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
-    <rdf:rest rdf:nodeID="Nb899aefe36f24eaf8bfa7b7d98079e16"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N90b50d36bc0142faaf8dec10d075ee4d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N62546e6fbf84495695f04498281f85e7"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne3ba1c4fed794acfb624dd96dc9d532f">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
-    <rdf:rest rdf:nodeID="N78071cc5b35d4a31ad65a258495cb0a6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6497c84f71a546cb92f81e36bde341ed">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollection"/>
-    <rdf:rest rdf:nodeID="Ne3ba1c4fed794acfb624dd96dc9d532f"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd2ebf29edde24e448a6fd64c3ec5879b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Na1a6267a33754e4f91b1fcd5a1814f3b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N750f7c3f72b04362a866a153301d6889">
+  <rdf:Description rdf:nodeID="Na0141081858943f79d29f2c32730b8ff">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Image"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nae9abda08e9e4a45a1053f3e5ec9c50c">
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/coordinatePoint">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Coordinate point</rdfs:label>
+    <rdfs:comment>Pair or triplet of numbers defining the position in a particular two- or three dimensional plane or space.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/sands/CoordinatePoint"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/internalIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Internal identifier</rdfs:label>
+    <rdfs:comment>Term or code that identifies someone or something within a particular product.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N9c2ba12d652045b7970538ae92d9bab1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5bce8f7c9eb64d8b8a670b39c1f8c639">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroup"/>
+    <rdf:rest rdf:nodeID="Nb1f5cd8afd864580ba775bd413e5dccf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ba484ed7a6b4dd286fe3663d2edffce">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
+    <rdf:rest rdf:nodeID="N77ef1c631da84d119a688b5df17f465c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9d38e91ad20e432f9d0d8c4a6df3a972">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollection"/>
+    <rdf:rest rdf:nodeID="N4ba484ed7a6b4dd286fe3663d2edffce"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f4b7cca96414de5b1bab90cabeb605a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/definedIn"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileInstance"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nffc7735f52c8474c806d9f1e51a5564b">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N959ba10689934cd091ffb21540832d0c">
+  <rdf:Description rdf:nodeID="N9c2ba12d652045b7970538ae92d9bab1">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N260fac4a3c5d4d43984c580a90f13218"/>
+    <owl:unionOf rdf:nodeID="Ndff0d1b3d101463981fdef3429a046b3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nacb1a7e54e27424da72a541feabca351">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeContact"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8c7480089f87456bbb625dc216c3cc18">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/ElectrodeArray"/>
+    <rdf:rest rdf:nodeID="Nffc7735f52c8474c806d9f1e51a5564b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ndff0d1b3d101463981fdef3429a046b3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Subject"/>
+    <rdf:rest rdf:nodeID="N5bce8f7c9eb64d8b8a670b39c1f8c639"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc0b634fda0b2411cb945a8f796ab2fb0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nfd7b7ce75a7744cf955ec1794af2f859"/>
   </rdf:Description>
 </rdf:RDF>

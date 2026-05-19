@@ -92,6 +92,26 @@
 <https://openminds.om-i.org/types/CommonCoordinateSpace> a owl:Class ;
     rdfs:label "Common coordinate space" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/hasVersion> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/custodian> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/fullName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/ISBN> <https://openminds.om-i.org/types/RRID> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/author> ],
+        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/ontologyIdentifier> ],
         [ a owl:Restriction ;
@@ -102,26 +122,6 @@
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/description> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/DOI> <https://openminds.om-i.org/types/ISBN> <https://openminds.om-i.org/types/RRID> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
-            owl:onProperty <https://openminds.om-i.org/props/custodian> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/CommonCoordinateSpaceVersion> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/hasVersion> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/fullName> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
-            owl:onProperty <https://openminds.om-i.org/props/author> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/shortName> ] .

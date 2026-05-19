@@ -1,0 +1,187 @@
+[
+  {
+    "@id": "https://openminds.om-i.org/props/coordinateFramework",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3c5400b5333443a793107e28b50ccc55"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Coordinate framework"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N258e9c4be18440fc9250510e3ec77276"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3c5400b5333443a793107e28b50ccc55",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/AnatomicalAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CoordinatePoint"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomAnnotation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImageStack"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolume"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolumeSequence"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N258e9c4be18440fc9250510e3ec77276",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomCoordinateFramework"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/CoordinatePoint",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Coordinate point"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Na6bbd10a13774b65aa92b8a3facb2100"
+      },
+      {
+        "@id": "_:Na393a44a176c42ffb94f66229a7edac3"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na6bbd10a13774b65aa92b8a3facb2100",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N8c19a2f26e0844419c0f1aa9bf3fb499"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/coordinateFramework"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8c19a2f26e0844419c0f1aa9bf3fb499",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/CommonCoordinateFrameworkVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomCoordinateFramework"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Na393a44a176c42ffb94f66229a7edac3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/coordinates"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/coordinates",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Pair or triplet of numbers defining a location in a given coordinate space."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Coordinates"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+      }
+    ]
+  }
+]

@@ -241,27 +241,62 @@
 <https://openminds.ebrains.eu/core/SoftwareVersion> a owl:Class ;
     rdfs:label "Software version" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/SoftwareVersion> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/isAlternativeVersionOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/HANDLE> <https://openminds.ebrains.eu/core/ISBN> <https://openminds.ebrains.eu/core/ISSN> <https://openminds.ebrains.eu/publications/Book> <https://openminds.ebrains.eu/publications/Chapter> <https://openminds.ebrains.eu/publications/ScholarlyArticle> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedPublication> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/developer> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/requirement> ],
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/feature> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileRepository> ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/developer> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionInnovation> ],
+        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/repository> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/supportChannel> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/hasPart> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/programmingLanguage> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/License> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/license> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/operatingSystem> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/applicationCategory> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Copyright> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/copyright> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/SoftwareVersion> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isAlternativeVersionOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/ContentType> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/outputFormat> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/HANDLE> <https://openminds.ebrains.eu/core/ISBN> <https://openminds.ebrains.eu/core/ISSN> <https://openminds.ebrains.eu/publications/Book> <https://openminds.ebrains.eu/publications/Chapter> <https://openminds.ebrains.eu/publications/ScholarlyArticle> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/relatedPublication> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/ISBN> <https://openminds.ebrains.eu/core/WebResource> ) ] ;
@@ -269,44 +304,10 @@
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/fullDocumentation> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/ModelVersion> <https://openminds.ebrains.eu/core/SoftwareVersion> <https://openminds.ebrains.eu/sands/BrainAtlasVersion> <https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/hasPart> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/SWHID> <https://openminds.ebrains.eu/core/RRID> ) ] ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/programmingLanguage> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/ActionStatusType> <https://openminds.ebrains.eu/controlledTerms/AgeCategory> <https://openminds.ebrains.eu/controlledTerms/AnalysisTechnique> <https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation> <https://openminds.ebrains.eu/controlledTerms/AnatomicalIdentificationType> <https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane> <https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType> <https://openminds.ebrains.eu/controlledTerms/AnnotationType> <https://openminds.ebrains.eu/controlledTerms/AtlasType> <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalProcess> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType> <https://openminds.ebrains.eu/controlledTerms/Colormap> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType> <https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType> <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> <https://openminds.ebrains.eu/controlledTerms/DataType> <https://openminds.ebrains.eu/controlledTerms/DeviceType> <https://openminds.ebrains.eu/controlledTerms/DifferenceMeasure> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/EducationalLevel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/EthicsAssessment> <https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach> <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> <https://openminds.ebrains.eu/controlledTerms/FileRepositoryType> <https://openminds.ebrains.eu/controlledTerms/FileUsageRole> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/Language> <https://openminds.ebrains.eu/controlledTerms/Laterality> <https://openminds.ebrains.eu/controlledTerms/LearningResourceType> <https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity> <https://openminds.ebrains.eu/controlledTerms/MeasuredSignalType> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel> <https://openminds.ebrains.eu/controlledTerms/ModelScope> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/PatchClampVariation> <https://openminds.ebrains.eu/controlledTerms/PreparationType> <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> <https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap> <https://openminds.ebrains.eu/controlledTerms/SemanticDataType> <https://openminds.ebrains.eu/controlledTerms/Service> <https://openminds.ebrains.eu/controlledTerms/SetupType> <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/StimulationApproach> <https://openminds.ebrains.eu/controlledTerms/StimulationTechnique> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/SubjectAttribute> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/Technique> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/controlledTerms/TissueSampleAttribute> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> <https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/keyword> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/versionInnovation> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/operatingSystem> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/SoftwareVersion> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/Funding> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/funding> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/Copyright> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/copyright> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/License> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/license> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/accessibility> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/Contribution> ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/otherContribution> ],
@@ -314,39 +315,38 @@
             owl:allValuesFrom <https://openminds.ebrains.eu/core/ContentType> ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/inputFormat> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/accessibility> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/ContentType> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/outputFormat> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/Language> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/language> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/device> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/applicationCategory> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/custodian> ],
         [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
-        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/supportChannel> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/requirement> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/device> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/SoftwareVersion> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/SWHID> <https://openminds.ebrains.eu/core/RRID> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Funding> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/funding> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/ActionStatusType> <https://openminds.ebrains.eu/controlledTerms/AgeCategory> <https://openminds.ebrains.eu/controlledTerms/AnalysisTechnique> <https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation> <https://openminds.ebrains.eu/controlledTerms/AnatomicalIdentificationType> <https://openminds.ebrains.eu/controlledTerms/AnatomicalPlane> <https://openminds.ebrains.eu/controlledTerms/AnnotationCriteriaType> <https://openminds.ebrains.eu/controlledTerms/AnnotationType> <https://openminds.ebrains.eu/controlledTerms/AtlasType> <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalProcess> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/ChemicalMixtureType> <https://openminds.ebrains.eu/controlledTerms/Colormap> <https://openminds.ebrains.eu/controlledTerms/ContributionType> <https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType> <https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType> <https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType> <https://openminds.ebrains.eu/controlledTerms/DataType> <https://openminds.ebrains.eu/controlledTerms/DeviceType> <https://openminds.ebrains.eu/controlledTerms/DifferenceMeasure> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/EducationalLevel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/EthicsAssessment> <https://openminds.ebrains.eu/controlledTerms/ExperimentalApproach> <https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping> <https://openminds.ebrains.eu/controlledTerms/FileRepositoryType> <https://openminds.ebrains.eu/controlledTerms/FileUsageRole> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/Language> <https://openminds.ebrains.eu/controlledTerms/Laterality> <https://openminds.ebrains.eu/controlledTerms/LearningResourceType> <https://openminds.ebrains.eu/controlledTerms/MeasuredQuantity> <https://openminds.ebrains.eu/controlledTerms/MeasuredSignalType> <https://openminds.ebrains.eu/controlledTerms/MetaDataModelType> <https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel> <https://openminds.ebrains.eu/controlledTerms/ModelScope> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OperatingDevice> <https://openminds.ebrains.eu/controlledTerms/OperatingSystem> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/PatchClampVariation> <https://openminds.ebrains.eu/controlledTerms/PreparationType> <https://openminds.ebrains.eu/controlledTerms/ProductAccessibility> <https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage> <https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap> <https://openminds.ebrains.eu/controlledTerms/SemanticDataType> <https://openminds.ebrains.eu/controlledTerms/Service> <https://openminds.ebrains.eu/controlledTerms/SetupType> <https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory> <https://openminds.ebrains.eu/controlledTerms/SoftwareFeature> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/StimulationApproach> <https://openminds.ebrains.eu/controlledTerms/StimulationTechnique> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/SubjectAttribute> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/Technique> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/Terminology> <https://openminds.ebrains.eu/controlledTerms/TissueSampleAttribute> <https://openminds.ebrains.eu/controlledTerms/TissueSampleType> <https://openminds.ebrains.eu/controlledTerms/TypeOfUncertainty> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/keyword> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/FileRepository> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/repository> ] .
 

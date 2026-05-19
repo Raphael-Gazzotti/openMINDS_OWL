@@ -4,51 +4,39 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="Nb41aacc6fe36478f8d21fff8f5c56082">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nd238d2e6a64b454db3d1f71d1b7ad181"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N89456fc9e2334118b4b22074dd75178e">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/chemicals/ChemicalSubstance"/>
-    <rdf:rest rdf:nodeID="Nc9b1cac1922a4fd19052aa5474725f11"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd742048c08534b85aa5ece7ff0e2eb4b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/MolecularEntity"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9fa3fb69126549e1b44661e8f9767ff6">
+  <rdf:Description rdf:nodeID="N923b1a6194fa4276a68565841f69243a">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/chemicalProduct"/>
-    <owl:allValuesFrom rdf:nodeID="N14849f2d7d5041b28832b95cc1ca47ee"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/amount"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N34dccd90b11a4f27a12f0f9239e96269">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/chemicals/ChemicalMixture"/>
+    <rdf:rest rdf:nodeID="N883ebe5104f5402597e25581a2abfa11"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/chemicals/AmountOfChemical">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:label>Amount of chemical</rdfs:label>
     <rdfs:comment>Structured information about the amount of a given chemical that was used.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="Nd4883695f748419e9eb9579eb67951c0"/>
-    <rdfs:subClassOf rdf:nodeID="N9fa3fb69126549e1b44661e8f9767ff6"/>
+    <rdfs:subClassOf rdf:nodeID="N923b1a6194fa4276a68565841f69243a"/>
+    <rdfs:subClassOf rdf:nodeID="N52606c2d6b514b859ae0b683b6e76511"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N14849f2d7d5041b28832b95cc1ca47ee">
+  <rdf:Description rdf:nodeID="N5fe8b14704b14c2a9fea8ad979959edf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nc175f43ef3e34029803cef72ecb295fe"/>
+    <owl:unionOf rdf:nodeID="N34dccd90b11a4f27a12f0f9239e96269"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N52606c2d6b514b859ae0b683b6e76511">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/chemicalProduct"/>
+    <owl:allValuesFrom rdf:nodeID="N5fe8b14704b14c2a9fea8ad979959edf"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/chemicalProduct">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Chemical product</rdfs:label>
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/chemicals/AmountOfChemical"/>
-    <rdfs:range rdf:nodeID="Nb41aacc6fe36478f8d21fff8f5c56082"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc9b1cac1922a4fd19052aa5474725f11">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/MolecularEntity"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd4883695f748419e9eb9579eb67951c0">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/amount"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <rdfs:range rdf:nodeID="N87cba7459b6349a59b97c0943d6b8d22"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/amount">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -56,16 +44,28 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/chemicals/AmountOfChemical"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nba7f6b01460f4490a3d60990e36c24f7">
+  <rdf:Description rdf:nodeID="N0fec3c15ca184e729caa28879d2b6b00">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/chemicals/ChemicalSubstance"/>
-    <rdf:rest rdf:nodeID="Nd742048c08534b85aa5ece7ff0e2eb4b"/>
+    <rdf:rest rdf:nodeID="N7f1cc8828f1c4f57ae3648016bba9981"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc175f43ef3e34029803cef72ecb295fe">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/chemicals/ChemicalMixture"/>
-    <rdf:rest rdf:nodeID="N89456fc9e2334118b4b22074dd75178e"/>
+  <rdf:Description rdf:nodeID="N3346c6eaffe740b88a032eb1d2c20037">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/MolecularEntity"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd238d2e6a64b454db3d1f71d1b7ad181">
+  <rdf:Description rdf:nodeID="N883ebe5104f5402597e25581a2abfa11">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/chemicals/ChemicalSubstance"/>
+    <rdf:rest rdf:nodeID="N3346c6eaffe740b88a032eb1d2c20037"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7f1cc8828f1c4f57ae3648016bba9981">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/MolecularEntity"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N87cba7459b6349a59b97c0943d6b8d22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nf7627448ff49469e85518fedf431e249"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf7627448ff49469e85518fedf431e249">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/chemicals/ChemicalMixture"/>
-    <rdf:rest rdf:nodeID="Nba7f6b01460f4490a3d60990e36c24f7"/>
+    <rdf:rest rdf:nodeID="N0fec3c15ca184e729caa28879d2b6b00"/>
   </rdf:Description>
 </rdf:RDF>

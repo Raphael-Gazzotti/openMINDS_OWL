@@ -7,7 +7,7 @@
     rdfs:label "Additional remarks" ;
     rdfs:comment "Mention of what deserves additional attention or notice." ;
     rdfs:domain [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalTargetPosition> <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/ChemicalSubstance> <https://openminds.om-i.org/types/Measurement> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/Recording> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectGroupState> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleCollectionState> <https://openminds.om-i.org/types/TissueSampleState> <https://openminds.om-i.org/types/ViewerSpecification> ) ] ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AnatomicalTargetPosition> <https://openminds.om-i.org/types/ChemicalMixture> <https://openminds.om-i.org/types/ChemicalSubstance> <https://openminds.om-i.org/types/GridImage> <https://openminds.om-i.org/types/GridImageStack> <https://openminds.om-i.org/types/GridVolume> <https://openminds.om-i.org/types/GridVolumeSequence> <https://openminds.om-i.org/types/Measurement> <https://openminds.om-i.org/types/ParcellationEntityVersion> <https://openminds.om-i.org/types/SubjectGroup> <https://openminds.om-i.org/types/SubjectGroupState> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSampleCollection> <https://openminds.om-i.org/types/TissueSampleCollectionState> <https://openminds.om-i.org/types/TissueSampleState> <https://openminds.om-i.org/types/ViewerSpecification> ) ] ;
     rdfs:range xsd:string .
 
 <https://openminds.om-i.org/props/timestamp> a owl:DatatypeProperty ;
@@ -21,11 +21,12 @@
     rdfs:domain <https://openminds.om-i.org/types/Measurement> ;
     rdfs:range <https://openminds.om-i.org/types/MeasuredQuantity> .
 
-<https://openminds.om-i.org/props/measuredWith> a owl:ObjectProperty ;
-    rdfs:label "Measured with" ;
-    rdfs:domain <https://openminds.om-i.org/types/Measurement> ;
+<https://openminds.om-i.org/props/obtainedWith> a owl:ObjectProperty ;
+    rdfs:label "Obtained with" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/GridImage> <https://openminds.om-i.org/types/GridImageStack> <https://openminds.om-i.org/types/GridVolume> <https://openminds.om-i.org/types/GridVolumeSequence> <https://openminds.om-i.org/types/Measurement> ) ] ;
     rdfs:range [ a owl:Class ;
-            owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] .
+            owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/MRICoilUsage> <https://openminds.om-i.org/types/MRIScannerUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] .
 
 <https://openminds.om-i.org/props/value> a owl:ObjectProperty ;
     rdfs:label "Value" ;
@@ -50,7 +51,7 @@
             owl:onProperty <https://openminds.om-i.org/props/measuredQuantity> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/ElectrodeArrayUsage> <https://openminds.om-i.org/types/ElectrodeUsage> <https://openminds.om-i.org/types/PipetteUsage> <https://openminds.om-i.org/types/MRICoilUsage> <https://openminds.om-i.org/types/MRIScannerUsage> <https://openminds.om-i.org/types/SlicingDeviceUsage> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/measuredWith> ] .
+            owl:onProperty <https://openminds.om-i.org/props/obtainedWith> ] .
 

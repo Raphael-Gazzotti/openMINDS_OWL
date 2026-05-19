@@ -1,0 +1,38 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/IRI> a owl:DatatypeProperty ;
+    rdfs:label "Iri" ;
+    rdfs:comment "Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Book> <https://openminds.om-i.org/types/Chapter> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileRepository> <https://openminds.om-i.org/types/LearningResource> <https://openminds.om-i.org/types/LivePaperResourceItem> <https://openminds.om-i.org/types/ScholarlyArticle> <https://openminds.om-i.org/types/WebResource> ) ] ;
+    rdfs:range xsd:string .
+
+<https://openminds.om-i.org/props/format> a owl:ObjectProperty ;
+    rdfs:label "Format" ;
+    rdfs:comment "Method of digitally organizing and structuring data or information." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/FileArchive> <https://openminds.om-i.org/types/FileBundle> <https://openminds.om-i.org/types/FileRepository> <https://openminds.om-i.org/types/LocalFile> <https://openminds.om-i.org/types/ModelVersion> <https://openminds.om-i.org/types/ValidationTestVersion> <https://openminds.om-i.org/types/WebResource> <https://openminds.om-i.org/types/WorkflowRecipeVersion> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/ContentType> .
+
+<https://openminds.om-i.org/props/sourceData> a owl:ObjectProperty ;
+    rdfs:label "Source data" ;
+    rdfs:domain <https://openminds.om-i.org/types/FileArchive> ;
+    rdfs:range <https://openminds.om-i.org/types/File> .
+
+<https://openminds.om-i.org/types/FileArchive> a owl:Class ;
+    rdfs:label "File archive" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/File> ;
+            owl:onProperty <https://openminds.om-i.org/props/sourceData> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/IRI> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/ContentType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/format> ] .
+

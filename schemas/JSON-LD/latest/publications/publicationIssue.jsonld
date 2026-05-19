@@ -1,5 +1,69 @@
 [
   {
+    "@id": "https://openminds.om-i.org/types/PublicationIssue",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Publication issue"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N81806df4fa3445afb0ee4616153161f0"
+      },
+      {
+        "@id": "_:Nbdbaf53e19164c65a9882c40eb683dae"
+      }
+    ]
+  },
+  {
+    "@id": "_:N81806df4fa3445afb0ee4616153161f0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/PublicationVolume"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/isPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbdbaf53e19164c65a9882c40eb683dae",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/issueNumber"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/isPartOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -11,7 +75,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N0bc1b8552d3b4092815cdd85dba5c1be"
+        "@id": "_:Na15d2c570b8e4ae3960690e65ea50d18"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -21,12 +85,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N9bce6d61eac84b14a6675c5fce0b08c7"
+        "@id": "_:N8a4966b9d0334a82ab443defbebd8f4b"
       }
     ]
   },
   {
-    "@id": "_:N0bc1b8552d3b4092815cdd85dba5c1be",
+    "@id": "_:Na15d2c570b8e4ae3960690e65ea50d18",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -41,6 +105,9 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DynamicMRIAcquisition"
           },
           {
             "@id": "https://openminds.om-i.org/types/ElectrodePlacement"
@@ -73,16 +140,25 @@
             "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
           },
           {
+            "@id": "https://openminds.om-i.org/types/StaticMRIAcquisition"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/StimulationActivity"
           },
           {
             "@id": "https://openminds.om-i.org/types/Subject"
           },
           {
+            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/TissueCulturePreparation"
           },
           {
             "@id": "https://openminds.om-i.org/types/TissueSample"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
           },
           {
             "@id": "https://openminds.om-i.org/types/TissueSampleSlicing"
@@ -92,7 +168,7 @@
     ]
   },
   {
-    "@id": "_:N9bce6d61eac84b14a6675c5fce0b08c7",
+    "@id": "_:N8a4966b9d0334a82ab443defbebd8f4b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -154,70 +230,6 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/PublicationIssue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Publication issue"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nf40aceea37cb4dcca05cc3d134b8703e"
-      },
-      {
-        "@id": "_:N4868624c394c43f6925d44d8e7a9fd85"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf40aceea37cb4dcca05cc3d134b8703e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/PublicationVolume"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4868624c394c43f6925d44d8e7a9fd85",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/issueNumber"
       }
     ]
   }

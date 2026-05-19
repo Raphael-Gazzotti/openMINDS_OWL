@@ -1,32 +1,78 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/device",
+    "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nb37fa6776ee44754ad91b30cc50844a9"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Device"
+        "@value": "Recording activity"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N603e06ca411b4cb7986025cbf3628dc8"
+        "@id": "_:Nabdde41d8e7b45d4b25970d4f005f7fa"
+      },
+      {
+        "@id": "_:N45325ed86e324f58a4dd1aec70db1494"
+      },
+      {
+        "@id": "_:N2a2e2f3aeb94453fba0df2c03f3ceedc"
+      },
+      {
+        "@id": "_:N27f704a6901c45969e97a7ecdb2aa2eb"
+      },
+      {
+        "@id": "_:N23fe765e7736482ca22b968540605cdd"
+      },
+      {
+        "@id": "_:N7dbcad2743dd42e98a7013b587a30af6"
+      },
+      {
+        "@id": "_:Nd4867e1d5e8a4012b2ec5f84cab1c053"
+      },
+      {
+        "@id": "_:N7372d041ec234850a999ea9860ac900f"
+      },
+      {
+        "@id": "_:N4ee215581a2847a2a9298d113bb1d17a"
       }
     ]
   },
   {
-    "@id": "_:Nb37fa6776ee44754ad91b30cc50844a9",
+    "@id": "_:Nabdde41d8e7b45d4b25970d4f005f7fa",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/customPropertySet"
+      }
+    ]
+  },
+  {
+    "@id": "_:N45325ed86e324f58a4dd1aec70db1494",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N41f14fe38e4c496b9e9722c4c94d0b8f"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/device"
+      }
+    ]
+  },
+  {
+    "@id": "_:N41f14fe38e4c496b9e9722c4c94d0b8f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -34,38 +80,414 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N2a2e2f3aeb94453fba0df2c03f3ceedc",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N592d78cd9810437b87f399a819f866ad"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/input"
+      }
+    ]
+  },
+  {
+    "@id": "_:N592d78cd9810437b87f399a819f866ad",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N27f704a6901c45969e97a7ecdb2aa2eb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/isPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:N23fe765e7736482ca22b968540605cdd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N69b30af2770e473d9f5747b9c66b72cf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/output"
+      }
+    ]
+  },
+  {
+    "@id": "_:N69b30af2770e473d9f5747b9c66b72cf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N7dbcad2743dd42e98a7013b587a30af6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nc66ac8a548a24d9d8f1e9214d9562a98"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/performedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc66ac8a548a24d9d8f1e9214d9562a98",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd4867e1d5e8a4012b2ec5f84cab1c053",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/preparationDesign"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7372d041ec234850a999ea9860ac900f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Protocol"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/protocol"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4ee215581a2847a2a9298d113bb1d17a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N42673b8b7ec64314b901127e66f6218f"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/studyTarget"
+      }
+    ]
+  },
+  {
+    "@id": "_:N42673b8b7ec64314b901127e66f6218f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BreedingType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellCultureType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSystem"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/startTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nc1dd932035df443b83b95d98baf90b44"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Start time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc1dd932035df443b83b95d98baf90b44",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:N603e06ca411b4cb7986025cbf3628dc8",
+    "@id": "https://openminds.ebrains.eu/vocab/endTime",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N6cf2debe0ede40f981b957fc569cf640"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "End time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6cf2debe0ede40f981b957fc569cf640",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -73,64 +495,314 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/output",
+    "@id": "https://openminds.ebrains.eu/vocab/studyTarget",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Something or someone that comes out of, is delivered or produced by a process or machine."
+        "@value": "Structure or function that was targeted within a study."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N77026d1a51ab4a2da3d5c6739f1bff64"
+        "@id": "_:N3297f4a3f34045b88736dca560ff5c15"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Output"
+        "@value": "Study target"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N32adda766cc9406c9e3aa1467430a6f7"
+        "@id": "_:N44f7be28d3964f50b7c97df8c1893aa1"
       }
     ]
   },
   {
-    "@id": "_:N77026d1a51ab4a2da3d5c6739f1bff64",
+    "@id": "_:N3297f4a3f34045b88736dca560ff5c15",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTest"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Model"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N44f7be28d3964f50b7c97df8c1893aa1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/BreedingType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellCultureType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSystem"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/protocol",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Plan that describes the process of a scientific or medical experiment, treatment, or procedure."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N6f186c604cf04107a8d85935e0732fb0"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Protocol"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Protocol"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6f186c604cf04107a8d85935e0732fb0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/input",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Something or someone that is put into or participates in a process or machine."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Ndab2dde969394cdd9f2afe1033e6cec6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Input"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nec8324dc6e6a4b7592f68a31457ba248"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndab2dde969394cdd9f2afe1033e6cec6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -187,7 +859,7 @@
     ]
   },
   {
-    "@id": "_:N32adda766cc9406c9e3aa1467430a6f7",
+    "@id": "_:Nec8324dc6e6a4b7592f68a31457ba248",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -198,16 +870,22 @@
             "@id": "https://openminds.ebrains.eu/computation/LocalFile"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/File"
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/FileArchive"
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/FileBundle"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
@@ -220,34 +898,40 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/preparationDesign",
+    "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3fe100a4b11d4c24a9b52648cd4712b9"
+        "@id": "_:Ndcd8734b3a76472c952d928e5481857e"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Preparation design"
+        "@value": "Lookup label"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:N3fe100a4b11d4c24a9b52648cd4712b9",
+    "@id": "_:Ndcd8734b3a76472c952d928e5481857e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -255,81 +939,112 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileRepositoryStructure"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+            "@id": "https://openminds.ebrains.eu/core/Subject"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
           },
           {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/protocol",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Plan that describes the process of a scientific or medical experiment, treatment, or procedure."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N273a3e690060488babe652a1d47cc9db"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Protocol"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Protocol"
-      }
-    ]
-  },
-  {
-    "@id": "_:N273a3e690060488babe652a1d47cc9db",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+            "@id": "https://openminds.ebrains.eu/core/TissueSample"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
           },
           {
+            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
           },
           {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          },
+          {
             "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
           },
           {
             "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
@@ -350,7 +1065,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N42c098ca19d2486e97baa28b68a5f399"
+        "@id": "_:N171dbf78d4cc4d7f9b99ed0c586588bb"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -365,7 +1080,7 @@
     ]
   },
   {
-    "@id": "_:N42c098ca19d2486e97baa28b68a5f399",
+    "@id": "_:N171dbf78d4cc4d7f9b99ed0c586588bb",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -431,105 +1146,33 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/customPropertySet",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N7f52c929cd874fedab58a9b959d578b8"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Custom property set"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7f52c929cd874fedab58a9b959d578b8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/input",
+    "@id": "https://openminds.ebrains.eu/vocab/device",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Something or someone that is put into or participates in a process or machine."
+        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nb7ad98e428114d499f7df0b80c3543f6"
+        "@id": "_:Na7f5c07ece3744ca9501aac62b715731"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Input"
+        "@value": "Device"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Ndf1e8b079e1b4e7282f236831820fc36"
+        "@id": "_:N755e49ccca434e8cb637dc5de3cfc4f6"
       }
     ]
   },
   {
-    "@id": "_:Nb7ad98e428114d499f7df0b80c3543f6",
+    "@id": "_:Na7f5c07ece3744ca9501aac62b715731",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -537,56 +1180,38 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
           },
           {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
           },
           {
             "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:Ndf1e8b079e1b4e7282f236831820fc36",
+    "@id": "_:N755e49ccca434e8cb637dc5de3cfc4f6",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -594,43 +1219,31 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
           },
           {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTestVersion"
+            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/File"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
           }
         ]
       }
@@ -648,7 +1261,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Ncfd90efcab2c483bbf6c58b5ca3f6652"
+        "@id": "_:N02c91ab007d248ab86c4172a5498d003"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -658,12 +1271,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N6914e96fb5d44298a44c61f0f0478dad"
+        "@id": "_:N7949bbf0a60c4a9e856fc99e1b4770b3"
       }
     ]
   },
   {
-    "@id": "_:Ncfd90efcab2c483bbf6c58b5ca3f6652",
+    "@id": "_:N02c91ab007d248ab86c4172a5498d003",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -723,7 +1336,7 @@
     ]
   },
   {
-    "@id": "_:N6914e96fb5d44298a44c61f0f0478dad",
+    "@id": "_:N7949bbf0a60c4a9e856fc99e1b4770b3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -768,6 +1381,128 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/output",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Something or someone that comes out of, is delivered or produced by a process or machine."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N33a6f9c001094eaf98b29a67e9be835c"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Output"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N069756b945de4e779617efc461b771e8"
+      }
+    ]
+  },
+  {
+    "@id": "_:N33a6f9c001094eaf98b29a67e9be835c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N069756b945de4e779617efc461b771e8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileArchive"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/description",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -779,7 +1514,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N0f4d98a3a53d43f392eef1ca638908c0"
+        "@id": "_:N073a6050dc2c420b9872903f2149d498"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -794,7 +1529,7 @@
     ]
   },
   {
-    "@id": "_:N0f4d98a3a53d43f392eef1ca638908c0",
+    "@id": "_:N073a6050dc2c420b9872903f2149d498",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1190,7 +1925,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N9dc217f40a2f4a1baf39b50bd62edc1d"
+        "@id": "_:N1bec6d9e30344ef6a9b006371b35eb66"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1200,12 +1935,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N93114fc0f6a549699edd0a634ef31c75"
+        "@id": "_:N8832d75c1b804d8a920b7169afc1c3f1"
       }
     ]
   },
   {
-    "@id": "_:N9dc217f40a2f4a1baf39b50bd62edc1d",
+    "@id": "_:N1bec6d9e30344ef6a9b006371b35eb66",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1256,7 +1991,7 @@
     ]
   },
   {
-    "@id": "_:N93114fc0f6a549699edd0a634ef31c75",
+    "@id": "_:N8832d75c1b804d8a920b7169afc1c3f1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1274,682 +2009,34 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/endTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N99965d8b08624046bb2ad389b193916a"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "End time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N99965d8b08624046bb2ad389b193916a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/studyTarget",
+    "@id": "https://openminds.ebrains.eu/vocab/customPropertySet",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structure or function that was targeted within a study."
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc243c32fb0024501a2d9bd5447d58670"
+        "@id": "_:N9b3dd6fa3a594717825ef66a023b72a2"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Study target"
+        "@value": "Custom property set"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Ne01b5127f9f84a83b565ddbdd6323707"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc243c32fb0024501a2d9bd5447d58670",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTest"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Model"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne01b5127f9f84a83b565ddbdd6323707",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BreedingType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellCultureType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSystem"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Recording activity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N887a48407f3f4eb5a061314a94226ac7"
-      },
-      {
-        "@id": "_:N67f41a01ca1d44ee8f62d98ffa4a9d2b"
-      },
-      {
-        "@id": "_:N90d223f16b4948f99c1d9e35a6f66669"
-      },
-      {
-        "@id": "_:N4c22f10d5fe947089b0f6544e0d2c260"
-      },
-      {
-        "@id": "_:N909db69d71a641ae9591d14ca3ef4141"
-      },
-      {
-        "@id": "_:Nd31c68f3f64c482d8edaae321be4d95a"
-      },
-      {
-        "@id": "_:Nf6e0228976d7418baa68bddb54a6bafa"
-      },
-      {
-        "@id": "_:N3094533af7dd4d7c8eef797321108357"
-      },
-      {
-        "@id": "_:Ne83f99e180e64332aba6f9574ab58104"
-      }
-    ]
-  },
-  {
-    "@id": "_:N887a48407f3f4eb5a061314a94226ac7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
         "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
       }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/customPropertySet"
-      }
     ]
   },
   {
-    "@id": "_:N67f41a01ca1d44ee8f62d98ffa4a9d2b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Nb5409f6a8fb14e68b5b103bf0f4ca98d"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/device"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb5409f6a8fb14e68b5b103bf0f4ca98d",
+    "@id": "_:N9b3dd6fa3a594717825ef66a023b72a2",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2002/07/owl#unionOf": [
       {
         "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N90d223f16b4948f99c1d9e35a6f66669",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N8459af26099e48df8e61fd2c85386ed3"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/input"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8459af26099e48df8e61fd2c85386ed3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N4c22f10d5fe947089b0f6544e0d2c260",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:N909db69d71a641ae9591d14ca3ef4141",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N0d71684f58ef49c28d84f76384eca124"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/output"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0d71684f58ef49c28d84f76384eca124",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd31c68f3f64c482d8edaae321be4d95a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N9481d42e1bd24ccab0150686b6c4d93f"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/performedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9481d42e1bd24ccab0150686b6c4d93f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf6e0228976d7418baa68bddb54a6bafa",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/preparationDesign"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3094533af7dd4d7c8eef797321108357",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Protocol"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/protocol"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne83f99e180e64332aba6f9574ab58104",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N6f8d54e73cd643a68b50bdc7e328a801"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/studyTarget"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6f8d54e73cd643a68b50bdc7e328a801",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalOrder"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BiologicalSex"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/BreedingType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellCultureType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Disease"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/DiseaseModel"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/GeneticStrainType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Handedness"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/MolecularEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSystem"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Species"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TactileStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/TermSuggestion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/VisualStimulusType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nd89cdee157154e079e37331ae9869390"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Lookup label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd89cdee157154e079e37331ae9869390",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-          },
           {
             "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
           },
@@ -1972,88 +2059,19 @@
             "@id": "https://openminds.ebrains.eu/computation/Visualization"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileRepositoryStructure"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
-          },
-          {
             "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Subject"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSample"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
           },
           {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          },
-          {
             "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
           },
           {
             "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
@@ -2063,28 +2081,28 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/startTime",
+    "@id": "https://openminds.ebrains.eu/vocab/preparationDesign",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3b1e4ecc46f1488c8da9bdc1f9d431bc"
+        "@id": "_:N734a9df087d340ef92e2bf14765fda6b"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Start time"
+        "@value": "Preparation design"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
       }
     ]
   },
   {
-    "@id": "_:N3b1e4ecc46f1488c8da9bdc1f9d431bc",
+    "@id": "_:N734a9df087d340ef92e2bf14765fda6b",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2092,25 +2110,7 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"

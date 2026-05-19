@@ -1,51 +1,12 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/software",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nf22d46ba64364a26bbd2bd1796d44698"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Software"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf22d46ba64364a26bbd2bd1796d44698",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Environment"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareAgent"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/environment",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N74a23b02b4664c84a2c4ebab3438d00a"
+        "@id": "_:Na1ceed60b2984e0781211306da7b58ac"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -55,12 +16,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N265938c58e9b484390a3cc8f9cc1a193"
+        "@id": "_:N5879d919f4934ee5a0acf82f65891b84"
       }
     ]
   },
   {
-    "@id": "_:N74a23b02b4664c84a2c4ebab3438d00a",
+    "@id": "_:Na1ceed60b2984e0781211306da7b58ac",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -96,7 +57,7 @@
     ]
   },
   {
-    "@id": "_:N265938c58e9b484390a3cc8f9cc1a193",
+    "@id": "_:N5879d919f4934ee5a0acf82f65891b84",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -107,9 +68,103 @@
             "@id": "https://openminds.om-i.org/types/Environment"
           },
           {
-            "@id": "https://openminds.om-i.org/types/WebServiceVersion"
+            "@id": "https://openminds.om-i.org/types/Service"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/SoftwareAgent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information about a piece of software or web service that can perform a task autonomously."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Software agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N46cca030258e47aeb104f470d32df370"
+      },
+      {
+        "@id": "_:Naa3ea47f49cd472699fbd8837b709ba1"
+      },
+      {
+        "@id": "_:Nbda9e31f25cf4ce58b036ecb79a547c0"
+      }
+    ]
+  },
+  {
+    "@id": "_:N46cca030258e47aeb104f470d32df370",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Environment"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/environment"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naa3ea47f49cd472699fbd8837b709ba1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/name"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbda9e31f25cf4ce58b036ecb79a547c0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/software"
       }
     ]
   },
@@ -125,7 +180,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nd7eb668cae3341bdb51b5fe3015e9637"
+        "@id": "_:Ncd788b5806ab49dab30dc9186ecf1468"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -140,7 +195,7 @@
     ]
   },
   {
-    "@id": "_:Nd7eb668cae3341bdb51b5fe3015e9637",
+    "@id": "_:Ncd788b5806ab49dab30dc9186ecf1468",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -148,16 +203,34 @@
       {
         "@list": [
           {
+            "@id": "https://openminds.om-i.org/types/AccessChannel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AccessEligibilityType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AccessForm"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AccessProcessType"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/ActionStatusType"
           },
           {
             "@id": "https://openminds.om-i.org/types/AgeCategory"
           },
           {
+            "@id": "https://openminds.om-i.org/types/AgeReference"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/AnalysisTechnique"
           },
           {
             "@id": "https://openminds.om-i.org/types/AnatomicalAxesOrientation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/AnatomicalCavity"
           },
           {
             "@id": "https://openminds.om-i.org/types/AnatomicalIdentificationType"
@@ -214,6 +287,12 @@
             "@id": "https://openminds.om-i.org/types/Colormap"
           },
           {
+            "@id": "https://openminds.om-i.org/types/CommunicationInterfaceType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CommunicationProtocol"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/ContentType"
           },
           {
@@ -232,10 +311,19 @@
             "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
           },
           {
-            "@id": "https://openminds.om-i.org/types/CustomCoordinateSpace"
+            "@id": "https://openminds.om-i.org/types/CustomCoordinateFramework"
           },
           {
             "@id": "https://openminds.om-i.org/types/DataType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DependencyImpact"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DeploymentEnvironmentType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/DeviceMountingType"
           },
           {
             "@id": "https://openminds.om-i.org/types/DeviceType"
@@ -265,10 +353,10 @@
             "@id": "https://openminds.om-i.org/types/Environment"
           },
           {
-            "@id": "https://openminds.om-i.org/types/EthicsAssessment"
+            "@id": "https://openminds.om-i.org/types/ExperimentalApproach"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ExperimentalApproach"
+            "@id": "https://openminds.om-i.org/types/ExternalBodyRegion"
           },
           {
             "@id": "https://openminds.om-i.org/types/File"
@@ -292,10 +380,25 @@
             "@id": "https://openminds.om-i.org/types/GeneticStrainType"
           },
           {
+            "@id": "https://openminds.om-i.org/types/GridImage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImageStack"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolume"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolumeSequence"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/GustatoryStimulusType"
           },
           {
             "@id": "https://openminds.om-i.org/types/Handedness"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/HardwareProduct"
           },
           {
             "@id": "https://openminds.om-i.org/types/HardwareSystem"
@@ -325,10 +428,22 @@
             "@id": "https://openminds.om-i.org/types/LocalFile"
           },
           {
-            "@id": "https://openminds.om-i.org/types/MRAcquisitionType"
+            "@id": "https://openminds.om-i.org/types/MRICoil"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIFatSuppressionTechnique"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIParallelAcquisitionTechnique"
           },
           {
             "@id": "https://openminds.om-i.org/types/MRIPulseSequence"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIScanner"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRISpoilingTechnique"
           },
           {
             "@id": "https://openminds.om-i.org/types/MRIWeighting"
@@ -349,7 +464,25 @@
             "@id": "https://openminds.om-i.org/types/ModelScope"
           },
           {
+            "@id": "https://openminds.om-i.org/types/ModificationConsentRequirement"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModificationConstraint"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModificationForm"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ModificationScope"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/MolecularEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MuscularStructure"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/NervousSystemStructure"
           },
           {
             "@id": "https://openminds.om-i.org/types/NumericalProperty"
@@ -364,16 +497,28 @@
             "@id": "https://openminds.om-i.org/types/OperatingSystem"
           },
           {
+            "@id": "https://openminds.om-i.org/types/OperationalApproach"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/OpticalStimulusType"
           },
           {
             "@id": "https://openminds.om-i.org/types/Organ"
           },
           {
+            "@id": "https://openminds.om-i.org/types/OrganSystemStructure"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/OrganismSubstance"
           },
           {
             "@id": "https://openminds.om-i.org/types/OrganismSystem"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organization"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OrganizationType"
           },
           {
             "@id": "https://openminds.om-i.org/types/ParcellationEntity"
@@ -385,6 +530,9 @@
             "@id": "https://openminds.om-i.org/types/PatchClampVariation"
           },
           {
+            "@id": "https://openminds.om-i.org/types/PaymentModelType"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/Periodical"
           },
           {
@@ -394,19 +542,22 @@
             "@id": "https://openminds.om-i.org/types/PreparationType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ProductAccessibility"
+            "@id": "https://openminds.om-i.org/types/ProgrammingLanguage"
           },
           {
-            "@id": "https://openminds.om-i.org/types/ProgrammingLanguage"
+            "@id": "https://openminds.om-i.org/types/ProjectType"
           },
           {
             "@id": "https://openminds.om-i.org/types/Protocol"
           },
           {
-            "@id": "https://openminds.om-i.org/types/QualitativeOverlap"
+            "@id": "https://openminds.om-i.org/types/PublicationStatus"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Recording"
+            "@id": "https://openminds.om-i.org/types/PulseShape"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QualitativeOverlap"
           },
           {
             "@id": "https://openminds.om-i.org/types/ScholarlyArticle"
@@ -415,13 +566,19 @@
             "@id": "https://openminds.om-i.org/types/SemanticDataType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Service"
+            "@id": "https://openminds.om-i.org/types/ServiceDeployment"
           },
           {
             "@id": "https://openminds.om-i.org/types/Setup"
           },
           {
             "@id": "https://openminds.om-i.org/types/SetupType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SignalDirectionality"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SkeletalStructure"
           },
           {
             "@id": "https://openminds.om-i.org/types/SlicingDevice"
@@ -434,6 +591,12 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/SoftwareFeature"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SovereignState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SpatialEncoding"
           },
           {
             "@id": "https://openminds.om-i.org/types/Species"
@@ -457,6 +620,9 @@
             "@id": "https://openminds.om-i.org/types/SubjectAttribute"
           },
           {
+            "@id": "https://openminds.om-i.org/types/SupranationalBody"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/TactileStimulusType"
           },
           {
@@ -475,112 +641,63 @@
             "@id": "https://openminds.om-i.org/types/TissueSampleType"
           },
           {
-            "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
+            "@id": "https://openminds.om-i.org/types/TissueStructure"
           },
           {
-            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
+            "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
           },
           {
             "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
           },
           {
+            "@id": "https://openminds.om-i.org/types/VascularStructure"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/VisualStimulusType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WeightType"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/types/SoftwareAgent",
+    "@id": "https://openminds.om-i.org/props/software",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@value": "Structured information about a piece of software or web service that can perform a task autonomously."
+        "@id": "_:N6544a8fbde114c869cdea3989fa14a39"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Software agent"
+        "@value": "Software"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nc7f6feb4001b41df8c6e76ba5eebd363"
-      },
-      {
-        "@id": "_:Ne669c1d3f1074a64a3a417e3ee33d3ed"
-      },
-      {
-        "@id": "_:N1a479d5ac47e48948b5e8abe69209961"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc7f6feb4001b41df8c6e76ba5eebd363",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Environment"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/environment"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne669c1d3f1074a64a3a417e3ee33d3ed",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/name"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1a479d5ac47e48948b5e8abe69209961",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://openminds.om-i.org/types/SoftwareVersion"
       }
+    ]
+  },
+  {
+    "@id": "_:N6544a8fbde114c869cdea3989fa14a39",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
+    "http://www.w3.org/2002/07/owl#unionOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/software"
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Environment"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareAgent"
+          }
+        ]
       }
     ]
   }

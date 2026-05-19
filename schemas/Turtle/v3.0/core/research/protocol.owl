@@ -43,17 +43,9 @@
     rdfs:label "Protocol" ;
     rdfs:comment "Structured information on a research project." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/description> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> ) ] ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/stimulusType> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/WebResource> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/describedIn> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AnalysisTechnique> <https://openminds.ebrains.eu/controlledTerms/StimulationApproach> <https://openminds.ebrains.eu/controlledTerms/StimulationTechnique> <https://openminds.ebrains.eu/controlledTerms/Technique> ) ] ;
@@ -61,5 +53,13 @@
             owl:onProperty <https://openminds.ebrains.eu/vocab/technique> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/description> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/WebResource> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/describedIn> ] .
 

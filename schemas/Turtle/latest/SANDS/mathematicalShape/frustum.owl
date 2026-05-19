@@ -1,0 +1,39 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/baseDistance> a owl:ObjectProperty ;
+    rdfs:label "Base distance" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Frustum> <https://openminds.om-i.org/types/Parallelogram> <https://openminds.om-i.org/types/RightCylinder> <https://openminds.om-i.org/types/RightPrism> <https://openminds.om-i.org/types/Trapezoid> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/props/majorBaseShape> a owl:ObjectProperty ;
+    rdfs:label "Major base shape" ;
+    rdfs:domain <https://openminds.om-i.org/types/Frustum> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Circle> <https://openminds.om-i.org/types/CircularSector> <https://openminds.om-i.org/types/Ellipse> <https://openminds.om-i.org/types/EquilateralTriangle> <https://openminds.om-i.org/types/IsoscelesTriangle> <https://openminds.om-i.org/types/Kite> <https://openminds.om-i.org/types/Parallelogram> <https://openminds.om-i.org/types/Rectangle> <https://openminds.om-i.org/types/RegularPolygon> <https://openminds.om-i.org/types/Rhombus> <https://openminds.om-i.org/types/RightTriangle> <https://openminds.om-i.org/types/Square> <https://openminds.om-i.org/types/Trapezoid> <https://openminds.om-i.org/types/Triangle> ) ] .
+
+<https://openminds.om-i.org/props/minorBaseScale> a owl:DatatypeProperty ;
+    rdfs:label "Minor base scale" ;
+    rdfs:domain <https://openminds.om-i.org/types/Frustum> ;
+    rdfs:range xsd:decimal .
+
+<https://openminds.om-i.org/types/Frustum> a owl:Class ;
+    rdfs:label "Frustum" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/Circle> <https://openminds.om-i.org/types/CircularSector> <https://openminds.om-i.org/types/Ellipse> <https://openminds.om-i.org/types/EquilateralTriangle> <https://openminds.om-i.org/types/IsoscelesTriangle> <https://openminds.om-i.org/types/Kite> <https://openminds.om-i.org/types/Parallelogram> <https://openminds.om-i.org/types/Rectangle> <https://openminds.om-i.org/types/RegularPolygon> <https://openminds.om-i.org/types/Rhombus> <https://openminds.om-i.org/types/RightTriangle> <https://openminds.om-i.org/types/Square> <https://openminds.om-i.org/types/Trapezoid> <https://openminds.om-i.org/types/Triangle> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/majorBaseShape> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/baseDistance> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/minorBaseScale> ] .
+

@@ -87,6 +87,19 @@
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/externalDiameter> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/DeviceType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/deviceType> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/RRID> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/internalDiameter> ],
@@ -95,25 +108,12 @@
                     owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/manufacturer> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/DeviceType> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/deviceType> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/RRID> ) ] ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/owner> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/chemicals/ChemicalMixture> <https://openminds.ebrains.eu/chemicals/ChemicalSubstance> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/material> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/owner> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/material> ] .
 

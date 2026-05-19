@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/CircularSector">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Circular sector</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N3b9ba3b365cf41c5ac9a76d3510b8f29"/>
+    <rdfs:subClassOf rdf:nodeID="N39345274d2d74cf7890f4f628dcf6935"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nea10baf0e97549e09b9c1e136ae8bf88">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nad15379c7b894dc1958dc2c57f10956d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nad15379c7b894dc1958dc2c57f10956d">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Circle"/>
+    <rdf:rest rdf:nodeID="N5f1200a692e54566886520205c81b0f4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1a9643ccdbca4535bcc66f6739ad3ba5">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Sphere"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f1200a692e54566886520205c81b0f4">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/CircularSector"/>
+    <rdf:rest rdf:nodeID="N1a9643ccdbca4535bcc66f6739ad3ba5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39345274d2d74cf7890f4f628dcf6935">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/radius"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b9ba3b365cf41c5ac9a76d3510b8f29">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/centralAngle"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/centralAngle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Central angle</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/CircularSector"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/radius">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Radius</rdfs:label>
+    <rdfs:domain rdf:nodeID="Nea10baf0e97549e09b9c1e136ae8bf88"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+</rdf:RDF>

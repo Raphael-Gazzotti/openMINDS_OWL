@@ -99,29 +99,32 @@
     rdfs:label "Brain atlas version" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/fullName> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionInnovation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/hasAlternativeVersion> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/Annotation> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/annotationSet> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/versionInnovation> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/fullName> ],
         [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/versionIdentifier> ],
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/DigitalIdentifier> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/CoordinateSpace> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/coordinateSpace> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/releaseDate> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/AtlasTerminology> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -131,10 +134,7 @@
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/shortName> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/DigitalIdentifier> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/BrainAtlasVersion> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/hasAlternativeVersion> ] .
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isNewVersionOf> ] .
 

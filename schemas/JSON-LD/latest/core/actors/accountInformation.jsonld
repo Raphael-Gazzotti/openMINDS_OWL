@@ -1,83 +1,5 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/userName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/AccountInformation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "User name"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/service",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N21527edd870d4b0a917c2198a1b9dc02"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Service"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N8f957df2b3cc40bc90e1d17d3f043a6b"
-      }
-    ]
-  },
-  {
-    "@id": "_:N21527edd870d4b0a917c2198a1b9dc02",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/AccountInformation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ServiceLink"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N8f957df2b3cc40bc90e1d17d3f043a6b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Service"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/WebService"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/types/AccountInformation",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
@@ -94,21 +16,21 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N3dc8058735e749c5bb09706aca328cae"
+        "@id": "_:N547adb1c9c3a4c7a8b5ee822317df2a7"
       },
       {
-        "@id": "_:Nfa9be2dd106243b69c433e810409083f"
+        "@id": "_:N0443d039732d4bf190b9ad2ba9649067"
       }
     ]
   },
   {
-    "@id": "_:N3dc8058735e749c5bb09706aca328cae",
+    "@id": "_:N547adb1c9c3a4c7a8b5ee822317df2a7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "https://openminds.om-i.org/types/WebService"
+        "@id": "https://openminds.om-i.org/types/Service"
       }
     ],
     "http://www.w3.org/2002/07/owl#maxCardinality": [
@@ -130,7 +52,7 @@
     ]
   },
   {
-    "@id": "_:Nfa9be2dd106243b69c433e810409083f",
+    "@id": "_:N0443d039732d4bf190b9ad2ba9649067",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -143,6 +65,93 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "https://openminds.om-i.org/props/userName"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/service",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N8b8e828994f149a98aa5e36c3c0c3808"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Service"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N96ede9ff35cd483a9a4d649f01bb1c11"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8b8e828994f149a98aa5e36c3c0c3808",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/AccountInformation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ServiceDeployment"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ServiceLink"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N96ede9ff35cd483a9a4d649f01bb1c11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Interface"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/InterfaceVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Service"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/WebResource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/userName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/AccountInformation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "User name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   }

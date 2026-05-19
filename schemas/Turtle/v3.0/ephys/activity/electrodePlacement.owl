@@ -103,26 +103,18 @@
 <https://openminds.ebrains.eu/ephys/ElectrodePlacement> a owl:Class ;
     rdfs:label "Electrode placement" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/CustomPropertySet> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/customPropertySet> ],
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/DatasetVersion> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/isPartOf> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/PreparationType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/preparationDesign> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/Protocol> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/protocol> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/core/SubjectState> ) ] ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/input> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/DatasetVersion> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/isPartOf> ],
+                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/studyTarget> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/core/SubjectState> ) ] ;
@@ -138,11 +130,19 @@
                     owl:unionOf ( <https://openminds.ebrains.eu/computation/SoftwareAgent> <https://openminds.ebrains.eu/core/Person> ) ] ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/performedBy> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/controlledTerms/AuditoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/BiologicalOrder> <https://openminds.ebrains.eu/controlledTerms/BiologicalSex> <https://openminds.ebrains.eu/controlledTerms/BreedingType> <https://openminds.ebrains.eu/controlledTerms/CellCultureType> <https://openminds.ebrains.eu/controlledTerms/CellType> <https://openminds.ebrains.eu/controlledTerms/Disease> <https://openminds.ebrains.eu/controlledTerms/DiseaseModel> <https://openminds.ebrains.eu/controlledTerms/ElectricalStimulusType> <https://openminds.ebrains.eu/controlledTerms/GeneticStrainType> <https://openminds.ebrains.eu/controlledTerms/GustatoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/Handedness> <https://openminds.ebrains.eu/controlledTerms/MolecularEntity> <https://openminds.ebrains.eu/controlledTerms/OlfactoryStimulusType> <https://openminds.ebrains.eu/controlledTerms/OpticalStimulusType> <https://openminds.ebrains.eu/controlledTerms/Organ> <https://openminds.ebrains.eu/controlledTerms/OrganismSubstance> <https://openminds.ebrains.eu/controlledTerms/OrganismSystem> <https://openminds.ebrains.eu/controlledTerms/Species> <https://openminds.ebrains.eu/controlledTerms/SubcellularEntity> <https://openminds.ebrains.eu/controlledTerms/TactileStimulusType> <https://openminds.ebrains.eu/controlledTerms/TermSuggestion> <https://openminds.ebrains.eu/controlledTerms/UBERONParcellation> <https://openminds.ebrains.eu/controlledTerms/VisualStimulusType> <https://openminds.ebrains.eu/sands/CustomAnatomicalEntity> <https://openminds.ebrains.eu/sands/ParcellationEntity> <https://openminds.ebrains.eu/sands/ParcellationEntityVersion> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/studyTarget> ],
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Protocol> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/protocol> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/CustomPropertySet> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/customPropertySet> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/sands/AnatomicalTargetPosition> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/targetPosition> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/targetPosition> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/TissueSampleState> <https://openminds.ebrains.eu/core/SubjectState> ) ] ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/input> ] .
 

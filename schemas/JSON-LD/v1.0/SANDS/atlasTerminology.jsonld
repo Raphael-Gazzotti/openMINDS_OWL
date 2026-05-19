@@ -1,22 +1,48 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/fullName",
+    "@id": "https://openminds.ebrains.eu/vocab/anatomicalEntity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Physical component of a body, organ, or tissue."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/sands/AtlasTerminology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Anatomical entity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/sands/AnatomicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/shortName",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Whole, non-abbreviated name of something or somebody."
+        "@value": "Shortened or fully abbreviated name of something or somebody."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N9c5a997a4c034563abee700da2730301"
+        "@id": "_:N2e7a86c1bd044c178a00cc38b16a1ee1"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Full name"
+        "@value": "Short name"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -26,7 +52,7 @@
     ]
   },
   {
-    "@id": "_:N9c5a997a4c034563abee700da2730301",
+    "@id": "_:N2e7a86c1bd044c178a00cc38b16a1ee1",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -86,103 +112,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/sands/AtlasTerminology",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Atlas terminology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nad7eb7adeb914f26a77103a7e82deed3"
-      },
-      {
-        "@id": "_:Ne543ce4dcf8749e889df48422ad20685"
-      },
-      {
-        "@id": "_:N7f04d2db7ca642de8c9e5318d02a7ee4"
-      },
-      {
-        "@id": "_:N448680a9da5f4260a1b3cca271d0c8c0"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nad7eb7adeb914f26a77103a7e82deed3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/sands/AnatomicalEntity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/anatomicalEntity"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne543ce4dcf8749e889df48422ad20685",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/FileInstance"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/definedIn"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7f04d2db7ca642de8c9e5318d02a7ee4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/fullName"
-      }
-    ]
-  },
-  {
-    "@id": "_:N448680a9da5f4260a1b3cca271d0c8c0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/shortName"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/ontologyIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -194,7 +123,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N4b68f5d472594a1a9fde3c9ee0706544"
+        "@id": "_:N0ae6ded93f69424d8ff56015c030a06a"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -209,7 +138,7 @@
     ]
   },
   {
-    "@id": "_:N4b68f5d472594a1a9fde3c9ee0706544",
+    "@id": "_:N0ae6ded93f69424d8ff56015c030a06a",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -347,32 +276,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/anatomicalEntity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Physical component of a body, organ, or tissue."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/sands/AtlasTerminology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Anatomical entity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.ebrains.eu/sands/AnatomicalEntity"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/definedIn",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -384,7 +287,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N4ab621d25aab4fedacebda339020cff5"
+        "@id": "_:Nfcd08e7bf28041c1bb1082d75ad25f90"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -399,7 +302,7 @@
     ]
   },
   {
-    "@id": "_:N4ab621d25aab4fedacebda339020cff5",
+    "@id": "_:Nfcd08e7bf28041c1bb1082d75ad25f90",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -420,23 +323,23 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/shortName",
+    "@id": "https://openminds.ebrains.eu/vocab/fullName",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Shortened or fully abbreviated name of something or somebody."
+        "@value": "Whole, non-abbreviated name of something or somebody."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3433ff0e5b494b148bf998e7c2efe55d"
+        "@id": "_:N0ad0415dd619414d948a85064eaf36d9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Short name"
+        "@value": "Full name"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -446,7 +349,7 @@
     ]
   },
   {
-    "@id": "_:N3433ff0e5b494b148bf998e7c2efe55d",
+    "@id": "_:N0ad0415dd619414d948a85064eaf36d9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -502,6 +405,103 @@
             "@id": "https://openminds.ebrains.eu/sands/CoordinateSpace"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/sands/AtlasTerminology",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Atlas terminology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Nd6dd8282b43044d480570b6c6084f185"
+      },
+      {
+        "@id": "_:N8a90a52136354ede87192341fe2eef0b"
+      },
+      {
+        "@id": "_:N5f28f0812ef3425da38022632a3a955e"
+      },
+      {
+        "@id": "_:Need47b6f2a7e45898c800213c123c722"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd6dd8282b43044d480570b6c6084f185",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/sands/AnatomicalEntity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/anatomicalEntity"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8a90a52136354ede87192341fe2eef0b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/FileInstance"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/definedIn"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5f28f0812ef3425da38022632a3a955e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/fullName"
+      }
+    ]
+  },
+  {
+    "@id": "_:Need47b6f2a7e45898c800213c123c722",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/shortName"
       }
     ]
   }

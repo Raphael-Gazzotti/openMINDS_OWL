@@ -1,5 +1,26 @@
 [
   {
+    "@id": "https://openminds.om-i.org/props/targetIdentificationType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Target identification type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/AnatomicalIdentificationType"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/additionalRemarks",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
@@ -11,7 +32,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3b00a06588814f16bf881b81b9f64464"
+        "@id": "_:N169cc9e397824614b427009fc328a5e9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -26,7 +47,7 @@
     ]
   },
   {
-    "@id": "_:N3b00a06588814f16bf881b81b9f64464",
+    "@id": "_:N169cc9e397824614b427009fc328a5e9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -77,13 +98,137 @@
     ]
   },
   {
+    "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Anatomical target position"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Ncf1f8d70430a428b906e2b3bad6d0ef0"
+      },
+      {
+        "@id": "_:N79bceed43dba4401b66cf3024f1f8a95"
+      },
+      {
+        "@id": "_:Nfe42d19a4d0545019e18576844b4d4e1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncf1f8d70430a428b906e2b3bad6d0ef0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N5cda0cbde12f4d83b2f45739921eb0fd"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/anatomicalTarget"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5cda0cbde12f4d83b2f45739921eb0fd",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/CellType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organ"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OrganismSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N79bceed43dba4401b66cf3024f1f8a95",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/spatialLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfe42d19a4d0545019e18576844b4d4e1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/AnatomicalIdentificationType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/targetIdentificationType"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/spatialLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N2f9672369f6f487184393824080cbfae"
+        "@id": "_:Na2c02c18d30049c69d82745ba6b69a2f"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -98,7 +243,7 @@
     ]
   },
   {
-    "@id": "_:N2f9672369f6f487184393824080cbfae",
+    "@id": "_:Na2c02c18d30049c69d82745ba6b69a2f",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -135,12 +280,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N5dda6340a23d46e0a70dd2295b41878e"
+        "@id": "_:N002ef89b0920423990f6955d28296958"
       }
     ]
   },
   {
-    "@id": "_:N5dda6340a23d46e0a70dd2295b41878e",
+    "@id": "_:N002ef89b0920423990f6955d28296958",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -172,151 +317,6 @@
             "@id": "https://openminds.om-i.org/types/UBERONParcellation"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Anatomical target position"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Na531b1b5318c4567857077bf2d862afe"
-      },
-      {
-        "@id": "_:Nb3b29a6c49f54626b5c541a269d7b4fc"
-      },
-      {
-        "@id": "_:N6e3e4d109e6042118c7c3a4d515fef95"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na531b1b5318c4567857077bf2d862afe",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N7e70e9d785a549b89a3d1bdb5265bb33"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/anatomicalTarget"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7e70e9d785a549b89a3d1bdb5265bb33",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/CellType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organ"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/OrganismSubstance"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubcellularEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb3b29a6c49f54626b5c541a269d7b4fc",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/spatialLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6e3e4d109e6042118c7c3a4d515fef95",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/AnatomicalIdentificationType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/targetIdentificationType"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/targetIdentificationType",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Target identification type"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/AnatomicalIdentificationType"
       }
     ]
   }

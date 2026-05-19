@@ -99,22 +99,32 @@
     rdfs:label "Validation test" ;
     rdfs:comment "Structured information about the definition of a process for validating a computational model." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/ModelScope> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/scope> ],
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/custodian> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Technique> ;
+            owl:onProperty <https://openminds.om-i.org/props/referenceDataAcquisition> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/developer> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/DOI> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/ValidationTestVersion> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/hasVersion> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/DifferenceMeasure> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/scoreType> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/DOI> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/fullName> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/AuditoryStimulusType> <https://openminds.om-i.org/types/BiologicalOrder> <https://openminds.om-i.org/types/BiologicalSex> <https://openminds.om-i.org/types/BreedingType> <https://openminds.om-i.org/types/CellCultureType> <https://openminds.om-i.org/types/CellType> <https://openminds.om-i.org/types/Disease> <https://openminds.om-i.org/types/DiseaseModel> <https://openminds.om-i.org/types/ElectricalStimulusType> <https://openminds.om-i.org/types/GeneticStrainType> <https://openminds.om-i.org/types/GustatoryStimulusType> <https://openminds.om-i.org/types/Handedness> <https://openminds.om-i.org/types/MolecularEntity> <https://openminds.om-i.org/types/OlfactoryStimulusType> <https://openminds.om-i.org/types/OpticalStimulusType> <https://openminds.om-i.org/types/Organ> <https://openminds.om-i.org/types/OrganismSubstance> <https://openminds.om-i.org/types/OrganismSystem> <https://openminds.om-i.org/types/Species> <https://openminds.om-i.org/types/SubcellularEntity> <https://openminds.om-i.org/types/TactileStimulusType> <https://openminds.om-i.org/types/TermSuggestion> <https://openminds.om-i.org/types/TissueSampleType> <https://openminds.om-i.org/types/UBERONParcellation> <https://openminds.om-i.org/types/VisualStimulusType> <https://openminds.om-i.org/types/CustomAnatomicalEntity> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
@@ -123,20 +133,10 @@
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/shortName> ],
         [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/description> ],
+            owl:allValuesFrom <https://openminds.om-i.org/types/ModelScope> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/scope> ],
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/fullName> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/ValidationTestVersion> ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/hasVersion> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Technique> ;
-            owl:onProperty <https://openminds.om-i.org/props/referenceDataAcquisition> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
-            owl:onProperty <https://openminds.om-i.org/props/custodian> ] .
+            owl:onProperty <https://openminds.om-i.org/props/description> ] .
 

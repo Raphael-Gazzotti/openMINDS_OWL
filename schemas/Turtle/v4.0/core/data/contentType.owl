@@ -62,15 +62,15 @@
     rdfs:label "Content type" ;
     rdfs:comment "Structured information on the content type of a file instance, bundle or repository." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/synonym> ],
+            owl:onProperty <https://openminds.om-i.org/props/fileExtension> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/DataType> ;
             owl:onProperty <https://openminds.om-i.org/props/dataType> ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/fileExtension> ] .
+            owl:onProperty <https://openminds.om-i.org/props/synonym> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/name> ] .
 

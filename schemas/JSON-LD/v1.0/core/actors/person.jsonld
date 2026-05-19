@@ -26,32 +26,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/givenName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Name given to a person, including all potential middle names, but excluding the family name."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Given name"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/contactInformation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -74,6 +48,32 @@
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://openminds.ebrains.eu/core/ContactInformation"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/givenName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Name given to a person, including all potential middle names, but excluding the family name."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Given name"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
@@ -104,107 +104,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/core/Person",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Structured information on a person."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N50d255297606490e8b5c23fa4bcfe6d0"
-      },
-      {
-        "@id": "_:N01b9f7bc3be74d1da198605539e586d2"
-      },
-      {
-        "@id": "_:N2616ad9e014147379bff7bf2e15346de"
-      },
-      {
-        "@id": "_:N72ba136df3624fc183a4034d321b4c90"
-      }
-    ]
-  },
-  {
-    "@id": "_:N50d255297606490e8b5c23fa4bcfe6d0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Affiliation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/affiliation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N01b9f7bc3be74d1da198605539e586d2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ContactInformation"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/contactInformation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2616ad9e014147379bff7bf2e15346de",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/ORCID"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier"
-      }
-    ]
-  },
-  {
-    "@id": "_:N72ba136df3624fc183a4034d321b4c90",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/givenName"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -216,7 +115,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Ndafc00e6c0c940d0935e80f76757c724"
+        "@id": "_:N7ca322283ab244e0ba524bd92a8cefaa"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -226,12 +125,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N32875cb8603e4101bac34afa3a6c535a"
+        "@id": "_:Nb4fbc5025f9a40fb9e03840027c05922"
       }
     ]
   },
   {
-    "@id": "_:Ndafc00e6c0c940d0935e80f76757c724",
+    "@id": "_:N7ca322283ab244e0ba524bd92a8cefaa",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -279,7 +178,7 @@
     ]
   },
   {
-    "@id": "_:N32875cb8603e4101bac34afa3a6c535a",
+    "@id": "_:Nb4fbc5025f9a40fb9e03840027c05922",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -305,6 +204,107 @@
             "@id": "https://openminds.ebrains.eu/core/SWHID"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/core/Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Structured information on a person."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Person"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N93631b9e109c46818ac672155600b57e"
+      },
+      {
+        "@id": "_:Neae0cb466d42419f9f57af491ffae4a3"
+      },
+      {
+        "@id": "_:N4a942c61bac942d5b680b9d3e89c0062"
+      },
+      {
+        "@id": "_:Nfebf6b9f88d54613a1509bd8309c3317"
+      }
+    ]
+  },
+  {
+    "@id": "_:N93631b9e109c46818ac672155600b57e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/Affiliation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/affiliation"
+      }
+    ]
+  },
+  {
+    "@id": "_:Neae0cb466d42419f9f57af491ffae4a3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ContactInformation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/contactInformation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4a942c61bac942d5b680b9d3e89c0062",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/ORCID"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/digitalIdentifier"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfebf6b9f88d54613a1509bd8309c3317",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/givenName"
       }
     ]
   }

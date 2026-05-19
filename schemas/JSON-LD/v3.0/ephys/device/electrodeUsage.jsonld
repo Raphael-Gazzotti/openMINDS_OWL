@@ -1,27 +1,32 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/usedSpecimen",
+    "@id": "https://openminds.ebrains.eu/vocab/device",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc121bc76499a4d31b072d88508f690b2"
+        "@id": "_:N77bd5be0c5614e618f63baa6e802a2a4"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Used specimen"
+        "@value": "Device"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N905f54cebc1347a3be374d8aa7a93d5e"
+        "@id": "_:N093b2c2d63fb4c829a50e5b320db184a"
       }
     ]
   },
   {
-    "@id": "_:Nc121bc76499a4d31b072d88508f690b2",
+    "@id": "_:N77bd5be0c5614e618f63baa6e802a2a4",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -29,7 +34,16 @@
       {
         "@list": [
           {
+            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
           },
           {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
@@ -38,10 +52,49 @@
             "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
           },
           {
-            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N093b2c2d63fb4c829a50e5b320db184a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
           },
           {
             "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
@@ -51,7 +104,28 @@
     ]
   },
   {
-    "@id": "_:N905f54cebc1347a3be374d8aa7a93d5e",
+    "@id": "https://openminds.ebrains.eu/vocab/contactResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Contact resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N09550dd679394f2fb54ac585d2f152e8"
+      }
+    ]
+  },
+  {
+    "@id": "_:N09550dd679394f2fb54ac585d2f152e8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -59,14 +133,44 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/Subject"
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/anatomicalLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nc7e7ef75109640b5bd1d4226a4597366"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Anatomical location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N0b123c367e2d438f891680a27e64ab24"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc7e7ef75109640b5bd1d4226a4597366",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
           {
             "@id": "https://openminds.ebrains.eu/core/TissueSample"
           },
@@ -74,35 +178,17 @@
             "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           }
         ]
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/metadataLocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N76ffd72190074b17a264395b366ce438"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Metadata location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nea5ca99979b54a02ad707436f966b701"
-      }
-    ]
-  },
-  {
-    "@id": "_:N76ffd72190074b17a264395b366ce438",
+    "@id": "_:N0b123c367e2d438f891680a27e64ab24",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -110,23 +196,208 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:Nea5ca99979b54a02ad707436f966b701",
+    "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Electrode usage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:Naeeb6afd8611461292579438757129c0"
+      },
+      {
+        "@id": "_:N119c2aa795ca49079e27252e5a605376"
+      },
+      {
+        "@id": "_:Ndd6a6c652bef48e0b384a605621b1f48"
+      },
+      {
+        "@id": "_:N07af33003e8a401aab037add2541cc76"
+      },
+      {
+        "@id": "_:Na23a3781f90c4815b1f045229cb41f34"
+      },
+      {
+        "@id": "_:Na00537e5723d4a25bdb4b4b390854c1d"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naeeb6afd8611461292579438757129c0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N844f3cd923794f139f708d8a6793523a"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/anatomicalLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N844f3cd923794f139f708d8a6793523a",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N119c2aa795ca49079e27252e5a605376",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Nfdb41a7ac1a7444088e8a41eb4ec38aa"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/contactResistance"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfdb41a7ac1a7444088e8a41eb4ec38aa",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndd6a6c652bef48e0b384a605621b1f48",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/device"
+      }
+    ]
+  },
+  {
+    "@id": "_:N07af33003e8a401aab037add2541cc76",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N2831aaaff74341bc874c29e396a3fa1c"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/metadataLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2831aaaff74341bc874c29e396a3fa1c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -144,28 +415,51 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/spatialLocation",
+    "@id": "_:Na23a3781f90c4815b1f045229cb41f34",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nafe82775151c49e197afdf2d641cd271"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Spatial location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
         "@id": "https://openminds.ebrains.eu/sands/CoordinatePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/spatialLocation"
       }
     ]
   },
   {
-    "@id": "_:Nafe82775151c49e197afdf2d641cd271",
+    "@id": "_:Na00537e5723d4a25bdb4b4b390854c1d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N9cf211b3eb064108be1e4f77573951a9"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/usedSpecimen"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9cf211b3eb064108be1e4f77573951a9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -173,13 +467,10 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
           }
         ]
       }
@@ -192,7 +483,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nae4d3f060aaf484f98f5852f9091342d"
+        "@id": "_:N72c3b8276353472e8d8dca04ff865e90"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -207,7 +498,7 @@
     ]
   },
   {
-    "@id": "_:Nae4d3f060aaf484f98f5852f9091342d",
+    "@id": "_:N72c3b8276353472e8d8dca04ff865e90",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -330,60 +621,28 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage",
+    "@id": "https://openminds.ebrains.eu/vocab/usedSpecimen",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nba3d74d2c6324f9fa59aba036b8c1a29"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Electrode usage"
+        "@value": "Used specimen"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N33bd43b0083b4bf9b91c1c152ba8df67"
-      },
-      {
-        "@id": "_:N36788678ce504109afa8fb33241139ae"
-      },
-      {
-        "@id": "_:Nc845b9a0479a4de9acf89436cd074e9f"
-      },
-      {
-        "@id": "_:Nc23418e04ad64df5a751f3043f01715f"
-      },
-      {
-        "@id": "_:N4f7b5df9480e4def9d4e933db62479f0"
-      },
-      {
-        "@id": "_:N70f8442976624ec7b80e3d75b5351f36"
+        "@id": "_:N33aa58376b5d48daa3fbdc865343aa62"
       }
     ]
   },
   {
-    "@id": "_:N33bd43b0083b4bf9b91c1c152ba8df67",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N4eb7e783db564508bf80e1c8ce961e21"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/anatomicalLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N4eb7e783db564508bf80e1c8ce961e21",
+    "@id": "_:Nba3d74d2c6324f9fa59aba036b8c1a29",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -391,57 +650,29 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
+            "@id": "https://openminds.ebrains.eu/sands/BrainAtlasVersion"
           },
           {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
+            "@id": "https://openminds.ebrains.eu/sands/CommonCoordinateSpaceVersion"
           },
           {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:N36788678ce504109afa8fb33241139ae",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Neb896f28757641e594584e7baa42b8e9"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/contactResistance"
-      }
-    ]
-  },
-  {
-    "@id": "_:Neb896f28757641e594584e7baa42b8e9",
+    "@id": "_:N33aa58376b5d48daa3fbdc865343aa62",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -449,61 +680,74 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
+            "@id": "https://openminds.ebrains.eu/core/Subject"
           },
           {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSample"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:Nc845b9a0479a4de9acf89436cd074e9f",
+    "@id": "https://openminds.ebrains.eu/vocab/metadataLocation",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+        "@id": "_:N5930f6efa779413c986b8ea82f45180c"
       }
     ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@value": "Metadata location"
       }
     ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/device"
+        "@id": "_:Nd2a17d5f8f9b47a48169cdfd92913556"
       }
     ]
   },
   {
-    "@id": "_:Nc23418e04ad64df5a751f3043f01715f",
+    "@id": "_:N5930f6efa779413c986b8ea82f45180c",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2002/07/owl#unionOf": [
       {
-        "@id": "_:N1a3ffb6006d94eaeaf4e7b13a6c0a76f"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/metadataLocation"
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          }
+        ]
       }
     ]
   },
   {
-    "@id": "_:N1a3ffb6006d94eaeaf4e7b13a6c0a76f",
+    "@id": "_:Nd2a17d5f8f9b47a48169cdfd92913556",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -521,233 +765,34 @@
     ]
   },
   {
-    "@id": "_:N4f7b5df9480e4def9d4e933db62479f0",
+    "@id": "https://openminds.ebrains.eu/vocab/spatialLocation",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nae40f78fd5904c1496ff382a1423420c"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Spatial location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
       {
         "@id": "https://openminds.ebrains.eu/sands/CoordinatePoint"
       }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/spatialLocation"
-      }
     ]
   },
   {
-    "@id": "_:N70f8442976624ec7b80e3d75b5351f36",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N159ae41dff86419599435fe36fa19ec2"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/usedSpecimen"
-      }
-    ]
-  },
-  {
-    "@id": "_:N159ae41dff86419599435fe36fa19ec2",
+    "@id": "_:Nae40f78fd5904c1496ff382a1423420c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2002/07/owl#unionOf": [
       {
         "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/contactResistance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Contact resistance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N88850cf30e0842a99934cdb265e7b6d8"
-      }
-    ]
-  },
-  {
-    "@id": "_:N88850cf30e0842a99934cdb265e7b6d8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/anatomicalLocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N9a0a1979aa8f41298359d892afe66211"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Anatomical location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N32ac01d2540646d39f68e6f96f6d1314"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9a0a1979aa8f41298359d892afe66211",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSample"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N32ac01d2540646d39f68e6f96f6d1314",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/CellType"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/Organ"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OrganismSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/SubcellularEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/device",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N5b59562950f745a19b4f743d8faa0fd4"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Device"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N412f37383b9741878dcc5750bdea9673"
-      }
-    ]
-  },
-  {
-    "@id": "_:N5b59562950f745a19b4f743d8faa0fd4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/core/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
           {
             "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
           },
@@ -755,52 +800,7 @@
             "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
           },
           {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N412f37383b9741878dcc5750bdea9673",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/controlledTerms/OperatingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+            "@id": "https://openminds.ebrains.eu/sands/AnatomicalTargetPosition"
           }
         ]
       }

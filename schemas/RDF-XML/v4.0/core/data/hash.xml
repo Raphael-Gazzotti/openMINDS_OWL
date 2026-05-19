@@ -4,24 +4,15 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N4c1e6e178c65465592d451d10c598205">
+  <rdf:Description rdf:nodeID="Nf349cb59f95943e98755e037ffa6c7ca">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/digest"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/types/Hash">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Hash</rdfs:label>
-    <rdfs:comment>Structured information on a hash.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="Na7c8dd0cc4c9456da64812d7dc45bf7f"/>
-    <rdfs:subClassOf rdf:nodeID="N4c1e6e178c65465592d451d10c598205"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/algorithm">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:label>Algorithm</rdfs:label>
-    <rdfs:comment>Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
+  <rdf:Description rdf:nodeID="N3e074d90458c4d508ed5d4a0a90c9718">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/algorithm"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/digest">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -30,9 +21,18 @@
     <rdfs:comment>Summation or condensation of a body of information.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na7c8dd0cc4c9456da64812d7dc45bf7f">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/algorithm"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/algorithm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Algorithm</rdfs:label>
+    <rdfs:comment>Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Hash"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Hash</rdfs:label>
+    <rdfs:comment>Structured information on a hash.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N3e074d90458c4d508ed5d4a0a90c9718"/>
+    <rdfs:subClassOf rdf:nodeID="Nf349cb59f95943e98755e037ffa6c7ca"/>
   </rdf:Description>
 </rdf:RDF>

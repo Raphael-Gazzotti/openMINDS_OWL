@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N51c2980f994145d9be52a13d40a8003a">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/InterfaceVersion"/>
+    <rdf:rest rdf:nodeID="N677153608bf04a399f938f840506aa3f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb808c7afd6dd41a7836d818a5dab8997">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/WebResource"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6b1fd2123c024862b7548c263ed2db46">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/InterfaceVersion"/>
+    <rdf:rest rdf:nodeID="N28044fdd7a524326bca41728d3da806e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3074efb0f2f842f4a8d9ed59329d5930">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Configuration"/>
+    <rdf:rest rdf:nodeID="N810b822e3e1e437bba4537829ab0ecd3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/fulfilledBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Fulfilled by</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Dependency"/>
+    <rdfs:range rdf:nodeID="N01100394f3b54f0fbd269ad2d0e90da3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N099d63834d6646d383de3a20a0d019fa">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/File"/>
+    <rdf:rest rdf:nodeID="N6b1fd2123c024862b7548c263ed2db46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb9f0b02d258442fcbe325bc03cb7cf68">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N3074efb0f2f842f4a8d9ed59329d5930"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28044fdd7a524326bca41728d3da806e">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SoftwareVersion"/>
+    <rdf:rest rdf:nodeID="N135b9473f2694e528b370b1454187b05"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N01100394f3b54f0fbd269ad2d0e90da3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N78e33fd1ca0e48ab86f13b6fd2638d5c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N135b9473f2694e528b370b1454187b05">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/WebResource"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/failureImpact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Failure impact</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Dependency"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/DependencyImpact"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nccd1323db328497692c7cd54cebd2e85">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/fulfilledBy"/>
+    <owl:allValuesFrom rdf:nodeID="Nb9f0b02d258442fcbe325bc03cb7cf68"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N677153608bf04a399f938f840506aa3f">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SoftwareVersion"/>
+    <rdf:rest rdf:nodeID="Nb808c7afd6dd41a7836d818a5dab8997"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N60bf90b86f2d4a03bf7853770eae8a59">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/failureImpact"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/DependencyImpact"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Dependency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Dependency</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N60bf90b86f2d4a03bf7853770eae8a59"/>
+    <rdfs:subClassOf rdf:nodeID="Nccd1323db328497692c7cd54cebd2e85"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N810b822e3e1e437bba4537829ab0ecd3">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/File"/>
+    <rdf:rest rdf:nodeID="N51c2980f994145d9be52a13d40a8003a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N78e33fd1ca0e48ab86f13b6fd2638d5c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Configuration"/>
+    <rdf:rest rdf:nodeID="N099d63834d6646d383de3a20a0d019fa"/>
+  </rdf:Description>
+</rdf:RDF>

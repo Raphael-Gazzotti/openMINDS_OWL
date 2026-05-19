@@ -1,12 +1,71 @@
 [
   {
+    "@id": "https://openminds.om-i.org/types/FileRepositoryStructure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "File repository structure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N0c5de79a310d44e59d49f36fa9fa1c59"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0c5de79a310d44e59d49f36fa9fa1c59",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/FilePathPattern"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/filePathPattern"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/filePathPattern",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/FileRepositoryStructure"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "File path pattern"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/FilePathPattern"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/lookupLabel",
     "@type": [
       "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3107c47c93024a98993f753242564700"
+        "@id": "_:N747ed22eac494c2b95fcb37324f37299"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -21,7 +80,7 @@
     ]
   },
   {
-    "@id": "_:N3107c47c93024a98993f753242564700",
+    "@id": "_:N747ed22eac494c2b95fcb37324f37299",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -50,10 +109,7 @@
             "@id": "https://openminds.om-i.org/types/DataCopy"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Electrode"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
+            "@id": "https://openminds.om-i.org/types/DynamicMRIAcquisition"
           },
           {
             "@id": "https://openminds.om-i.org/types/ElectrodeArrayUsage"
@@ -74,6 +130,12 @@
             "@id": "https://openminds.om-i.org/types/GenericComputation"
           },
           {
+            "@id": "https://openminds.om-i.org/types/MRICoilUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIScannerUsage"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/ModelValidation"
           },
           {
@@ -84,9 +146,6 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Pipette"
           },
           {
             "@id": "https://openminds.om-i.org/types/PipetteUsage"
@@ -104,10 +163,10 @@
             "@id": "https://openminds.om-i.org/types/Simulation"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SlicingDevice"
+            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
+            "@id": "https://openminds.om-i.org/types/StaticMRIAcquisition"
           },
           {
             "@id": "https://openminds.om-i.org/types/StimulationActivity"
@@ -146,65 +205,6 @@
             "@id": "https://openminds.om-i.org/types/Visualization"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/filePathPattern",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/FileRepositoryStructure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "File path pattern"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/FilePathPattern"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/FileRepositoryStructure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "File repository structure"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nfe6b8f4dc3174ef4b11b33fb710764f0"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfe6b8f4dc3174ef4b11b33fb710764f0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/FilePathPattern"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/filePathPattern"
       }
     ]
   }

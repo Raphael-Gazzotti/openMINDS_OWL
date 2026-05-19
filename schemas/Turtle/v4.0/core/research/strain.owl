@@ -92,17 +92,30 @@
 <https://openminds.om-i.org/types/Strain> a owl:Class ;
     rdfs:label "Strain" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/GeneticStrainType> ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/RRID> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/geneticStrainType> ],
+            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/StockNumber> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/stockNumber> ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/ontologyIdentifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/name> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Species> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/species> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/alternateIdentifier> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Strain> ;
+            owl:onProperty <https://openminds.om-i.org/props/backgroundStrain> ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/synonym> ],
@@ -111,25 +124,12 @@
                     owl:unionOf ( <https://openminds.om-i.org/types/Disease> <https://openminds.om-i.org/types/DiseaseModel> ) ] ;
             owl:onProperty <https://openminds.om-i.org/props/diseaseModel> ],
         [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/ontologyIdentifier> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/RRID> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/digitalIdentifier> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/BreedingType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/breedingType> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Species> ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/GeneticStrainType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/species> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Strain> ;
-            owl:onProperty <https://openminds.om-i.org/props/backgroundStrain> ] .
+            owl:onProperty <https://openminds.om-i.org/props/geneticStrainType> ] .
 

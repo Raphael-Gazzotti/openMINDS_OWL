@@ -60,24 +60,24 @@
 <https://openminds.ebrains.eu/specimenPrep/SlicingDevice> a owl:Class ;
     rdfs:label "Slicing device" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/manufacturer> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/owner> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.ebrains.eu/core/DOI> <https://openminds.ebrains.eu/core/RRID> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/Consortium> <https://openminds.ebrains.eu/core/Organization> <https://openminds.ebrains.eu/core/Person> ) ] ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/owner> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/controlledTerms/DeviceType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/deviceType> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/name> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/deviceType> ] .
 

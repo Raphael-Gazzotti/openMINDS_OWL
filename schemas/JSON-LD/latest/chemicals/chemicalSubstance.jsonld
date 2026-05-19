@@ -1,5 +1,62 @@
 [
   {
+    "@id": "https://openminds.om-i.org/props/purity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nf9079d1e7a8f4068acbc02937422cc81"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Purity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N1bbc868b61bb474f839c412f767e8945"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf9079d1e7a8f4068acbc02937422cc81",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ProductSource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N1bbc868b61bb474f839c412f767e8945",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.om-i.org/props/molecularEntity",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -21,33 +78,106 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/additionalRemarks",
+    "@id": "https://openminds.om-i.org/types/ChemicalSubstance",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Mention of what deserves additional attention or notice."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Nd42ed816ae4a4d9b8e011fe50dbb2bbe"
+        "@value": "Structured information about a chemical substance."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Additional remarks"
+        "@value": "Chemical substance"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "_:N947bed7030954b9eb736c55ab1c6cded"
+      },
+      {
+        "@id": "_:Nf749a8d18cf24f918bb0c38641471dfe"
+      },
+      {
+        "@id": "_:Nc54e9593ab874cef967b9377c1613b3b"
       }
     ]
   },
   {
-    "@id": "_:Nd42ed816ae4a4d9b8e011fe50dbb2bbe",
+    "@id": "_:N947bed7030954b9eb736c55ab1c6cded",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/MolecularEntity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/molecularEntity"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf749a8d18cf24f918bb0c38641471dfe",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/ProductSource"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/productSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc54e9593ab874cef967b9377c1613b3b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N6b4dd4bf686b42f89716f1314a639815"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/purity"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6b4dd4bf686b42f89716f1314a639815",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -55,43 +185,49 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition"
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
           },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/productSource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nbc4d564164b5437cbb08b6d46a30574f"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Product source"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/ProductSource"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbc4d564164b5437cbb08b6d46a30574f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
           {
             "@id": "https://openminds.om-i.org/types/ChemicalMixture"
           },
           {
             "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Measurement"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Recording"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ViewerSpecification"
           }
         ]
       }
@@ -104,7 +240,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N541383c9c9ca4a7a876b1da5b64f413d"
+        "@id": "_:N8bc62161831d4ced83686042a68a1854"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -119,7 +255,7 @@
     ]
   },
   {
-    "@id": "_:N541383c9c9ca4a7a876b1da5b64f413d",
+    "@id": "_:N8bc62161831d4ced83686042a68a1854",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -148,10 +284,7 @@
             "@id": "https://openminds.om-i.org/types/DataCopy"
           },
           {
-            "@id": "https://openminds.om-i.org/types/Electrode"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
+            "@id": "https://openminds.om-i.org/types/DynamicMRIAcquisition"
           },
           {
             "@id": "https://openminds.om-i.org/types/ElectrodeArrayUsage"
@@ -172,6 +305,12 @@
             "@id": "https://openminds.om-i.org/types/GenericComputation"
           },
           {
+            "@id": "https://openminds.om-i.org/types/MRICoilUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MRIScannerUsage"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/ModelValidation"
           },
           {
@@ -182,9 +321,6 @@
           },
           {
             "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Pipette"
           },
           {
             "@id": "https://openminds.om-i.org/types/PipetteUsage"
@@ -202,10 +338,10 @@
             "@id": "https://openminds.om-i.org/types/Simulation"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SlicingDevice"
+            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
           },
           {
-            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
+            "@id": "https://openminds.om-i.org/types/StaticMRIAcquisition"
           },
           {
             "@id": "https://openminds.om-i.org/types/StimulationActivity"
@@ -248,145 +384,33 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/types/ChemicalSubstance",
+    "@id": "https://openminds.om-i.org/props/additionalRemarks",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Structured information about a chemical substance."
+        "@value": "Mention of what deserves additional attention or notice."
       }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Chemical substance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:N71ff988451184b91979c2c57e10fc43a"
-      },
-      {
-        "@id": "_:N53d51bb0f8894f2bb730b7c68bde9081"
-      },
-      {
-        "@id": "_:N2756b3da17194547aecf9abbc1b7fb5c"
-      }
-    ]
-  },
-  {
-    "@id": "_:N71ff988451184b91979c2c57e10fc43a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/MolecularEntity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/molecularEntity"
-      }
-    ]
-  },
-  {
-    "@id": "_:N53d51bb0f8894f2bb730b7c68bde9081",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/ProductSource"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/productSource"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2756b3da17194547aecf9abbc1b7fb5c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N000fe92887b240ecb5d2c8f706e170d9"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/purity"
-      }
-    ]
-  },
-  {
-    "@id": "_:N000fe92887b240ecb5d2c8f706e170d9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/purity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nf9c30219195d4e4e84ed86175da13393"
+        "@id": "_:Nac7acd40535d40c882e38c371e6e8e64"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Purity"
+        "@value": "Additional remarks"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N183074b1aefd4914a90f9b7620853643"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:Nf9c30219195d4e4e84ed86175da13393",
+    "@id": "_:Nac7acd40535d40c882e38c371e6e8e64",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -394,67 +418,52 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
+            "@id": "https://openminds.om-i.org/types/AnatomicalTargetPosition"
           },
-          {
-            "@id": "https://openminds.om-i.org/types/ProductSource"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N183074b1aefd4914a90f9b7620853643",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/productSource",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N230a6d86bce2424ab0bb99442e494a34"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Product source"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/ProductSource"
-      }
-    ]
-  },
-  {
-    "@id": "_:N230a6d86bce2424ab0bb99442e494a34",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
           {
             "@id": "https://openminds.om-i.org/types/ChemicalMixture"
           },
           {
             "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImageStack"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolume"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolumeSequence"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Measurement"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ViewerSpecification"
           }
         ]
       }

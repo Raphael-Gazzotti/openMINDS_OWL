@@ -27,9 +27,6 @@
     rdfs:label "Custom property set" ;
     rdfs:comment "Structured information about properties of an entity that are not represented in an openMINDS schema." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/context> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/AnalysisTechnique> <https://openminds.om-i.org/types/MRIPulseSequence> <https://openminds.om-i.org/types/MRIWeighting> <https://openminds.om-i.org/types/StimulationApproach> <https://openminds.om-i.org/types/StimulationTechnique> <https://openminds.om-i.org/types/Technique> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -40,5 +37,8 @@
                     owl:unionOf ( <https://openminds.om-i.org/types/Configuration> <https://openminds.om-i.org/types/File> <https://openminds.om-i.org/types/PropertyValueList> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/dataLocation> ] .
+            owl:onProperty <https://openminds.om-i.org/props/dataLocation> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/context> ] .
 

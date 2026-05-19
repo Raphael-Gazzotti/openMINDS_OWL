@@ -4,221 +4,75 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="Ne23bc4288af84762b19ad693fe26966e">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N25151c505ed7440e8d9bc23ad872b4cb"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N29d940d219c1474c9161643699a9547a">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Modality"/>
-    <rdf:rest rdf:nodeID="N31dd0475d46d4726ac7ddaa3bd1b69c4"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N30d4b836ed064dccbb0237451cb9d221">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N93638509ebda4a98a6ec1d62ce782621">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ContributionType"/>
-    <rdf:rest rdf:nodeID="N74b8352876c840d592b67247e5fc1ec0"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1a904855805041b7a60e6abe3256e378">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N15e653db06fb42178dfc3939716e0d20">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/CellType"/>
-    <rdf:rest rdf:nodeID="N93638509ebda4a98a6ec1d62ce782621"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb6ff11cd4de340468d87309edce9541f">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ServiceLink"/>
-    <rdf:rest rdf:nodeID="N7e3467b3e2894c248de3011febb70a56"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N66235a4e15dc4c4a882dbc6d561a1bd8">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/specialUsageRole"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileUsageRole"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2fa1ac589d624cdfa66f291be7c0fb04">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/name"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/storageSize">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Storage size</rdfs:label>
-    <rdfs:comment>Quantitative value defining how much disk space is used by an object on a computer system.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Nb10875deed764f9695db4b30af95ba59"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N14214e950b2a46bbab362360bd68a13b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/isPartOf"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N44f6d8805b4f43c8bf750c163aefbb1a">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="Ne3cd5ebb1bb84cae8d08a6dc125d11c8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N748185187ddc4518b86714897f4ba1da">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N7004aaacab744df3be426484d86ee9b6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N647930ffe87c4a8483b418d7c90a185c">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/fileRepository"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/isPartOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Is part of</rdfs:label>
-    <rdfs:comment>Reference to the ensemble of multiple things or beings.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Nb95c3889e8e246dfb467998553bc743c"/>
-    <rdfs:range rdf:nodeID="Nffc0048f9ec044e7a25e3cd0d369e661"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndf8d91d18ac34872bef4c9968f59e9b5">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/BiologicalSex"/>
-    <rdf:rest rdf:nodeID="N15e653db06fb42178dfc3939716e0d20"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e5fd109ebf84efc9576082cb1ae5931">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Organ"/>
-    <rdf:rest rdf:nodeID="Nde6571e3382f4ffbb36bbc542a7e89d9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N378f31dcb4b54131933bd41e8291026d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/format"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ContentType"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd1a07ddc1e2c4c01a54f4aef4ee7b654">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N1a904855805041b7a60e6abe3256e378"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7e3467b3e2894c248de3011febb70a56">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/StringParameter"/>
-    <rdf:rest rdf:nodeID="Nb553aafbf4de414aa754f746119f89b1"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7ed550cadd8140c9bf8e640a3c1f4719">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <rdf:rest rdf:nodeID="N4628b150f4244a2993823a17c51d9f4b"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/File">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>File</rdfs:label>
-    <rdfs:comment>Structured information on a file instance that is accessible via a URL.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="Nd26a7eb36fe3412abde2b9e0e992bf5c"/>
-    <rdfs:subClassOf rdf:nodeID="N6fb830a309194b8fa702de324dc4db9f"/>
-    <rdfs:subClassOf rdf:nodeID="N647930ffe87c4a8483b418d7c90a185c"/>
-    <rdfs:subClassOf rdf:nodeID="N378f31dcb4b54131933bd41e8291026d"/>
-    <rdfs:subClassOf rdf:nodeID="N8379f5b8b8b54a6cabaff7c7748c50ff"/>
-    <rdfs:subClassOf rdf:nodeID="N14214e950b2a46bbab362360bd68a13b"/>
-    <rdfs:subClassOf rdf:nodeID="N2fa1ac589d624cdfa66f291be7c0fb04"/>
-    <rdfs:subClassOf rdf:nodeID="N66235a4e15dc4c4a882dbc6d561a1bd8"/>
-    <rdfs:subClassOf rdf:nodeID="Ncebef7bb2dee4e93b18dcbf2212c384e"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb95c3889e8e246dfb467998553bc743c">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Ne23bc4288af84762b19ad693fe26966e"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na67e9c4a40464e118e25c29a55e4f415">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/BehavioralTask"/>
-    <rdf:rest rdf:nodeID="Nfcfa7892c9d0438b83311a32fd307d12"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Naad46c4bd275423db4c5df3adb851f90">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/TermSuggestion"/>
-    <rdf:rest rdf:nodeID="N2b7ec01b894b49aa9c93e0f6759e29f9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4730d38eb981451a98c60bd6b4745f96">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="N6b81874873bd42378535dfb33e72bbe8"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc2d700f423cc491d8ff21651954b07e2">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"/>
-    <rdf:rest rdf:nodeID="N332a336566db4eab96196c5ec0ef6122"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6b81874873bd42378535dfb33e72bbe8">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <rdf:rest rdf:nodeID="Nb7ea3d59ec1d4930ba10fb8ff65e61b5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5e5e09dfd2a64bf48d31fa2c8834c9c3">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollectionState"/>
-    <rdf:rest rdf:nodeID="Nf99a6baf318e4b1ea4e65938600e3476"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7bed3f6f61564ff0b885c6867f9d6eef">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSample"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N48ee3eebc42a43ddb2e1a6aadfab17c0">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Subject"/>
-    <rdf:rest rdf:nodeID="N7bed3f6f61564ff0b885c6867f9d6eef"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N49db34349c974cffabb626d9e66ae010">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory"/>
-    <rdf:rest rdf:nodeID="Nd7172d898b4047d79b40ff89aca8cb54"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nce7230dfdf604e90ad065605881072c9">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/DatasetType"/>
-    <rdf:rest rdf:nodeID="N3f7d50d75e6246518f7b03ef230a4468"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd03acb7d012148e59f84c0c2b3313c21">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nf7721cb0c79348f5a3887fabfc2a66af"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd7172d898b4047d79b40ff89aca8cb54">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Species"/>
-    <rdf:rest rdf:nodeID="N03c5a39f2cb94283bbbab4b211838fed"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncbfe23bdcb364d2f83cea8b59af1707b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"/>
-    <rdf:rest rdf:nodeID="Na4b26fee30534fe1b9efe580abc8bc7f"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nde6571e3382f4ffbb36bbc542a7e89d9">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Phenotype"/>
-    <rdf:rest rdf:nodeID="N9b9183bdc02949d59d179ae82073e828"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/content">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Content</rdfs:label>
     <rdfs:comment>Something that is contained.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N92e2d9f869f7487ea78bcfe9a6e86430"/>
+    <rdfs:domain rdf:nodeID="Nc8910116ac7545c09162043fa1af6482"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N2e147d87e63444759f8e984e7d4cc2a8">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"/>
-    <rdf:rest rdf:nodeID="Nee38818cbd8b41acbee2722c66793f50"/>
+  <rdf:Description rdf:nodeID="Nafbea8a0582f40809b3cb5377d808453">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"/>
+    <rdf:rest rdf:nodeID="N842ede6c5aea4abf8b238edc15c1e065"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N29810f5b436848a8a7099d1b14d7a0c7">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="Nccd216ba91794ebbaa48d0dee80921f4"/>
+  <rdf:Description rdf:nodeID="N4524007978aa4ab0ba5ca3011f08cbc5">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
+    <rdf:rest rdf:nodeID="Nafbea8a0582f40809b3cb5377d808453"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf1cf59b6fd454f74a870484e62adb543">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroup"/>
-    <rdf:rest rdf:nodeID="N171ab392b2614930a8945ca6a8a4030f"/>
+  <rdf:Description rdf:nodeID="N985d0c8b12554928b9f7a0061740d57c">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/specialUsageRole"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileUsageRole"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N7584707ffb62443aaefd807d4711e061">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="N7ed550cadd8140c9bf8e640a3c1f4719"/>
+  <rdf:Description rdf:nodeID="Ncb9a0a248d944293a32e45727c399523">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleState"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb78f3fc5418d4da29423fb6fc686fabd">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="N30d4b836ed064dccbb0237451cb9d221"/>
+  <rdf:Description rdf:nodeID="Nabd9d101a8d94d89b60e0c5a4ee5a0c4">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectState"/>
+    <rdf:rest rdf:nodeID="N513aa91f957643d9b6fe280318cb80e6"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1dcc3ac29863475eb74d36b890b8c7ee">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Protocol"/>
-    <rdf:rest rdf:nodeID="Nb6ff11cd4de340468d87309edce9541f"/>
+  <rdf:Description rdf:nodeID="N8b07a03d393b431f893bd1becbb4d38f">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSample"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3749d31f69e247f1b8d6be2a68d060eb">
+  <rdf:Description rdf:nodeID="N942fb24db2dc4bc68f98b26df3a506d5">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nffc0048f9ec044e7a25e3cd0d369e661">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nd46ce082e78d43b49b87ee525f6c4325"/>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/descendedFrom">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Descended from</rdfs:label>
+    <rdfs:domain rdf:nodeID="N5713acb5e5ca40239254333c66b4f58c"/>
+    <rdfs:range rdf:nodeID="N30788cd347dc471f83f753ad60ed9c02"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N3f7d50d75e6246518f7b03ef230a4468">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Disease"/>
-    <rdf:rest rdf:nodeID="N7a2475d5551a4c98b544eb602d575099"/>
+  <rdf:Description rdf:nodeID="Nea413aa53fe34ecd9cc4f8d381d93e72">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleState"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3061b10d062e42f9a892877df43ade2c">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/CellType"/>
+    <rdf:rest rdf:nodeID="Nc12dac84c74240c88d113ce95c3ace11"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3ab43c91c1ac4da5b75499abee44e31d">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/DiseaseModel"/>
+    <rdf:rest rdf:nodeID="N880c026f57764e61af0d0e0ea2cb2c1a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/isPartOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Is part of</rdfs:label>
+    <rdfs:comment>Reference to the ensemble of multiple things or beings.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N2068f53de0294404b45e045ee9496aa0"/>
+    <rdfs:range rdf:nodeID="Nf80304662eda4d26807e4d66f306b7d3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc12dac84c74240c88d113ce95c3ace11">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ContributionType"/>
+    <rdf:rest rdf:nodeID="N8360015e77ea4b0b8156c9b63ee6128b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N900a2bcf417c4ae588fd21f9a487a350">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/StringParameter"/>
+    <rdf:rest rdf:nodeID="Nbfa562304b114301a75edbaec0cd5f84"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/specialUsageRole">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -227,261 +81,341 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/File"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileUsageRole"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0e29f08831c2479096eb91801c74f237">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/AgeCategory"/>
-    <rdf:rest rdf:nodeID="Nf42f6618763243a3b5ff84c4a06425a5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb7ea3d59ec1d4930ba10fb8ff65e61b5">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/NumericalParameter"/>
-    <rdf:rest rdf:nodeID="N1dcc3ac29863475eb74d36b890b8c7ee"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2bc060f100a54ec994f83611ab182855">
+  <rdf:Description rdf:nodeID="N81c8c1d80f9a4f84b1a889b189dce53e">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N09f046fcbdde4ccabbc97f075636087f"/>
+    <rdf:rest rdf:nodeID="Nff4cf69d916f4024b0a649ba0cd990a4"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncebef7bb2dee4e93b18dcbf2212c384e">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/storageSize"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  <rdf:Description rdf:nodeID="Nc4f5caf83d4243e6ab06915b765b1432">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Strain"/>
+    <rdf:rest rdf:nodeID="N5d3a988613564074aa363611cd65a7fe"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N8f9f31ea34014fd89501ae43dd3da99f">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"/>
-    <rdf:rest rdf:nodeID="N49db34349c974cffabb626d9e66ae010"/>
+  <rdf:Description rdf:nodeID="Nc0642362f462436ea952492b2a9fb41b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Language"/>
+    <rdf:rest rdf:nodeID="N3c2a105b65634920b29523c2d30671c3"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/hash">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Hash</rdfs:label>
-    <rdfs:comment>Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Nd03acb7d012148e59f84c0c2b3313c21"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne5d69cf0cc6f45659c64cbf58eea6c97">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/BehavioralTask"/>
-    <rdf:rest rdf:nodeID="Ndf8d91d18ac34872bef4c9968f59e9b5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N738344308d4649d58cd7c01c865a3965">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileUsageRole"/>
-    <rdf:rest rdf:nodeID="Ne53f5e24ace046ea89102460a701531b"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/format">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Format</rdfs:label>
-    <rdfs:comment>Method of digitally organizing and structuring data or information.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N0d9ea26d471b45cb9e9d9dd117855bf5"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/ContentType"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7a2475d5551a4c98b544eb602d575099">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/DiseaseModel"/>
-    <rdf:rest rdf:nodeID="Nc2d700f423cc491d8ff21651954b07e2"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N171ab392b2614930a8945ca6a8a4030f">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollection"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N74b8352876c840d592b67247e5fc1ec0">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"/>
-    <rdf:rest rdf:nodeID="Nce7230dfdf604e90ad065605881072c9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na3a5052c6b4c447da64816242ceab570">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/SoftwareApplicationCategory"/>
-    <rdf:rest rdf:nodeID="N8f9f31ea34014fd89501ae43dd3da99f"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N92b97a65a21f45f5963b8c7c7d0e1a1c">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N4730d38eb981451a98c60bd6b4745f96"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2b7ec01b894b49aa9c93e0f6759e29f9">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Terminology"/>
-    <rdf:rest rdf:nodeID="N5252859ee971496b80ddb43c020fbb94"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N4da6535bdb824cffba8ad01f938b3121">
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/File">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Na67e9c4a40464e118e25c29a55e4f415"/>
+    <rdfs:label>File</rdfs:label>
+    <rdfs:comment>Structured information on a file instance that is accessible via a URL.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="Nbcdc0d7e577249c6a037f36eaeeb29ef"/>
+    <rdfs:subClassOf rdf:nodeID="N9338631079d3459babdf75c89b2f9a13"/>
+    <rdfs:subClassOf rdf:nodeID="N9e46175eb4564b56a2bf5b4264272088"/>
+    <rdfs:subClassOf rdf:nodeID="Nbf480fcb9b7a4dd6bfdbf91828ead531"/>
+    <rdfs:subClassOf rdf:nodeID="N79e0d794f94b4c19a144a6ec5dfad5b0"/>
+    <rdfs:subClassOf rdf:nodeID="Nc6628ace33374cd2a2df74ae1c9f5866"/>
+    <rdfs:subClassOf rdf:nodeID="N22f3cec96baa4de7b27a9832f0c85504"/>
+    <rdfs:subClassOf rdf:nodeID="N985d0c8b12554928b9f7a0061740d57c"/>
+    <rdfs:subClassOf rdf:nodeID="N1646cab2ab7e4e719cf3fb763a76bcf9"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nccd216ba91794ebbaa48d0dee80921f4">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfcfa7892c9d0438b83311a32fd307d12">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N37582d61539e42df99e6607bd2d7e4fb"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncee9a107c5ac437ba4fa173e3722812e">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ModelScope"/>
-    <rdf:rest rdf:nodeID="Nb7d0e3349db04b2781aac3ce2ca911f6"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf42f6618763243a3b5ff84c4a06425a5">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"/>
-    <rdf:rest rdf:nodeID="Ne5d69cf0cc6f45659c64cbf58eea6c97"/>
+  <rdf:Description rdf:nodeID="N4c4e27356ad047b3ad835d37bc8d931b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/BehavioralTask"/>
+    <rdf:rest rdf:nodeID="N69944edd790742c998f60be9dcf62d71"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/IRI">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Iri</rdfs:label>
     <rdfs:comment>Stands for Internationalized Resource Identifier which is an internet protocol standard that builds on the URI protocol, extending the set of permitted characters to include Unicode/ISO 10646.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N65ecddc30f474b598d89e754c606d92c"/>
+    <rdfs:domain rdf:nodeID="Na10b8102c07649f098a94fa9e00b6351"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N01adb379537e4a8c8fbb3644d5ac2016">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Language"/>
-    <rdf:rest rdf:nodeID="N082d4333282f43f3a6d60971d8a78717"/>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Hash</rdfs:label>
+    <rdfs:comment>Term used for the process of converting any data into a single value. Often also directly refers to the resulting single value.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N6a1986f45432478ab7a638652d7159cb"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N9b9183bdc02949d59d179ae82073e828">
+  <rdf:Description rdf:nodeID="N90d8ec67787b4bae9e3ee3f1d85cfd41">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroupState"/>
+    <rdf:rest rdf:nodeID="Nabd9d101a8d94d89b60e0c5a4ee5a0c4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbaac5d4184fd4934a9cc718c88bf97b3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="Nbeca613015064861b3b19dbdf9b88c17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N79e0d794f94b4c19a144a6ec5dfad5b0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/hash"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbeca613015064861b3b19dbdf9b88c17">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6919492dcc494b6e80b64ddf2b513e45">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="N129b8773e8f34ede9d67978a8ed6c2dd"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39a976ebb9c049848ace134cd7006e06">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="N848f202418d84a84a33e4bcedcec3983"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9c5ac31c86ee43658345c42c6b61762b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"/>
+    <rdf:rest rdf:nodeID="Ne061b8e3da054b7d812824b8722552fb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N05e90d3bb1b041ef9da2cf082b1de56a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/MetaDataModelType"/>
+    <rdf:rest rdf:nodeID="Ne9eb640bfb5a4bd884638872a8703433"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N92c47067522948c9ad186e1d1899023e">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroup"/>
+    <rdf:rest rdf:nodeID="N0b13bcb97732456587f2853a8ae37ceb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6aeaf7b8d3984e66ac9f6473bc4f03b7">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ModelScope"/>
+    <rdf:rest rdf:nodeID="N457b77945cbf4398b728032d45183803"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N14ef4a3ebc444d918ff85dcc4b348ea3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Terminology"/>
+    <rdf:rest rdf:nodeID="N80279cc8f29f45cca5c221672e1adcd2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbcdc0d7e577249c6a037f36eaeeb29ef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/IRI"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne94cb209a2dc45979a52176443a1cba7">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="N2c334d3cf90842938624c1bf99c1cb97"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8360015e77ea4b0b8156c9b63ee6128b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"/>
+    <rdf:rest rdf:nodeID="N1d593bfdf24c48cfae179366a538c154"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6f37262f4b3a429294764ff761d737ed">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/BehavioralTask"/>
+    <rdf:rest rdf:nodeID="N6919492dcc494b6e80b64ddf2b513e45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N43e5b7eb356d4156a7471b6970c1d3dc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N44b9fa1c3b044f2986d8c7f1d9a9f996"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8375faafca6f4a368233e56ab7ec3b3a">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/PreparationType"/>
-    <rdf:rest rdf:nodeID="N2e147d87e63444759f8e984e7d4cc2a8"/>
+    <rdf:rest rdf:nodeID="Ndc2ddcdbaa8c4731ab611670d5aec1e4"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N4628b150f4244a2993823a17c51d9f4b">
+  <rdf:Description rdf:nodeID="N22f3cec96baa4de7b27a9832f0c85504">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/name"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1ccd627178a9465b8582fc0bffbd5bea">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/TermSuggestion"/>
+    <rdf:rest rdf:nodeID="N14ef4a3ebc444d918ff85dcc4b348ea3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1646cab2ab7e4e719cf3fb763a76bcf9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/storageSize"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N91f392f359c04d6dace24c40f367a8d3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/SoftwareFeatureCategory"/>
+    <rdf:rest rdf:nodeID="Na18cbdc75c424573b24b33f7691f9293"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N0b13bcb97732456587f2853a8ae37ceb">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollection"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbdb3621e4e0f4cdfaf1e6fbe71429b72">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Subject"/>
+    <rdf:rest rdf:nodeID="N8b07a03d393b431f893bd1becbb4d38f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N58b0896427864dd9a83052c4ff12e057">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Phenotype"/>
+    <rdf:rest rdf:nodeID="N8375faafca6f4a368233e56ab7ec3b3a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nafae04114c654e42a32283b11a94e355">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"/>
+    <rdf:rest rdf:nodeID="N4524007978aa4ab0ba5ca3011f08cbc5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2c334d3cf90842938624c1bf99c1cb97">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="Neb62487aeb244c80b8aa83e4496b5c5b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc533598eff2945f1ac16a3d0cbc60752">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectState"/>
+    <rdf:rest rdf:nodeID="N11f722320099467cbabf21580da0e296"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N129b8773e8f34ede9d67978a8ed6c2dd">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="N5dbcd51489cc4442a4f440a3b9856898"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc5feeb622687412d9cf288245a418092">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="N97c5db9f9bf942aea8160881cf11e78a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N513aa91f957643d9b6fe280318cb80e6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollectionState"/>
+    <rdf:rest rdf:nodeID="Nea413aa53fe34ecd9cc4f8d381d93e72"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na130729ee821413ba05f52aa27cb84d6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Disease"/>
+    <rdf:rest rdf:nodeID="N3ab43c91c1ac4da5b75499abee44e31d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne07de7b28bd74bef9bc9ac733e35124b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/Protocol"/>
+    <rdf:rest rdf:nodeID="N5f659252db9a46878e6c66e9641898e5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N457b77945cbf4398b728032d45183803">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/OperatingDevice"/>
+    <rdf:rest rdf:nodeID="N3aafb96842ac4ec9b2c1c54507cf67e6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na10b8102c07649f098a94fa9e00b6351">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N39a976ebb9c049848ace134cd7006e06"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc6628ace33374cd2a2df74ae1c9f5866">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/isPartOf"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/format">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Format</rdfs:label>
+    <rdfs:comment>Method of digitally organizing and structuring data or information.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N8200aae5dadc487da5a0ed69637aa566"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/ContentType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6a494617ed1c4fb3a3e3a4437805deec">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ModelVersion"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2549c47792ec4a289020210ccfabafd5">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
+    <rdf:rest rdf:nodeID="N92c47067522948c9ad186e1d1899023e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N842ede6c5aea4abf8b238edc15c1e065">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/SoftwareFeature"/>
+    <rdf:rest rdf:nodeID="N91f392f359c04d6dace24c40f367a8d3"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9e46175eb4564b56a2bf5b4264272088">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/fileRepository"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5dbcd51489cc4442a4f440a3b9856898">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroupState"/>
+    <rdf:rest rdf:nodeID="Nc533598eff2945f1ac16a3d0cbc60752"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8019d2dcb6cc47eea746401ed105948a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
+    <rdf:rest rdf:nodeID="N6a494617ed1c4fb3a3e3a4437805deec"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf8b013cecade4b588a284e5999205583">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/BehavioralTask"/>
+    <rdf:rest rdf:nodeID="N5211b30149584c9c95229ed4a66b5a46"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d3a988613564074aa363611cd65a7fe">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Technique"/>
+    <rdf:rest rdf:nodeID="N1ccd627178a9465b8582fc0bffbd5bea"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N52e8bc6509e7403d87f2d0e381f49977">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/UnitOfMeasurement"/>
+    <rdf:rest rdf:nodeID="N5398848a5b984810af85ad18ff398c79"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3aafb96842ac4ec9b2c1c54507cf67e6">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/OperatingSystem"/>
+    <rdf:rest rdf:nodeID="Nf924cf77fdbb45feadac8a88610c9494"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne4f9e27457ee4c60bcbd6bfce96bfd16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N4c4e27356ad047b3ad835d37bc8d931b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N97c5db9f9bf942aea8160881cf11e78a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="N8019d2dcb6cc47eea746401ed105948a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8200aae5dadc487da5a0ed69637aa566">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nc5feeb622687412d9cf288245a418092"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:label>Name</rdfs:label>
     <rdfs:comment>Word or phrase that constitutes the distinctive designation of a being or thing.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N2c40fa5655bb47e980c4239b6c3b7bef"/>
+    <rdfs:domain rdf:nodeID="N43e5b7eb356d4156a7471b6970c1d3dc"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N332a336566db4eab96196c5ec0ef6122">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileBundleGrouping"/>
-    <rdf:rest rdf:nodeID="N738344308d4649d58cd7c01c865a3965"/>
+  <rdf:Description rdf:nodeID="Ne9eb640bfb5a4bd884638872a8703433">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Modality"/>
+    <rdf:rest rdf:nodeID="Ne4afbf6d90c04e9abb8d99c69fbc3ebc"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf99a6baf318e4b1ea4e65938600e3476">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleState"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd46ce082e78d43b49b87ee525f6c4325">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/DatasetVersion"/>
-    <rdf:rest rdf:nodeID="N44f6d8805b4f43c8bf750c163aefbb1a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2c042962a3cc43d6a511a95f95609cd4">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroupState"/>
-    <rdf:rest rdf:nodeID="N262bbdee176a4e968a03648fc11e2f08"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N37582d61539e42df99e6607bd2d7e4fb">
+  <rdf:Description rdf:nodeID="N170116c4c98941d2b6193f2f3a556479">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="N2c042962a3cc43d6a511a95f95609cd4"/>
+    <rdf:rest rdf:nodeID="N2549c47792ec4a289020210ccfabafd5"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne3cd5ebb1bb84cae8d08a6dc125d11c8">
+  <rdf:Description rdf:nodeID="Nf924cf77fdbb45feadac8a88610c9494">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Organ"/>
+    <rdf:rest rdf:nodeID="N58b0896427864dd9a83052c4ff12e057"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59843e86892449a388e94f4ae921075b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="Ne34e78ad077d43e481086a0d42aa7366"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncc9d0b83e3f044c3a6cd2b2cd947f5dc">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <rdf:rest rdf:nodeID="Nf1cf59b6fd454f74a870484e62adb543"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N7004aaacab744df3be426484d86ee9b6">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N3749d31f69e247f1b8d6be2a68d060eb"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0d3e7b4f79d14c3eb86d351f05ef68d2">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="Nd6c61e36c52649a292a218384e043c2b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd26a7eb36fe3412abde2b9e0e992bf5c">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/IRI"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf7721cb0c79348f5a3887fabfc2a66af">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="Nb78f3fc5418d4da29423fb6fc686fabd"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/descendedFrom">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Descended from</rdfs:label>
-    <rdfs:domain rdf:nodeID="N748185187ddc4518b86714897f4ba1da"/>
-    <rdfs:range rdf:nodeID="N4da6535bdb824cffba8ad01f938b3121"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N5692e0c290784b0ea1b0a54833d8a504">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
-    <rdf:rest rdf:nodeID="N48ee3eebc42a43ddb2e1a6aadfab17c0"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nee38818cbd8b41acbee2722c66793f50">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ProgrammingLanguage"/>
-    <rdf:rest rdf:nodeID="N0be5137e30a0406796ebc924e4728805"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N09f046fcbdde4ccabbc97f075636087f">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="N889b911360cc478a8c6c4ff29c8dc7a9"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N92e2d9f869f7487ea78bcfe9a6e86430">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nd1a07ddc1e2c4c01a54f4aef4ee7b654"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd6c61e36c52649a292a218384e043c2b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="Ne6cd40e231fe4fa4930b28133db7f017"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc5a98fc8a627432f95f1819419fb0d7b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleState"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N31dd0475d46d4726ac7ddaa3bd1b69c4">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"/>
-    <rdf:rest rdf:nodeID="Ncee9a107c5ac437ba4fa173e3722812e"/>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/storageSize">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Storage size</rdfs:label>
+    <rdfs:comment>Quantitative value defining how much disk space is used by an object on a computer system.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Nc3a4b1d966cb4ef6af0f01b2dd1bda88"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf7c0ee59d02a463abf63d45e2a4d5011">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/MetaDataModelType"/>
-    <rdf:rest rdf:nodeID="N29d940d219c1474c9161643699a9547a"/>
+  <rdf:Description rdf:nodeID="N1a49009d7e4c4a1ab834ee6486e82e71">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N8379f5b8b8b54a6cabaff7c7748c50ff">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/hash"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N03c5a39f2cb94283bbbab4b211838fed">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Strain"/>
-    <rdf:rest rdf:nodeID="Na0807cd9a74b4a689476e1bdb831b75a"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ncde9bc76a17444998917e2ad390681ad">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollectionState"/>
-    <rdf:rest rdf:nodeID="Nc5a98fc8a627432f95f1819419fb0d7b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne6cd40e231fe4fa4930b28133db7f017">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectGroupState"/>
-    <rdf:rest rdf:nodeID="N45f6dcd5451b414d8c1573e33563b8d0"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2c40fa5655bb47e980c4239b6c3b7bef">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N0e29f08831c2479096eb91801c74f237"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Na4b26fee30534fe1b9efe580abc8bc7f">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ContentType"/>
-    <rdf:rest rdf:nodeID="N92b97a65a21f45f5963b8c7c7d0e1a1c"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb7d0e3349db04b2781aac3ce2ca911f6">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/OperatingDevice"/>
-    <rdf:rest rdf:nodeID="Nfb93c1b338d84e6aa040b55c27bbb7ea"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N6fb830a309194b8fa702de324dc4db9f">
+  <rdf:Description rdf:nodeID="N9338631079d3459babdf75c89b2f9a13">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/descendedFrom"/>
-    <owl:allValuesFrom rdf:nodeID="Nbbd1a86e19aa4a7b99fcb877c31c2e18"/>
+    <owl:allValuesFrom rdf:nodeID="Ne4f9e27457ee4c60bcbd6bfce96bfd16"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N65ecddc30f474b598d89e754c606d92c">
+  <rdf:Description rdf:nodeID="Nc8910116ac7545c09162043fa1af6482">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N29810f5b436848a8a7099d1b14d7a0c7"/>
+    <owl:unionOf rdf:nodeID="Nbaac5d4184fd4934a9cc718c88bf97b3"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nbbd1a86e19aa4a7b99fcb877c31c2e18">
+  <rdf:Description rdf:nodeID="Neb62487aeb244c80b8aa83e4496b5c5b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
+    <rdf:rest rdf:nodeID="N1247a48ceaaf4f6eaafb6a3fa701677b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N83e22a86552644ebadf5978a642bbb41">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Genotype"/>
+    <rdf:rest rdf:nodeID="Nc0642362f462436ea952492b2a9fb41b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf80304662eda4d26807e4d66f306b7d3">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N911d55cc945d4565b0252d280cd52115"/>
+    <owl:unionOf rdf:nodeID="N38f35c1070134560a70d59eaee7e40d9"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N082d4333282f43f3a6d60971d8a78717">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Laterality"/>
-    <rdf:rest rdf:nodeID="Nf7c0ee59d02a463abf63d45e2a4d5011"/>
+  <rdf:Description rdf:nodeID="N848f202418d84a84a33e4bcedcec3983">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na0807cd9a74b4a689476e1bdb831b75a">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Technique"/>
-    <rdf:rest rdf:nodeID="Naad46c4bd275423db4c5df3adb851f90"/>
+  <rdf:Description rdf:nodeID="Ne34e78ad077d43e481086a0d42aa7366">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="Ncc9d0b83e3f044c3a6cd2b2cd947f5dc"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nfb93c1b338d84e6aa040b55c27bbb7ea">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/OperatingSystem"/>
-    <rdf:rest rdf:nodeID="N0e5fd109ebf84efc9576082cb1ae5931"/>
+  <rdf:Description rdf:nodeID="N2174b726dea84fcfbb3226136253f60d">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="N90d8ec67787b4bae9e3ee3f1d85cfd41"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N4f93568f26a844a7bf128f78b8cdc87b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
-    <rdf:rest rdf:nodeID="N7584707ffb62443aaefd807d4711e061"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb10875deed764f9695db4b30af95ba59">
+  <rdf:Description rdf:nodeID="N5713acb5e5ca40239254333c66b4f58c">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N2bc060f100a54ec994f83611ab182855"/>
+    <owl:unionOf rdf:nodeID="Na477486803624f97842d31407c042b17"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6a1986f45432478ab7a638652d7159cb">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N59843e86892449a388e94f4ae921075b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N880c026f57764e61af0d0e0ea2cb2c1a">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/EthicsAssessment"/>
+    <rdf:rest rdf:nodeID="N9c5ac31c86ee43658345c42c6b61762b"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/fileRepository">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -489,44 +423,110 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/File"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N889b911360cc478a8c6c4ff29c8dc7a9">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileRepository"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="N3c2a105b65634920b29523c2d30671c3">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Laterality"/>
+    <rdf:rest rdf:nodeID="N05e90d3bb1b041ef9da2cf082b1de56a"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0be5137e30a0406796ebc924e4728805">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
-    <rdf:rest rdf:nodeID="Na3a5052c6b4c447da64816242ceab570"/>
+  <rdf:Description rdf:nodeID="N2068f53de0294404b45e045ee9496aa0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7690ea54299a4fce8856cbf89b926abc"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nb553aafbf4de414aa754f746119f89b1">
+  <rdf:Description rdf:nodeID="Nc3a4b1d966cb4ef6af0f01b2dd1bda88">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N81c8c1d80f9a4f84b1a889b189dce53e"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbfa562304b114301a75edbaec0cd5f84">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntity"/>
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N45f6dcd5451b414d8c1573e33563b8d0">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectState"/>
-    <rdf:rest rdf:nodeID="N5e5e09dfd2a64bf48d31fa2c8834c9c3"/>
+  <rdf:Description rdf:nodeID="Ne4afbf6d90c04e9abb8d99c69fbc3ebc">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ModelAbstractionLevel"/>
+    <rdf:rest rdf:nodeID="N6aeaf7b8d3984e66ac9f6473bc4f03b7"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N25151c505ed7440e8d9bc23ad872b4cb">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
-    <rdf:rest rdf:nodeID="N5692e0c290784b0ea1b0a54833d8a504"/>
+  <rdf:Description rdf:nodeID="Ndc2ddcdbaa8c4731ab611670d5aec1e4">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/ProductAccessibility"/>
+    <rdf:rest rdf:nodeID="Nafae04114c654e42a32283b11a94e355"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N5252859ee971496b80ddb43c020fbb94">
+  <rdf:Description rdf:nodeID="N80279cc8f29f45cca5c221672e1adcd2">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/TissueSampleType"/>
-    <rdf:rest rdf:nodeID="Ncbfe23bdcb364d2f83cea8b59af1707b"/>
+    <rdf:rest rdf:nodeID="N52e8bc6509e7403d87f2d0e381f49977"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N262bbdee176a4e968a03648fc11e2f08">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/SubjectState"/>
-    <rdf:rest rdf:nodeID="Ncde9bc76a17444998917e2ad390681ad"/>
+  <rdf:Description rdf:nodeID="N1d593bfdf24c48cfae179366a538c154">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/DatasetType"/>
+    <rdf:rest rdf:nodeID="Na130729ee821413ba05f52aa27cb84d6"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Ne53f5e24ace046ea89102460a701531b">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Genotype"/>
-    <rdf:rest rdf:nodeID="N01adb379537e4a8c8fbb3644d5ac2016"/>
+  <rdf:Description rdf:nodeID="N69944edd790742c998f60be9dcf62d71">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="N2174b726dea84fcfbb3226136253f60d"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0d9ea26d471b45cb9e9d9dd117855bf5">
+  <rdf:Description rdf:nodeID="N44b9fa1c3b044f2986d8c7f1d9a9f996">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/AgeCategory"/>
+    <rdf:rest rdf:nodeID="N86d965a3db3443d8848d121b632f6c3d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5211b30149584c9c95229ed4a66b5a46">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/BiologicalSex"/>
+    <rdf:rest rdf:nodeID="N3061b10d062e42f9a892877df43ade2c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne061b8e3da054b7d812824b8722552fb">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/FileUsageRole"/>
+    <rdf:rest rdf:nodeID="N83e22a86552644ebadf5978a642bbb41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5398848a5b984810af85ad18ff398c79">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ContentType"/>
+    <rdf:rest rdf:nodeID="Ne94cb209a2dc45979a52176443a1cba7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1247a48ceaaf4f6eaafb6a3fa701677b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/NumericalParameter"/>
+    <rdf:rest rdf:nodeID="Ne07de7b28bd74bef9bc9ac733e35124b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb7284fe343d74a48a630eedb862dce30">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="Nbfc319b8722d4589b9aa2f8b0e4ff473"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N86d965a3db3443d8848d121b632f6c3d">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/AnatomicalAxesOrientation"/>
+    <rdf:rest rdf:nodeID="Nf8b013cecade4b588a284e5999205583"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nff4cf69d916f4024b0a649ba0cd990a4">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/FileBundle"/>
+    <rdf:rest rdf:nodeID="N1a49009d7e4c4a1ab834ee6486e82e71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na477486803624f97842d31407c042b17">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="N942fb24db2dc4bc68f98b26df3a506d5"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbf480fcb9b7a4dd6bfdbf91828ead531">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/format"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ContentType"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na18cbdc75c424573b24b33f7691f9293">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/controlledTerms/Species"/>
+    <rdf:rest rdf:nodeID="Nc4f5caf83d4243e6ab06915b765b1432"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbfc319b8722d4589b9aa2f8b0e4ff473">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
+    <rdf:rest rdf:nodeID="Nbdb3621e4e0f4cdfaf1e6fbe71429b72"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30788cd347dc471f83f753ad60ed9c02">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N4f93568f26a844a7bf128f78b8cdc87b"/>
+    <owl:unionOf rdf:nodeID="N6f37262f4b3a429294764ff761d737ed"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N911d55cc945d4565b0252d280cd52115">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/BehavioralTask"/>
-    <rdf:rest rdf:nodeID="N0d3e7b4f79d14c3eb86d351f05ef68d2"/>
+  <rdf:Description rdf:nodeID="N11f722320099467cbabf21580da0e296">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/TissueSampleCollectionState"/>
+    <rdf:rest rdf:nodeID="Ncb9a0a248d944293a32e45727c399523"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N38f35c1070134560a70d59eaee7e40d9">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/DatasetVersion"/>
+    <rdf:rest rdf:nodeID="N170116c4c98941d2b6193f2f3a556479"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5f659252db9a46878e6c66e9641898e5">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/ServiceLink"/>
+    <rdf:rest rdf:nodeID="N900a2bcf417c4ae588fd21f9a487a350"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7690ea54299a4fce8856cbf89b926abc">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/File"/>
+    <rdf:rest rdf:nodeID="Nb7284fe343d74a48a630eedb862dce30"/>
   </rdf:Description>
 </rdf:RDF>

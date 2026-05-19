@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/cameraPosition",
+    "@id": "https://openminds.om-i.org/props/anchorPoint",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -11,12 +11,157 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Camera position"
+        "@value": "Anchor point"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
+        "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/preferredDisplayColor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/ViewerSpecification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Preferred display color"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Ne10e80af8e2244ebb9d3c7da467fbbc6"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne10e80af8e2244ebb9d3c7da467fbbc6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Colormap"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SingleColor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/ViewerSpecification",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Viewer specification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N6ad1241a91c8481287c1d667e16a9752"
+      },
+      {
+        "@id": "_:Nf37155a7a3944d899c197adcc2c83037"
+      },
+      {
+        "@id": "_:N29b8a3f6fd7a4fe0b5ad01e4104e9ba0"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6ad1241a91c8481287c1d667e16a9752",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/anchorPoint"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf37155a7a3944d899c197adcc2c83037",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
         "@id": "https://openminds.om-i.org/types/CoordinatePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/cameraPosition"
+      }
+    ]
+  },
+  {
+    "@id": "_:N29b8a3f6fd7a4fe0b5ad01e4104e9ba0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N93e2b3d131494e76b46092e4a08e641b"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/preferredDisplayColor"
+      }
+    ]
+  },
+  {
+    "@id": "_:N93e2b3d131494e76b46092e4a08e641b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Colormap"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SingleColor"
+          }
+        ]
       }
     ]
   },
@@ -32,7 +177,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N36032e9172b841ed9713cd804c58eb79"
+        "@id": "_:N466a74719d6048aeb867d12a61971bd9"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -47,7 +192,7 @@
     ]
   },
   {
-    "@id": "_:N36032e9172b841ed9713cd804c58eb79",
+    "@id": "_:N466a74719d6048aeb867d12a61971bd9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -64,13 +209,22 @@
             "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
           },
           {
+            "@id": "https://openminds.om-i.org/types/GridImage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridImageStack"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolume"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/GridVolumeSequence"
+          },
+          {
             "@id": "https://openminds.om-i.org/types/Measurement"
           },
           {
             "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Recording"
           },
           {
             "@id": "https://openminds.om-i.org/types/SubjectGroup"
@@ -98,113 +252,7 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/types/ViewerSpecification",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Viewer specification"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nea57abac5b2c4d6f90e54b0134318b03"
-      },
-      {
-        "@id": "_:N63111232fc2d4c8fb0dba4ca7ce9f5e8"
-      },
-      {
-        "@id": "_:Nac34da0cbf8b4353996112d105ee75cb"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nea57abac5b2c4d6f90e54b0134318b03",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/anchorPoint"
-      }
-    ]
-  },
-  {
-    "@id": "_:N63111232fc2d4c8fb0dba4ca7ce9f5e8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/cameraPosition"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nac34da0cbf8b4353996112d105ee75cb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Nf5585d0413594648a8bcd8a10c29232b"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/preferredDisplayColor"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf5585d0413594648a8bcd8a10c29232b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Colormap"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SingleColor"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/preferredDisplayColor",
+    "@id": "https://openminds.om-i.org/props/cameraPosition",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -215,72 +263,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Preferred display color"
+        "@value": "Camera position"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N75b2dc5d592041959695b5c64d3d40bf"
-      }
-    ]
-  },
-  {
-    "@id": "_:N75b2dc5d592041959695b5c64d3d40bf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Colormap"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SingleColor"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/anchorPoint",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N1419083237ef4bf79836665013ec20ef"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Anchor point"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1419083237ef4bf79836665013ec20ef",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/AtlasAnnotation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CustomAnnotation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ViewerSpecification"
-          }
-        ]
+        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
       }
     ]
   }

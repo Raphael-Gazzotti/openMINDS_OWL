@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N2553e4a233a14a9d90f76a633e0e197e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/country"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/SovereignState"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Country</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Location"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/SovereignState"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Location">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Location</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N2553e4a233a14a9d90f76a633e0e197e"/>
+    <rdfs:subClassOf rdf:nodeID="N71d8662de5db458caade372f071e4182"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/geoCoordinates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Geo coordinates</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Location"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/GeoCoordinates"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N71d8662de5db458caade372f071e4182">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/geoCoordinates"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/GeoCoordinates"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>Address</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Location"/>
+  </rdf:Description>
+</rdf:RDF>

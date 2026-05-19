@@ -4,10 +4,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="Nce80d81b36564c029ccb29d8d9a3955b">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Hash">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Hash</rdfs:label>
+    <rdfs:comment>Structured information on a hash.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N3d6e70e903b34cefab666dc4edf38680"/>
+    <rdfs:subClassOf rdf:nodeID="N8e47142cc552430a9307c62a05c4cbdd"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/digest">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -23,16 +25,14 @@
     <rdfs:comment>Procedure for solving a mathematical problem in a finite number of steps. Can involve repetition of an operation.</rdfs:comment>
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/core/Hash"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/core/Hash">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Hash</rdfs:label>
-    <rdfs:comment>Structured information on a hash.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N770aa1b321dc4b018c08b110c739ced2"/>
-    <rdfs:subClassOf rdf:nodeID="Nce80d81b36564c029ccb29d8d9a3955b"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N770aa1b321dc4b018c08b110c739ced2">
+  <rdf:Description rdf:nodeID="N3d6e70e903b34cefab666dc4edf38680">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/algorithm"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8e47142cc552430a9307c62a05c4cbdd">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/digest"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
 </rdf:RDF>

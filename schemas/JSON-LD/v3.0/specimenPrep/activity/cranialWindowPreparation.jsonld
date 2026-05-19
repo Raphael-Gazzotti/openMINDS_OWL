@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://openminds.ebrains.eu/vocab/reinforcementType",
+    "@id": "https://openminds.ebrains.eu/vocab/constructionType",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -11,43 +11,38 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Reinforcement type"
+        "@value": "Construction type"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType"
+        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType"
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/output",
+    "@id": "https://openminds.ebrains.eu/vocab/startTime",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Something or someone that comes out of, is delivered or produced by a process or machine."
-      }
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N31d8763b2e614939b44612313915def6"
+        "@id": "_:N0b1a2b1406894e6a8f845f5c8c0f8470"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Output"
+        "@value": "Start time"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N7d584925ba844b7ebf239157e72dbdb4"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:N31d8763b2e614939b44612313915def6",
+    "@id": "_:N0b1a2b1406894e6a8f845f5c8c0f8470",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -91,12 +86,6 @@
             "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
           },
           {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
-          },
-          {
             "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
           }
         ]
@@ -104,67 +93,28 @@
     ]
   },
   {
-    "@id": "_:N7d584925ba844b7ebf239157e72dbdb4",
+    "@id": "https://openminds.ebrains.eu/vocab/endTime",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/File"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileArchive"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileBundle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/preparationDesign",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N1a7c9b1cbdf24909a6a621c144dd778e"
+        "@id": "_:N92425c98364c4e69a6693c3b76e49551"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Preparation design"
+        "@value": "End time"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:N1a7c9b1cbdf24909a6a621c144dd778e",
+    "@id": "_:N92425c98364c4e69a6693c3b76e49551",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -172,7 +122,25 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
@@ -197,33 +165,33 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/protocol",
+    "@id": "https://openminds.ebrains.eu/vocab/studyTarget",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Plan that describes the process of a scientific or medical experiment, treatment, or procedure."
+        "@value": "Structure or function that was targeted within a study."
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3a67ee938ff34745b176fc5018343f1a"
+        "@id": "_:Ne1f42fb6b1a24393bfbbe2ecea118519"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Protocol"
+        "@value": "Study target"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/core/Protocol"
+        "@id": "_:Nd5311f6299d1411bb1495fe592913f51"
       }
     ]
   },
   {
-    "@id": "_:N3a67ee938ff34745b176fc5018343f1a",
+    "@id": "_:Ne1f42fb6b1a24393bfbbe2ecea118519",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -231,7 +199,34 @@
       {
         "@list": [
           {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ValidationTest"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
             "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Model"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
@@ -256,328 +251,7 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Cranial window preparation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nc9970ec402cf4f48b305d9f093d29ec0"
-      },
-      {
-        "@id": "_:Naa36d9a9bbab405a9f48444fc03465a1"
-      },
-      {
-        "@id": "_:N52fc51082c40493187bbbdc72be4b87a"
-      },
-      {
-        "@id": "_:Nd12f56dbfc6d47bc813261486e0d980e"
-      },
-      {
-        "@id": "_:N6fa2e3d51a784ec381cfb1dfaa02903e"
-      },
-      {
-        "@id": "_:N433e7bf2cb354b0ca44695e83531750a"
-      },
-      {
-        "@id": "_:Ne951439ce83d431390809733ecb65a89"
-      },
-      {
-        "@id": "_:Nb69a2ea0b62e45b582724f99408fcddc"
-      },
-      {
-        "@id": "_:Nb38d0cf9f94f4bd49aab916b62b5d11f"
-      },
-      {
-        "@id": "_:N945dd0f53dcf4d27b1b29c4ea3347df2"
-      },
-      {
-        "@id": "_:N6b9c5e7ae5244a0db864571cfdef8483"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc9970ec402cf4f48b305d9f093d29ec0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/constructionType"
-      }
-    ]
-  },
-  {
-    "@id": "_:Naa36d9a9bbab405a9f48444fc03465a1",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/customPropertySet"
-      }
-    ]
-  },
-  {
-    "@id": "_:N52fc51082c40493187bbbdc72be4b87a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Nf73ad85d13464c969b10d17dcc7e402b"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/dimension"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf73ad85d13464c969b10d17dcc7e402b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/sands/Circle"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/Ellipse"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/Rectangle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd12f56dbfc6d47bc813261486e0d980e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/SubjectState"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/input"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6fa2e3d51a784ec381cfb1dfaa02903e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:N433e7bf2cb354b0ca44695e83531750a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/SubjectState"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/output"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne951439ce83d431390809733ecb65a89",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Ne11ed925b67c4bc58be8723566607f15"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/performedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne11ed925b67c4bc58be8723566607f15",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Person"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb69a2ea0b62e45b582724f99408fcddc",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/preparationDesign"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb38d0cf9f94f4bd49aab916b62b5d11f",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/core/Protocol"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/protocol"
-      }
-    ]
-  },
-  {
-    "@id": "_:N945dd0f53dcf4d27b1b29c4ea3347df2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/reinforcementType"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6b9c5e7ae5244a0db864571cfdef8483",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:Na3940ea5e40a4085a7602e8f128161cf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.ebrains.eu/vocab/studyTarget"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na3940ea5e40a4085a7602e8f128161cf",
+    "@id": "_:Nd5311f6299d1411bb1495fe592913f51",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -670,28 +344,33 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/customPropertySet",
+    "@id": "https://openminds.ebrains.eu/vocab/protocol",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Plan that describes the process of a scientific or medical experiment, treatment, or procedure."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nbbf89df269b242a98588ba2024bc683f"
+        "@id": "_:N2af6d67a86504cfeb9a1839e7e57ab83"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Custom property set"
+        "@value": "Protocol"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
+        "@id": "https://openminds.ebrains.eu/core/Protocol"
       }
     ]
   },
   {
-    "@id": "_:Nbbf89df269b242a98588ba2024bc683f",
+    "@id": "_:N2af6d67a86504cfeb9a1839e7e57ab83",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -699,25 +378,7 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
           },
           {
             "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
@@ -753,7 +414,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N1ed81728330843a695282205c632eeb8"
+        "@id": "_:N34051de8ae984346a16f81fa490756f3"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -763,12 +424,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nb872bb6fcf0b4be6886b30049aba0d44"
+        "@id": "_:Nbf156a7127734c4b98082dcb85032ace"
       }
     ]
   },
   {
-    "@id": "_:N1ed81728330843a695282205c632eeb8",
+    "@id": "_:N34051de8ae984346a16f81fa490756f3",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -825,7 +486,7 @@
     ]
   },
   {
-    "@id": "_:Nb872bb6fcf0b4be6886b30049aba0d44",
+    "@id": "_:Nbf156a7127734c4b98082dcb85032ace",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -876,6 +537,171 @@
     ]
   },
   {
+    "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N2aab56d2260f4060b3a2c2ef91714b49"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Lookup label"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2aab56d2260f4060b3a2c2ef91714b49",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Configuration"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileRepositoryStructure"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Subject"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSample"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/reinforcementType",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Reinforcement type"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType"
+      }
+    ]
+  },
+  {
     "@id": "https://openminds.ebrains.eu/vocab/isPartOf",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -887,7 +713,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N0051013ef6cf4da38d8da97fd0a58e29"
+        "@id": "_:N6e46de1d88024a5a9ce8a014b367f4a8"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -897,12 +723,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nccfb00f1b0c84bef9f8c284c415ccaf8"
+        "@id": "_:N6f19204c87324ec084ea00a26fe8fbcc"
       }
     ]
   },
   {
-    "@id": "_:N0051013ef6cf4da38d8da97fd0a58e29",
+    "@id": "_:N6e46de1d88024a5a9ce8a014b367f4a8",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -962,7 +788,7 @@
     ]
   },
   {
-    "@id": "_:Nccfb00f1b0c84bef9f8c284c415ccaf8",
+    "@id": "_:N6f19204c87324ec084ea00a26fe8fbcc",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1007,23 +833,124 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/constructionType",
+    "@id": "https://openminds.ebrains.eu/vocab/output",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Something or someone that comes out of, is delivered or produced by a process or machine."
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+        "@id": "_:N287fc3cc7f3b4f6cb1f5c2d9399c3449"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Construction type"
+        "@value": "Output"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType"
+        "@id": "_:Nc121eedf16a0454db48b4b9ac4e0c12b"
+      }
+    ]
+  },
+  {
+    "@id": "_:N287fc3cc7f3b4f6cb1f5c2d9399c3449",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueCulturePreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/TissueSampleSlicing"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc121eedf16a0454db48b4b9ac4e0c12b",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/LocalFile"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/File"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileArchive"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/FileBundle"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ModelVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/SubjectState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
+          }
+        ]
       }
     ]
   },
@@ -1039,7 +966,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc2c84f5ce5634da2807d5470f87a5c2c"
+        "@id": "_:N7fa06f2132ec4b24abdca9ce34e8c959"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1054,7 +981,7 @@
     ]
   },
   {
-    "@id": "_:Nc2c84f5ce5634da2807d5470f87a5c2c",
+    "@id": "_:N7fa06f2132ec4b24abdca9ce34e8c959",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1444,28 +1371,119 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/performedBy",
+    "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:Na7eee11e5a5b4234a7bc2326d9d48796"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Performed by"
+        "@value": "Cranial window preparation"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:N346219a00b0046448db40c65103af22e"
+        "@id": "_:N2dc971b1237641b98d6eed3378c55055"
+      },
+      {
+        "@id": "_:N93993dcc0f964e2b86b7181f52fff444"
+      },
+      {
+        "@id": "_:N9883021eac6243ab90ca65ac64b5229e"
+      },
+      {
+        "@id": "_:N9f2baa98f3544246ba09061aa85cbc3f"
+      },
+      {
+        "@id": "_:Na3d9eacad0d44b14bef3cdafb040a836"
+      },
+      {
+        "@id": "_:N627768df6d0544319a4bc12da356c26d"
+      },
+      {
+        "@id": "_:N428d6194104345088f9aa24d1a97db81"
+      },
+      {
+        "@id": "_:N3e5314b5be5341cda71bf670c2c3f44d"
+      },
+      {
+        "@id": "_:Nf8a8fd9d84e8494b8391aaada951e51e"
+      },
+      {
+        "@id": "_:N9745fc987c7f466cadfcf9a12f45a218"
+      },
+      {
+        "@id": "_:N09610a6cb1cd41dab5bb36091fae5b35"
       }
     ]
   },
   {
-    "@id": "_:Na7eee11e5a5b4234a7bc2326d9d48796",
+    "@id": "_:N2dc971b1237641b98d6eed3378c55055",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowConstructionType"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/constructionType"
+      }
+    ]
+  },
+  {
+    "@id": "_:N93993dcc0f964e2b86b7181f52fff444",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/customPropertySet"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9883021eac6243ab90ca65ac64b5229e",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N91348984871a4a54a9e155e7d9788202"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/dimension"
+      }
+    ]
+  },
+  {
+    "@id": "_:N91348984871a4a54a9e155e7d9788202",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1473,50 +1491,108 @@
       {
         "@list": [
           {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+            "@id": "https://openminds.ebrains.eu/sands/Circle"
           },
           {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+            "@id": "https://openminds.ebrains.eu/sands/Ellipse"
           },
           {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+            "@id": "https://openminds.ebrains.eu/sands/Rectangle"
           }
         ]
       }
     ]
   },
   {
-    "@id": "_:N346219a00b0046448db40c65103af22e",
+    "@id": "_:N9f2baa98f3544246ba09061aa85cbc3f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/SubjectState"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/input"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na3d9eacad0d44b14bef3cdafb040a836",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/isPartOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:N627768df6d0544319a4bc12da356c26d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/SubjectState"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/output"
+      }
+    ]
+  },
+  {
+    "@id": "_:N428d6194104345088f9aa24d1a97db81",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N6f28c2a9fe754323b5fecbe83a0be2b9"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/performedBy"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6f28c2a9fe754323b5fecbe83a0be2b9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1534,165 +1610,89 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/endTime",
+    "@id": "_:N3e5314b5be5341cda71bf670c2c3f44d",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "_:N4ff9ecf3d65e44fab314ac06ffa3f455"
+        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
       {
-        "@value": "End time"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
+        "@id": "https://openminds.ebrains.eu/vocab/preparationDesign"
       }
     ]
   },
   {
-    "@id": "_:N4ff9ecf3d65e44fab314ac06ffa3f455",
+    "@id": "_:Nf8a8fd9d84e8494b8391aaada951e51e",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
+        "@id": "https://openminds.ebrains.eu/core/Protocol"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/protocol"
       }
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/studyTarget",
+    "@id": "_:N9745fc987c7f466cadfcf9a12f45a218",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@value": "Structure or function that was targeted within a study."
+        "@id": "https://openminds.ebrains.eu/controlledTerms/CranialWindowReinforcementType"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
       {
-        "@id": "_:N31f44b23ebae44709681f7e2e8740875"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@value": "Study target"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N4ff04b857bf143048a5c4f8868b19ce4"
+        "@id": "https://openminds.ebrains.eu/vocab/reinforcementType"
       }
     ]
   },
   {
-    "@id": "_:N31f44b23ebae44709681f7e2e8740875",
+    "@id": "_:N09610a6cb1cd41dab5bb36091fae5b35",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ValidationTest"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Model"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
+        "@id": "_:N4f91e35e0a16452785eda8b3d417d569"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.ebrains.eu/vocab/studyTarget"
       }
     ]
   },
   {
-    "@id": "_:N4ff04b857bf143048a5c4f8868b19ce4",
+    "@id": "_:N4f91e35e0a16452785eda8b3d417d569",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1785,222 +1785,6 @@
     ]
   },
   {
-    "@id": "https://openminds.ebrains.eu/vocab/lookupLabel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N58b390ae84bb4b2eb75885c8413fc15b"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Lookup label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N58b390ae84bb4b2eb75885c8413fc15b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/chemicals/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Configuration"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ContentTypePattern"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/FileRepositoryStructure"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/PropertyValueList"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/Subject"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroup"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectGroupState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/SubjectState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSample"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollection"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleCollectionState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/TissueSampleState"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Electrode"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/Pipette"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/sands/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/EphysStimulus"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.ebrains.eu/vocab/startTime",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N00c77eeab974417e9c33bda5f3dab9d9"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Start time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "_:N00c77eeab974417e9c33bda5f3dab9d9",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Optimization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Simulation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/computation/Visualization"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
-          },
-          {
-            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.ebrains.eu/vocab/dimension",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -2017,12 +1801,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N2762c029b8ee4f2bbe0ad388d5ef8d51"
+        "@id": "_:Ndfddcd965480434ca00d2dde6ea2245e"
       }
     ]
   },
   {
-    "@id": "_:N2762c029b8ee4f2bbe0ad388d5ef8d51",
+    "@id": "_:Ndfddcd965480434ca00d2dde6ea2245e",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -2037,6 +1821,222 @@
           },
           {
             "@id": "https://openminds.ebrains.eu/sands/Rectangle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/performedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nd414b29f85c046ddaf9885cbff7b5833"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Performed by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N3a2af02ebc1d41e7bacf32e9d9a852c6"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd414b29f85c046ddaf9885cbff7b5833",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N3a2af02ebc1d41e7bacf32e9d9a852c6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/SoftwareAgent"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/Person"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/customPropertySet",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N4daed2a961664c2a904e63ab6876ebd6"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Custom property set"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/core/CustomPropertySet"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4daed2a961664c2a904e63ab6876ebd6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataAnalysis"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/DataCopy"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/GenericComputation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/ModelValidation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Optimization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Simulation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/computation/Visualization"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.ebrains.eu/vocab/preparationDesign",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:Nf70c37b023314c2a9f8701354e394288"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Preparation design"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.ebrains.eu/controlledTerms/PreparationType"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf70c37b023314c2a9f8701354e394288",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.ebrains.eu/core/DatasetVersion"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/core/ProtocolExecution"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/CellPatching"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/ephys/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/specimenPrep/CranialWindowPreparation"
+          },
+          {
+            "@id": "https://openminds.ebrains.eu/stimulation/StimulationActivity"
           }
         ]
       }

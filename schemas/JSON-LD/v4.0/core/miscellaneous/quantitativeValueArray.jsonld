@@ -1,22 +1,196 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/negativeUncertainties",
+    "@id": "https://openminds.om-i.org/props/unit",
     "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Determinate quantity adopted as a standard of measurement."
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
+        "@id": "_:Nb3e495ddfc9c4577b982ac6e722d65b5"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Negative uncertainties"
+        "@value": "Unit"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
+        "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb3e495ddfc9c4577b982ac6e722d65b5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Channel"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/QuantitativeValueArray",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A representation of an array of quantitative values, optionally with uncertainties."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quantitative value array"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N4ad9da56585a446b956e390843b537c0"
+      },
+      {
+        "@id": "_:Nd68b05bd0e904b7080407d7c5eab6bb7"
+      },
+      {
+        "@id": "_:Ncfcca05203b54f59afceb7782ee3af47"
+      },
+      {
+        "@id": "_:N6f07df3c75c243f3b82404d5572e8594"
+      },
+      {
+        "@id": "_:N9468493ba6014ced8343182eef96d0d5"
+      },
+      {
+        "@id": "_:Na51212f978d546d08b2a3533e01bda37"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4ad9da56585a446b956e390843b537c0",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/negativeUncertainties"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd68b05bd0e904b7080407d7c5eab6bb7",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/positiveUncertainties"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncfcca05203b54f59afceb7782ee3af47",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/typeOfUncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6f07df3c75c243f3b82404d5572e8594",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9468493ba6014ced8343182eef96d0d5",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/values"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na51212f978d546d08b2a3533e01bda37",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/values"
       }
     ]
   },
@@ -63,154 +237,6 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/types/QuantitativeValueArray",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A representation of an array of quantitative values, optionally with uncertainties."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Quantitative value array"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Nee5c72fe7a39466e8aa05e67dfbe52d2"
-      },
-      {
-        "@id": "_:Ndc7a1a0182b04360a3c2ee77ffdbd115"
-      },
-      {
-        "@id": "_:N54f786675b404838b9e38f9c111d4399"
-      },
-      {
-        "@id": "_:N1d8d28c1d67c4f21a72e8a17009af4ba"
-      },
-      {
-        "@id": "_:N1f04c5850c5b42b7b1f9d7366a2769a5"
-      },
-      {
-        "@id": "_:N6caa0dce0f2f4f12beb1835ef4388bf5"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nee5c72fe7a39466e8aa05e67dfbe52d2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/negativeUncertainties"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ndc7a1a0182b04360a3c2ee77ffdbd115",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/positiveUncertainties"
-      }
-    ]
-  },
-  {
-    "@id": "_:N54f786675b404838b9e38f9c111d4399",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/TypeOfUncertainty"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/typeOfUncertainty"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1d8d28c1d67c4f21a72e8a17009af4ba",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/unit"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1f04c5850c5b42b7b1f9d7366a2769a5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/values"
-      }
-    ]
-  },
-  {
-    "@id": "_:N6caa0dce0f2f4f12beb1835ef4388bf5",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/values"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/typeOfUncertainty",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -222,7 +248,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N93e80cecab7d44bb803abd9a0e354a05"
+        "@id": "_:N27a25236ff5e4e3d9aa90ec223fb2aae"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -237,7 +263,7 @@
     ]
   },
   {
-    "@id": "_:N93e80cecab7d44bb803abd9a0e354a05",
+    "@id": "_:N27a25236ff5e4e3d9aa90ec223fb2aae",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -255,49 +281,23 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/unit",
+    "@id": "https://openminds.om-i.org/props/negativeUncertainties",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Determinate quantity adopted as a standard of measurement."
-      }
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nd2b51a0dab9b4f9bbddd3b4be3423f2d"
+        "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Unit"
+        "@value": "Negative uncertainties"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "https://openminds.om-i.org/types/UnitOfMeasurement"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd2b51a0dab9b4f9bbddd3b4be3423f2d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Channel"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueArray"
-          }
-        ]
+        "@id": "http://www.w3.org/1999/02/22-rdf-syntax-ns#List"
       }
     ]
   }

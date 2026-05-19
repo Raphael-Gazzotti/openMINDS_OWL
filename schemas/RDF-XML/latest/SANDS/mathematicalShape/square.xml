@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Square">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Square</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N59c3176810bf4c869b55b297093da225"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N28eb78a5bd574fd7b7a49cf27e2ab92c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Cube"/>
+    <rdf:rest rdf:nodeID="N1b6441fedb934707ad9eccd34cbc916a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N59c3176810bf4c869b55b297093da225">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/sideLength"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/sideLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Side length</rdfs:label>
+    <rdfs:domain rdf:nodeID="N74fc92fe7a8d45b9915cddb6e8fb57f3"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N74fc92fe7a8d45b9915cddb6e8fb57f3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N28eb78a5bd574fd7b7a49cf27e2ab92c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1b6441fedb934707ad9eccd34cbc916a">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/EquilateralTriangle"/>
+    <rdf:rest rdf:nodeID="Nfef4b948b2fe4d6db5cf5ecbb0164a8d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfef4b948b2fe4d6db5cf5ecbb0164a8d">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Square"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

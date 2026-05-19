@@ -1,0 +1,44 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/criteria> a owl:ObjectProperty ;
+    rdfs:label "Criteria" ;
+    rdfs:comment "Aspects or standards on which a judgement or decision is based." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/AtlasAnnotation> <https://openminds.om-i.org/types/CustomAnnotation> <https://openminds.om-i.org/types/QualitativeRelationAssessment> <https://openminds.om-i.org/types/QuantitativeRelationAssessment> ) ] ;
+    rdfs:range <https://openminds.om-i.org/types/ProtocolExecution> .
+
+<https://openminds.om-i.org/props/inRelationTo> a owl:ObjectProperty ;
+    rdfs:label "In relation to" ;
+    rdfs:comment "Reference to a related element." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QualitativeRelationAssessment> <https://openminds.om-i.org/types/QuantitativeRelationAssessment> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/CustomAnatomicalEntity> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] .
+
+<https://openminds.om-i.org/props/qualitativeOverlap> a owl:ObjectProperty ;
+    rdfs:label "Qualitative overlap" ;
+    rdfs:comment "Semantic characterization of how much two things occupy the same space." ;
+    rdfs:domain <https://openminds.om-i.org/types/QualitativeRelationAssessment> ;
+    rdfs:range <https://openminds.om-i.org/types/QualitativeOverlap> .
+
+<https://openminds.om-i.org/types/QualitativeRelationAssessment> a owl:Class ;
+    rdfs:label "Qualitative relation assessment" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/CustomAnatomicalEntity> <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/inRelationTo> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/ProtocolExecution> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/criteria> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QualitativeOverlap> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/qualitativeOverlap> ] .
+

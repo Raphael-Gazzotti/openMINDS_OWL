@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="Na557c269715c4960bff03cfefe2600bc">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/baseLengths"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/baseDistance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Base distance</rdfs:label>
+    <rdfs:domain rdf:nodeID="N25dccb71ecca4e838ba35767cfd6d20e"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/baseLengths">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Base lengths</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/Trapezoid"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N67010ba543984ec78462852007632d5f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/baseDistance"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Trapezoid">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Trapezoid</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N67010ba543984ec78462852007632d5f"/>
+    <rdfs:subClassOf rdf:nodeID="Na557c269715c4960bff03cfefe2600bc"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne340cf228acf4d6ca9d677010c8d5870">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/RightCylinder"/>
+    <rdf:rest rdf:nodeID="Nd4476335638b40f5a7b2db1c8f1eb8d4"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25dccb71ecca4e838ba35767cfd6d20e">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N39c3870e85a6443aad303d9b92fa30c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N39c3870e85a6443aad303d9b92fa30c6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Frustum"/>
+    <rdf:rest rdf:nodeID="N122e1ae9e1f8400186e5e845764097e7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N122e1ae9e1f8400186e5e845764097e7">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Parallelogram"/>
+    <rdf:rest rdf:nodeID="Ne340cf228acf4d6ca9d677010c8d5870"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd4476335638b40f5a7b2db1c8f1eb8d4">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/RightPrism"/>
+    <rdf:rest rdf:nodeID="N378ce67cd1314d4c80cfef7878c1bfc6"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N378ce67cd1314d4c80cfef7878c1bfc6">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Trapezoid"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

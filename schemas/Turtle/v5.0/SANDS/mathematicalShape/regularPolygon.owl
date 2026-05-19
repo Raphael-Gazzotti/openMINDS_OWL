@@ -1,0 +1,20 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/numberOfSides> rdfs:label "Number of sides" ;
+    rdfs:domain <https://openminds.om-i.org/types/RegularPolygon> .
+
+<https://openminds.om-i.org/props/circumradius> a owl:ObjectProperty ;
+    rdfs:label "Circumradius" ;
+    rdfs:domain <https://openminds.om-i.org/types/RegularPolygon> ;
+    rdfs:range <https://openminds.om-i.org/types/QuantitativeValue> .
+
+<https://openminds.om-i.org/types/RegularPolygon> a owl:Class ;
+    rdfs:label "Regular polygon" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/circumradius> ] .
+

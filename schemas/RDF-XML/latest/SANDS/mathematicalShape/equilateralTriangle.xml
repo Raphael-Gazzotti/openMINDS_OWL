@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/EquilateralTriangle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Equilateral triangle</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="Nf764f0d3588e4e4f98a7f1178ccce39a"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/sideLength">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Side length</rdfs:label>
+    <rdfs:domain rdf:nodeID="Ne87d1e7228524560843382340c3b76e5"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N664a435033864562809ae2c427f93982">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Square"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na3d151e19116451f94bf2f164b5a794f">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/EquilateralTriangle"/>
+    <rdf:rest rdf:nodeID="N664a435033864562809ae2c427f93982"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf764f0d3588e4e4f98a7f1178ccce39a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/sideLength"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nba66b3bfd01b432399f37c69eae64aa9">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Cube"/>
+    <rdf:rest rdf:nodeID="Na3d151e19116451f94bf2f164b5a794f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne87d1e7228524560843382340c3b76e5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nba66b3bfd01b432399f37c69eae64aa9"/>
+  </rdf:Description>
+</rdf:RDF>

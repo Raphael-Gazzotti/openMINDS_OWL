@@ -4,13 +4,72 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N54f786675b404838b9e38f9c111d4399">
+  <rdf:Description rdf:nodeID="Nb3e495ddfc9c4577b982ac6e722d65b5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N2dcb4c99d4b2455c889edc16894047b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2b10e55367744b9aa9946678248a27ff">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nbd36b2877e6e4ac4a6f70aad38e773e8">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <rdf:rest rdf:nodeID="N76f1731aa9494320ad665b8e6ed3bc81"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/typeOfUncertainty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Type of uncertainty</rdfs:label>
+    <rdfs:comment>Distinct technique used to quantify the uncertainty of a measurement.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="N27a25236ff5e4e3d9aa90ec223fb2aae"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/TypeOfUncertainty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6f07df3c75c243f3b82404d5572e8594">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/unit"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2dcb4c99d4b2455c889edc16894047b0">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Channel"/>
+    <rdf:rest rdf:nodeID="Nbd36b2877e6e4ac4a6f70aad38e773e8"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/QuantitativeValueArray">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Quantitative value array</rdfs:label>
+    <rdfs:comment>A representation of an array of quantitative values, optionally with uncertainties.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N4ad9da56585a446b956e390843b537c0"/>
+    <rdfs:subClassOf rdf:nodeID="Nd68b05bd0e904b7080407d7c5eab6bb7"/>
+    <rdfs:subClassOf rdf:nodeID="Ncfcca05203b54f59afceb7782ee3af47"/>
+    <rdfs:subClassOf rdf:nodeID="N6f07df3c75c243f3b82404d5572e8594"/>
+    <rdfs:subClassOf rdf:nodeID="N9468493ba6014ced8343182eef96d0d5"/>
+    <rdfs:subClassOf rdf:nodeID="Na51212f978d546d08b2a3533e01bda37"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ncfcca05203b54f59afceb7782ee3af47">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/typeOfUncertainty"/>
     <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/TypeOfUncertainty"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1f04c5850c5b42b7b1f9d7366a2769a5">
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/values">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdfs:label>Values</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7294acc568b2439c847620791123babe">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <rdf:rest rdf:nodeID="N2b10e55367744b9aa9946678248a27ff"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N4ad9da56585a446b956e390843b537c0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/negativeUncertainties"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N27a25236ff5e4e3d9aa90ec223fb2aae">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N7294acc568b2439c847620791123babe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9468493ba6014ced8343182eef96d0d5">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/values"/>
     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
@@ -21,90 +80,31 @@
     <rdfs:label>Negative uncertainties</rdfs:label>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N1d8d28c1d67c4f21a72e8a17009af4ba">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/unit"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/values">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-    <rdfs:label>Values</rdfs:label>
-    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/typeOfUncertainty">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Type of uncertainty</rdfs:label>
-    <rdfs:comment>Distinct technique used to quantify the uncertainty of a measurement.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N93e80cecab7d44bb803abd9a0e354a05"/>
-    <rdfs:range rdf:resource="https://openminds.om-i.org/types/TypeOfUncertainty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/props/unit">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Unit</rdfs:label>
-    <rdfs:comment>Determinate quantity adopted as a standard of measurement.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="Nd2b51a0dab9b4f9bbddd3b4be3423f2d"/>
-    <rdfs:range rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nf537a4cedba64438a07b3174d7937c98">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.om-i.org/types/QuantitativeValueArray">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Quantitative value array</rdfs:label>
-    <rdfs:comment>A representation of an array of quantitative values, optionally with uncertainties.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="Nee5c72fe7a39466e8aa05e67dfbe52d2"/>
-    <rdfs:subClassOf rdf:nodeID="Ndc7a1a0182b04360a3c2ee77ffdbd115"/>
-    <rdfs:subClassOf rdf:nodeID="N54f786675b404838b9e38f9c111d4399"/>
-    <rdfs:subClassOf rdf:nodeID="N1d8d28c1d67c4f21a72e8a17009af4ba"/>
-    <rdfs:subClassOf rdf:nodeID="N1f04c5850c5b42b7b1f9d7366a2769a5"/>
-    <rdfs:subClassOf rdf:nodeID="N6caa0dce0f2f4f12beb1835ef4388bf5"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Ndc7a1a0182b04360a3c2ee77ffdbd115">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/positiveUncertainties"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N93e80cecab7d44bb803abd9a0e354a05">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nadb6948c13774265963df790a4a5e29e"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://openminds.om-i.org/props/positiveUncertainties">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
     <rdfs:label>Positive uncertainties</rdfs:label>
     <rdfs:domain rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N0568d3800fb34b98b3649861892c2194">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Unit</rdfs:label>
+    <rdfs:comment>Determinate quantity adopted as a standard of measurement.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Nb3e495ddfc9c4577b982ac6e722d65b5"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/UnitOfMeasurement"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N6caa0dce0f2f4f12beb1835ef4388bf5">
+  <rdf:Description rdf:nodeID="Nd68b05bd0e904b7080407d7c5eab6bb7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/positiveUncertainties"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na51212f978d546d08b2a3533e01bda37">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.om-i.org/props/values"/>
     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd3a31ccbab7a41a9b55aa959db74aaae">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
-    <rdf:rest rdf:nodeID="N0568d3800fb34b98b3649861892c2194"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd2b51a0dab9b4f9bbddd3b4be3423f2d">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N32fc4308e88342f9a73fb1158328c45f"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nee5c72fe7a39466e8aa05e67dfbe52d2">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/negativeUncertainties"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N32fc4308e88342f9a73fb1158328c45f">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/Channel"/>
-    <rdf:rest rdf:nodeID="Nd3a31ccbab7a41a9b55aa959db74aaae"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nadb6948c13774265963df790a4a5e29e">
-    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
-    <rdf:rest rdf:nodeID="Nf537a4cedba64438a07b3174d7937c98"/>
+  <rdf:Description rdf:nodeID="N76f1731aa9494320ad665b8e6ed3bc81">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValueArray"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
 </rdf:RDF>

@@ -4,11 +4,86 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N43b0759ad39b436a91ac0cacc3e2a721">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nc00ebafb780d40eab1632d3eb20fe8da"/>
+  <rdf:Description rdf:nodeID="N6b0ca97bbd534fd88e74ad730ac624cb">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N66748730a9564e929492e5a3b616d1c5">
+  <rdf:Description rdf:nodeID="N399d5b3b3fb348399ba94e38dff8de15">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
+    <rdf:rest rdf:nodeID="N6b0ca97bbd534fd88e74ad730ac624cb"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N46e5fc10f5b64714b5169c915ae54b5f">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/criteriaQualityType"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N237e1d67ea99496e870631ac52fcb997">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Anatomical entity relation</rdfs:label>
+    <rdfs:comment>Structured information on the relation between one anatomical entity and another.</rdfs:comment>
+    <rdfs:subClassOf rdf:nodeID="N627c73465d4c49dbbf74b79ce7433a63"/>
+    <rdfs:subClassOf rdf:nodeID="N46e5fc10f5b64714b5169c915ae54b5f"/>
+    <rdfs:subClassOf rdf:nodeID="Nfa5e036979c74a8f9d5df994755aa83b"/>
+    <rdfs:subClassOf rdf:nodeID="Nf360a9f9a3f444bebf6bb5016f8d77c0"/>
+    <rdfs:subClassOf rdf:nodeID="N559db5a40e3a414babe47befc0ac138d"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/quantitativeOverlap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Quantitative overlap</rdfs:label>
+    <rdfs:comment>Numerical characterization of how much two things occupy the same space.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
+    <rdfs:range rdf:nodeID="N84aaca73a44d4bc59c4064384718598a"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nf360a9f9a3f444bebf6bb5016f8d77c0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/qualitativeOverlap"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N9a353ca2864644c8bb42037cf4d5f39b">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb08f272a9cbb46d49b3b0311d72dddde">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/qualitativeOverlap">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Qualitative overlap</rdfs:label>
+    <rdfs:comment>Semantic characterization of how much two things occupy the same space.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N627c73465d4c49dbbf74b79ce7433a63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/criteria"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/criteriaQualityType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Criteria quality type</rdfs:label>
+    <rdfs:comment>Distinct class that defines how the judgement or decision was made for a particular criteria.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Na34cc0b0f2554b73932f56dc2a5fba4d"/>
+    <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N84aaca73a44d4bc59c4064384718598a">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N399d5b3b3fb348399ba94e38dff8de15"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N68819cc033d54f589283c4da1257b5c6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N998fc4d49ce847bf8636b26de23812de"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfa5e036979c74a8f9d5df994755aa83b">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/inRelationTo"/>
     <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntity"/>
@@ -22,112 +97,37 @@
     <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntity"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N5cefdf6a22ed4b17a275477a8ea51d00">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/quantitativeOverlap"/>
-    <owl:allValuesFrom rdf:nodeID="N689c31f84f374c8cb82e21386cca58fa"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd1f46cd812db4623beb062d6e1e960f1">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-    <rdf:rest rdf:nodeID="N9a369745d2f54070a501d3570e798370"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N40c061bdd0d4442ca5a05e77bbb03c77">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nd1f46cd812db4623beb062d6e1e960f1"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N427088c3c8824c6dbd349ca28557204f">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="N0916bc4811fb461aaa90a9e313f2d336"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N0916bc4811fb461aaa90a9e313f2d336">
+  <rdf:Description rdf:nodeID="N1e4c9bbc9c824f778a92c8bd89a59c7f">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
-    <rdf:rest rdf:nodeID="N9719986e1ec0470eaa46252fbb6d1b01"/>
+    <rdf:rest rdf:nodeID="N237e1d67ea99496e870631ac52fcb997"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/qualitativeOverlap">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Qualitative overlap</rdfs:label>
-    <rdfs:comment>Semantic characterization of how much two things occupy the same space.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation">
+  <rdf:Description rdf:nodeID="Nc2bbc1ff1aa74387bbd417ce75e54fb9">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>Anatomical entity relation</rdfs:label>
-    <rdfs:comment>Structured information on the relation between one anatomical entity and another.</rdfs:comment>
-    <rdfs:subClassOf rdf:nodeID="N023510d8e7f046428e8ed919880b0b09"/>
-    <rdfs:subClassOf rdf:nodeID="N2cdd14d61aa84ef9b96d6ec1cbb50d08"/>
-    <rdfs:subClassOf rdf:nodeID="N66748730a9564e929492e5a3b616d1c5"/>
-    <rdfs:subClassOf rdf:nodeID="N41322f5ff1ab4d438733880ac4d008a6"/>
-    <rdfs:subClassOf rdf:nodeID="N5cefdf6a22ed4b17a275477a8ea51d00"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2cdd14d61aa84ef9b96d6ec1cbb50d08">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/criteriaQualityType"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N41322f5ff1ab4d438733880ac4d008a6">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/qualitativeOverlap"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/controlledTerms/QualitativeOverlap"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd51148cb915a418b8f532cc36a76251c">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/criteriaQualityType">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Criteria quality type</rdfs:label>
-    <rdfs:comment>Distinct class that defines how the judgement or decision was made for a particular criteria.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N427088c3c8824c6dbd349ca28557204f"/>
-    <rdfs:range rdf:resource="https://openminds.ebrains.eu/controlledTerms/CriteriaQualityType"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N023510d8e7f046428e8ed919880b0b09">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/criteria"/>
-    <owl:allValuesFrom rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
-    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:unionOf rdf:nodeID="N63bb20a0ffca4c04a1f33981baccd696"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/criteria">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label>Criteria</rdfs:label>
     <rdfs:comment>Aspects or standards on which a judgement or decision is based.</rdfs:comment>
-    <rdfs:domain rdf:nodeID="N43b0759ad39b436a91ac0cacc3e2a721"/>
+    <rdfs:domain rdf:nodeID="Nc2bbc1ff1aa74387bbd417ce75e54fb9"/>
     <rdfs:range rdf:resource="https://openminds.ebrains.eu/core/ProtocolExecution"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N9a369745d2f54070a501d3570e798370">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  <rdf:Description rdf:nodeID="N559db5a40e3a414babe47befc0ac138d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.ebrains.eu/vocab/quantitativeOverlap"/>
+    <owl:allValuesFrom rdf:nodeID="N68819cc033d54f589283c4da1257b5c6"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N689c31f84f374c8cb82e21386cca58fa">
+  <rdf:Description rdf:nodeID="Na34cc0b0f2554b73932f56dc2a5fba4d">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:unionOf rdf:nodeID="Nd4632ac88cda4751b940d08ce82d8b27"/>
+    <owl:unionOf rdf:nodeID="N1e4c9bbc9c824f778a92c8bd89a59c7f"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Nc00ebafb780d40eab1632d3eb20fe8da">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
-    <rdf:rest rdf:nodeID="Nd51148cb915a418b8f532cc36a76251c"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="Nd4632ac88cda4751b940d08ce82d8b27">
+  <rdf:Description rdf:nodeID="N998fc4d49ce847bf8636b26de23812de">
     <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValue"/>
-    <rdf:rest rdf:nodeID="Na0f5053e6e6845f8a16f7647cac420e0"/>
+    <rdf:rest rdf:nodeID="Nb08f272a9cbb46d49b3b0311d72dddde"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Na0f5053e6e6845f8a16f7647cac420e0">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/core/QuantitativeValueRange"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N9719986e1ec0470eaa46252fbb6d1b01">
-    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/Annotation"/>
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://openminds.ebrains.eu/vocab/quantitativeOverlap">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>Quantitative overlap</rdfs:label>
-    <rdfs:comment>Numerical characterization of how much two things occupy the same space.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
-    <rdfs:range rdf:nodeID="N40c061bdd0d4442ca5a05e77bbb03c77"/>
+  <rdf:Description rdf:nodeID="N63bb20a0ffca4c04a1f33981baccd696">
+    <rdf:first rdf:resource="https://openminds.ebrains.eu/sands/AnatomicalEntityRelation"/>
+    <rdf:rest rdf:nodeID="N9a353ca2864644c8bb42037cf4d5f39b"/>
   </rdf:Description>
 </rdf:RDF>

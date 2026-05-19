@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="N28c9c8625b734186bdd67d0e003dedfe">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Circle"/>
+    <rdf:rest rdf:nodeID="N6e8aaed3bccd476aa9097b5679e26492"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc017da0b040b452f8cac0385d3a3a315">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N28c9c8625b734186bdd67d0e003dedfe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7c04617b3cbc41129cd863c65c2a272b">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/radius"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/radius">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Radius</rdfs:label>
+    <rdfs:domain rdf:nodeID="Nc017da0b040b452f8cac0385d3a3a315"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N25c2f62f45ae42a88fa39d3bc019d0de">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/Sphere"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/Circle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Circle</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N7c04617b3cbc41129cd863c65c2a272b"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6e8aaed3bccd476aa9097b5679e26492">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/CircularSector"/>
+    <rdf:rest rdf:nodeID="N25c2f62f45ae42a88fa39d3bc019d0de"/>
+  </rdf:Description>
+</rdf:RDF>

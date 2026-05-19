@@ -1,6 +1,6 @@
 [
   {
-    "@id": "https://openminds.om-i.org/props/sealResistance",
+    "@id": "https://openminds.om-i.org/props/compensationCurrent",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -11,7 +11,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Seal resistance"
+        "@value": "Compensation current"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
@@ -21,7 +21,7 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/pipetteSolution",
+    "@id": "https://openminds.om-i.org/props/chlorideReversalPotential",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -32,12 +32,911 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Pipette solution"
+        "@value": "Chloride reversal potential"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/endMembranePotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "End membrane potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/holdingPotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Holding potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/inputResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Input resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/types/PipetteUsage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pipette usage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:N8bd5f389462b4648bcb2a5eaf81c2eb3"
+      },
+      {
+        "@id": "_:N1c7a4937409546b6a0610b9fab6e4088"
+      },
+      {
+        "@id": "_:N5ca516b66704432cbd6a9b29f00fd2ed"
+      },
+      {
+        "@id": "_:Nf37f5b9db3304319839577a2de77b021"
+      },
+      {
+        "@id": "_:Ndacf905639eb42f98857424bc57fb3c8"
+      },
+      {
+        "@id": "_:Naf2cc02e44364818972e1c629d190b0c"
+      },
+      {
+        "@id": "_:N7a09fdbca0b0434d988338c32067e191"
+      },
+      {
+        "@id": "_:N8a36c23956f54f7f9230920979508d55"
+      },
+      {
+        "@id": "_:N68331c1b53c041f6899cd655ec32ff36"
+      },
+      {
+        "@id": "_:N24ec38f6a5a149b0a89aa3fa69f0178d"
+      },
+      {
+        "@id": "_:Nd9d393f909714bf88f35e0be63dd7709"
+      },
+      {
+        "@id": "_:Nf3c8d33d01ed40849666a5aeba880deb"
+      },
+      {
+        "@id": "_:Nd0ab51a977ea4963a32aab6dfb705ada"
+      },
+      {
+        "@id": "_:N49252fa42f794aa6b72711b556041c7d"
+      },
+      {
+        "@id": "_:N21b4524655d540f38cbcd4e3ee457f24"
+      },
+      {
+        "@id": "_:Nde06f1b13f3d40e098f3326ba0c15047"
+      },
+      {
+        "@id": "_:N77556cc674bd4a34bfb6b8411ebaa321"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8bd5f389462b4648bcb2a5eaf81c2eb3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Na6968b74551143319c910e4863353f1f"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/anatomicalLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na6968b74551143319c910e4863353f1f",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/CellType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organ"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OrganismSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N1c7a4937409546b6a0610b9fab6e4088",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/chlorideReversalPotential"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5ca516b66704432cbd6a9b29f00fd2ed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/compensationCurrent"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf37f5b9db3304319839577a2de77b021",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Pipette"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/device"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndacf905639eb42f98857424bc57fb3c8",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/endMembranePotential"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naf2cc02e44364818972e1c629d190b0c",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/holdingPotential"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7a09fdbca0b0434d988338c32067e191",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/inputResistance"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8a36c23956f54f7f9230920979508d55",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N737ef2ca78614df6af4018e4e4e01b11"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/labelingCompound"
+      }
+    ]
+  },
+  {
+    "@id": "_:N737ef2ca78614df6af4018e4e4e01b11",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/ChemicalMixture"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/MolecularEntity"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N68331c1b53c041f6899cd655ec32ff36",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/liquidJunctionPotential"
+      }
+    ]
+  },
+  {
+    "@id": "_:N24ec38f6a5a149b0a89aa3fa69f0178d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N3241d1fc67b14f7597405519966073e4"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/metadataLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3241d1fc67b14f7597405519966073e4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/File"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/FileBundle"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd9d393f909714bf88f35e0be63dd7709",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:N8faddb25022b4e7598f8bfa8b5e5d009"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/pipetteResistance"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8faddb25022b4e7598f8bfa8b5e5d009",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf3c8d33d01ed40849666a5aeba880deb",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
         "@id": "https://openminds.om-i.org/types/ChemicalMixture"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/pipetteSolution"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd0ab51a977ea4963a32aab6dfb705ada",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/sealResistance"
+      }
+    ]
+  },
+  {
+    "@id": "_:N49252fa42f794aa6b72711b556041c7d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/seriesResistance"
+      }
+    ]
+  },
+  {
+    "@id": "_:N21b4524655d540f38cbcd4e3ee457f24",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/spatialLocation"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nde06f1b13f3d40e098f3326ba0c15047",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/startMembranePotential"
+      }
+    ]
+  },
+  {
+    "@id": "_:N77556cc674bd4a34bfb6b8411ebaa321",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "_:Ndb3b80d1028b401ba60f7ac0829ea3f3"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "https://openminds.om-i.org/props/usedSpecimen"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndb3b80d1028b401ba60f7ac0829ea3f3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/SubjectState"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleState"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/startMembranePotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Start membrane potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/device",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N3cb340a1d7ef4048adfc74b92c08ec4d"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Device"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:Nd63a30c6da5a4909870405615ecb5890"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3cb340a1d7ef4048adfc74b92c08ec4d",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/CellPatching"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodePlacement"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/RecordingActivity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleSlicing"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd63a30c6da5a4909870405615ecb5890",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/Electrode"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeArrayUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OperatingDevice"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Pipette"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SlicingDevice"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/liquidJunctionPotential",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Liquid junction potential"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/anatomicalLocation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:N90a8fefa46cb46fbb0651270f16c2115"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Anatomical location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N77225f0754e642cb845893691cef0f41"
+      }
+    ]
+  },
+  {
+    "@id": "_:N90a8fefa46cb46fbb0651270f16c2115",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/ElectrodeUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/PipetteUsage"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSample"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:N77225f0754e642cb845893691cef0f41",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/CellType"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/Organ"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/OrganismSubstance"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/SubcellularEntity"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/pipetteResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Pipette resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "_:N1d4d73e60bf74a2ca6e6f027f884f8d6"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1d4d73e60bf74a2ca6e6f027f884f8d6",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
+          },
+          {
+            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/seriesResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Series resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
       }
     ]
   },
@@ -48,7 +947,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N1af922211b864607a3152f4827943e2d"
+        "@id": "_:Nc3f7cdb17c854649a8a093ff55dbd751"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -63,7 +962,7 @@
     ]
   },
   {
-    "@id": "_:N1af922211b864607a3152f4827943e2d",
+    "@id": "_:Nc3f7cdb17c854649a8a093ff55dbd751",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -192,115 +1091,13 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/anatomicalLocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N8372e3623df647238613fc8c8f875e59"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Anatomical location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:N08cb2e75a7104f03b40de4c1b097d826"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8372e3623df647238613fc8c8f875e59",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSample"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleCollection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N08cb2e75a7104f03b40de4c1b097d826",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/CellType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organ"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/OrganismSubstance"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubcellularEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/startMembranePotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Start membrane potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/metadataLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nc49ef4cd0b834f7c97b9ee53cdd56d13"
+        "@id": "_:N178dab87cbdb4bb993dc8b66aa9b3db0"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -310,12 +1107,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nf2cf99307e9a4263a860dd4db1acdb58"
+        "@id": "_:Nf2c6b836fa1242aaaf931c7eee977920"
       }
     ]
   },
   {
-    "@id": "_:Nc49ef4cd0b834f7c97b9ee53cdd56d13",
+    "@id": "_:N178dab87cbdb4bb993dc8b66aa9b3db0",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -339,7 +1136,7 @@
     ]
   },
   {
-    "@id": "_:Nf2cf99307e9a4263a860dd4db1acdb58",
+    "@id": "_:Nf2c6b836fa1242aaaf931c7eee977920",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -353,6 +1150,27 @@
             "@id": "https://openminds.om-i.org/types/FileBundle"
           }
         ]
+      }
+    ]
+  },
+  {
+    "@id": "https://openminds.om-i.org/props/sealResistance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://openminds.om-i.org/types/PipetteUsage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Seal resistance"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://openminds.om-i.org/types/Measurement"
       }
     ]
   },
@@ -373,12 +1191,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:N7d2529bba046497097633466882d33eb"
+        "@id": "_:N38107cdaf9ea438ba931ecee0f386b38"
       }
     ]
   },
   {
-    "@id": "_:N7d2529bba046497097633466882d33eb",
+    "@id": "_:N38107cdaf9ea438ba931ecee0f386b38",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -395,639 +1213,6 @@
             "@id": "https://openminds.om-i.org/types/MolecularEntity"
           }
         ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/seriesResistance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Series resistance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/types/PipetteUsage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Pipette usage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:Ncc95d8c550c1429f9036b286ef3929a8"
-      },
-      {
-        "@id": "_:Nb5b17e7370194ede8c02f4ad9354ef07"
-      },
-      {
-        "@id": "_:Na41fc87d27e5447fbc4a59b14adfab9b"
-      },
-      {
-        "@id": "_:Ne132b533477e421c9d17c7932be35a1a"
-      },
-      {
-        "@id": "_:N8f5696d1b4224ddf9244a1561ca9b71b"
-      },
-      {
-        "@id": "_:N2ac16cf6d6bd4821a6de6ac199b9cd4c"
-      },
-      {
-        "@id": "_:N688446ece430413483a881b1bd3fc7c6"
-      },
-      {
-        "@id": "_:N06116d1ca0364026950ec4e4abf5471e"
-      },
-      {
-        "@id": "_:N6eaf9d34b4694e6aa14cc64bdd080780"
-      },
-      {
-        "@id": "_:Nac95479a1213471ea2d6d0957828d50b"
-      },
-      {
-        "@id": "_:Ne5554cd826214f7480a7287462a52ec2"
-      },
-      {
-        "@id": "_:Nc1a59f9165304c34bb653c571a632723"
-      },
-      {
-        "@id": "_:Naa63136d90df43669ed20a4ee24c55b3"
-      },
-      {
-        "@id": "_:Nd9f0592e242644f6bb47cdf6f127f655"
-      },
-      {
-        "@id": "_:N8e5e888c8706443ca5d8a07fc62e818d"
-      },
-      {
-        "@id": "_:N2688bee3eef441a1bdb76cf02a4b5c02"
-      },
-      {
-        "@id": "_:Nc9d686c2a40447158828cc11c231bf6b"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ncc95d8c550c1429f9036b286ef3929a8",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N01dbc1084f9241f99646b6973f4c0521"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/anatomicalLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N01dbc1084f9241f99646b6973f4c0521",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/CellType"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Organ"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/OrganismSubstance"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SubcellularEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/UBERONParcellation"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/CustomAnatomicalEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ParcellationEntityVersion"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb5b17e7370194ede8c02f4ad9354ef07",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/chlorideReversalPotential"
-      }
-    ]
-  },
-  {
-    "@id": "_:Na41fc87d27e5447fbc4a59b14adfab9b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/compensationCurrent"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne132b533477e421c9d17c7932be35a1a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Pipette"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/device"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8f5696d1b4224ddf9244a1561ca9b71b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/endMembranePotential"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2ac16cf6d6bd4821a6de6ac199b9cd4c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/holdingPotential"
-      }
-    ]
-  },
-  {
-    "@id": "_:N688446ece430413483a881b1bd3fc7c6",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/inputResistance"
-      }
-    ]
-  },
-  {
-    "@id": "_:N06116d1ca0364026950ec4e4abf5471e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N888693649c524c19ad0d9b8b3b83f78b"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/labelingCompound"
-      }
-    ]
-  },
-  {
-    "@id": "_:N888693649c524c19ad0d9b8b3b83f78b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/ChemicalMixture"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ChemicalSubstance"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/MolecularEntity"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:N6eaf9d34b4694e6aa14cc64bdd080780",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/liquidJunctionPotential"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nac95479a1213471ea2d6d0957828d50b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N1954376df49145e28e6b337b06e8bf23"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/metadataLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1954376df49145e28e6b337b06e8bf23",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/File"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/FileBundle"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne5554cd826214f7480a7287462a52ec2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N7eb756b5a9964d2db39f88aeba611a5c"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/pipetteResistance"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7eb756b5a9964d2db39f88aeba611a5c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc1a59f9165304c34bb653c571a632723",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/ChemicalMixture"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/pipetteSolution"
-      }
-    ]
-  },
-  {
-    "@id": "_:Naa63136d90df43669ed20a4ee24c55b3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/sealResistance"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd9f0592e242644f6bb47cdf6f127f655",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/seriesResistance"
-      }
-    ]
-  },
-  {
-    "@id": "_:N8e5e888c8706443ca5d8a07fc62e818d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/CoordinatePoint"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/spatialLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:N2688bee3eef441a1bdb76cf02a4b5c02",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/startMembranePotential"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nc9d686c2a40447158828cc11c231bf6b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "_:N0104d04fc8714e2c9eff402ed448326c"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "https://openminds.om-i.org/props/usedSpecimen"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0104d04fc8714e2c9eff402ed448326c",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/SubjectState"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleState"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/chlorideReversalPotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Chloride reversal potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/endMembranePotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "End membrane potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/compensationCurrent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Compensation current"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
       }
     ]
   },
@@ -1038,7 +1223,7 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:N3c4f5d93552a457fa14f924cb08a880b"
+        "@id": "_:N161d24cac95f4c228dd583399e360c86"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1048,12 +1233,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Nb374a369532144d78b0da100e74618de"
+        "@id": "_:N40900fff4634483e8f252411d7d0b4d9"
       }
     ]
   },
   {
-    "@id": "_:N3c4f5d93552a457fa14f924cb08a880b",
+    "@id": "_:N161d24cac95f4c228dd583399e360c86",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1083,7 +1268,7 @@
     ]
   },
   {
-    "@id": "_:Nb374a369532144d78b0da100e74618de",
+    "@id": "_:N40900fff4634483e8f252411d7d0b4d9",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1113,138 +1298,13 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/liquidJunctionPotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Liquid junction potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/device",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Piece of equipment or mechanism (hardware) designed to serve a special purpose or perform a special function."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:N1fba724b222a412d9d908b5580c7f060"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Device"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "_:Nf97fa9a44e364864b1f9f05db05cc37a"
-      }
-    ]
-  },
-  {
-    "@id": "_:N1fba724b222a412d9d908b5580c7f060",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/CellPatching"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodePlacement"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/RecordingActivity"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SoftwareVersion"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/TissueSampleSlicing"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:Nf97fa9a44e364864b1f9f05db05cc37a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/Electrode"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArray"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeArrayUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/ElectrodeUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/OperatingDevice"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/Pipette"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/PipetteUsage"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SlicingDevice"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/SlicingDeviceUsage"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "@id": "https://openminds.om-i.org/props/spatialLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#domain": [
       {
-        "@id": "_:Nca92ba8e17474fb2bf9621b4dd3198fa"
+        "@id": "_:N30633cb623454e80a524e90775a1d03c"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1259,7 +1319,7 @@
     ]
   },
   {
-    "@id": "_:Nca92ba8e17474fb2bf9621b4dd3198fa",
+    "@id": "_:N30633cb623454e80a524e90775a1d03c",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1280,7 +1340,7 @@
     ]
   },
   {
-    "@id": "https://openminds.om-i.org/props/pipetteResistance",
+    "@id": "https://openminds.om-i.org/props/pipetteSolution",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
@@ -1291,72 +1351,12 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Pipette resistance"
+        "@value": "Pipette solution"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "_:Ne7a8ee1ac58c4d2a92577438a79ffe65"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne7a8ee1ac58c4d2a92577438a79ffe65",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValue"
-          },
-          {
-            "@id": "https://openminds.om-i.org/types/QuantitativeValueRange"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/inputResistance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Input resistance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
-      }
-    ]
-  },
-  {
-    "@id": "https://openminds.om-i.org/props/holdingPotential",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "https://openminds.om-i.org/types/PipetteUsage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Holding potential"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "https://openminds.om-i.org/types/Measurement"
+        "@id": "https://openminds.om-i.org/types/ChemicalMixture"
       }
     ]
   }

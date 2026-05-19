@@ -1,0 +1,32 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/age> a owl:ObjectProperty ;
+    rdfs:label "Age" ;
+    rdfs:comment "Time of life or existence at which some particular qualification, capacity or event arises." ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/SpecimenAge> <https://openminds.om-i.org/types/SubjectGroupState> <https://openminds.om-i.org/types/SubjectState> <https://openminds.om-i.org/types/TissueSampleCollectionState> <https://openminds.om-i.org/types/TissueSampleState> ) ] ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> <https://openminds.om-i.org/types/SpecimenAge> ) ] .
+
+<https://openminds.om-i.org/props/reference> a owl:ObjectProperty ;
+    rdfs:label "Reference" ;
+    rdfs:domain <https://openminds.om-i.org/types/SpecimenAge> ;
+    rdfs:range <https://openminds.om-i.org/types/AgeReference> .
+
+<https://openminds.om-i.org/types/SpecimenAge> a owl:Class ;
+    rdfs:label "Specimen age" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/QuantitativeValue> <https://openminds.om-i.org/types/QuantitativeValueRange> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/age> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AgeReference> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/reference> ] .
+

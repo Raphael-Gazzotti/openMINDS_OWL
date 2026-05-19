@@ -89,6 +89,13 @@
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/ontologyIdentifier> ],
         [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
+            owl:onProperty <https://openminds.om-i.org/props/hasParent> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/versionIdentifier> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/AtlasAnnotation> ;
             owl:onProperty <https://openminds.om-i.org/props/hasAnnotation> ],
         [ a owl:Restriction ;
@@ -96,16 +103,9 @@
             owl:onProperty <https://openminds.om-i.org/props/alternateName> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.om-i.org/types/ParcellationEntity> <https://openminds.om-i.org/types/ParcellationEntityVersion> ) ] ;
-            owl:onProperty <https://openminds.om-i.org/props/hasParent> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/versionIdentifier> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/QualitativeRelationAssessment> <https://openminds.om-i.org/types/QuantitativeRelationAssessment> ) ] ;
-            owl:onProperty <https://openminds.om-i.org/props/relationAssessment> ] .
+            owl:onProperty <https://openminds.om-i.org/props/relationAssessment> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/name> ] .
 

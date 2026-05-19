@@ -27,9 +27,6 @@
     rdfs:label "Software agent" ;
     rdfs:comment "Structured information about a piece of software or web service that can perform a task autonomously." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/Environment> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/environment> ],
@@ -37,5 +34,8 @@
             owl:allValuesFrom <https://openminds.om-i.org/types/SoftwareVersion> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/software> ] .
+            owl:onProperty <https://openminds.om-i.org/props/software> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/name> ] .
 

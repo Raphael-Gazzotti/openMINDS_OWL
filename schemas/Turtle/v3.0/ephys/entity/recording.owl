@@ -55,28 +55,28 @@
 <https://openminds.ebrains.eu/ephys/Recording> a owl:Class ;
     rdfs:label "Recording" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/samplingFrequency> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/ephys/Recording> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/previousRecording> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/dataLocation> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/QuantitativeValue> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/samplingFrequency> ],
+            owl:onProperty <https://openminds.ebrains.eu/vocab/recordedWith> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/ephys/Channel> ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/channel> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
-                    owl:unionOf ( <https://openminds.ebrains.eu/ephys/ElectrodeArrayUsage> <https://openminds.ebrains.eu/ephys/ElectrodeUsage> <https://openminds.ebrains.eu/ephys/PipetteUsage> <https://openminds.ebrains.eu/specimenPrep/SlicingDeviceUsage> ) ] ;
+                    owl:unionOf ( <https://openminds.ebrains.eu/core/File> <https://openminds.ebrains.eu/core/FileBundle> ) ] ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/recordedWith> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/dataLocation> ] .
 

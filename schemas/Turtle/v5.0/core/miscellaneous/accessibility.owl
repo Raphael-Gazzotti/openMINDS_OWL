@@ -1,0 +1,56 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/channel> a owl:ObjectProperty ;
+    rdfs:label "Channel" ;
+    rdfs:domain <https://openminds.om-i.org/types/Accessibility> ;
+    rdfs:range <https://openminds.om-i.org/types/AccessChannel> .
+
+<https://openminds.om-i.org/props/eligibility> a owl:ObjectProperty ;
+    rdfs:label "Eligibility" ;
+    rdfs:domain <https://openminds.om-i.org/types/Accessibility> ;
+    rdfs:range <https://openminds.om-i.org/types/AccessEligibilityType> .
+
+<https://openminds.om-i.org/props/form> a owl:ObjectProperty ;
+    rdfs:label "Form" ;
+    rdfs:domain <https://openminds.om-i.org/types/Accessibility> ;
+    rdfs:range <https://openminds.om-i.org/types/AccessForm> .
+
+<https://openminds.om-i.org/props/paymentModel> a owl:ObjectProperty ;
+    rdfs:label "Payment model" ;
+    rdfs:domain <https://openminds.om-i.org/types/Accessibility> ;
+    rdfs:range <https://openminds.om-i.org/types/PaymentModelType> .
+
+<https://openminds.om-i.org/props/process> a owl:ObjectProperty ;
+    rdfs:label "Process" ;
+    rdfs:domain <https://openminds.om-i.org/types/Accessibility> ;
+    rdfs:range <https://openminds.om-i.org/types/AccessProcessType> .
+
+<https://openminds.om-i.org/types/Accessibility> a owl:Class ;
+    rdfs:label "Accessibility" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AccessEligibilityType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/eligibility> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AccessChannel> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/channel> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/PaymentModelType> ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/paymentModel> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AccessProcessType> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/process> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/AccessForm> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/form> ] .
+

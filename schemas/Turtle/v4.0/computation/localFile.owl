@@ -65,26 +65,15 @@
     rdfs:label "Local file" ;
     rdfs:comment "Structured information about a file that is not accessible via a URL." ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/FileUsageRole> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/specialUsageRole> ],
-        [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/path> ],
+            owl:onProperty <https://openminds.om-i.org/props/name> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/DataType> ;
             owl:onProperty <https://openminds.om-i.org/props/dataType> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/FileUsageRole> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/storageSize> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/Hash> ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/hash> ],
+            owl:onProperty <https://openminds.om-i.org/props/specialUsageRole> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/ContentType> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -92,5 +81,16 @@
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.om-i.org/types/File> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/copyOf> ] .
+            owl:onProperty <https://openminds.om-i.org/props/copyOf> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/Hash> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/hash> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/path> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/QuantitativeValue> ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/storageSize> ] .
 

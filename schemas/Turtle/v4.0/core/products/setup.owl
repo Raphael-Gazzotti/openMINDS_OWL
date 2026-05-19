@@ -47,12 +47,12 @@
 <https://openminds.om-i.org/types/Setup> a owl:Class ;
     rdfs:label "Setup" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.om-i.org/props/name> ],
-        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
             owl:onProperty <https://openminds.om-i.org/props/manufacturer> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.om-i.org/types/SetupType> ;
+            owl:onProperty <https://openminds.om-i.org/props/type> ],
         [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( <https://openminds.om-i.org/types/Setup> <https://openminds.om-i.org/types/SoftwareVersion> <https://openminds.om-i.org/types/Electrode> <https://openminds.om-i.org/types/ElectrodeArray> <https://openminds.om-i.org/types/Pipette> <https://openminds.om-i.org/types/SlicingDevice> ) ] ;
@@ -62,6 +62,6 @@
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <https://openminds.om-i.org/props/description> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.om-i.org/types/SetupType> ;
-            owl:onProperty <https://openminds.om-i.org/props/type> ] .
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/name> ] .
 

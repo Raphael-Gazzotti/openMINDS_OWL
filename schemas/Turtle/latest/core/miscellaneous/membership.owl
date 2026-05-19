@@ -1,0 +1,32 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openminds.om-i.org/props/endDate> a owl:DatatypeProperty ;
+    rdfs:label "End date" ;
+    rdfs:comment "Date in the Gregorian calendar at which something terminates in time." ;
+    rdfs:domain <https://openminds.om-i.org/types/Membership> ;
+    rdfs:range xsd:date .
+
+<https://openminds.om-i.org/props/startDate> a owl:DatatypeProperty ;
+    rdfs:label "Start date" ;
+    rdfs:comment "Date in the Gregorian calendar at which something begins in time" ;
+    rdfs:domain <https://openminds.om-i.org/types/Membership> ;
+    rdfs:range xsd:date .
+
+<https://openminds.om-i.org/props/member> a owl:ObjectProperty ;
+    rdfs:label "Member" ;
+    rdfs:domain <https://openminds.om-i.org/types/Membership> ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] .
+
+<https://openminds.om-i.org/types/Membership> a owl:Class ;
+    rdfs:label "Membership" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom [ a owl:Class ;
+                    owl:unionOf ( <https://openminds.om-i.org/types/Consortium> <https://openminds.om-i.org/types/Organization> <https://openminds.om-i.org/types/Person> ) ] ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.om-i.org/props/member> ] .
+

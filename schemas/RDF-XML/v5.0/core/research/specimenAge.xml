@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/age">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Age</rdfs:label>
+    <rdfs:comment>Time of life or existence at which some particular qualification, capacity or event arises.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="Naf649a0065734a0da378efcf312673b3"/>
+    <rdfs:range rdf:nodeID="N8281899ccf6e45ff9ccaec154f4d5b84"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2c2e7bf05d8246818bb707635485a4ca">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/TissueSampleCollectionState"/>
+    <rdf:rest rdf:nodeID="N3fffc6f104194b478766de94bd06e921"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/props/reference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>Reference</rdfs:label>
+    <rdfs:domain rdf:resource="https://openminds.om-i.org/types/SpecimenAge"/>
+    <rdfs:range rdf:resource="https://openminds.om-i.org/types/AgeReference"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Naf649a0065734a0da378efcf312673b3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="N8ecc74a0c88b4f558f745896439a2ad2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://openminds.om-i.org/types/SpecimenAge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Specimen age</rdfs:label>
+    <rdfs:subClassOf rdf:nodeID="N12fb3f918b974c3188d4592cc5113733"/>
+    <rdfs:subClassOf rdf:nodeID="N481568cb5ae641cfba630c2e4a4f2b87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nd368bfd3da5c4cb9abb5872268e8632c">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SubjectState"/>
+    <rdf:rest rdf:nodeID="N2c2e7bf05d8246818bb707635485a4ca"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N12fb3f918b974c3188d4592cc5113733">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/age"/>
+    <owl:allValuesFrom rdf:nodeID="Nb58b16dda2d34659b47d0ea81b772708"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N481568cb5ae641cfba630c2e4a4f2b87">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="https://openminds.om-i.org/props/reference"/>
+    <owl:allValuesFrom rdf:resource="https://openminds.om-i.org/types/AgeReference"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3fffc6f104194b478766de94bd06e921">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/TissueSampleState"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6914ffd0c7aa4f68bdeb6c820012ae2f">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
+    <rdf:rest rdf:nodeID="N196f9800b4694ac2836eb6b08411443d"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8ecc74a0c88b4f558f745896439a2ad2">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SpecimenAge"/>
+    <rdf:rest rdf:nodeID="Ne6a6399845df44ae9ecbfbd829414764"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne6a6399845df44ae9ecbfbd829414764">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SubjectGroupState"/>
+    <rdf:rest rdf:nodeID="Nd368bfd3da5c4cb9abb5872268e8632c"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb58b16dda2d34659b47d0ea81b772708">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Na54e75df629e4b89a6c6ade51c669000"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N196f9800b4694ac2836eb6b08411443d">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/SpecimenAge"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Na54e75df629e4b89a6c6ade51c669000">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <rdf:rest rdf:nodeID="N1f873a7f6ed44e86aa62423e0e249525"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nfb973e68f9c04543b3cb5399d6f549b0">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValue"/>
+    <rdf:rest rdf:nodeID="N6914ffd0c7aa4f68bdeb6c820012ae2f"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8281899ccf6e45ff9ccaec154f4d5b84">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="Nfb973e68f9c04543b3cb5399d6f549b0"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N1f873a7f6ed44e86aa62423e0e249525">
+    <rdf:first rdf:resource="https://openminds.om-i.org/types/QuantitativeValueRange"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -52,22 +52,22 @@
     rdfs:label "Person" ;
     rdfs:comment "Structured information on a person." ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/Affiliation> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/affiliation> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/alternateName> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom <https://openminds.ebrains.eu/core/ORCID> ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <https://openminds.ebrains.eu/vocab/givenName> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/AccountInformation> ;
             owl:onProperty <https://openminds.ebrains.eu/vocab/associatedAccount> ],
         [ a owl:Restriction ;
             owl:allValuesFrom <https://openminds.ebrains.eu/core/ContactInformation> ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/contactInformation> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/ORCID> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/digitalIdentifier> ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/alternateName> ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/givenName> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom <https://openminds.ebrains.eu/core/Affiliation> ;
-            owl:onProperty <https://openminds.ebrains.eu/vocab/affiliation> ] .
+            owl:onProperty <https://openminds.ebrains.eu/vocab/contactInformation> ] .
 
